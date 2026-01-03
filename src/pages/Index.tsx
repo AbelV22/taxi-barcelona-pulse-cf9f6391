@@ -8,7 +8,7 @@ import { LicensesView } from "@/components/views/LicensesView";
 import { AlertsView } from "@/components/views/AlertsView";
 
 const titles: Record<string, string> = {
-  dashboard: "Dashboard",
+  dashboard: "Inicio",
   vuelos: "Vuelos Aeropuerto BCN",
   eventos: "Calendario de Eventos",
   licencias: "Precio de Licencias",
