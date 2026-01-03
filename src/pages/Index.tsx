@@ -36,6 +36,10 @@ const Index = () => {
     setActiveTab("vuelos");
   };
 
+  const handleViewAllEvents = () => {
+    setActiveTab("eventos");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Sidebar 
@@ -48,7 +52,7 @@ const Index = () => {
         onToggle={() => setSidebarOpen(!sidebarOpen)}
       />
       
-      <main className="lg:pl-64 transition-all duration-300">
+      <main className="lg:pl-56 transition-all duration-300">
         <Header title={titles[activeTab]} onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
         
         <div className="p-4 md:p-6">
@@ -56,6 +60,7 @@ const Index = () => {
             <DashboardView 
               onTerminalClick={handleTerminalClick}
               onViewAllFlights={handleViewAllFlights}
+              onViewAllEvents={handleViewAllEvents}
             />
           )}
           {activeTab === "vuelos" && <FlightsView />}

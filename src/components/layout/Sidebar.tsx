@@ -51,7 +51,7 @@ export function Sidebar({ activeTab, onTabChange, isOpen, onToggle }: SidebarPro
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed left-0 top-0 z-40 h-screen w-64 bg-sidebar border-r border-sidebar-border transition-transform duration-300",
+        "fixed left-0 top-0 z-40 h-screen w-56 bg-sidebar border-r border-sidebar-border transition-transform duration-300",
         !isOpen && "-translate-x-full lg:translate-x-0"
       )}>
         <div className="flex h-full flex-col">

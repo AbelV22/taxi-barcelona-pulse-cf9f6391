@@ -51,15 +51,19 @@ const typeColors: Record<string, string> = {
 interface EventsWidgetProps {
   expanded?: boolean;
   limit?: number;
+  onViewAllClick?: () => void;
 }
 
-export function EventsWidget({ expanded = false, limit = 3 }: EventsWidgetProps) {
+export function EventsWidget({ expanded = false, limit = 3, onViewAllClick }: EventsWidgetProps) {
   const displayEvents = expanded ? upcomingEvents : upcomingEvents.slice(0, limit);
 
   return (
     <div className="card-dashboard p-4 md:p-5">
       <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2 md:gap-3">
+        <div 
+          className="flex items-center gap-2 md:gap-3 cursor-pointer hover:opacity-80 transition-opacity"
+          onClick={onViewAllClick}
+        >
           <div className="flex h-9 w-9 md:h-10 md:w-10 items-center justify-center rounded-lg bg-purple-500/10">
             <Calendar className="h-4 w-4 md:h-5 md:w-5 text-purple-500" />
           </div>
@@ -69,7 +73,10 @@ export function EventsWidget({ expanded = false, limit = 3 }: EventsWidgetProps)
           </div>
         </div>
         {!expanded && (
-          <button className="flex items-center gap-1 text-xs md:text-sm text-primary hover:text-primary/80 transition-colors">
+          <button 
+            onClick={onViewAllClick}
+            className="flex items-center gap-1 text-xs md:text-sm text-primary hover:text-primary/80 transition-colors"
+          >
             Ver todos
             <ChevronRight className="h-4 w-4" />
           </button>
