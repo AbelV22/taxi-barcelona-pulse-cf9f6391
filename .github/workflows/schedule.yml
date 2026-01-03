@@ -1,0 +1,41 @@
+name: Actualizar Radar Taxi
+
+on:
+  schedule:
+    # Horas en UTC. BCN es UTC+1 (Invierno). 
+    # 03:00 UTC = 04:00 BCN
+    # 13:00 UTC = 14:00 BCN
+    # 19:00 UTC = 20:00 BCN
+    - cron: '0 3,13,19 * * *'
+  workflow_dispatch: # Permite pulsar un botón manual para probar
+
+permissions:
+  contents: write # IMPORTANTE: Permiso para guardar el archivo json
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar tu código
+        uses: actions/checkout@v3
+
+      - name: Preparar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalar librerías
+        run: pip install requests
+
+      - name: Ejecutar Script de Radar
+        env:
+          API_KEY: ${{ secrets.AVIATIONSTACK_KEY }} # Tu clave secreta
+        run: python scripts/update_data.py
+
+      - name: Guardar cambios en el repo
+        run: |
+          git config --global user.name 'TaxiBot'
+          git config --global user.email 'bot@taxibcn.app'
+          git add public/data.json
+          # Solo hace commit si hay cambios reales
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📡 Actualización Automática" && git push)
