@@ -31,7 +31,7 @@ export function LicensePriceWidget({ expanded = false }: { expanded?: boolean })
 
       {/* Current price */}
       <div className="flex items-baseline gap-2 md:gap-3 mb-4">
-        <p className="text-2xl md:text-4xl font-bold text-primary" style={{ fontFamily: 'Space Grotesk' }}>
+        <p className="text-2xl md:text-4xl font-display font-bold text-primary">
           {(currentPrice / 1000).toFixed(0)}k€
         </p>
         <div className={cn(

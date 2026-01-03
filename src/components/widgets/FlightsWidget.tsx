@@ -45,7 +45,7 @@ export function FlightsWidget({ expanded = false }: FlightsWidgetProps) {
               <span className="font-medium text-foreground text-xs md:text-sm">{terminal.name}</span>
             </div>
             
-            <p className="text-2xl md:text-3xl font-bold mb-1" style={{ color: terminal.color, fontFamily: 'Space Grotesk' }}>{terminal.arrivals}</p>
+            <p className="text-2xl md:text-3xl font-display font-bold mb-1" style={{ color: terminal.color }}>{terminal.arrivals}</p>
             <p className="text-xs md:text-sm text-muted-foreground mb-2">vuelos</p>
             
             <div className="flex items-center justify-center gap-1 text-muted-foreground">

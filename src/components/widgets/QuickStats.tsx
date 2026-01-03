@@ -56,7 +56,7 @@ export function QuickStats() {
             <p className="text-xs md:text-sm text-muted-foreground">{stat.label}</p>
             <stat.icon className={`h-5 w-5 md:h-6 md:w-6 ${stat.iconColor}`} />
           </div>
-          <p className={`text-2xl md:text-4xl font-bold tracking-tight ${stat.valueColor || 'text-foreground'}`} style={{ fontFamily: 'Space Grotesk, sans-serif' }}>
+          <p className={`text-2xl md:text-4xl font-display font-bold tracking-tight ${stat.valueColor || 'text-foreground'}`}>
             {stat.value}
           </p>
           <p className="text-xs md:text-sm text-muted-foreground mt-1">{stat.subtext}</p>
