@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RefreshCw, Plane, LogIn, LogOut, Sun, CloudRain } from "lucide-react";
+import { RefreshCw, Plane, LogIn, LogOut, Sun, CloudRain, Calendar } from "lucide-react";
 import { TerminalCard } from "@/components/widgets/TerminalCard";
 import { TrainsWidget } from "@/components/widgets/TrainsWidget";
 import { CruisesWidget } from "@/components/widgets/CruisesWidget";
@@ -30,6 +30,7 @@ interface DashboardViewProps {
   onTerminalClick?: (terminalId: string) => void;
   onViewAllFlights?: () => void;
   onViewAllEvents?: () => void;
+  onViewFullDay?: () => void;
 }
 
 // Función para parsear hora "HH:MM" a minutos del día
@@ -90,7 +91,7 @@ const getEsperaReten = (terminalId: string, currentHour: number): number => {
   return isPeakHour ? base + 12 : base;
 };
 
-export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents }: DashboardViewProps) {
+export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents, onViewFullDay }: DashboardViewProps) {
   const [vuelos, setVuelos] = useState<VueloRaw[]>([]);
   const [extras, setExtras] = useState<ExtrasData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -198,6 +199,15 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
 
   return (
     <div className="space-y-3 animate-fade-in pb-20">
+      {/* Botón Vista Día Completo - Arriba del todo */}
+      <button
+        onClick={onViewFullDay}
+        className="w-full flex items-center justify-center gap-2 p-3 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 hover:from-amber-500/30 hover:to-orange-500/30 transition-all"
+      >
+        <Calendar className="h-5 w-5 text-amber-500" />
+        <span className="font-display font-bold text-amber-600 dark:text-amber-400">Vista Día Completo</span>
+      </button>
+
       {/* Header con hora, clima y botones de retén */}
       <div className="flex items-center justify-between px-1">
         <div className="flex items-center gap-2">
