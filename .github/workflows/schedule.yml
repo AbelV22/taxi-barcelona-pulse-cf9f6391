@@ -2,9 +2,10 @@ name: Actualizar Vuelos BCN
 
 on:
   schedule:
-    # Se ejecuta cada 4 horas
-    - cron: '0 */4 * * *'
-  # Botón manual para probar
+    # Minuto 0, desde la hora 4 hasta la 23 (UTC)
+    # En España esto es: 05:00 AM hasta 00:00 AM (Medianoche)
+    - cron: '0 4-23 * * *'
+  # Botón manual
   workflow_dispatch:
 
 jobs:
