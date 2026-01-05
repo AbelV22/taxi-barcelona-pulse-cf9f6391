@@ -1,4 +1,4 @@
-import { Plane, Clock, ChevronRight } from "lucide-react";
+import { Plane, Clock, ChevronRight, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface TerminalCardProps {
@@ -7,7 +7,7 @@ interface TerminalCardProps {
   vuelosProximaHora: number;
   vuelosSiguienteHora: number;
   esperaMinutos: number;
-  nextFlight?: { hora: string; origen: string };
+  contribuidores?: number;
   onClick?: () => void;
 }
 
@@ -17,7 +17,7 @@ export function TerminalCard({
   vuelosProximaHora, 
   vuelosSiguienteHora, 
   esperaMinutos, 
-  nextFlight,
+  contribuidores = 0,
   onClick 
 }: TerminalCardProps) {
   // Determinar si la espera es alta (>25min) o baja (<10min)
@@ -73,15 +73,16 @@ export function TerminalCard({
         </span>
       </div>
       
-      {/* Próximo vuelo */}
-      {nextFlight && (
-        <div className="mt-2 text-[10px] text-muted-foreground flex items-center gap-1">
-          <span>Próximo:</span>
-          <span className="font-medium text-foreground">{nextFlight.hora}</span>
-          <span>desde</span>
-          <span className="font-medium text-foreground truncate max-w-[60px]">{nextFlight.origen}</span>
-        </div>
-      )}
+      {/* Contribuidores de datos */}
+      <div className="mt-2 flex items-center gap-1 text-[10px] text-muted-foreground">
+        <Users className="h-3 w-3" />
+        <span>
+          {contribuidores > 0 
+            ? `${contribuidores} taxista${contribuidores > 1 ? 's' : ''} informaron (última hora)`
+            : "Sin datos de taxistas aún"
+          }
+        </span>
+      </div>
     </button>
   );
 }

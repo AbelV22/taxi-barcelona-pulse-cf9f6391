@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { RefreshCw, Plane } from "lucide-react";
+import { RefreshCw, Plane, LogIn, LogOut, Sun, CloudRain } from "lucide-react";
 import { TerminalCard } from "@/components/widgets/TerminalCard";
 import { TrainsWidget } from "@/components/widgets/TrainsWidget";
 import { CruisesWidget } from "@/components/widgets/CruisesWidget";
-import { WeatherFloating } from "@/components/widgets/WeatherFloating";
 import { EventsWidget } from "@/components/widgets/EventsWidget";
 import { LicensePriceWidget } from "@/components/widgets/LicensePriceWidget";
 
@@ -194,16 +193,12 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     return !estado.includes("finalizado");
   }).slice(0, 6);
 
+  // Hora actual formateada
+  const horaActual = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
+
   return (
     <div className="space-y-3 animate-fade-in pb-20">
-      {/* Weather Floating */}
-      <WeatherFloating 
-        clima_prob={extras?.clima_prob} 
-        clima_estado={extras?.clima_estado}
-        temp={18}
-      />
-
-      {/* Header compacto con info clave */}
+      {/* Header con hora, clima y botones de retén */}
       <div className="flex items-center justify-between px-1">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10">
@@ -214,26 +209,50 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
             <div className="flex items-center gap-1 text-[10px] text-muted-foreground">
               <span className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
               <span>Radar activo</span>
-              {updateTime && <span className="ml-1">· {updateTime}</span>}
             </div>
           </div>
         </div>
-        <div className="text-right">
-          <p className="font-display font-bold text-2xl text-primary">{totalVuelos}</p>
-          <p className="text-[10px] text-muted-foreground">vuelos 24h</p>
+        {/* Hora actual y clima mini */}
+        <div className="flex items-center gap-2">
+          <div className="text-right">
+            <p className="font-display font-bold text-lg text-foreground">{horaActual}</p>
+          </div>
+          <button className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] bg-muted/50 border border-border">
+            {extras?.clima_prob && extras.clima_prob >= 50 ? (
+              <>
+                <CloudRain className="h-3 w-3 text-rain" />
+                <span className="text-rain">{extras.clima_prob}%</span>
+              </>
+            ) : (
+              <>
+                <Sun className="h-3 w-3 text-amber-400" />
+                <span>{extras?.clima_prob || 0}%</span>
+              </>
+            )}
+          </button>
         </div>
+      </div>
+
+      {/* Botones de Retén */}
+      <div className="grid grid-cols-2 gap-2">
+        <button className="flex items-center justify-center gap-2 p-3 rounded-xl bg-success/10 border border-success/30 hover:bg-success/20 transition-colors">
+          <LogIn className="h-5 w-5 text-success" />
+          <span className="font-display font-semibold text-success text-sm">Entro al retén</span>
+        </button>
+        <button className="flex items-center justify-center gap-2 p-3 rounded-xl bg-primary/10 border border-primary/30 hover:bg-primary/20 transition-colors">
+          <LogOut className="h-5 w-5 text-primary" />
+          <span className="font-display font-semibold text-primary text-sm">Salgo del retén</span>
+        </button>
       </div>
 
       {/* Terminal Cards Grid - Optimizado móvil */}
       <div className="grid grid-cols-2 gap-2">
         {terminals.map(term => {
           const data = terminalData[term.id];
-          const nextFlight = data.vuelos.find(v => {
-            const estado = v.estado?.toLowerCase() || "";
-            return !estado.includes("finalizado");
-          });
           const vuelosProximaHora = getVuelosPorHora(data.vuelos, 0);
           const vuelosSiguienteHora = getVuelosPorHora(data.vuelos, 1);
+          // Simulamos contribuidores (más adelante vendrán de la BD)
+          const contribuidores = Math.floor(Math.random() * 5);
           
           return (
             <TerminalCard
@@ -243,10 +262,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
               vuelosProximaHora={vuelosProximaHora}
               vuelosSiguienteHora={vuelosSiguienteHora}
               esperaMinutos={getEsperaReten(term.id, currentHour)}
-              nextFlight={nextFlight ? {
-                hora: nextFlight.hora,
-                origen: nextFlight.origen?.split("(")[0]?.trim() || nextFlight.origen
-              } : undefined}
+              contribuidores={contribuidores}
               onClick={() => onTerminalClick?.(term.id)}
             />
           );
