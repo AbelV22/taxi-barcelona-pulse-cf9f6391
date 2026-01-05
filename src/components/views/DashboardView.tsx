@@ -25,7 +25,6 @@ interface ExtrasData {
   clima_prob: number;
   clima_estado: string;
 }
-
 interface DashboardViewProps {
   onTerminalClick?: (terminalId: string) => void;
   onViewAllFlights?: () => void;
@@ -45,7 +44,7 @@ const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   const terminal = vuelo.terminal?.toUpperCase() || "";
   const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
   const origen = vuelo.origen?.toUpperCase() || "";
-  
+
   // T2C: EasyJet (terminal indica "T2C" o códigos EJU/EZY)
   if (terminal.includes("T2C") || terminal.includes("EASYJET")) {
     return "t2c";
@@ -53,23 +52,23 @@ const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   if (codigosVuelo.includes("EJU") || codigosVuelo.includes("EZY")) {
     return "t2c";
   }
-  
+
   // Puente Aéreo: vuelos IBE desde Madrid (código IBE + origen Madrid)
   if (origen.includes("MADRID") && codigosVuelo.includes("IBE")) {
     // Los vuelos IBE desde Madrid son Puente Aéreo
     return "puente";
   }
-  
+
   // T2A/T2B: Ryanair, Wizz, etc.
   if (terminal.includes("T2A") || terminal.includes("T2B")) {
     return "t2";
   }
-  
+
   // T1: resto de vuelos T1
   if (terminal.includes("T1")) {
     return "t1";
   }
-  
+
   // Default T2 para otros casos
   return "t2";
 };
@@ -77,31 +76,33 @@ const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
 // Tiempos de retén estimados por terminal y hora del día
 const getEsperaReten = (terminalId: string, currentHour: number): number => {
   // Hora punta: 10-14h y 18-21h
-  const isPeakHour = (currentHour >= 10 && currentHour <= 14) || (currentHour >= 18 && currentHour <= 21);
-  
+  const isPeakHour = currentHour >= 10 && currentHour <= 14 || currentHour >= 18 && currentHour <= 21;
+
   // Tiempos base por terminal (minutos)
   const baseWait: Record<string, number> = {
-    t1: 25,      // T1 es la más grande, más espera
-    t2: 15,      // T2 menos tráfico
-    t2c: 12,     // T2C EasyJet, vuelos low cost
-    puente: 8    // Puente Aéreo, vuelos frecuentes Madrid
+    t1: 25,
+    // T1 es la más grande, más espera
+    t2: 15,
+    // T2 menos tráfico
+    t2c: 12,
+    // T2C EasyJet, vuelos low cost
+    puente: 8 // Puente Aéreo, vuelos frecuentes Madrid
   };
-  
   const base = baseWait[terminalId] || 20;
   return isPeakHour ? base + 12 : base;
 };
-
-export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents, onViewFullDay }: DashboardViewProps) {
+export function DashboardView({
+  onTerminalClick,
+  onViewAllFlights,
+  onViewAllEvents,
+  onViewFullDay
+}: DashboardViewProps) {
   const [vuelos, setVuelos] = useState<VueloRaw[]>([]);
   const [extras, setExtras] = useState<ExtrasData | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateTime, setUpdateTime] = useState<string>("");
-
   const fetchData = () => {
-    Promise.all([
-      fetch("/vuelos.json?t=" + Date.now()).then(res => res.json()).catch(() => []),
-      fetch("/data.json?t=" + Date.now()).then(res => res.json()).catch(() => null)
-    ]).then(([vuelosData, dataJson]) => {
+    Promise.all([fetch("/vuelos.json?t=" + Date.now()).then(res => res.json()).catch(() => []), fetch("/data.json?t=" + Date.now()).then(res => res.json()).catch(() => null)]).then(([vuelosData, dataJson]) => {
       console.log("📡 Vuelos cargados:", vuelosData?.length || 0);
       setVuelos(Array.isArray(vuelosData) ? vuelosData : []);
       if (dataJson?.extras) setExtras(dataJson.extras);
@@ -109,23 +110,18 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       setLoading(false);
     });
   };
-
   useEffect(() => {
     fetchData();
     // Auto-refresh cada 2 horas
     const interval = setInterval(fetchData, 2 * 60 * 60 * 1000);
     return () => clearInterval(interval);
   }, []);
-
   if (loading) {
-    return (
-      <div className="flex flex-col items-center justify-center h-[60vh] space-y-4">
+    return <div className="flex flex-col items-center justify-center h-[60vh] space-y-4">
         <RefreshCw className="h-8 w-8 text-primary animate-spin" />
         <p className="text-sm text-muted-foreground">Conectando radar...</p>
-      </div>
-    );
+      </div>;
   }
-
   const now = new Date();
   const currentHour = now.getHours();
   const currentMinutes = currentHour * 60 + now.getMinutes();
@@ -148,26 +144,45 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   });
 
   // Agrupar por terminal
-  const terminalData: Record<string, { vuelos: VueloRaw[] }> = {
-    t1: { vuelos: [] },
-    t2: { vuelos: [] },
-    t2c: { vuelos: [] },
-    puente: { vuelos: [] }
+  const terminalData: Record<string, {
+    vuelos: VueloRaw[];
+  }> = {
+    t1: {
+      vuelos: []
+    },
+    t2: {
+      vuelos: []
+    },
+    t2c: {
+      vuelos: []
+    },
+    puente: {
+      vuelos: []
+    }
   };
-
   vuelosSorted.forEach(vuelo => {
     const type = getTerminalType(vuelo);
     terminalData[type].vuelos.push(vuelo);
   });
 
   // Config visual de terminales
-  const terminals = [
-    { id: "t1", name: "Terminal 1", color: "#F59E0B" },
-    { id: "t2", name: "Terminal 2", color: "#F59E0B" },
-    { id: "puente", name: "Puente Aéreo", color: "#F59E0B" },
-    { id: "t2c", name: "T2C EasyJet", color: "#F59E0B" },
-  ];
-
+  const terminals = [{
+    id: "t1",
+    name: "Terminal 1",
+    color: "#F59E0B"
+  }, {
+    id: "t2",
+    name: "Terminal 2",
+    color: "#F59E0B"
+  }, {
+    id: "puente",
+    name: "Puente Aéreo",
+    color: "#F59E0B"
+  }, {
+    id: "t2c",
+    name: "T2C EasyJet",
+    color: "#F59E0B"
+  }];
   const totalVuelos = vuelosSorted.length;
 
   // Calcular vuelos por hora para cada terminal
@@ -195,10 +210,11 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   }).slice(0, 6);
 
   // Hora actual formateada
-  const horaActual = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
-
-  return (
-    <div className="space-y-3 animate-fade-in pb-20">
+  const horaActual = now.toLocaleTimeString('es-ES', {
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+  return <div className="space-y-3 animate-fade-in pb-20">
       {/* Header con hora, clima y botón día completo */}
       <div className="flex items-center justify-between px-1">
         <div className="flex items-center gap-2">
@@ -215,28 +231,21 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
         </div>
         {/* Botón día completo + hora + clima */}
         <div className="flex items-center gap-2">
-          <button
-            onClick={onViewFullDay}
-            className="px-2 py-1 rounded-lg text-[10px] bg-muted/50 border border-border hover:bg-muted transition-colors"
-          >
-            <Calendar className="h-3 w-3 inline mr-1" />
-            <span>Día</span>
+          <button onClick={onViewFullDay} className="py-1 rounded-lg text-[10px] border border-border transition-colors mx-[190px] px-[20px] text-justify shadow-md bg-slate-200 hover:bg-slate-100">
+            <Calendar className="h-3 w-3 inline mr-1 text-primary" />
+            <span className="text-primary-foreground font-sans">Día Completo </span>
           </button>
           <div className="text-right">
             <p className="font-display font-bold text-lg text-foreground">{horaActual}</p>
           </div>
           <button className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] bg-muted/50 border border-border">
-            {extras?.clima_prob && extras.clima_prob >= 50 ? (
-              <>
+            {extras?.clima_prob && extras.clima_prob >= 50 ? <>
                 <CloudRain className="h-3 w-3 text-rain" />
                 <span className="text-rain">{extras.clima_prob}%</span>
-              </>
-            ) : (
-              <>
+              </> : <>
                 <Sun className="h-3 w-3 text-amber-400" />
                 <span>{extras?.clima_prob || 0}%</span>
-              </>
-            )}
+              </>}
           </button>
         </div>
       </div>
@@ -256,25 +265,13 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       {/* Terminal Cards Grid - Optimizado móvil */}
       <div className="grid grid-cols-2 gap-2">
         {terminals.map(term => {
-          const data = terminalData[term.id];
-          const vuelosProximaHora = getVuelosPorHora(data.vuelos, 0);
-          const vuelosSiguienteHora = getVuelosPorHora(data.vuelos, 1);
-          // Simulamos contribuidores (más adelante vendrán de la BD)
-          const contribuidores = Math.floor(Math.random() * 5);
-          
-          return (
-            <TerminalCard
-              key={term.id}
-              id={term.id}
-              name={term.name}
-              vuelosProximaHora={vuelosProximaHora}
-              vuelosSiguienteHora={vuelosSiguienteHora}
-              esperaMinutos={getEsperaReten(term.id, currentHour)}
-              contribuidores={contribuidores}
-              onClick={() => onTerminalClick?.(term.id)}
-            />
-          );
-        })}
+        const data = terminalData[term.id];
+        const vuelosProximaHora = getVuelosPorHora(data.vuelos, 0);
+        const vuelosSiguienteHora = getVuelosPorHora(data.vuelos, 1);
+        // Simulamos contribuidores (más adelante vendrán de la BD)
+        const contribuidores = Math.floor(Math.random() * 5);
+        return <TerminalCard key={term.id} id={term.id} name={term.name} vuelosProximaHora={vuelosProximaHora} vuelosSiguienteHora={vuelosSiguienteHora} esperaMinutos={getEsperaReten(term.id, currentHour)} contribuidores={contribuidores} onClick={() => onTerminalClick?.(term.id)} />;
+      })}
       </div>
 
       {/* Transporte Grid - Trenes y Eventos */}
@@ -286,11 +283,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       {/* Cruceros y Licencia */}
       <div className="grid grid-cols-2 gap-2">
         <CruisesWidget />
-        <LicensePriceWidget 
-          precio={extras?.licencia || 0} 
-          tendencia={extras?.licencia_tendencia || "estable"} 
-        />
+        <LicensePriceWidget precio={extras?.licencia || 0} tendencia={extras?.licencia_tendencia || "estable"} />
       </div>
-    </div>
-  );
+    </div>;
 }
