@@ -15,6 +15,7 @@ import { TrainsByOperatorView } from "@/components/views/TrainsByOperatorView";
 const titles: Record<string, string> = {
   dashboard: "Inicio",
   vuelos: "Vuelos Aeropuerto BCN",
+  trenes: "Trenes Sants",
   eventos: "Calendario de Eventos",
   licencias: "Precio de Licencias",
   alertas: "Alertas",
@@ -114,6 +115,13 @@ const Index = () => {
             />
           )}
           {activeTab === "vuelos" && <FlightsView />}
+          {activeTab === "trenes" && (
+            <TrainsFullDayView 
+              onBack={() => setActiveTab("dashboard")}
+              onCityClick={handleTrainCityClick}
+              onOperatorClick={handleTrainOperatorClick}
+            />
+          )}
           {activeTab === "eventos" && <EventsView />}
           {activeTab === "licencias" && <LicensesView />}
           {activeTab === "alertas" && <AlertsView />}

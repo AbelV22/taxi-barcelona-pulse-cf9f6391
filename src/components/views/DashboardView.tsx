@@ -172,6 +172,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   const totalVuelos = vuelosSorted.length;
 
   // Calcular vuelos por hora para cada terminal
+  // horaOffset 0 = hora actual, 1 = próxima hora
   const getVuelosPorHora = (vuelosTerminal: VueloRaw[], horaOffset: number) => {
     const targetHour = (currentHour + horaOffset) % 24;
     return vuelosTerminal.filter(v => {

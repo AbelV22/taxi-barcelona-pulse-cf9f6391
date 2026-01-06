@@ -1,6 +1,7 @@
 import { 
   LayoutDashboard, 
   Plane, 
+  Train,
   Calendar, 
   TrendingUp, 
   Bell, 
@@ -21,8 +22,9 @@ interface SidebarProps {
 }
 
 const navItems = [
-  { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
+  { id: "dashboard", label: "Inicio", icon: LayoutDashboard },
   { id: "vuelos", label: "Vuelos BCN", icon: Plane },
+  { id: "trenes", label: "Trenes Sants", icon: Train },
   { id: "eventos", label: "Eventos", icon: Calendar },
   { id: "licencias", label: "Licencias", icon: TrendingUp },
   { id: "alertas", label: "Alertas", icon: Bell },
