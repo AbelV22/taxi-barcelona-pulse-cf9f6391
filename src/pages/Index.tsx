@@ -8,6 +8,7 @@ import { LicensesView } from "@/components/views/LicensesView";
 import { AlertsView } from "@/components/views/AlertsView";
 import { TerminalDetailView } from "@/components/views/TerminalDetailView";
 import { FullDayView } from "@/components/views/FullDayView";
+import { TrainsFullDayView } from "@/components/views/TrainsFullDayView";
 
 const titles: Record<string, string> = {
   dashboard: "Inicio",
@@ -17,6 +18,7 @@ const titles: Record<string, string> = {
   alertas: "Alertas",
   terminalDetail: "Detalle Terminal",
   fullDay: "Vista Día Completo",
+  trainsFullDay: "Trenes Sants",
 };
 
 const Index = () => {
@@ -50,6 +52,14 @@ const Index = () => {
     setActiveTab("dashboard");
   };
 
+  const handleViewTrainsFullDay = () => {
+    setActiveTab("trainsFullDay");
+  };
+
+  const handleBackFromTrainsFullDay = () => {
+    setActiveTab("dashboard");
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Sidebar 
@@ -72,6 +82,7 @@ const Index = () => {
               onViewAllFlights={handleViewAllFlights}
               onViewAllEvents={handleViewAllEvents}
               onViewFullDay={handleViewFullDay}
+              onViewTrainsFullDay={handleViewTrainsFullDay}
             />
           )}
           {activeTab === "vuelos" && <FlightsView />}
@@ -86,6 +97,9 @@ const Index = () => {
           )}
           {activeTab === "fullDay" && (
             <FullDayView onBack={handleBackFromFullDay} />
+          )}
+          {activeTab === "trainsFullDay" && (
+            <TrainsFullDayView onBack={handleBackFromTrainsFullDay} />
           )}
         </div>
       </main>

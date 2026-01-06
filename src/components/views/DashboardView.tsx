@@ -31,6 +31,7 @@ interface DashboardViewProps {
   onViewAllFlights?: () => void;
   onViewAllEvents?: () => void;
   onViewFullDay?: () => void;
+  onViewTrainsFullDay?: () => void;
 }
 
 // Función para parsear hora "HH:MM" a minutos del día
@@ -91,7 +92,7 @@ const getEsperaReten = (terminalId: string, currentHour: number): number => {
   return isPeakHour ? base + 12 : base;
 };
 
-export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents, onViewFullDay }: DashboardViewProps) {
+export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEvents, onViewFullDay, onViewTrainsFullDay }: DashboardViewProps) {
   const [vuelos, setVuelos] = useState<VueloRaw[]>([]);
   const [extras, setExtras] = useState<ExtrasData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -279,7 +280,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       </div>
 
       {/* Trenes - Ancho completo */}
-      <TrainsWidget />
+      <TrainsWidget onViewFullDay={onViewTrainsFullDay} />
 
       {/* Eventos */}
       <EventsWidget onViewAllClick={onViewAllEvents} compact />
