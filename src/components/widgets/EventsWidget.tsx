@@ -1,51 +1,21 @@
-import { Calendar, MapPin, Users, ChevronRight } from "lucide-react";
+import { Calendar, MapPin, Users, ChevronRight, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-
-interface Event {
-  id: string;
-  title: string;
-  location: string;
-  date: string;
-  time: string;
-  attendees: number;
-  type: "Deportes" | "Música" | "Tecnología" | "Cultura";
-}
-
-const upcomingEvents: Event[] = [
-  {
-    id: "3",
-    title: "Mobile World Congress",
-    location: "Fira Gran Via",
-    date: "lunes, 26 de febrero",
-    time: "09:00h",
-    attendees: 100000,
-    type: "Tecnología",
-  },
-  {
-    id: "1",
-    title: "FC Barcelona vs Real Madrid",
-    location: "Camp Nou",
-    date: "viernes, 15 de marzo",
-    time: "21:00h",
-    attendees: 98000,
-    type: "Deportes",
-  },
-  {
-    id: "2",
-    title: "Primavera Sound 2024",
-    location: "Parc del Fòrum",
-    date: "sábado, 1 de junio",
-    time: "16:00h",
-    attendees: 65000,
-    type: "Música",
-  },
-];
+import { useEvents, FormattedEvent } from "@/hooks/useEvents";
 
 const typeColors: Record<string, string> = {
-  Deportes: "bg-success/20 text-success border border-success/30",
-  Música: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
-  Tecnología: "bg-info/20 text-info border border-info/30",
-  Cultura: "bg-primary/20 text-primary border border-primary/30",
+  Congress: "bg-info/20 text-info border border-info/30",
+  Music: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
+  Sports: "bg-success/20 text-success border border-success/30",
+  Culture: "bg-primary/20 text-primary border border-primary/30",
+  Other: "bg-muted text-muted-foreground border border-border",
+};
+
+const typeLabels: Record<string, string> = {
+  Congress: "Congreso",
+  Music: "Música",
+  Sports: "Deportes",
+  Culture: "Cultura",
+  Other: "Otro",
 };
 
 interface EventsWidgetProps {
@@ -56,7 +26,22 @@ interface EventsWidgetProps {
 }
 
 export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, compact = false }: EventsWidgetProps) {
-  const displayEvents = expanded ? upcomingEvents : upcomingEvents.slice(0, compact ? 2 : limit);
+  const { events, loading } = useEvents();
+  
+  const displayEvents = expanded ? events : events.slice(0, compact ? 2 : limit);
+
+  if (loading) {
+    return (
+      <div className="card-dashboard p-4 animate-pulse">
+        <div className="h-6 w-32 bg-muted rounded mb-4" />
+        <div className="space-y-3">
+          {[1, 2, 3].map(i => (
+            <div key={i} className="h-16 bg-muted rounded-xl" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   // Modo compacto para el dashboard
   if (compact) {
@@ -83,11 +68,12 @@ export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, comp
           {displayEvents.map((event) => (
             <div 
               key={event.id}
-              className="flex items-center justify-between p-1.5 rounded-lg bg-muted/30 text-xs"
+              className="flex items-center justify-between p-1.5 rounded-lg bg-muted/30 text-xs cursor-pointer hover:bg-muted/50 transition-colors"
+              onClick={() => window.open(event.url_ticket, "_blank")}
             >
               <div className="flex items-center gap-2 flex-1 min-w-0">
                 <Badge className={`${typeColors[event.type]} text-[9px] px-1 py-0`}>
-                  {event.type.slice(0, 3)}
+                  {typeLabels[event.type]?.slice(0, 3) || "Otr"}
                 </Badge>
                 <span className="truncate text-foreground text-[10px]">{event.title}</span>
               </div>
@@ -114,7 +100,7 @@ export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, comp
           </div>
           <div>
             <h3 className="font-display font-semibold text-foreground text-sm md:text-base">Eventos Barcelona</h3>
-            <p className="text-xs md:text-sm text-muted-foreground">Próximos eventos</p>
+            <p className="text-xs md:text-sm text-muted-foreground">Próximos eventos ({events.length} totales)</p>
           </div>
         </div>
         {!expanded && (
@@ -132,16 +118,18 @@ export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, comp
         {displayEvents.map((event) => (
           <div 
             key={event.id}
-            className="flex items-start justify-between p-3 md:p-4 rounded-xl border border-border hover:border-primary/30 transition-colors"
+            className="flex items-start justify-between p-3 md:p-4 rounded-xl border border-border hover:border-primary/30 transition-colors cursor-pointer group"
+            onClick={() => window.open(event.url_ticket, "_blank")}
           >
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1 md:mb-2">
                 <Badge className={`${typeColors[event.type]} text-xs`}>
-                  {event.type}
+                  {typeLabels[event.type] || event.categoria}
                 </Badge>
+                <ExternalLink className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               
-              <h4 className="font-medium text-foreground text-sm md:text-base mb-1 md:mb-2 truncate">{event.title}</h4>
+              <h4 className="font-medium text-foreground text-sm md:text-base mb-1 md:mb-2 line-clamp-2">{event.title}</h4>
               
               <div className="flex flex-wrap items-center gap-2 md:gap-4 text-xs md:text-sm text-muted-foreground">
                 <span className="flex items-center gap-1">
@@ -150,7 +138,7 @@ export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, comp
                 </span>
                 <span className="flex items-center gap-1">
                   <Calendar className="h-3 w-3 md:h-3.5 md:w-3.5 flex-shrink-0" />
-                  {event.date}
+                  {event.date} · {event.time}
                 </span>
               </div>
             </div>

@@ -1,108 +1,95 @@
-import { useState } from "react";
-import { Calendar as CalendarIcon, MapPin, Users, Clock, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useMemo } from "react";
+import { Calendar as CalendarIcon, MapPin, Users, Clock, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar } from "@/components/ui/calendar";
-
-interface CalendarEvent {
-  id: string;
-  title: string;
-  location: string;
-  date: string;
-  dateObj: Date;
-  time: string;
-  attendees: number;
-  type: "Deportes" | "Música" | "Tecnología" | "Cultura";
-}
-
-const events: CalendarEvent[] = [
-  {
-    id: "1",
-    title: "FC Barcelona vs Real Madrid",
-    location: "Camp Nou",
-    date: "viernes, 15 de marzo",
-    dateObj: new Date(2026, 2, 15),
-    time: "21:00h",
-    attendees: 98000,
-    type: "Deportes",
-  },
-  {
-    id: "2",
-    title: "Primavera Sound 2024",
-    location: "Parc del Fòrum",
-    date: "sábado, 1 de junio",
-    dateObj: new Date(2026, 5, 1),
-    time: "16:00h",
-    attendees: 65000,
-    type: "Música",
-  },
-  {
-    id: "3",
-    title: "Mobile World Congress",
-    location: "Fira Gran Via",
-    date: "lunes, 26 de febrero",
-    dateObj: new Date(2026, 1, 26),
-    time: "09:00h",
-    attendees: 100000,
-    type: "Tecnología",
-  },
-  {
-    id: "4",
-    title: "Concierto Coldplay",
-    location: "Estadi Olímpic",
-    date: "lunes, 20 de mayo",
-    dateObj: new Date(2026, 4, 20),
-    time: "20:30h",
-    attendees: 55000,
-    type: "Música",
-  },
-  {
-    id: "5",
-    title: "Feria de Abril",
-    location: "Fòrum",
-    date: "jueves, 18 de abril",
-    dateObj: new Date(2026, 3, 18),
-    time: "12:00h",
-    attendees: 30000,
-    type: "Cultura",
-  },
-  {
-    id: "6",
-    title: "Zurich Marató Barcelona",
-    location: "Centro Ciudad",
-    date: "domingo, 10 de marzo",
-    dateObj: new Date(2026, 2, 10),
-    time: "08:30h",
-    attendees: 20000,
-    type: "Deportes",
-  },
-];
+import { useEvents } from "@/hooks/useEvents";
 
 const typeColors: Record<string, string> = {
-  Deportes: "bg-success/20 text-success border border-success/30",
-  Música: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
-  Tecnología: "bg-info/20 text-info border border-info/30",
-  Cultura: "bg-primary/20 text-primary border border-primary/30",
+  Congress: "bg-info/20 text-info border border-info/30",
+  Music: "bg-purple-500/20 text-purple-400 border border-purple-500/30",
+  Sports: "bg-success/20 text-success border border-success/30",
+  Culture: "bg-primary/20 text-primary border border-primary/30",
+  Other: "bg-muted text-muted-foreground border border-border",
+};
+
+const typeLabels: Record<string, string> = {
+  Congress: "Congreso",
+  Music: "Música",
+  Sports: "Deportes",
+  Culture: "Cultura",
+  Other: "Otro",
 };
 
 export function EventsView() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
+  const { events, loading } = useEvents();
 
-  // Get event dates for calendar highlighting
-  const eventDates = events.map(e => e.dateObj);
+  // Parse dates from event.date string for calendar highlighting
+  const eventDatesMap = useMemo(() => {
+    const map = new Map<string, typeof events>();
+    events.forEach(event => {
+      // Extract date from formatted string - we need to get the original date
+      // We'll use a simple approach: parse the formatted date
+      const dateMatch = event.date.match(/(\d+) de (\w+)/);
+      if (dateMatch) {
+        const monthNames: Record<string, number> = {
+          enero: 0, febrero: 1, marzo: 2, abril: 3, mayo: 4, junio: 5,
+          julio: 6, agosto: 7, septiembre: 8, octubre: 9, noviembre: 10, diciembre: 11
+        };
+        const day = parseInt(dateMatch[1]);
+        const month = monthNames[dateMatch[2].toLowerCase()];
+        const year = new Date().getFullYear();
+        const dateKey = new Date(year >= 2026 ? year : 2026, month, day).toDateString();
+        
+        if (!map.has(dateKey)) {
+          map.set(dateKey, []);
+        }
+        map.get(dateKey)?.push(event);
+      }
+    });
+    return map;
+  }, [events]);
+
+  const eventDates = useMemo(() => {
+    return Array.from(eventDatesMap.keys()).map(dateStr => new Date(dateStr));
+  }, [eventDatesMap]);
+
+  const selectedDayEvents = useMemo(() => {
+    if (!selectedDate) return [];
+    return eventDatesMap.get(selectedDate.toDateString()) || [];
+  }, [selectedDate, eventDatesMap]);
+
+  if (loading) {
+    return (
+      <div className="space-y-6 animate-pulse">
+        <div className="h-8 w-48 bg-muted rounded" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[1, 2, 3, 4, 5, 6].map(i => (
+            <div key={i} className="h-48 bg-muted rounded-xl" />
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Featured Events Grid */}
       <div>
-        <h2 className="font-display text-xl font-semibold text-foreground mb-4">Próximos Eventos Destacados</h2>
+        <h2 className="font-display text-xl font-semibold text-foreground mb-4">
+          Próximos Eventos ({events.length} programados)
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {events.slice(0, 6).map((event) => (
-            <div key={event.id} className="card-dashboard-hover p-4 md:p-5">
+            <div 
+              key={event.id} 
+              className="card-dashboard-hover p-4 md:p-5 cursor-pointer group"
+              onClick={() => window.open(event.url_ticket, "_blank")}
+            >
               <div className="flex items-start justify-between mb-3">
                 <Badge className={typeColors[event.type]}>
-                  {event.type}
+                  {typeLabels[event.type] || event.categoria}
                 </Badge>
                 <div className="flex items-center gap-1 text-primary">
                   <Users className="h-4 w-4" />
@@ -110,12 +97,15 @@ export function EventsView() {
                 </div>
               </div>
               
-              <h3 className="font-semibold text-foreground mb-3 text-sm md:text-base">{event.title}</h3>
+              <div className="flex items-start justify-between gap-2">
+                <h3 className="font-semibold text-foreground mb-3 text-sm md:text-base line-clamp-2">{event.title}</h3>
+                <ExternalLink className="h-4 w-4 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+              </div>
               
               <div className="space-y-1.5 md:space-y-2 text-xs md:text-sm text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <MapPin className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
-                  <span>{event.location}</span>
+                  <span className="truncate">{event.location}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CalendarIcon className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
@@ -162,18 +152,21 @@ export function EventsView() {
             {selectedDate?.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })}
           </h3>
           
-          {events.filter(e => 
-            e.dateObj.toDateString() === selectedDate?.toDateString()
-          ).length > 0 ? (
+          {selectedDayEvents.length > 0 ? (
             <div className="space-y-3">
-              {events.filter(e => 
-                e.dateObj.toDateString() === selectedDate?.toDateString()
-              ).map(event => (
-                <div key={event.id} className="p-3 rounded-lg bg-accent/30 border border-border">
-                  <Badge className={cn(typeColors[event.type], "mb-2")}>
-                    {event.type}
-                  </Badge>
-                  <h4 className="font-medium text-foreground text-sm">{event.title}</h4>
+              {selectedDayEvents.map(event => (
+                <div 
+                  key={event.id} 
+                  className="p-3 rounded-lg bg-accent/30 border border-border cursor-pointer hover:border-primary/30 transition-colors"
+                  onClick={() => window.open(event.url_ticket, "_blank")}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <Badge className={cn(typeColors[event.type])}>
+                      {typeLabels[event.type] || event.categoria}
+                    </Badge>
+                    <ExternalLink className="h-3 w-3 text-muted-foreground" />
+                  </div>
+                  <h4 className="font-medium text-foreground text-sm line-clamp-2">{event.title}</h4>
                   <p className="text-xs text-muted-foreground mt-1">{event.location} - {event.time}</p>
                 </div>
               ))}
