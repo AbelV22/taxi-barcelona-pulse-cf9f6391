@@ -177,13 +177,16 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     const targetHour = (currentHour + horaOffset) % 24;
     return vuelosTerminal.filter(v => {
       const estado = v.estado?.toLowerCase() || "";
-      if (estado.includes("finalizado") || estado.includes("cancelado")) return false;
+      // Solo excluir cancelados
+      if (estado.includes("cancelado")) return false;
       const horaVuelo = parseInt(v.hora?.split(":")[0] || "0", 10);
-      // Si es día siguiente y la hora es menor, contar también
-      if (v.dia_relativo === 1 && horaOffset > 0) {
+      
+      // Para la hora actual (horaOffset = 0), mostrar todos los de esta hora
+      // Para horas futuras, verificar día relativo
+      if (v.dia_relativo === 0) {
         return horaVuelo === targetHour;
       }
-      if (v.dia_relativo === 0) {
+      if (v.dia_relativo === 1 && horaOffset > 0) {
         return horaVuelo === targetHour;
       }
       return false;
