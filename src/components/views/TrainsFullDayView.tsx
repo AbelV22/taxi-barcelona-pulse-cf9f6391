@@ -12,6 +12,7 @@ interface TrenSants {
 interface TrainsFullDayViewProps {
   onBack?: () => void;
   onCityClick?: (city: string) => void;
+  onOperatorClick?: (operator: string) => void;
 }
 
 // Extraer primera palabra del origen (ciudad)
@@ -79,7 +80,7 @@ const getTrenBgColor = (tren: string): string => {
   }
 };
 
-// Generar array de 24 horas empezando 1 hora antes de la hora actual
+// Generar array de 24 horas empezando 30 minutos antes de la hora actual
 const generateHourSlots = (startHour: number): string[] => {
   const slots: string[] = [];
   for (let i = 0; i < 24; i++) {
@@ -90,17 +91,27 @@ const generateHourSlots = (startHour: number): string[] => {
   return slots;
 };
 
-export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProps) {
+export function TrainsFullDayView({ onBack, onCityClick, onOperatorClick }: TrainsFullDayViewProps) {
   const [trenes, setTrenes] = useState<TrenSants[]>([]);
   const [loading, setLoading] = useState(true);
   const [lastUpdate, setLastUpdate] = useState<string>("");
+  const [fileUpdateTime, setFileUpdateTime] = useState<string>("");
 
   useEffect(() => {
     fetch("/trenes_sants.json?t=" + Date.now())
       .then(res => res.json())
-      .then((data: TrenSants[]) => {
+      .then((data: TrenSants[] | { trenes: TrenSants[], meta?: { update_time?: string } }) => {
+        let trenesData: TrenSants[];
+        if (Array.isArray(data)) {
+          trenesData = data;
+        } else {
+          trenesData = data.trenes || [];
+          if (data.meta?.update_time) {
+            setFileUpdateTime(data.meta.update_time);
+          }
+        }
         // Eliminar duplicados (mismo hora + tren)
-        const uniqueTrenes = data.filter((tren, index, self) =>
+        const uniqueTrenes = trenesData.filter((tren, index, self) =>
           index === self.findIndex(t => t.hora === tren.hora && t.tren === tren.tren)
         );
         setTrenes(uniqueTrenes);
@@ -146,14 +157,23 @@ export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProp
     return counts;
   }, [trenes]);
 
-  // Ordenar trenes por hora
+  // Ordenar trenes por hora y filtrar desde 30 min antes
   const trenesSorted = useMemo(() => {
-    return [...trenes].sort((a, b) => {
-      const [ha, ma] = (a.hora || "00:00").split(":").map(Number);
-      const [hb, mb] = (b.hora || "00:00").split(":").map(Number);
-      return ha * 60 + ma - (hb * 60 + mb);
-    });
-  }, [trenes]);
+    const currentMinutes = now.getHours() * 60 + now.getMinutes();
+    const startMinutes = currentMinutes - 30; // 30 min antes
+    
+    return [...trenes]
+      .sort((a, b) => {
+        const [ha, ma] = (a.hora || "00:00").split(":").map(Number);
+        const [hb, mb] = (b.hora || "00:00").split(":").map(Number);
+        return ha * 60 + ma - (hb * 60 + mb);
+      })
+      .filter(tren => {
+        const [h, m] = (tren.hora || "00:00").split(":").map(Number);
+        const trenMinutes = h * 60 + m;
+        return trenMinutes >= startMinutes;
+      });
+  }, [trenes, now]);
 
   // Max para detectar horas calientes
   const maxPerHour = Math.max(...Object.values(countByHour), 1);
@@ -196,12 +216,17 @@ export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProp
           <h1 className="font-display font-bold text-xl text-foreground">Trenes Sants</h1>
           <p className="text-[11px] text-muted-foreground">Llegadas de alta velocidad</p>
         </div>
-        {lastUpdate && (
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-muted/50 border border-border">
-            <Clock className="h-3 w-3 text-muted-foreground" />
-            <span className="text-[10px] text-muted-foreground font-medium">{lastUpdate}</span>
-          </div>
-        )}
+        <div className="flex flex-col items-end gap-0.5">
+          {fileUpdateTime && (
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30">
+              <Clock className="h-3 w-3 text-emerald-500" />
+              <span className="text-[10px] text-emerald-500 font-medium">Datos: {fileUpdateTime}</span>
+            </div>
+          )}
+          {lastUpdate && (
+            <span className="text-[9px] text-muted-foreground">Cargado: {lastUpdate}</span>
+          )}
+        </div>
       </div>
 
       {/* Fecha */}
@@ -284,10 +309,11 @@ export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProp
               {Object.entries(countByOperador)
                 .sort((a, b) => b[1] - a[1])
                 .map(([tipo, count]) => (
-                  <div 
+                  <button 
                     key={tipo}
+                    onClick={() => onOperatorClick?.(tipo)}
                     className={cn(
-                      "flex items-center justify-between px-2 py-1.5 rounded-lg",
+                      "w-full flex items-center justify-between px-2 py-1.5 rounded-lg cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-offset-background transition-all group",
                       getTrenBgColor(tipo.includes("IRYO") ? "IL - IRYO" : tipo)
                     )}
                   >
@@ -297,8 +323,11 @@ export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProp
                     )}>
                       {tipo}
                     </span>
-                    <span className="font-display font-bold text-sm text-foreground">{count}</span>
-                  </div>
+                    <div className="flex items-center gap-1">
+                      <span className="font-display font-bold text-sm text-foreground">{count}</span>
+                      <ChevronRight className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </div>
+                  </button>
                 ))}
             </div>
           </div>
@@ -398,7 +427,7 @@ export function TrainsFullDayView({ onBack, onCityClick }: TrainsFullDayViewProp
           <span className="font-medium">= Hora caliente (alta concentración)</span>
         </div>
         <p className="text-[10px] text-muted-foreground/80 mt-1.5">
-          Datos desde 1h antes para ver tendencia inmediata.
+          Mostrando trenes desde 30 min antes de la hora actual.
         </p>
       </div>
     </div>

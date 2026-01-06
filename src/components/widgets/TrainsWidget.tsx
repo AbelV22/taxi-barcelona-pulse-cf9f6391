@@ -110,7 +110,10 @@ export function TrainsWidget({ onViewFullDay }: TrainsWidgetProps) {
   }
 
   return (
-    <div className="card-dashboard p-3 space-y-2 col-span-full">
+    <div 
+      className="card-dashboard p-3 space-y-2 col-span-full cursor-pointer hover:border-emerald-500/50 transition-colors"
+      onClick={onViewFullDay}
+    >
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">

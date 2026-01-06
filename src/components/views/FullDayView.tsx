@@ -165,13 +165,14 @@ export function FullDayView({
           <h1 className="font-display font-bold text-xl text-foreground">Vista Día</h1>
           <p className="text-[11px] text-muted-foreground">Previsión de llegadas</p>
         </div>
-        {/* Última actualización */}
-        {lastUpdate && (
-          <div className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-muted/50 border border-border">
-            <Clock className="h-3 w-3 text-muted-foreground" />
-            <span className="text-[10px] text-muted-foreground font-medium">{lastUpdate}</span>
-          </div>
-        )}
+        <div className="flex flex-col items-end gap-0.5">
+          {lastUpdate && (
+            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/30">
+              <Clock className="h-3 w-3 text-primary" />
+              <span className="text-[10px] text-primary font-medium">Datos: {lastUpdate}</span>
+            </div>
+          )}
+        </div>
       </div>
 
       {/* Fecha - Diseño premium */}
