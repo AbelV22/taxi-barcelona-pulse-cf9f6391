@@ -34,16 +34,16 @@ export function TerminalCard({
         <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors flex-shrink-0" />
       </div>
       
-      {/* Stats - vuelos próxima hora en grande, amarillo */}
+      {/* Stats - vuelos esta hora en grande, amarillo */}
       <div className="mb-2">
         <div className="flex items-baseline gap-1.5">
           <Plane className="h-4 w-4 text-amber-400" />
           <span className="font-display font-bold text-2xl text-amber-400">{vuelosProximaHora}</span>
-          <span className="text-[10px] text-muted-foreground">próx. hora</span>
+          <span className="text-[10px] text-muted-foreground">esta hora</span>
         </div>
         <div className="flex items-center gap-1 mt-1 ml-5">
           <span className="font-display font-semibold text-sm text-muted-foreground">+{vuelosSiguienteHora}</span>
-          <span className="text-[10px] text-muted-foreground">sig. hora</span>
+          <span className="text-[10px] text-muted-foreground">próx. hora</span>
         </div>
       </div>
       
