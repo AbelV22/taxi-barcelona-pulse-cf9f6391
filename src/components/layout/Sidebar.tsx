@@ -55,13 +55,15 @@ export function Sidebar({ activeTab, onTabChange, isOpen, onToggle }: SidebarPro
         !isOpen && "-translate-x-full lg:translate-x-0"
       )}>
         <div className="flex h-full flex-col">
-          {/* Logo */}
+          {/* Logo con efecto glow para dark mode */}
           <div className="flex items-center justify-center px-4 py-5 border-b border-sidebar-border">
-            <img 
-              src={logoItaxiBcn} 
-              alt="iTaxiBcn" 
-              className="h-12 w-auto object-contain drop-shadow-lg"
-            />
+            <div className="relative">
+              <img 
+                src={logoItaxiBcn} 
+                alt="iTaxiBcn" 
+                className="h-14 w-auto object-contain drop-shadow-[0_0_12px_rgba(250,204,21,0.6)]"
+              />
+            </div>
           </div>
 
           {/* Navigation */}

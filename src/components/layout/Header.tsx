@@ -22,12 +22,14 @@ export function Header({ title, onMenuToggle }: HeaderProps) {
         {/* Mobile menu spacer */}
         <div className="w-10 lg:hidden" />
         
-        {/* Logo - Visible solo en móvil y tablet */}
-        <img 
-          src={logoItaxiBcn} 
-          alt="iTaxiBcn" 
-          className="h-8 w-auto object-contain lg:hidden"
-        />
+        {/* Logo - Visible solo en móvil y tablet con efecto glow */}
+        <div className="lg:hidden relative">
+          <img 
+            src={logoItaxiBcn} 
+            alt="iTaxiBcn" 
+            className="h-10 w-auto object-contain drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]"
+          />
+        </div>
         
         <div className="hidden sm:block">
           <h1 className="font-display text-lg md:text-2xl font-bold text-foreground">{title}</h1>
