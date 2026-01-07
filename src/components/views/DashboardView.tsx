@@ -219,7 +219,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     <div className="space-y-3 pb-16">
 
       {/* === ACTION BUTTONS - GRADIENT PREMIUM === */}
-      <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '0ms' }}>
+      <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '100ms' }}>
         <button className="btn-gradient-emerald flex items-center justify-center gap-2 h-14 rounded-xl text-white font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] hover:shadow-lg hover:shadow-emerald-500/20">
           <MapPin className="h-5 w-5" />
           <span className="text-sm">Entro al retén</span>
@@ -251,7 +251,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       </div>
 
       {/* === AEROPUERTO SECTION - GLASSMORPHISM === */}
-      <section className="space-y-2 animate-fade-in" style={{ animationDelay: '100ms', animationFillMode: 'backwards' }}>
+      <section className="space-y-2 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
         {/* Section Header - Clickable */}
         <button 
           onClick={onViewFullDay}
@@ -315,7 +315,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       </section>
 
       {/* === TRENES SANTS - GLASSMORPHISM DEPARTURE BOARD === */}
-      <section className="space-y-2 animate-fade-in" style={{ animationDelay: '400ms', animationFillMode: 'backwards' }}>
+      <section className="space-y-2 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'backwards' }}>
         {/* Section Header - Clickable */}
         <button 
           onClick={onViewTrainsFullDay}
@@ -379,7 +379,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       </section>
 
       {/* === LIVE DATA WIDGETS - GLASS === */}
-      <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
+      <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '600ms', animationFillMode: 'backwards' }}>
         {/* Eventos Widget */}
         <button
           onClick={onViewAllEvents}
