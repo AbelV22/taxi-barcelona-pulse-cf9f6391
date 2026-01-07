@@ -13,19 +13,25 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # --- CONFIGURACIÓN ---
 URL_ADIF = "https://www.adif.es/w/71801-barcelona-sants?pageFromPlid=335"
-# Guardamos en 'public' para que sea accesible desde tu web
 OUTPUT_FILE = os.path.join(os.getcwd(), "public", "trenes_sants.json")
 
 def click_js(driver, elemento):
     driver.execute_script("arguments[0].click();", elemento)
 
+def limpiar_hora(texto_hora):
+    """Si hay salto de línea (12:00\n12:10), nos quedamos con la última."""
+    if not texto_hora: return ""
+    partes = texto_hora.split('\n')
+    return partes[-1].strip()
+
 def limpiar_nombre_tren(texto_sucio):
     # Convierte "RF - AVE 03662" en "AVE 03662"
-    limpio = re.sub(r'^(RF|RI|MD|R\d+)\s*-\s*', '', texto_sucio)
+    texto = texto_sucio.replace('\n', ' ')
+    limpio = re.sub(r'^(RF|RI|MD|R\d+|IL)\s*-\s*', '', texto)
     return limpio.strip()
 
 def obtener_trenes():
-    print("🚀 Iniciando Scraper de Trenes Sants (Larga Distancia)...")
+    print("🚀 Iniciando Scraper de Trenes Sants (Modo GitHub Actions)...")
     
     options = Options()
     options.add_argument('--headless')
@@ -34,76 +40,105 @@ def obtener_trenes():
     options.add_argument('--window-size=1920,1080')
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")
     
-    # En GitHub Actions, Chrome ya suele estar instalado, webdriver_manager lo localiza
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     datos = []
 
     try:
         driver.get(URL_ADIF)
-        wait = WebDriverWait(driver, 15)
+        wait = WebDriverWait(driver, 20) # Aumentado tiempo de espera inicial
         
-        # 1. MATAR COOKIES
+        # 1. MATAR COOKIES (Crítico para que no tapen el botón de cargar)
         try: driver.execute_script("var b=document.querySelector('#onetrust-banner-sdk'); if(b) b.remove();")
         except: pass
 
-        # 2. NAVEGACIÓN (Llegadas -> Filtro -> Consultar)
+        # 2. NAVEGACIÓN
         print("👆 Configurando filtros...")
-        click_js(driver, wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[href='#tab-llegadas']"))))
-        time.sleep(1)
+        # Espera explicita a la pestaña
+        tab_llegadas = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "a[href='#tab-llegadas']")))
+        click_js(driver, tab_llegadas)
+        time.sleep(2)
 
+        # Seleccionar Radio Button (Larga Distancia)
         radios = driver.find_elements(By.CSS_SELECTOR, "input[type='radio']")
-        if len(radios) > 1: click_js(driver, radios[1]) # Selecciona AV/Larga Distancia
+        if len(radios) > 1: click_js(driver, radios[1])
         
+        # Botón Consultar
         btn_consultar = driver.find_element(By.CSS_SELECTOR, "input[value='Consultar']")
         click_js(driver, btn_consultar)
-        print("⏳ Esperando datos iniciales...")
-        time.sleep(5)
+        print("⏳ Consulta enviada. Esperando tabla...")
+        time.sleep(6) # Damos tiempo a la carga inicial
 
-        # 3. BUCLE "PAC-MAN" (Cargar más resultados)
+        # 3. BUCLE "PAC-MAN" MEJORADO
+        print("🔄 Buscando trenes ocultos (Scroll infinito)...")
+        intentos_fallidos = 0
+        
         while True:
             try:
+                # Scroll al fondo de la página
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(1)
-                # Buscamos el input específico de cargar más
-                boton_carga = driver.find_elements(By.CSS_SELECTOR, "#tabla-horas-trenes-llegadas-load-more input")
+                time.sleep(1.5)
+
+                # Buscamos el botón específico
+                botones_carga = driver.find_elements(By.CSS_SELECTOR, "#tabla-horas-trenes-llegadas-load-more input")
                 
-                if boton_carga and boton_carga[0].is_displayed():
-                    print("⬇️ Botón 'Cargar más' detectado. Pulsando...")
-                    click_js(driver, boton_carga[0])
-                    time.sleep(4)
+                if botones_carga:
+                    boton = botones_carga[0]
+                    # Truco: Scroll específico al elemento para asegurar que es "clickable"
+                    driver.execute_script("arguments[0].scrollIntoView(true);", boton)
+                    time.sleep(0.5)
+                    
+                    if boton.is_displayed():
+                        print("   ⬇️ Clic en 'Cargar más'...")
+                        click_js(driver, boton)
+                        time.sleep(3.5) # Espera para que carguen filas
+                        intentos_fallidos = 0 # Reiniciar contador
+                    else:
+                        print("   ⚠️ Botón detectado pero no visible. Reintentando scroll...")
+                        intentos_fallidos += 1
                 else:
-                    print("✅ Fin de la lista (no hay más botones).")
+                    print("   ✅ No hay más botones de carga.")
                     break
+                
+                # Seguridad para no buclear infinito si se atasca
+                if intentos_fallidos > 3:
+                    print("   ⚠️ Demasiados intentos fallidos. Saliendo del bucle.")
+                    break
+
             except Exception as e:
+                print(f"   ⚠️ Error en bucle de carga: {e}")
                 break
 
-        # 4. EXTRACCIÓN
-        print("👀 Procesando tabla...")
+        # 4. EXTRACCIÓN Y LIMPIEZA
+        print("👀 Procesando filas extraídas...")
         filas = driver.find_elements(By.CSS_SELECTOR, "#horas-trenes-estacion-llegadas tbody tr")
+        print(f"📊 Filas encontradas en HTML: {len(filas)}")
         
-        whitelist = ["AVE", "AVLO", "OUIGO", "IRYO", "ALVIA", "EUROMED", "INTERCITY", "TGV", "LD"]
+        whitelist = ["AVE", "AVLO", "OUIGO", "IRYO", "ALVIA", "EUROMED", "INTERCITY", "TGV", "LD", "MD", "AVANT"]
 
         for fila in filas:
             try:
                 celdas = fila.find_elements(By.TAG_NAME, "td")
                 if len(celdas) < 3: continue
 
-                hora = celdas[0].text.strip()
+                hora_raw = celdas[0].text.strip()
                 origen = celdas[1].text.strip()
-                tipo_sucio = celdas[2].text.strip().upper()
+                tipo_raw = celdas[2].text.strip().upper()
                 via = celdas[3].text.strip() if len(celdas) > 3 else "-"
                 
-                if not re.match(r"\d{2}:\d{2}", hora): continue
+                # Limpieza
+                hora_real = limpiar_hora(hora_raw)
+                tipo_limpio = limpiar_nombre_tren(tipo_raw)
 
-                tipo_limpio = limpiar_nombre_tren(tipo_sucio)
-
-                # FILTRO DE SEGURIDAD (Solo Larga Distancia)
+                # Validaciones
+                if not re.match(r"\d{2}:\d{2}", hora_real): continue
+                
+                # Filtros
                 es_valido = any(marca in tipo_limpio for marca in whitelist)
-                if "RODALIES" in tipo_sucio or "CERCANIAS" in tipo_sucio: es_valido = False
+                if "RODALIES" in tipo_raw or "CERCANIAS" in tipo_raw: es_valido = False
 
                 if es_valido:
                     datos.append({
-                        "hora": hora,
+                        "hora": hora_real,
                         "origen": origen,
                         "tren": tipo_limpio,
                         "via": via
@@ -111,20 +146,27 @@ def obtener_trenes():
             except: continue
 
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"❌ Error crítico: {e}")
+        # Opcional: Imprimir el HTML si falla para debuggear en los logs de GitHub
+        # print(driver.page_source[:1000]) 
     finally:
         driver.quit()
 
     # 5. GUARDADO
-    datos.sort(key=lambda x: x['hora'])
-    
-    # Aseguramos que existe la carpeta public
-    os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
-    
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(datos, f, ensure_ascii=False, indent=4)
-    
-    print(f"💾 ¡ÉXITO! {len(datos)} trenes guardados en: {OUTPUT_FILE}")
+    if datos:
+        datos.sort(key=lambda x: x['hora'])
+        
+        # Crear directorio si no existe
+        os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
+        
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(datos, f, ensure_ascii=False, indent=4)
+        
+        print(f"💾 ¡ÉXITO! {len(datos)} trenes guardados en: {OUTPUT_FILE}")
+        # Imprimir muestra para verificar en los logs de la Action
+        print(f"   Último tren: {datos[-1]['hora']} - {datos[-1]['tren']}")
+    else:
+        print("⚠️ No se han extraído datos válidos.")
 
 if __name__ == "__main__":
     obtener_trenes()
