@@ -64,22 +64,35 @@ export function EventsWidget({ expanded = false, limit = 3, onViewAllClick, comp
             Ver →
           </button>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1.5">
           {displayEvents.map((event) => (
             <div 
               key={event.id}
-              className="flex items-center justify-between p-1.5 rounded-lg bg-muted/30 text-xs cursor-pointer hover:bg-muted/50 transition-colors"
+              className="p-2 rounded-lg bg-muted/30 text-xs cursor-pointer hover:bg-muted/50 transition-colors"
               onClick={() => window.open(event.url_ticket, "_blank")}
             >
-              <div className="flex items-center gap-2 flex-1 min-w-0">
-                <Badge className={`${typeColors[event.type]} text-[9px] px-1 py-0`}>
-                  {typeLabels[event.type]?.slice(0, 3) || "Otr"}
-                </Badge>
-                <span className="truncate text-foreground text-[10px]">{event.title}</span>
+              <div className="flex items-center justify-between gap-1 mb-1">
+                <div className="flex items-center gap-1.5 flex-1 min-w-0">
+                  <Badge className={`${typeColors[event.type]} text-[8px] px-1 py-0 shrink-0`}>
+                    {typeLabels[event.type]?.slice(0, 3) || "Otr"}
+                  </Badge>
+                  <span className="truncate text-foreground text-[10px] font-medium">{event.title}</span>
+                </div>
+                <div className="flex items-center gap-0.5 text-purple-400 shrink-0">
+                  <Users className="h-2.5 w-2.5" />
+                  <span className="font-medium text-[9px]">{(event.attendees / 1000).toFixed(0)}k</span>
+                </div>
               </div>
-              <div className="flex items-center gap-1 text-purple-400 ml-1">
-                <Users className="h-3 w-3" />
-                <span className="font-medium text-[10px]">{(event.attendees / 1000).toFixed(0)}k</span>
+              <div className="flex items-center gap-2 text-[9px] text-muted-foreground">
+                <span className="flex items-center gap-0.5">
+                  <Calendar className="h-2.5 w-2.5" />
+                  {event.date.split(',')[0]}
+                </span>
+                <span>🕐 {event.time}-{event.endTime}</span>
+                <span className="flex items-center gap-0.5 truncate">
+                  <MapPin className="h-2.5 w-2.5 shrink-0" />
+                  <span className="truncate">{event.location}</span>
+                </span>
               </div>
             </div>
           ))}
