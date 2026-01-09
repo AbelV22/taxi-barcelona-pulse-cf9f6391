@@ -1,6 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
-import { ArrowLeft, Plane, RefreshCw, Flame, Clock } from "lucide-react";
+import { ArrowLeft, Plane, RefreshCw, Flame, Clock, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface VueloRaw {
   hora: string;
@@ -13,18 +19,24 @@ interface VueloRaw {
   dia_relativo: number;
 }
 
-interface VuelosJsonMeta {
-  vuelos: VueloRaw[];
-  meta?: {
-    update_time?: string;
-  };
-}
-
 interface FullDayViewProps {
   onBack?: () => void;
 }
 
-// Determinar tipo de terminal
+// Lista de orígenes de larga distancia (high ticket)
+const LONG_HAUL_ORIGINS = [
+  "NEW YORK", "LOS ANGELES", "MIAMI", "CHICAGO", "WASHINGTON", "BOSTON", "SAN FRANCISCO",
+  "TORONTO", "MONTREAL", "MEXICO", "BOGOTA", "BUENOS AIRES", "SAO PAULO", "LIMA", "SANTIAGO",
+  "DOHA", "DUBAI", "ABU DHABI", "TOKYO", "SEOUL", "BEIJING", "SHANGHAI", "SINGAPORE", "HONG KONG",
+  "BANGKOK", "DELHI", "MUMBAI", "JOHANNESBURG", "CAPE TOWN", "SYDNEY", "MELBOURNE",
+  "TEL AVIV", "CAIRO", "EL CAIRO", "LAX", "JFK", "ORD", "DFW", "DOH", "DXB"
+];
+
+const isLongHaul = (origen: string): boolean => {
+  const origenUpper = origen?.toUpperCase() || "";
+  return LONG_HAUL_ORIGINS.some(lh => origenUpper.includes(lh));
+};
+
 const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   const terminal = vuelo.terminal?.toUpperCase() || "";
   const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
@@ -37,7 +49,6 @@ const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   return "t2";
 };
 
-// Generar array de 24 horas empezando 1 hora antes de la hora actual
 const generateHourSlots = (startHour: number): string[] => {
   const slots: string[] = [];
   for (let i = 0; i < 24; i++) {
@@ -47,9 +58,8 @@ const generateHourSlots = (startHour: number): string[] => {
   }
   return slots;
 };
-export function FullDayView({
-  onBack
-}: FullDayViewProps) {
+
+export function FullDayView({ onBack }: FullDayViewProps) {
   const [vuelos, setVuelos] = useState<VueloRaw[]>([]);
   const [loading, setLoading] = useState(true);
   const [lastUpdate, setLastUpdate] = useState<string>("");
@@ -70,24 +80,20 @@ export function FullDayView({
       })
       .catch(() => setLoading(false));
   }, []);
+
   const now = new Date();
   const currentHour = now.getHours();
-  const startHour = (currentHour - 1 + 24) % 24; // Una hora antes
+  const startHour = (currentHour - 1 + 24) % 24;
 
-  // Generar slots de hora
   const hourSlots = useMemo(() => generateHourSlots(startHour), [startHour]);
 
-  // Filtrar vuelos activos (no cancelados)
-  const vuelosActivos = useMemo(() => vuelos.filter(v => !v.estado?.toLowerCase().includes("cancelado")), [vuelos]);
+  const vuelosActivos = useMemo(() => 
+    vuelos.filter(v => !v.estado?.toLowerCase().includes("cancelado")), 
+    [vuelos]
+  );
 
-  // Agrupar por terminal
   const vuelosPorTerminal = useMemo(() => {
-    const data: Record<string, VueloRaw[]> = {
-      t1: [],
-      t2: [],
-      t2c: [],
-      puente: []
-    };
+    const data: Record<string, VueloRaw[]> = { t1: [], t2: [], t2c: [], puente: [] };
     vuelosActivos.forEach(v => {
       const type = getTerminalType(v);
       data[type].push(v);
@@ -95,14 +101,28 @@ export function FullDayView({
     return data;
   }, [vuelosActivos]);
 
-  // Contar vuelos por hora y terminal
+  // Agrupar vuelos por hora para T1 y T2
+  const vuelosPorHora = useMemo(() => {
+    const groups: Record<number, { t1: VueloRaw[]; t2: VueloRaw[] }> = {};
+    for (let h = 0; h < 24; h++) {
+      groups[h] = { t1: [], t2: [] };
+    }
+    
+    vuelosPorTerminal.t1.forEach(v => {
+      const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
+      groups[hour].t1.push(v);
+    });
+    
+    vuelosPorTerminal.t2.forEach(v => {
+      const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
+      groups[hour].t2.push(v);
+    });
+    
+    return groups;
+  }, [vuelosPorTerminal]);
+
   const countByHourAndTerminal = useMemo(() => {
-    const counts: Record<string, Record<number, number>> = {
-      t1: {},
-      t2: {},
-      t2c: {},
-      puente: {}
-    };
+    const counts: Record<string, Record<number, number>> = { t1: {}, t2: {}, t2c: {}, puente: {} };
     Object.entries(vuelosPorTerminal).forEach(([terminal, vuelos]) => {
       vuelos.forEach(v => {
         const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
@@ -112,11 +132,9 @@ export function FullDayView({
     return counts;
   }, [vuelosPorTerminal]);
 
-  // Obtener vuelos específicos de Puente Aéreo y T2C con hora exacta
-  // Empezar desde 30 minutos antes de la hora actual
   const getVuelosHoraExacta = (terminal: 't2c' | 'puente'): VueloRaw[] => {
     const nowMinutes = currentHour * 60 + now.getMinutes();
-    const startMinutes = nowMinutes - 30; // 30 minutos antes
+    const startMinutes = nowMinutes - 30;
     
     return vuelosPorTerminal[terminal]
       .filter(v => {
@@ -132,27 +150,20 @@ export function FullDayView({
       });
   };
 
-  // Calcular máximos para resaltar horas calientes
   const maxT1 = Math.max(...Object.values(countByHourAndTerminal.t1), 1);
   const maxT2 = Math.max(...Object.values(countByHourAndTerminal.t2), 1);
 
-  // Totales
   const totalT1 = vuelosPorTerminal.t1.length;
   const totalT2 = vuelosPorTerminal.t2.length;
   const totalPuente = vuelosPorTerminal.puente.length;
   const totalT2C = vuelosPorTerminal.t2c.length;
 
-  // Fecha formateada
-  const fechaFormateada = now.toLocaleDateString('es-ES', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  });
-  const diaSemana = now.toLocaleDateString('es-ES', {
-    weekday: 'long'
-  }).toUpperCase();
+  const fechaFormateada = now.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const diaSemana = now.toLocaleDateString('es-ES', { weekday: 'long' }).toUpperCase();
+  
   const puenteVuelos = getVuelosHoraExacta('puente');
   const t2cVuelos = getVuelosHoraExacta('t2c');
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] space-y-4">
@@ -164,7 +175,7 @@ export function FullDayView({
 
   return (
     <div className="animate-fade-in pb-20">
-      {/* Header - Optimizado móvil */}
+      {/* Header */}
       <div className="flex items-center gap-3 mb-3">
         <button 
           onClick={onBack} 
@@ -174,19 +185,17 @@ export function FullDayView({
         </button>
         <div className="flex-1">
           <h1 className="font-display font-bold text-xl text-foreground">Vista Día</h1>
-          <p className="text-[11px] text-muted-foreground">Previsión de llegadas</p>
+          <p className="text-[11px] text-muted-foreground">Toca una franja horaria para ver detalles</p>
         </div>
-        <div className="flex flex-col items-end gap-0.5">
-          {lastUpdate && (
-            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/30">
-              <Clock className="h-3 w-3 text-primary" />
-              <span className="text-[10px] text-primary font-medium">Datos: {lastUpdate}</span>
-            </div>
-          )}
-        </div>
+        {lastUpdate && (
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-primary/10 border border-primary/30">
+            <Clock className="h-3 w-3 text-primary" />
+            <span className="text-[10px] text-primary font-medium">{lastUpdate}</span>
+          </div>
+        )}
       </div>
 
-      {/* Fecha - Diseño premium */}
+      {/* Fecha */}
       <div className="flex gap-2 mb-3">
         <div className="flex-1 bg-card rounded-xl py-2.5 px-4 text-center border border-border shadow-sm">
           <span className="font-display font-bold text-foreground text-sm">{fechaFormateada}</span>
@@ -196,11 +205,11 @@ export function FullDayView({
         </div>
       </div>
 
-      {/* Tabla principal - Grid responsive */}
+      {/* Tabla con Acordeón - T1 y T2 */}
       <div className="grid grid-cols-2 gap-2">
-        {/* Columna izquierda: T1 y T2 por hora */}
+        {/* Columna izquierda: T1 y T2 con acordeón */}
         <div className="overflow-hidden rounded-xl border border-border bg-card shadow-lg shadow-black/10">
-          {/* Header de la tabla */}
+          {/* Header */}
           <div className="grid grid-cols-3 bg-muted border-b border-border">
             <div className="py-2.5 px-1 text-center border-r border-border">
               <span className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-wide">Hora</span>
@@ -213,66 +222,138 @@ export function FullDayView({
             </div>
           </div>
 
-          {/* Filas de datos - Custom scrollbar */}
+          {/* Filas con Acordeón */}
           <div className="max-h-[55vh] overflow-y-auto scrollbar-dark">
-            {hourSlots.map((slot, idx) => {
-              const hour = (startHour + idx) % 24;
-              const countT1 = countByHourAndTerminal.t1[hour] || 0;
-              const countT2 = countByHourAndTerminal.t2[hour] || 0;
-
-              // Determinar si es hora caliente
-              const isHotT1 = countT1 >= maxT1 * 0.7 && countT1 > 0;
-              const isHotT2 = countT2 >= maxT2 * 0.7 && countT2 > 0;
-              const isCurrentHour = hour === currentHour;
-              
-              return (
-                <div 
-                  key={slot} 
-                  className={cn(
-                    "grid grid-cols-3 border-b border-border/40",
-                    isCurrentHour && "bg-primary/15"
-                  )}
-                >
-                  <div className={cn(
-                    "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center",
-                    isCurrentHour && "bg-primary/10"
-                  )}>
-                    <span className={cn(
-                      "text-[9px] font-mono font-medium",
-                      isCurrentHour ? "font-bold text-primary" : "text-muted-foreground"
-                    )}>
-                      {slot}
-                    </span>
-                  </div>
-                  <div className={cn(
-                    "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-0.5",
-                    isHotT1 && "bg-amber-500/15"
-                  )}>
-                    {isHotT1 && <Flame className="h-3 w-3 text-amber-500" />}
-                    <span className={cn(
-                      "font-display font-bold text-sm",
-                      isHotT1 ? "text-amber-500" : "text-foreground",
-                      countT1 === 0 && "text-muted-foreground/40"
-                    )}>
-                      {countT1.toString().padStart(2, '0')}
-                    </span>
-                  </div>
-                  <div className={cn(
-                    "py-2 px-1 text-center flex items-center justify-center gap-0.5",
-                    isHotT2 && "bg-blue-500/15"
-                  )}>
-                    {isHotT2 && <Flame className="h-3 w-3 text-blue-500" />}
-                    <span className={cn(
-                      "font-display font-bold text-sm",
-                      isHotT2 ? "text-blue-500" : "text-foreground",
-                      countT2 === 0 && "text-muted-foreground/40"
-                    )}>
-                      {countT2.toString().padStart(2, '0')}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
+            <Accordion type="single" collapsible className="w-full">
+              {hourSlots.map((slot, idx) => {
+                const hour = (startHour + idx) % 24;
+                const countT1 = countByHourAndTerminal.t1[hour] || 0;
+                const countT2 = countByHourAndTerminal.t2[hour] || 0;
+                const isHotT1 = countT1 >= maxT1 * 0.7 && countT1 > 0;
+                const isHotT2 = countT2 >= maxT2 * 0.7 && countT2 > 0;
+                const isCurrentHour = hour === currentHour;
+                const hasFlights = countT1 > 0 || countT2 > 0;
+                const flightsT1 = vuelosPorHora[hour]?.t1 || [];
+                const flightsT2 = vuelosPorHora[hour]?.t2 || [];
+                const longHaulT1 = flightsT1.filter(f => isLongHaul(f.origen)).length;
+                const longHaulT2 = flightsT2.filter(f => isLongHaul(f.origen)).length;
+                
+                return (
+                  <AccordionItem 
+                    key={slot} 
+                    value={slot} 
+                    className={cn(
+                      "border-b border-border/40",
+                      isCurrentHour && "bg-primary/15"
+                    )}
+                  >
+                    <AccordionTrigger className="py-0 px-0 hover:no-underline [&[data-state=open]>div]:bg-muted/50">
+                      <div className={cn(
+                        "grid grid-cols-3 w-full",
+                        hasFlights && "cursor-pointer"
+                      )}>
+                        <div className={cn(
+                          "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-1",
+                          isCurrentHour && "bg-primary/10"
+                        )}>
+                          <span className={cn(
+                            "text-[9px] font-mono font-medium",
+                            isCurrentHour ? "font-bold text-primary" : "text-muted-foreground"
+                          )}>
+                            {slot}
+                          </span>
+                          {hasFlights && <ChevronDown className="h-3 w-3 text-muted-foreground/50 shrink-0" />}
+                        </div>
+                        <div className={cn(
+                          "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-0.5",
+                          isHotT1 && "bg-amber-500/15"
+                        )}>
+                          {isHotT1 && <Flame className="h-3 w-3 text-amber-500" />}
+                          <span className={cn(
+                            "font-display font-bold text-sm",
+                            isHotT1 ? "text-amber-500" : "text-foreground",
+                            countT1 === 0 && "text-muted-foreground/40"
+                          )}>
+                            {countT1.toString().padStart(2, '0')}
+                          </span>
+                          {longHaulT1 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
+                        </div>
+                        <div className={cn(
+                          "py-2 px-1 text-center flex items-center justify-center gap-0.5",
+                          isHotT2 && "bg-blue-500/15"
+                        )}>
+                          {isHotT2 && <Flame className="h-3 w-3 text-blue-500" />}
+                          <span className={cn(
+                            "font-display font-bold text-sm",
+                            isHotT2 ? "text-blue-500" : "text-foreground",
+                            countT2 === 0 && "text-muted-foreground/40"
+                          )}>
+                            {countT2.toString().padStart(2, '0')}
+                          </span>
+                          {longHaulT2 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
+                        </div>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-0">
+                      {hasFlights && (
+                        <div className="bg-muted/30 border-t border-border/40">
+                          {/* T1 Flights */}
+                          {flightsT1.length > 0 && (
+                            <div className="p-2 border-b border-border/30">
+                              <span className="text-[9px] font-bold text-amber-500 uppercase mb-1 block">T1</span>
+                              <div className="space-y-1">
+                                {flightsT1.slice(0, 5).map((f, i) => {
+                                  const isHighTicket = isLongHaul(f.origen);
+                                  return (
+                                    <div key={i} className={cn(
+                                      "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
+                                      isHighTicket && "bg-yellow-500/10"
+                                    )}>
+                                      <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
+                                      <span className="text-muted-foreground truncate flex-1">{f.vuelo?.split("/")[0]}</span>
+                                      {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
+                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">{f.origen?.split("(")[0]?.trim()}</span>
+                                    </div>
+                                  );
+                                })}
+                                {flightsT1.length > 5 && (
+                                  <p className="text-[9px] text-muted-foreground text-center">+{flightsT1.length - 5} más</p>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                          {/* T2 Flights */}
+                          {flightsT2.length > 0 && (
+                            <div className="p-2">
+                              <span className="text-[9px] font-bold text-blue-500 uppercase mb-1 block">T2</span>
+                              <div className="space-y-1">
+                                {flightsT2.slice(0, 5).map((f, i) => {
+                                  const isHighTicket = isLongHaul(f.origen);
+                                  return (
+                                    <div key={i} className={cn(
+                                      "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
+                                      isHighTicket && "bg-yellow-500/10"
+                                    )}>
+                                      <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
+                                      <span className="text-muted-foreground truncate flex-1">{f.vuelo?.split("/")[0]}</span>
+                                      {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
+                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">{f.origen?.split("(")[0]?.trim()}</span>
+                                    </div>
+                                  );
+                                })}
+                                {flightsT2.length > 5 && (
+                                  <p className="text-[9px] text-muted-foreground text-center">+{flightsT2.length - 5} más</p>
+                                )}
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
 
           {/* Totales */}
@@ -289,9 +370,8 @@ export function FullDayView({
           </div>
         </div>
 
-        {/* Columna derecha: Puente Aéreo y T2C juntos verticalmente */}
+        {/* Columna derecha: Puente Aéreo y T2C */}
         <div className="rounded-xl border border-border bg-card overflow-hidden shadow-lg shadow-black/10">
-          {/* Headers lado a lado */}
           <div className="grid grid-cols-2 border-b border-border bg-muted">
             <div className="py-2.5 px-2 text-center border-r border-border">
               <span className="text-[9px] font-display font-bold text-red-500 uppercase leading-tight block">Puente</span>
@@ -303,9 +383,7 @@ export function FullDayView({
             </div>
           </div>
           
-          {/* Contenido lado a lado - Custom scrollbar */}
           <div className="grid grid-cols-2 max-h-[48vh] overflow-y-auto scrollbar-dark">
-            {/* Puente Aéreo */}
             <div className="border-r border-border">
               {puenteVuelos.length === 0 ? (
                 <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
@@ -322,7 +400,6 @@ export function FullDayView({
               )}
             </div>
             
-            {/* T2C EasyJet */}
             <div>
               {t2cVuelos.length === 0 ? (
                 <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
@@ -340,7 +417,6 @@ export function FullDayView({
             </div>
           </div>
           
-          {/* Totales */}
           <div className="grid grid-cols-2 bg-muted border-t border-border">
             <div className="py-2.5 px-2 text-center border-r border-border">
               <span className="font-display font-bold text-base text-red-500">{totalPuente}</span>
@@ -353,14 +429,15 @@ export function FullDayView({
       </div>
 
       {/* Leyenda */}
-      <div className="mt-3 p-3 rounded-xl bg-card border border-border shadow-sm">
+      <div className="mt-3 p-3 rounded-xl bg-card border border-border shadow-sm space-y-1.5">
         <div className="flex items-center gap-2 text-xs text-muted-foreground">
           <Flame className="h-4 w-4 text-amber-500" />
-          <span className="font-medium">= Hora caliente (alta concentración)</span>
+          <span className="font-medium">= Hora caliente</span>
         </div>
-        <p className="text-[10px] text-muted-foreground/80 mt-1.5">
-          Datos desde 1h antes para ver tendencia inmediata.
-        </p>
+        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+          <Globe className="h-4 w-4 text-yellow-500" />
+          <span className="font-medium">= Larga Distancia (High Ticket)</span>
+        </div>
       </div>
     </div>
   );

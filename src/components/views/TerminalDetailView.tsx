@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
-import { Plane, Clock, Users, ArrowDown, ArrowLeft, RefreshCw } from "lucide-react";
+import { useState, useEffect, useMemo } from "react";
+import { Plane, Clock, Users, ArrowLeft, RefreshCw, Flame, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell, ReferenceLine
 } from "recharts";
 
 interface TerminalDetailViewProps {
@@ -12,7 +11,6 @@ interface TerminalDetailViewProps {
   onBack: () => void;
 }
 
-// Tipos para vuelos.json
 interface VueloRaw {
   hora: string;
   vuelo: string;
@@ -24,54 +22,49 @@ interface VueloRaw {
   dia_relativo: number;
 }
 
-const terminalConfig: Record<string, { name: string; color: string }> = {
-  t1: { name: "Terminal 1", color: "#3B82F6" },
-  t2: { name: "Terminal 2", color: "#10B981" },
-  puente: { name: "Puente Aéreo", color: "#8B5CF6" },
-  t2c: { name: "T2C EasyJet", color: "#F97316" },
+const terminalConfig: Record<string, { name: string; color: string; gradient: string }> = {
+  t1: { name: "Terminal 1", color: "#FACC15", gradient: "from-yellow-500 to-amber-600" },
+  t2: { name: "Terminal 2", color: "#3B82F6", gradient: "from-blue-500 to-indigo-600" },
+  puente: { name: "Puente Aéreo", color: "#8B5CF6", gradient: "from-violet-500 to-purple-600" },
+  t2c: { name: "T2C EasyJet", color: "#F97316", gradient: "from-orange-500 to-red-600" },
 };
 
-// Función para parsear hora "HH:MM" a minutos del día
+// Lista de orígenes de larga distancia (high ticket)
+const LONG_HAUL_ORIGINS = [
+  "NEW YORK", "LOS ANGELES", "MIAMI", "CHICAGO", "WASHINGTON", "BOSTON", "SAN FRANCISCO",
+  "TORONTO", "MONTREAL", "MEXICO", "BOGOTA", "BUENOS AIRES", "SAO PAULO", "LIMA", "SANTIAGO",
+  "DOHA", "DUBAI", "ABU DHABI", "TOKYO", "SEOUL", "BEIJING", "SHANGHAI", "SINGAPORE", "HONG KONG",
+  "BANGKOK", "DELHI", "MUMBAI", "JOHANNESBURG", "CAPE TOWN", "SYDNEY", "MELBOURNE",
+  "TEL AVIV", "CAIRO", "EL CAIRO", "LAX", "JFK", "ORD", "DFW", "DOH", "DXB"
+];
+
+const isLongHaul = (origen: string): boolean => {
+  const origenUpper = origen?.toUpperCase() || "";
+  return LONG_HAUL_ORIGINS.some(lh => origenUpper.includes(lh));
+};
+
 const parseHora = (hora: string): number => {
   if (!hora) return 0;
   const [h, m] = hora.split(":").map(Number);
   return (h || 0) * 60 + (m || 0);
 };
 
-// Determinar tipo de terminal basado en los datos reales del scraper
 const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   const terminal = vuelo.terminal?.toUpperCase() || "";
   const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
   const origen = vuelo.origen?.toUpperCase() || "";
   
-  if (terminal.includes("T2C") || terminal.includes("EASYJET")) {
-    return "t2c";
-  }
-  if (codigosVuelo.includes("EJU") || codigosVuelo.includes("EZY")) {
-    return "t2c";
-  }
-  
-  if (origen.includes("MADRID") && codigosVuelo.includes("IBE")) {
-    return "puente";
-  }
-  
-  if (terminal.includes("T2A") || terminal.includes("T2B")) {
-    return "t2";
-  }
-  
-  if (terminal.includes("T1")) {
-    return "t1";
-  }
-  
+  if (terminal.includes("T2C") || terminal.includes("EASYJET")) return "t2c";
+  if (codigosVuelo.includes("EJU") || codigosVuelo.includes("EZY")) return "t2c";
+  if (origen.includes("MADRID") && codigosVuelo.includes("IBE")) return "puente";
+  if (terminal.includes("T2A") || terminal.includes("T2B")) return "t2";
+  if (terminal.includes("T1")) return "t1";
   return "t2";
 };
 
-// Tiempos de retén estimados por terminal
 const getEsperaReten = (terminalId: string, currentHour: number): number => {
   const isPeakHour = (currentHour >= 10 && currentHour <= 14) || (currentHour >= 18 && currentHour <= 21);
-  const baseWait: Record<string, number> = {
-    t1: 25, t2: 15, t2c: 12, puente: 8
-  };
+  const baseWait: Record<string, number> = { t1: 25, t2: 15, t2c: 12, puente: 8 };
   const base = baseWait[terminalId] || 20;
   return isPeakHour ? base + 12 : base;
 };
@@ -79,31 +72,105 @@ const getEsperaReten = (terminalId: string, currentHour: number): number => {
 export function TerminalDetailView({ terminalId, onBack }: TerminalDetailViewProps) {
   const [vuelos, setVuelos] = useState<VueloRaw[]>([]);
   const [loading, setLoading] = useState(true);
-  const [chartType, setChartType] = useState<"vuelos" | "pasajeros">("vuelos");
 
-  const fetchData = () => {
+  useEffect(() => {
     fetch("/vuelos.json?t=" + Date.now())
       .then((res) => res.json())
       .then((data) => {
-        console.log("📡 TerminalDetail - Vuelos cargados:", data?.length || 0);
         setVuelos(Array.isArray(data) ? data : []);
         setLoading(false);
       })
-      .catch((err) => {
-        console.error("Error cargando vuelos.json:", err);
-        setLoading(false);
-      });
-  };
-
-  useEffect(() => {
-    fetchData();
-    // Auto-refresh cada 2 horas
-    const interval = setInterval(fetchData, 2 * 60 * 60 * 1000);
-    return () => clearInterval(interval);
+      .catch(() => setLoading(false));
   }, []);
 
   const terminal = terminalConfig[terminalId];
-  const currentHour = new Date().getHours();
+  const now = new Date();
+  const currentHour = now.getHours();
+  const currentMinutes = currentHour * 60 + now.getMinutes();
+
+  // Filtrar vuelos activos de esta terminal
+  const terminalFlights = useMemo(() => {
+    return vuelos
+      .filter(v => !v.estado?.toLowerCase().includes("cancelado"))
+      .filter(v => getTerminalType(v) === terminalId)
+      .sort((a, b) => {
+        if (a.dia_relativo !== b.dia_relativo) return a.dia_relativo - b.dia_relativo;
+        return parseHora(a.hora) - parseHora(b.hora);
+      });
+  }, [vuelos, terminalId]);
+
+  // Datos para el histograma de barras por hora
+  const hourlyData = useMemo(() => {
+    const startHour = (currentHour - 1 + 24) % 24;
+    const paxPerFlight = terminalId === 'puente' ? 150 : terminalId === 't2c' ? 180 : 200;
+    const hourlyGroups: Record<number, number> = {};
+    
+    for (let i = 0; i < 12; i++) {
+      const h = (startHour + i) % 24;
+      hourlyGroups[h] = 0;
+    }
+    
+    terminalFlights.forEach(v => {
+      const hora = parseInt(v.hora?.split(":")[0] || "0", 10);
+      if (hourlyGroups[hora] !== undefined) {
+        hourlyGroups[hora] += paxPerFlight;
+      }
+    });
+    
+    const data = [];
+    let maxPax = 0;
+    let peakHour = startHour;
+    
+    for (let i = 0; i < 12; i++) {
+      const h = (startHour + i) % 24;
+      const pax = hourlyGroups[h];
+      if (pax > maxPax) {
+        maxPax = pax;
+        peakHour = h;
+      }
+      data.push({
+        hour: h,
+        label: `${h}:00`,
+        shortLabel: `${h}`,
+        pax,
+        isPeak: false,
+        isCurrent: h === currentHour
+      });
+    }
+    
+    // Marcar el pico
+    data.forEach(d => {
+      if (d.hour === peakHour && d.pax > 0) d.isPeak = true;
+    });
+    
+    return { data, maxPax, peakHour };
+  }, [terminalFlights, currentHour, terminalId]);
+
+  // Próximo pico
+  const nextPeakInfo = useMemo(() => {
+    const peak = hourlyData.data.find(d => d.isPeak && d.hour >= currentHour);
+    if (peak) {
+      const peakTime = `${peak.hour}:00`;
+      return { pax: peak.pax, time: peakTime };
+    }
+    return null;
+  }, [hourlyData, currentHour]);
+
+  // Vuelos pendientes (no finalizados)
+  const upcomingFlights = useMemo(() => {
+    return terminalFlights.filter(v => {
+      const estado = v.estado?.toLowerCase() || "";
+      if (estado.includes("finalizado")) return false;
+      const vueloMin = parseHora(v.hora);
+      return vueloMin >= currentMinutes - 30;
+    }).slice(0, 20);
+  }, [terminalFlights, currentMinutes]);
+
+  // Stats
+  const paxPerFlight = terminalId === 'puente' ? 150 : terminalId === 't2c' ? 180 : 200;
+  const totalPax = terminalFlights.length * paxPerFlight;
+  const espera = getEsperaReten(terminalId, currentHour);
+  const longHaulCount = upcomingFlights.filter(f => isLongHaul(f.origen)).length;
 
   if (loading) {
     return (
@@ -126,242 +193,214 @@ export function TerminalDetailView({ terminalId, onBack }: TerminalDetailViewPro
     );
   }
 
-  // Filtrar vuelos activos (no cancelados)
-  const vuelosActivos = vuelos.filter(v => {
-    const estado = v.estado?.toLowerCase() || "";
-    return !estado.includes("cancelado");
-  });
-
-  // Ordenar por hora
-  const vuelosSorted = [...vuelosActivos].sort((a, b) => {
-    if (a.dia_relativo !== b.dia_relativo) {
-      return a.dia_relativo - b.dia_relativo;
-    }
-    return parseHora(a.hora) - parseHora(b.hora);
-  });
-
-  // Filtrar vuelos de esta terminal
-  const terminalFlights = vuelosSorted.filter(v => getTerminalType(v) === terminalId);
-
-  // Calcular estadísticas
-  const paxPerFlight = terminalId === 'puente' ? 150 : terminalId === 't2c' ? 180 : 200;
-  const totalPax = terminalFlights.length * paxPerFlight;
-  const espera = getEsperaReten(terminalId, currentHour);
-
-  // Crear datos horarios para gráfica - empezar 1 hora antes de la actual
-  const startHour = (currentHour - 1 + 24) % 24;
-  const hourlyGroups: Record<number, { vuelos: number; pax: number }> = {};
-  
-  // Crear 24 horas empezando desde startHour
-  for (let i = 0; i < 24; i++) {
-    const h = (startHour + i) % 24;
-    hourlyGroups[h] = { vuelos: 0, pax: 0 };
-  }
-  
-  terminalFlights.forEach(v => {
-    const hora = parseInt(v.hora?.split(":")[0] || "0", 10);
-    if (hourlyGroups[hora] !== undefined) {
-      hourlyGroups[hora].vuelos += 1;
-      hourlyGroups[hora].pax += paxPerFlight;
-    }
-  });
-
-  // Ordenar datos desde startHour
-  const hourlyData = [];
-  for (let i = 0; i < 24; i++) {
-    const h = (startHour + i) % 24;
-    hourlyData.push({
-      hour: `${String(h).padStart(2, '0')}:00`,
-      vuelos: hourlyGroups[h].vuelos,
-      pasajeros: hourlyGroups[h].pax
-    });
-  }
-
-  // Vuelos no finalizados para mostrar
-  const flights = terminalFlights.filter(v => {
-    const estado = v.estado?.toLowerCase() || "";
-    return !estado.includes("finalizado");
-  }).slice(0, 15);
+  const timeFormatted = now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' });
 
   return (
-    <div className="space-y-6 animate-fade-in">
-      {/* Header */}
-      <div className="flex items-center gap-4">
-        <Button variant="ghost" size="icon" onClick={onBack} className="shrink-0">
-          <ArrowLeft className="h-5 w-5" />
-        </Button>
-        <div className="flex items-center gap-3">
-          <div 
-            className="flex h-12 w-12 items-center justify-center rounded-xl"
-            style={{ backgroundColor: `${terminal.color}20` }}
-          >
-            <Plane className="h-6 w-6" style={{ color: terminal.color }} />
-          </div>
-          <div>
-            <h1 className="font-display text-xl md:text-2xl font-bold text-foreground">{terminal.name}</h1>
-            <p className="text-sm text-muted-foreground">Llegadas próximas 24h</p>
-          </div>
+    <div className="space-y-4 animate-fade-in pb-20">
+      {/* Header Gridwise Style */}
+      <div className="flex items-center justify-between">
+        <button 
+          onClick={onBack}
+          className="flex items-center justify-center w-10 h-10 rounded-xl bg-card border border-border hover:bg-muted transition-colors"
+        >
+          <ArrowLeft className="h-5 w-5 text-foreground" />
+        </button>
+        <div className="flex items-center gap-2">
+          <Plane className="h-5 w-5" style={{ color: terminal.color }} />
+          <span className="font-display font-bold text-foreground">{terminal.name}</span>
+        </div>
+        <div className="text-right">
+          <span className="text-xs text-muted-foreground">Actualizado</span>
+          <p className="text-sm font-mono font-semibold text-foreground">{timeFormatted}</p>
         </div>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-3">
-        <div className="card-dashboard p-4 md:p-6 text-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Plane className="h-5 w-5" style={{ color: terminal.color }} />
-            <span className="text-muted-foreground text-xs">Vuelos</span>
+      {/* Next Peak Banner - Gridwise Style */}
+      {nextPeakInfo && (
+        <div className="card-glass p-4">
+          <div className="flex items-center gap-2 mb-1">
+            <span className="text-sm text-muted-foreground">Next Peak</span>
+            <Flame className="h-4 w-4 text-red-500" />
           </div>
-          <p className="text-2xl md:text-3xl font-display font-bold" style={{ color: terminal.color }}>
-            {terminalFlights.length}
-          </p>
-        </div>
-        <div className="card-dashboard p-4 md:p-6 text-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Users className="h-5 w-5 text-primary" />
-            <span className="text-muted-foreground text-xs">Pasajeros</span>
+          <div className="flex items-baseline gap-2">
+            <span className="font-display font-black text-3xl text-white">{nextPeakInfo.pax.toLocaleString()}</span>
+            <span className="text-sm text-muted-foreground">passengers</span>
           </div>
-          <p className="text-2xl md:text-3xl font-display font-bold text-primary">
-            {totalPax.toLocaleString()}
-          </p>
+          <p className="text-sm text-muted-foreground mt-0.5">arriving <span className="text-white font-semibold">{nextPeakInfo.time}</span></p>
         </div>
-        <div className="card-dashboard p-4 md:p-6 text-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <Clock className="h-5 w-5 text-amber-500" />
-            <span className="text-muted-foreground text-xs">Retén</span>
-          </div>
-          <p className="text-2xl md:text-3xl font-display font-bold text-amber-500">
-            ~{espera}'
-          </p>
-        </div>
-      </div>
+      )}
 
-      {/* Chart */}
-      <div className="card-dashboard p-4 md:p-6">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="font-display text-lg font-semibold text-foreground">
-            Evolución por Hora
-          </h3>
-          <div className="flex gap-1 bg-muted rounded-lg p-1">
-            <Button
-              variant={chartType === "vuelos" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => setChartType("vuelos")}
-              className="text-xs h-7 px-3"
-            >
-              Vuelos
-            </Button>
-            <Button
-              variant={chartType === "pasajeros" ? "secondary" : "ghost"}
-              size="sm"
-              onClick={() => setChartType("pasajeros")}
-              className="text-xs h-7 px-3"
-            >
-              Pasajeros
-            </Button>
-          </div>
-        </div>
-        <div className="h-56 md:h-64">
+      {/* Histogram Chart - Gridwise Style */}
+      <div className="card-glass p-4">
+        <div className="h-52">
           <ResponsiveContainer width="100%" height="100%">
-            <AreaChart data={hourlyData}>
+            <BarChart data={hourlyData.data} barCategoryGap="15%">
               <defs>
-                <linearGradient id={`gradient-${terminalId}`} x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor={terminal.color} stopOpacity={0.3}/>
-                  <stop offset="95%" stopColor={terminal.color} stopOpacity={0}/>
+                <linearGradient id={`barGradient-${terminalId}`} x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor={terminal.color} stopOpacity={1}/>
+                  <stop offset="100%" stopColor={terminal.color} stopOpacity={0.4}/>
+                </linearGradient>
+                <linearGradient id="peakGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="#EF4444" stopOpacity={1}/>
+                  <stop offset="100%" stopColor="#DC2626" stopOpacity={0.6}/>
                 </linearGradient>
               </defs>
               <XAxis 
-                dataKey="hour" 
+                dataKey="shortLabel" 
                 axisLine={false} 
                 tickLine={false}
                 tick={{ fontSize: 10, fill: 'hsl(220, 10%, 55%)' }}
-                interval={3}
               />
               <YAxis 
                 axisLine={false} 
                 tickLine={false}
                 tick={{ fontSize: 10, fill: 'hsl(220, 10%, 55%)' }}
-                tickFormatter={chartType === "pasajeros" ? (value) => `${(value / 1000).toFixed(1)}k` : undefined}
+                tickFormatter={(value) => value >= 1000 ? `${(value / 1000).toFixed(0)}k` : value}
+                width={35}
               />
               <Tooltip 
+                cursor={{ fill: 'rgba(255,255,255,0.05)' }}
                 contentStyle={{
                   backgroundColor: 'hsl(220, 25%, 10%)',
                   border: '1px solid hsl(220, 15%, 18%)',
                   borderRadius: '8px',
                   color: 'white'
                 }}
-                formatter={(value: number) => [
-                  chartType === "vuelos" ? `${value} vuelos` : `${value.toLocaleString()} pasajeros`,
-                  chartType === "vuelos" ? "Vuelos" : "Pasajeros"
-                ]}
+                formatter={(value: number) => [`${value.toLocaleString()} pax`, 'Pasajeros']}
+                labelFormatter={(label) => `${label}:00`}
               />
-              <Area 
-                type="monotone" 
-                dataKey={chartType} 
-                stroke={terminal.color} 
-                strokeWidth={2}
-                fill={`url(#gradient-${terminalId})`}
-              />
-            </AreaChart>
+              <Bar 
+                dataKey="pax" 
+                radius={[4, 4, 0, 0]}
+              >
+                {hourlyData.data.map((entry, index) => (
+                  <Cell 
+                    key={`cell-${index}`} 
+                    fill={entry.isPeak ? 'url(#peakGradient)' : `url(#barGradient-${terminalId})`}
+                    opacity={entry.isCurrent ? 1 : 0.7}
+                  />
+                ))}
+              </Bar>
+              {/* Marker for peak */}
+              {hourlyData.data.map((entry, index) => 
+                entry.isPeak && entry.pax > 0 ? (
+                  <ReferenceLine 
+                    key={`peak-${index}`}
+                    x={entry.shortLabel} 
+                    stroke="transparent"
+                    label={{ 
+                      value: '🔥', 
+                      position: 'top',
+                      fontSize: 16,
+                      offset: 5
+                    }}
+                  />
+                ) : null
+              )}
+            </BarChart>
           </ResponsiveContainer>
+        </div>
+        
+        {/* Legend */}
+        <div className="flex items-center justify-center gap-6 mt-3 pt-3 border-t border-white/10">
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-sm" style={{ backgroundColor: terminal.color }} />
+            <span className="text-xs text-muted-foreground">Llegadas</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="w-3 h-3 rounded-sm bg-red-500" />
+            <span className="text-xs text-muted-foreground">Pico</span>
+          </div>
         </div>
       </div>
 
-      {/* Flights List */}
-      <div className="card-dashboard">
-        <div className="p-4 md:p-6 border-b border-border">
-          <h3 className="font-display text-lg font-semibold text-foreground">
-            Próximos Vuelos
-          </h3>
+      {/* Quick Stats */}
+      <div className="grid grid-cols-3 gap-2">
+        <div className="card-glass p-3 text-center">
+          <Plane className="h-4 w-4 mx-auto mb-1" style={{ color: terminal.color }} />
+          <p className="font-mono font-bold text-xl text-white">{terminalFlights.length}</p>
+          <p className="text-[10px] text-muted-foreground">Vuelos</p>
         </div>
-        <div className="divide-y divide-border max-h-[400px] overflow-y-auto">
-          {flights.length === 0 ? (
+        <div className="card-glass p-3 text-center">
+          <Users className="h-4 w-4 text-primary mx-auto mb-1" />
+          <p className="font-mono font-bold text-xl text-primary">{totalPax.toLocaleString()}</p>
+          <p className="text-[10px] text-muted-foreground">Pasajeros</p>
+        </div>
+        <div className="card-glass p-3 text-center">
+          <Clock className="h-4 w-4 text-amber-500 mx-auto mb-1" />
+          <p className="font-mono font-bold text-xl text-amber-500">~{espera}'</p>
+          <p className="text-[10px] text-muted-foreground">Retén</p>
+        </div>
+      </div>
+
+      {/* High Ticket Alert */}
+      {longHaulCount > 0 && (
+        <div className="flex items-center gap-3 p-3 rounded-xl bg-gradient-to-r from-yellow-500/10 to-amber-500/10 border border-yellow-500/30">
+          <Globe className="h-5 w-5 text-yellow-500" />
+          <div>
+            <p className="text-sm font-semibold text-yellow-500">{longHaulCount} vuelos Larga Distancia</p>
+            <p className="text-xs text-muted-foreground">🌎 Carreras de alto valor próximas</p>
+          </div>
+        </div>
+      )}
+
+      {/* Flights List */}
+      <div className="card-glass overflow-hidden">
+        <div className="p-3 border-b border-white/10 flex items-center justify-between">
+          <h3 className="font-display font-semibold text-foreground">Próximos Vuelos</h3>
+          <span className="text-xs text-muted-foreground">{upcomingFlights.length} pendientes</span>
+        </div>
+        <div className="divide-y divide-white/5 max-h-[50vh] overflow-y-auto">
+          {upcomingFlights.length === 0 ? (
             <div className="p-8 text-center text-muted-foreground">
-              No hay vuelos pendientes para esta terminal
+              No hay vuelos pendientes
             </div>
           ) : (
-            flights.map((flight, idx) => {
+            upcomingFlights.map((flight, idx) => {
               const codigoPrincipal = flight.vuelo?.split("/")[0]?.trim() || flight.vuelo;
               const origenCorto = flight.origen?.split("(")[0]?.trim() || flight.origen;
+              const isHighTicket = isLongHaul(flight.origen);
               
               return (
-                <div key={idx} className="flex flex-col md:flex-row md:items-center gap-3 md:gap-6 p-4 md:p-6 hover:bg-accent/30 transition-colors">
-                  <div className="flex items-center gap-4 md:gap-6 flex-1">
-                    <div 
-                      className="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-full flex-shrink-0"
-                      style={{ backgroundColor: `${terminal.color}15` }}
-                    >
-                      <ArrowDown className="h-4 w-4 md:h-5 md:w-5" style={{ color: terminal.color }} />
+                <div 
+                  key={idx} 
+                  className={cn(
+                    "flex items-center gap-3 p-3 transition-colors",
+                    isHighTicket && "bg-yellow-500/5"
+                  )}
+                >
+                  {/* Time */}
+                  <span className="font-mono font-bold text-lg tabular-nums text-white w-14">
+                    {flight.hora}
+                  </span>
+                  
+                  {/* Flight Info */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold text-sm text-foreground">{codigoPrincipal}</span>
+                      {isHighTicket && (
+                        <span className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-yellow-500/20 text-yellow-500 text-[10px] font-semibold">
+                          <Globe className="h-3 w-3" />
+                          HIGH TICKET
+                        </span>
+                      )}
                     </div>
-
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 md:gap-3 mb-1">
-                        <span className="font-semibold text-foreground">{codigoPrincipal}</span>
-                        <Badge 
-                          className={cn(
-                            "text-xs",
-                            flight.estado?.toLowerCase().includes("aterriz") 
-                              ? "status-landing" 
-                              : "status-ontime"
-                          )}
-                        >
-                          {flight.estado || "Programado"}
-                        </Badge>
-                      </div>
-                      <p className="text-sm text-muted-foreground truncate">{origenCorto}</p>
-                    </div>
-
-                    <div className="flex items-center gap-2 text-muted-foreground">
-                      <Clock className="h-4 w-4 hidden md:block" />
-                      <span className="font-mono text-lg text-foreground">{flight.hora}</span>
-                    </div>
+                    <p className="text-xs text-muted-foreground truncate">{origenCorto}</p>
                   </div>
-
-                  <div className="flex items-center gap-4 md:gap-6 ml-14 md:ml-0">
-                    <div className="flex items-center gap-1 md:gap-2">
-                      <Users className="h-4 w-4 text-primary" />
-                      <span className="text-primary font-bold">{paxPerFlight}</span>
-                      <span className="text-xs text-muted-foreground hidden sm:inline">pax</span>
-                    </div>
+                  
+                  {/* Status */}
+                  <div className="text-right">
+                    <span className={cn(
+                      "text-[10px] font-medium px-2 py-1 rounded-full",
+                      flight.estado?.toLowerCase().includes("aterriz") 
+                        ? "bg-emerald-500/20 text-emerald-400"
+                        : flight.estado?.toLowerCase().includes("retrasado")
+                        ? "bg-red-500/20 text-red-400"
+                        : "bg-blue-500/20 text-blue-400"
+                    )}>
+                      {flight.estado || "En hora"}
+                    </span>
+                    <p className="text-xs text-muted-foreground mt-1">{paxPerFlight} pax</p>
                   </div>
                 </div>
               );

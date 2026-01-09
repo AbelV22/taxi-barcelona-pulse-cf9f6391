@@ -222,17 +222,25 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     });
   });
 
-  const getVuelosPorHora = (terminalId: string, horaOffset: number) => {
-    const targetHour = (currentHour + horaOffset) % 24;
-    return countByHourAndTerminal[terminalId][targetHour] || 0;
+  // NUEVA LÓGICA: Ventana deslizante de 60 minutos desde el minuto actual
+  const getVuelosProximos60Min = (terminalId: string): number => {
+    const nowMinutes = currentHour * 60 + now.getMinutes();
+    const endMinutes = nowMinutes + 60;
+    
+    return terminalData[terminalId].vuelos.filter(v => {
+      if (v.estado?.toLowerCase().includes("finalizado")) return false;
+      const [h, m] = (v.hora || "00:00").split(":").map(Number);
+      const vueloMinutes = h * 60 + m;
+      return vueloMinutes >= nowMinutes && vueloMinutes < endMinutes;
+    }).length;
   };
 
-  // Terminal config - 2x2 Grid with T2C EasyJet
+  // Terminal config - 2x2 Grid with T2C EasyJet (Ventana 60 min)
   const terminals = [
-    { id: "t1", name: "T1", vuelosEstaHora: getVuelosPorHora("t1", 0), espera: getEsperaReten("t1", currentHour), contribuidores: 3 },
-    { id: "t2", name: "T2", vuelosEstaHora: getVuelosPorHora("t2", 0), espera: getEsperaReten("t2", currentHour), contribuidores: 2 },
-    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosPorHora("puente", 0), espera: getEsperaReten("puente", currentHour), contribuidores: 1 },
-    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosPorHora("t2c", 0), espera: getEsperaReten("t2c", currentHour), contribuidores: 0 },
+    { id: "t1", name: "T1", vuelosEstaHora: getVuelosProximos60Min("t1"), espera: getEsperaReten("t1", currentHour), contribuidores: 3 },
+    { id: "t2", name: "T2", vuelosEstaHora: getVuelosProximos60Min("t2"), espera: getEsperaReten("t2", currentHour), contribuidores: 2 },
+    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosProximos60Min("puente"), espera: getEsperaReten("puente", currentHour), contribuidores: 1 },
+    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosProximos60Min("t2c"), espera: getEsperaReten("t2c", currentHour), contribuidores: 0 },
   ];
 
   // License price data
@@ -374,11 +382,11 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
                 </div>
                 
                 {/* BIG NUMBER - Monospace Numeric */}
-                <div className="flex items-baseline gap-1">
+                <div className="flex flex-col">
                   <span className="font-mono font-black text-3xl tabular-nums tracking-tight text-white">
                     {term.vuelosEstaHora}
                   </span>
-                  <span className="text-[9px] text-muted-foreground">vuelos/h</span>
+                  <span className="text-[8px] text-primary font-medium">Próximos 60m</span>
                 </div>
 
                 {/* Social Proof */}
