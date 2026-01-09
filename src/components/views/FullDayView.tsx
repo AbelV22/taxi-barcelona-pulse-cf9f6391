@@ -1,7 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
 import { ArrowLeft, Plane, RefreshCw, Flame, Clock, ChevronDown, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface VueloRaw {
   hora: string;
@@ -20,54 +25,19 @@ interface FullDayViewProps {
 
 // Lista de orígenes de larga distancia (high ticket)
 const LONG_HAUL_ORIGINS = [
-  "NEW YORK",
-  "LOS ANGELES",
-  "MIAMI",
-  "CHICAGO",
-  "WASHINGTON",
-  "BOSTON",
-  "SAN FRANCISCO",
-  "TORONTO",
-  "MONTREAL",
-  "MEXICO",
-  "BOGOTA",
-  "BUENOS AIRES",
-  "SAO PAULO",
-  "LIMA",
-  "SANTIAGO",
-  "DOHA",
-  "DUBAI",
-  "ABU DHABI",
-  "TOKYO",
-  "SEOUL",
-  "BEIJING",
-  "SHANGHAI",
-  "SINGAPORE",
-  "HONG KONG",
-  "BANGKOK",
-  "DELHI",
-  "MUMBAI",
-  "JOHANNESBURG",
-  "CAPE TOWN",
-  "SYDNEY",
-  "MELBOURNE",
-  "TEL AVIV",
-  "CAIRO",
-  "EL CAIRO",
-  "LAX",
-  "JFK",
-  "ORD",
-  "DFW",
-  "DOH",
-  "DXB",
+  "NEW YORK", "LOS ANGELES", "MIAMI", "CHICAGO", "WASHINGTON", "BOSTON", "SAN FRANCISCO",
+  "TORONTO", "MONTREAL", "MEXICO", "BOGOTA", "BUENOS AIRES", "SAO PAULO", "LIMA", "SANTIAGO",
+  "DOHA", "DUBAI", "ABU DHABI", "TOKYO", "SEOUL", "BEIJING", "SHANGHAI", "SINGAPORE", "HONG KONG",
+  "BANGKOK", "DELHI", "MUMBAI", "JOHANNESBURG", "CAPE TOWN", "SYDNEY", "MELBOURNE",
+  "TEL AVIV", "CAIRO", "EL CAIRO", "LAX", "JFK", "ORD", "DFW", "DOH", "DXB"
 ];
 
 const isLongHaul = (origen: string): boolean => {
   const origenUpper = origen?.toUpperCase() || "";
-  return LONG_HAUL_ORIGINS.some((lh) => origenUpper.includes(lh));
+  return LONG_HAUL_ORIGINS.some(lh => origenUpper.includes(lh));
 };
 
-const getTerminalType = (vuelo: VueloRaw): "t1" | "t2" | "t2c" | "puente" => {
+const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   const terminal = vuelo.terminal?.toUpperCase() || "";
   const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
   const origen = vuelo.origen?.toUpperCase() || "";
@@ -84,7 +54,7 @@ const generateHourSlots = (startHour: number): string[] => {
   for (let i = 0; i < 24; i++) {
     const hour = (startHour + i) % 24;
     const nextHour = (hour + 1) % 24;
-    slots.push(`${hour.toString().padStart(2, "0")} - ${nextHour.toString().padStart(2, "0")}`);
+    slots.push(`${hour.toString().padStart(2, '0')} - ${nextHour.toString().padStart(2, '0')}`);
   }
   return slots;
 };
@@ -96,8 +66,8 @@ export function FullDayView({ onBack }: FullDayViewProps) {
 
   useEffect(() => {
     fetch("/vuelos.json?t=" + Date.now())
-      .then((res) => res.json())
-      .then((data) => {
+      .then(res => res.json())
+      .then(data => {
         if (Array.isArray(data)) {
           setVuelos(data);
         } else if (data?.vuelos) {
@@ -117,11 +87,14 @@ export function FullDayView({ onBack }: FullDayViewProps) {
 
   const hourSlots = useMemo(() => generateHourSlots(startHour), [startHour]);
 
-  const vuelosActivos = useMemo(() => vuelos.filter((v) => !v.estado?.toLowerCase().includes("cancelado")), [vuelos]);
+  const vuelosActivos = useMemo(() => 
+    vuelos.filter(v => !v.estado?.toLowerCase().includes("cancelado")), 
+    [vuelos]
+  );
 
   const vuelosPorTerminal = useMemo(() => {
     const data: Record<string, VueloRaw[]> = { t1: [], t2: [], t2c: [], puente: [] };
-    vuelosActivos.forEach((v) => {
+    vuelosActivos.forEach(v => {
       const type = getTerminalType(v);
       data[type].push(v);
     });
@@ -134,24 +107,24 @@ export function FullDayView({ onBack }: FullDayViewProps) {
     for (let h = 0; h < 24; h++) {
       groups[h] = { t1: [], t2: [] };
     }
-
-    vuelosPorTerminal.t1.forEach((v) => {
+    
+    vuelosPorTerminal.t1.forEach(v => {
       const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
       groups[hour].t1.push(v);
     });
-
-    vuelosPorTerminal.t2.forEach((v) => {
+    
+    vuelosPorTerminal.t2.forEach(v => {
       const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
       groups[hour].t2.push(v);
     });
-
+    
     return groups;
   }, [vuelosPorTerminal]);
 
   const countByHourAndTerminal = useMemo(() => {
     const counts: Record<string, Record<number, number>> = { t1: {}, t2: {}, t2c: {}, puente: {} };
     Object.entries(vuelosPorTerminal).forEach(([terminal, vuelos]) => {
-      vuelos.forEach((v) => {
+      vuelos.forEach(v => {
         const hour = parseInt(v.hora?.split(":")[0] || "0", 10);
         counts[terminal][hour] = (counts[terminal][hour] || 0) + 1;
       });
@@ -159,12 +132,12 @@ export function FullDayView({ onBack }: FullDayViewProps) {
     return counts;
   }, [vuelosPorTerminal]);
 
-  const getVuelosHoraExacta = (terminal: "t2c" | "puente"): VueloRaw[] => {
+  const getVuelosHoraExacta = (terminal: 't2c' | 'puente'): VueloRaw[] => {
     const nowMinutes = currentHour * 60 + now.getMinutes();
     const startMinutes = nowMinutes - 30;
-
+    
     return vuelosPorTerminal[terminal]
-      .filter((v) => {
+      .filter(v => {
         if (v.estado?.toLowerCase().includes("finalizado")) return false;
         const [h, m] = (v.hora || "00:00").split(":").map(Number);
         const vueloMinutes = h * 60 + m;
@@ -185,11 +158,11 @@ export function FullDayView({ onBack }: FullDayViewProps) {
   const totalPuente = vuelosPorTerminal.puente.length;
   const totalT2C = vuelosPorTerminal.t2c.length;
 
-  const fechaFormateada = now.toLocaleDateString("es-ES", { day: "2-digit", month: "2-digit", year: "numeric" });
-  const diaSemana = now.toLocaleDateString("es-ES", { weekday: "long" }).toUpperCase();
-
-  const puenteVuelos = getVuelosHoraExacta("puente");
-  const t2cVuelos = getVuelosHoraExacta("t2c");
+  const fechaFormateada = now.toLocaleDateString('es-ES', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const diaSemana = now.toLocaleDateString('es-ES', { weekday: 'long' }).toUpperCase();
+  
+  const puenteVuelos = getVuelosHoraExacta('puente');
+  const t2cVuelos = getVuelosHoraExacta('t2c');
 
   if (loading) {
     return (
@@ -204,8 +177,8 @@ export function FullDayView({ onBack }: FullDayViewProps) {
     <div className="animate-fade-in pb-20">
       {/* Header */}
       <div className="flex items-center gap-3 mb-3">
-        <button
-          onClick={onBack}
+        <button 
+          onClick={onBack} 
           className="flex items-center justify-center w-10 h-10 rounded-xl bg-card border border-border shadow-md hover:bg-muted transition-colors"
         >
           <ArrowLeft className="h-5 w-5 text-foreground" />
@@ -239,9 +212,7 @@ export function FullDayView({ onBack }: FullDayViewProps) {
           {/* Header */}
           <div className="grid grid-cols-3 bg-muted border-b border-border">
             <div className="py-2.5 px-1 text-center border-r border-border">
-              <span className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-wide">
-                Hora
-              </span>
+              <span className="text-[10px] font-display font-bold text-muted-foreground uppercase tracking-wide">Hora</span>
             </div>
             <div className="py-2.5 px-1 text-center border-r border-border">
               <span className="text-[10px] font-display font-bold text-amber-500 uppercase tracking-wide">T1</span>
@@ -264,66 +235,60 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                 const hasFlights = countT1 > 0 || countT2 > 0;
                 const flightsT1 = vuelosPorHora[hour]?.t1 || [];
                 const flightsT2 = vuelosPorHora[hour]?.t2 || [];
-                const longHaulT1 = flightsT1.filter((f) => isLongHaul(f.origen)).length;
-                const longHaulT2 = flightsT2.filter((f) => isLongHaul(f.origen)).length;
-
+                const longHaulT1 = flightsT1.filter(f => isLongHaul(f.origen)).length;
+                const longHaulT2 = flightsT2.filter(f => isLongHaul(f.origen)).length;
+                
                 return (
-                  <AccordionItem
-                    key={slot}
-                    value={slot}
-                    className={cn("border-b border-border/40", isCurrentHour && "bg-primary/15")}
+                  <AccordionItem 
+                    key={slot} 
+                    value={slot} 
+                    className={cn(
+                      "border-b border-border/40",
+                      isCurrentHour && "bg-primary/15"
+                    )}
                   >
                     <AccordionTrigger className="py-0 px-0 hover:no-underline [&[data-state=open]>div]:bg-muted/50">
-                      <div className={cn("grid grid-cols-3 w-full", hasFlights && "cursor-pointer")}>
-                        <div
-                          className={cn(
-                            "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-1",
-                            isCurrentHour && "bg-primary/10",
-                          )}
-                        >
-                          <span
-                            className={cn(
-                              "text-[9px] font-mono font-medium",
-                              isCurrentHour ? "font-bold text-primary" : "text-muted-foreground",
-                            )}
-                          >
+                      <div className={cn(
+                        "grid grid-cols-3 w-full",
+                        hasFlights && "cursor-pointer"
+                      )}>
+                        <div className={cn(
+                          "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-1",
+                          isCurrentHour && "bg-primary/10"
+                        )}>
+                          <span className={cn(
+                            "text-[9px] font-mono font-medium",
+                            isCurrentHour ? "font-bold text-primary" : "text-muted-foreground"
+                          )}>
                             {slot}
                           </span>
                           {hasFlights && <ChevronDown className="h-3 w-3 text-muted-foreground/50 shrink-0" />}
                         </div>
-                        <div
-                          className={cn(
-                            "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-0.5",
-                            isHotT1 && "bg-amber-500/15",
-                          )}
-                        >
+                        <div className={cn(
+                          "py-2 px-1 text-center border-r border-border/40 flex items-center justify-center gap-0.5",
+                          isHotT1 && "bg-amber-500/15"
+                        )}>
                           {isHotT1 && <Flame className="h-3 w-3 text-amber-500" />}
-                          <span
-                            className={cn(
-                              "font-display font-bold text-sm",
-                              isHotT1 ? "text-amber-500" : "text-foreground",
-                              countT1 === 0 && "text-muted-foreground/40",
-                            )}
-                          >
-                            {countT1.toString().padStart(2, "0")}
+                          <span className={cn(
+                            "font-display font-bold text-sm",
+                            isHotT1 ? "text-amber-500" : "text-foreground",
+                            countT1 === 0 && "text-muted-foreground/40"
+                          )}>
+                            {countT1.toString().padStart(2, '0')}
                           </span>
                           {longHaulT1 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
                         </div>
-                        <div
-                          className={cn(
-                            "py-2 px-1 text-center flex items-center justify-center gap-0.5",
-                            isHotT2 && "bg-blue-500/15",
-                          )}
-                        >
+                        <div className={cn(
+                          "py-2 px-1 text-center flex items-center justify-center gap-0.5",
+                          isHotT2 && "bg-blue-500/15"
+                        )}>
                           {isHotT2 && <Flame className="h-3 w-3 text-blue-500" />}
-                          <span
-                            className={cn(
-                              "font-display font-bold text-sm",
-                              isHotT2 ? "text-blue-500" : "text-foreground",
-                              countT2 === 0 && "text-muted-foreground/40",
-                            )}
-                          >
-                            {countT2.toString().padStart(2, "0")}
+                          <span className={cn(
+                            "font-display font-bold text-sm",
+                            isHotT2 ? "text-blue-500" : "text-foreground",
+                            countT2 === 0 && "text-muted-foreground/40"
+                          )}>
+                            {countT2.toString().padStart(2, '0')}
                           </span>
                           {longHaulT2 > 0 && <Globe className="h-3 w-3 text-yellow-500 ml-0.5" />}
                         </div>
@@ -340,28 +305,19 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                                 {flightsT1.slice(0, 5).map((f, i) => {
                                   const isHighTicket = isLongHaul(f.origen);
                                   return (
-                                    <div
-                                      key={i}
-                                      className={cn(
-                                        "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
-                                        isHighTicket && "bg-yellow-500/10",
-                                      )}
-                                    >
+                                    <div key={i} className={cn(
+                                      "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
+                                      isHighTicket && "bg-yellow-500/10"
+                                    )}>
                                       <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
-                                      <span className="text-muted-foreground truncate flex-1">
-                                        {f.vuelo?.split("/")[0]}
-                                      </span>
+                                      <span className="text-muted-foreground truncate flex-1">{f.vuelo?.split("/")[0]}</span>
                                       {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
-                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">
-                                        {f.origen?.split("(")[0]?.trim()}
-                                      </span>
+                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">{f.origen?.split("(")[0]?.trim()}</span>
                                     </div>
                                   );
                                 })}
                                 {flightsT1.length > 5 && (
-                                  <p className="text-[9px] text-muted-foreground text-center">
-                                    +{flightsT1.length - 5} más
-                                  </p>
+                                  <p className="text-[9px] text-muted-foreground text-center">+{flightsT1.length - 5} más</p>
                                 )}
                               </div>
                             </div>
@@ -374,28 +330,19 @@ export function FullDayView({ onBack }: FullDayViewProps) {
                                 {flightsT2.slice(0, 5).map((f, i) => {
                                   const isHighTicket = isLongHaul(f.origen);
                                   return (
-                                    <div
-                                      key={i}
-                                      className={cn(
-                                        "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
-                                        isHighTicket && "bg-yellow-500/10",
-                                      )}
-                                    >
+                                    <div key={i} className={cn(
+                                      "flex items-center gap-2 text-[10px] py-1 px-1.5 rounded",
+                                      isHighTicket && "bg-yellow-500/10"
+                                    )}>
                                       <span className="font-mono font-semibold text-white w-10">{f.hora}</span>
-                                      <span className="text-muted-foreground truncate flex-1">
-                                        {f.vuelo?.split("/")[0]}
-                                      </span>
+                                      <span className="text-muted-foreground truncate flex-1">{f.vuelo?.split("/")[0]}</span>
                                       {isHighTicket && <Globe className="h-3 w-3 text-yellow-500 shrink-0" />}
-                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">
-                                        {f.origen?.split("(")[0]?.trim()}
-                                      </span>
+                                      <span className="text-muted-foreground/70 truncate max-w-[60px]">{f.origen?.split("(")[0]?.trim()}</span>
                                     </div>
                                   );
                                 })}
                                 {flightsT2.length > 5 && (
-                                  <p className="text-[9px] text-muted-foreground text-center">
-                                    +{flightsT2.length - 5} más
-                                  </p>
+                                  <p className="text-[9px] text-muted-foreground text-center">+{flightsT2.length - 5} más</p>
                                 )}
                               </div>
                             </div>
@@ -427,74 +374,49 @@ export function FullDayView({ onBack }: FullDayViewProps) {
         <div className="rounded-xl border border-border bg-card overflow-hidden shadow-lg shadow-black/10">
           <div className="grid grid-cols-2 border-b border-border bg-muted">
             <div className="py-2.5 px-2 text-center border-r border-border">
-              <span className="text-[9px] font-display font-bold text-red-500 uppercase leading-tight block">
-                Puente
-              </span>
-              <span className="text-[9px] font-display font-bold text-red-500 uppercase leading-tight block">
-                Aéreo
-              </span>
+              <span className="text-[9px] font-display font-bold text-red-500 uppercase leading-tight block">Puente</span>
+              <span className="text-[9px] font-display font-bold text-red-500 uppercase leading-tight block">Aéreo</span>
             </div>
             <div className="py-2.5 px-2 text-center">
-              <span className="text-[9px] font-display font-bold text-orange-500 uppercase leading-tight block">
-                T2C
-              </span>
-              <span className="text-[9px] font-display font-bold text-orange-500 uppercase leading-tight block">
-                EasyJet
-              </span>
+              <span className="text-[9px] font-display font-bold text-orange-500 uppercase leading-tight block">T2C</span>
+              <span className="text-[9px] font-display font-bold text-orange-500 uppercase leading-tight block">EasyJet</span>
             </div>
           </div>
-
-          <div className="overflow-y-auto scrollbar-dark flex-1 max-h-[48vh]">
-            {/* Iteramos por las mismas horas que la columna izquierda */}
-            {hourSlots.map((slot, idx) => {
-              const hour = (startHour + idx) % 24;
-              const isCurrentHour = hour === currentHour;
-
-              // Sacamos los vuelos de esa hora exacta usando la nueva lógica del PASO 1
-              const puenteDelSlot = vuelosPorHora[hour]?.puente || [];
-              const t2cDelSlot = vuelosPorHora[hour]?.t2c || [];
-
-              return (
-                <div
-                  key={slot}
-                  className={cn(
-                    "grid grid-cols-2 border-b border-border/40 min-h-[44px]",
-                    isCurrentHour && "bg-primary/5",
-                  )}
-                >
-                  {/* Celda Puente Aéreo */}
-                  <div className="border-r border-border/40 p-1 flex flex-col justify-center">
-                    {puenteDelSlot.length > 0 ? (
-                      puenteDelSlot.map((v, i) => (
-                        <div key={i} className="flex items-center justify-between px-1 py-0.5">
-                          <span className="font-display font-bold text-xs text-red-500">{v.hora}</span>
-                          <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
-                        </div>
-                      ))
-                    ) : (
-                      // Espacio vacío para mantener alineación
-                      <div className="h-full w-full"></div>
-                    )}
+          
+          <div className="grid grid-cols-2 max-h-[48vh] overflow-y-auto scrollbar-dark">
+            <div className="border-r border-border">
+              {puenteVuelos.length === 0 ? (
+                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
+              ) : (
+                puenteVuelos.map((vuelo, idx) => (
+                  <div 
+                    key={idx} 
+                    className="flex items-center justify-between py-2 px-2.5 border-b border-border/40"
+                  >
+                    <span className="font-display font-bold text-xs text-red-500">{vuelo.hora}</span>
+                    <Plane className="h-3 w-3 text-muted-foreground/60" />
                   </div>
-
-                  {/* Celda T2C EasyJet */}
-                  <div className="p-1 flex flex-col justify-center">
-                    {t2cDelSlot.length > 0 ? (
-                      t2cDelSlot.map((v, i) => (
-                        <div key={i} className="flex items-center justify-between px-1 py-0.5">
-                          <span className="font-display font-bold text-xs text-orange-500">{v.hora}</span>
-                          <Plane className="h-2.5 w-2.5 text-muted-foreground/40" />
-                        </div>
-                      ))
-                    ) : (
-                      <div className="h-full w-full"></div>
-                    )}
+                ))
+              )}
+            </div>
+            
+            <div>
+              {t2cVuelos.length === 0 ? (
+                <div className="p-4 text-center text-[10px] text-muted-foreground">Sin vuelos</div>
+              ) : (
+                t2cVuelos.map((vuelo, idx) => (
+                  <div 
+                    key={idx} 
+                    className="flex items-center justify-between py-2 px-2.5 border-b border-border/40"
+                  >
+                    <span className="font-display font-bold text-xs text-orange-500">{vuelo.hora}</span>
+                    <Plane className="h-3 w-3 text-muted-foreground/60" />
                   </div>
-                </div>
-              );
-            })}
+                ))
+              )}
+            </div>
           </div>
-
+          
           <div className="grid grid-cols-2 bg-muted border-t border-border">
             <div className="py-2.5 px-2 text-center border-r border-border">
               <span className="font-display font-bold text-base text-red-500">{totalPuente}</span>
