@@ -30,12 +30,6 @@
         "via": ""
     },
     {
-        "hora": "08:23",
-        "origen": "Camp de Tarragona",
-        "tren": "AVANT 08869",
-        "via": ""
-    },
-    {
         "hora": "08:50",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03092",
@@ -60,21 +54,9 @@
         "via": ""
     },
     {
-        "hora": "09:15",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 08087",
-        "via": ""
-    },
-    {
         "hora": "09:25",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03063",
-        "via": ""
-    },
-    {
-        "hora": "09:31",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03301",
         "via": ""
     },
     {
@@ -114,7 +96,7 @@
         "via": ""
     },
     {
-        "hora": "10:14",
+        "hora": "10:15",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06471",
         "via": ""
@@ -147,6 +129,12 @@
         "hora": "10:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06081",
+        "via": ""
+    },
+    {
+        "hora": "11:19",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03083",
         "via": ""
     },
     {
@@ -192,7 +180,7 @@
         "via": ""
     },
     {
-        "hora": "12:20",
+        "hora": "12:27",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01092",
         "via": ""
