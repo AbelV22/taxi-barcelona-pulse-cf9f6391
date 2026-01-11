@@ -90,18 +90,6 @@
         "via": ""
     },
     {
-        "hora": "10:05",
-        "origen": "Figueres-Vilafant",
-        "tren": "EUROMED 01101",
-        "via": ""
-    },
-    {
-        "hora": "10:15",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
         "hora": "10:34",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03081",
@@ -114,18 +102,6 @@
         "via": ""
     },
     {
-        "hora": "10:46",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03073",
-        "via": ""
-    },
-    {
-        "hora": "10:59",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06081",
-        "via": ""
-    },
-    {
         "hora": "10:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06081",
@@ -135,18 +111,6 @@
         "hora": "11:19",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03083",
-        "via": ""
-    },
-    {
-        "hora": "11:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03083",
-        "via": ""
-    },
-    {
-        "hora": "11:27",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06281",
         "via": ""
     },
     {
@@ -180,33 +144,33 @@
         "via": ""
     },
     {
-        "hora": "12:27",
+        "hora": "12:29",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVANT 34730",
+        "via": ""
+    },
+    {
+        "hora": "12:29",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVANT 34730",
+        "via": ""
+    },
+    {
+        "hora": "12:36",
+        "origen": "Marseille Saint Charles",
+        "tren": "AVE 09730",
+        "via": ""
+    },
+    {
+        "hora": "12:36",
+        "origen": "Marseille Saint Charles",
+        "tren": "AVE 09730",
+        "via": ""
+    },
+    {
+        "hora": "12:41",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01092",
-        "via": ""
-    },
-    {
-        "hora": "12:29",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34730",
-        "via": ""
-    },
-    {
-        "hora": "12:29",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34730",
-        "via": ""
-    },
-    {
-        "hora": "12:36",
-        "origen": "Marseille Saint Charles",
-        "tren": "AVE 09730",
-        "via": ""
-    },
-    {
-        "hora": "12:36",
-        "origen": "Marseille Saint Charles",
-        "tren": "AVE 09730",
         "via": ""
     },
     {
@@ -276,7 +240,7 @@
         "via": ""
     },
     {
-        "hora": "13:40",
+        "hora": "13:46",
         "origen": "Portbou",
         "tren": "MD 15070",
         "via": ""
