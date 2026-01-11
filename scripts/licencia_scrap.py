@@ -61,6 +61,32 @@ def iniciar_driver():
 
 # --- A. MILANUNCIOS (LÓGICA NUEVA: SCROLL PROGRESIVO + JS) ---
 def scrape_milanuncios(driver):
+
+    # --- 🕵️ BLOQUE DE DEPURACIÓN FORENSE ---
+        titulo = driver.title
+        print(f"   🔎 Título detectado: '{titulo}'")
+        
+        if "Interruption" in titulo or "Access Denied" in titulo or "Robot" in titulo:
+            print("   🚨 BLOQUEO DETECTADO. Generando pruebas...")
+            
+            # 1. Guardar HTML del bloqueo (para ver si pide Captcha o es IP ban)
+            with open("error_milanuncios.html", "w", encoding="utf-8") as f:
+                f.write(driver.page_source)
+            
+            # 2. Guardar FOTO del bloqueo
+            driver.save_screenshot("error_milanuncios.png")
+            
+            print("   📸 Captura guardada como 'error_milanuncios.png'")
+            print("   📄 HTML guardado como 'error_milanuncios.html'")
+            
+            # Intentamos leer el mensaje de error en pantalla
+            try:
+                mensaje = driver.find_element(By.TAG_NAME, "h1").text
+                print(f"   ⚠️ Mensaje en pantalla: {mensaje}")
+            except: pass
+            
+            return [] # Cortamos aquí, no tiene sentido seguir
+        # ----------------------------------------
     datos = []
     print(f"\n🌍 [1/4] MILANUNCIOS (Modo Stealth GitHub)...")
     try:
