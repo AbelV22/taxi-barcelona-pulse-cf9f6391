@@ -4,6 +4,7 @@ import time
 import re
 import json
 import pandas as pd
+import undetected_chromedriver as uc
 from datetime import datetime
 
 # =============================================================================
@@ -28,30 +29,21 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
 def iniciar_driver():
-    options = Options()
-    options.add_argument('--headless') 
+    print("🚀 Iniciando Chrome en modo INDETECTABLE...")
+    
+    options = uc.ChromeOptions()
+    # headless=new es mucho más difícil de detectar que el headless antiguo
+    options.add_argument('--headless=new') 
     options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--window-size=1920,1080')
+    options.add_argument("--lang=es-ES")
     
-    # --- CONFIGURACIÓN ANTI-BOT CRÍTICA PARA GITHUB ACTIONS ---
-    # 1. Desactiva la bandera que dice "Soy un robot"
-    options.add_argument("--disable-blink-features=AutomationControlled") 
-    
-    # 2. Excluye switches de automatización
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-    
-    # 3. Forzamos idioma (Vital para el popup que se ve en tu foto)
-    options.add_argument("--lang=en-US") # Ponemos inglés porque tu foto muestra inglés, así coincidimos con el botón
-    
-    # 4. User Agent rotativo o fijo muy común
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36")
-    
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    
-    # 5. Truco final: Eliminar la propiedad 'webdriver' de Javascript
-    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    # Esto evita errores de memoria en entornos Docker/Linux limitados
+    options.add_argument('--disable-dev-shm-usage') 
+
+    # Iniciar el driver parcheado. 
+    # version_main=None hace que busque la versión correcta automáticamente
+    driver = uc.Chrome(options=options, version_main=None)
     
     return driver
 
