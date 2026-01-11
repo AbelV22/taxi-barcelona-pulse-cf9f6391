@@ -6,24 +6,31 @@ import { AreaChart, Area, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, 
 
 interface OfertaDetalle {
   fuente: string;
-  dia_descanso: string;
-  coche_modelo: string;
-  precio_total: number;
-  valor_coche_estimado: number;
-  precio_neto_licencia: number;
-  texto_original: string;
+  dia: string;
+  modelo: string;
+  precio_neto: number;
+  raw?: string;
 }
 
-interface LicenciasData {
-  metadata: {
-    total_ofertas_validas: number;
-    precio_mercado_referencia: number;
+interface WebFeedData {
+  ticker: {
+    current_price: number;
+    delta_value: number;
+    delta_percent: number;
+    direction: string;
+    volume: number;
+    volatility: number;
   };
-  estadisticas: {
-    valor_mediano_por_fuente: Record<string, number>;
-    valor_mediano_por_dia: Record<string, number>;
+  charts: {
+    history_dates: string[];
+    history_prices: number[];
+    price_by_day_descanso: Record<string, number>;
   };
-  detalle_ofertas: OfertaDetalle[];
+  market_depth: {
+    cheapest_offers: OfertaDetalle[];
+    all_offers: OfertaDetalle[];
+  };
+  updated_at: string;
 }
 
 interface HistoryEntry {
@@ -59,14 +66,14 @@ const parseCSV = (text: string): HistoryEntry[] => {
 };
 
 export function LicensesView() {
-  const [data, setData] = useState<LicenciasData | null>(null);
+  const [data, setData] = useState<WebFeedData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [hoveredBarIndex, setHoveredBarIndex] = useState<number | null>(null);
 
   useEffect(() => {
     Promise.all([
-      fetch("/analisis_licencias_taxi.json?t=" + Date.now()).then(res => res.json()),
+      fetch("/web_feed.json?t=" + Date.now()).then(res => res.json()),
       fetch("/history_stats.csv?t=" + Date.now()).then(res => res.text())
     ])
       .then(([jsonData, csvText]) => {
@@ -95,21 +102,17 @@ export function LicensesView() {
     );
   }
 
-  const { metadata, estadisticas, detalle_ofertas } = data;
+  const { ticker, charts, market_depth } = data;
 
-  // Calculate stats
-  const preciosNetos = detalle_ofertas.map(o => o.precio_neto_licencia);
+  // Calculate stats from web_feed
+  const preciosNetos = market_depth.all_offers.map(o => o.precio_neto);
   const minPrice = Math.min(...preciosNetos);
   const maxPrice = Math.max(...preciosNetos);
   const avgPrice = preciosNetos.reduce((a, b) => a + b, 0) / preciosNetos.length;
 
-  // Calculate real trend from historical data
-  const currentHistoryPrice = history.length > 0 ? history[history.length - 1].median_price : metadata.precio_mercado_referencia;
-  const previousHistoryPrice = history.length > 1 ? history[history.length - 2].median_price : currentHistoryPrice;
-  const trendPercent = previousHistoryPrice > 0 
-    ? ((currentHistoryPrice - previousHistoryPrice) / previousHistoryPrice * 100).toFixed(1) 
-    : "0.0";
-  const trendIsUp = parseFloat(trendPercent) > 0;
+  // Use trend from web_feed ticker
+  const trendPercent = ticker.delta_percent.toFixed(1);
+  const trendIsUp = ticker.direction === "up" || ticker.delta_percent > 0;
 
   // Temporal evolution data from CSV
   const evolucionTemporal = history.length > 0 
@@ -117,10 +120,10 @@ export function LicensesView() {
         fecha: h.date.slice(5).replace('-', '/'), // "2026-01-11" -> "01/11"
         precio: h.median_price
       }))
-    : [{ fecha: "hoy", precio: metadata.precio_mercado_referencia }];
+    : [{ fecha: "hoy", precio: ticker.current_price }];
 
-  // Prepare bar chart data - sorted by value
-  const chartDataPorDia = Object.entries(estadisticas.valor_mediano_por_dia)
+  // Prepare bar chart data from web_feed - sorted by value
+  const chartDataPorDia = Object.entries(charts.price_by_day_descanso)
     .map(([dia, valor]) => ({
       dia: dia.replace(" IMPAR", " I").replace(" PAR", " P"),
       diaFull: dia,
@@ -129,8 +132,8 @@ export function LicensesView() {
     }))
     .sort((a, b) => a.valor - b.valor);
 
-  // Sorted offers
-  const ofertasOrdenadas = [...detalle_ofertas].sort((a, b) => a.precio_neto_licencia - b.precio_neto_licencia);
+  // Sorted offers from web_feed
+  const ofertasOrdenadas = [...market_depth.all_offers].sort((a, b) => a.precio_neto - b.precio_neto);
 
   // Custom tooltip for area chart
   const CustomAreaTooltip = ({ active, payload, label }: any) => {
@@ -192,7 +195,7 @@ export function LicensesView() {
             </div>
             <p className="text-xs text-muted-foreground mb-1">Ref. Mercado</p>
             <p className="font-mono font-bold text-2xl md:text-3xl text-primary tabular-nums tracking-tight">
-              {metadata.precio_mercado_referencia.toLocaleString('es-ES')}
+              {ticker.current_price.toLocaleString('es-ES')}
               <span className="text-lg ml-1">€</span>
             </p>
             <p className="text-[10px] text-muted-foreground mt-1.5 font-mono">precio mediano neto</p>
@@ -257,7 +260,7 @@ export function LicensesView() {
             </div>
             <p className="text-xs text-muted-foreground mb-1">Anuncios Activos</p>
             <p className="font-mono font-bold text-2xl md:text-3xl text-sky-400 tabular-nums tracking-tight">
-              {metadata.total_ofertas_validas}
+              {ticker.volume}
             </p>
             <p className="text-[10px] text-muted-foreground mt-1.5 font-mono">ofertas válidas</p>
           </div>
@@ -400,28 +403,42 @@ export function LicensesView() {
         </div>
       </div>
 
-      {/* Portal Comparison */}
-      <div className="rounded-xl bg-[#0d0d12] border border-white/10 p-5 backdrop-blur-sm">
-        <h3 className="font-display font-semibold text-foreground text-base mb-4">Mediana por Portal</h3>
-        <div className="grid grid-cols-2 gap-3">
-          {Object.entries(estadisticas.valor_mediano_por_fuente).map(([fuente, valor]) => (
-            <div key={fuente} className="p-4 rounded-xl bg-white/[0.02] border border-white/10 hover:border-primary/30 transition-colors">
-              <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider font-mono">{fuente}</p>
-              <p className="font-mono font-bold text-xl text-foreground tabular-nums">
-                {valor.toLocaleString('es-ES')}
-                <span className="text-sm ml-1 text-muted-foreground">€</span>
-              </p>
+      {/* Portal Comparison - Calculate from all_offers */}
+      {(() => {
+        const portalStats: Record<string, number[]> = {};
+        market_depth.all_offers.forEach(o => {
+          if (!portalStats[o.fuente]) portalStats[o.fuente] = [];
+          portalStats[o.fuente].push(o.precio_neto);
+        });
+        const portalMedians = Object.entries(portalStats).map(([fuente, precios]) => {
+          const sorted = [...precios].sort((a, b) => a - b);
+          const median = sorted[Math.floor(sorted.length / 2)];
+          return { fuente, median };
+        });
+        return (
+          <div className="rounded-xl bg-[#0d0d12] border border-white/10 p-5 backdrop-blur-sm">
+            <h3 className="font-display font-semibold text-foreground text-base mb-4">Mediana por Portal</h3>
+            <div className="grid grid-cols-2 gap-3">
+              {portalMedians.map(({ fuente, median }) => (
+                <div key={fuente} className="p-4 rounded-xl bg-white/[0.02] border border-white/10 hover:border-primary/30 transition-colors">
+                  <p className="text-xs text-muted-foreground mb-2 uppercase tracking-wider font-mono">{fuente}</p>
+                  <p className="font-mono font-bold text-xl text-foreground tabular-nums">
+                    {median.toLocaleString('es-ES')}
+                    <span className="text-sm ml-1 text-muted-foreground">€</span>
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        );
+      })()}
 
       {/* Listings */}
       <div className="rounded-xl bg-[#0d0d12] border border-white/10 p-5 backdrop-blur-sm">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-display font-semibold text-foreground text-base">Ofertas Detectadas</h3>
           <Badge variant="outline" className="font-mono text-xs px-3 py-1 border-white/10 bg-white/5">
-            {detalle_ofertas.length} anuncios
+            {market_depth.all_offers.length} anuncios
           </Badge>
         </div>
 
@@ -436,25 +453,22 @@ export function LicensesView() {
                     variant="outline" 
                     className="text-[10px] px-2 py-0.5 font-mono border-primary/30 text-primary bg-primary/10"
                   >
-                    {oferta.dia_descanso}
+                    {oferta.dia}
                   </Badge>
                 </div>
               </div>
               <div className="flex items-center justify-between">
                 <div className="space-y-1">
-                  <p className="text-xs text-muted-foreground font-mono tabular-nums">
-                    Total: {oferta.precio_total.toLocaleString('es-ES')}€
-                  </p>
-                  {oferta.coche_modelo !== "SIN COCHE" && (
+                  {oferta.modelo !== "DESCONOCIDO" && oferta.modelo !== "SIN COCHE" && (
                     <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
                       <Car className="h-3.5 w-3.5" />
-                      <span className="font-mono tabular-nums">{oferta.coche_modelo} (-{oferta.valor_coche_estimado.toLocaleString('es-ES')}€)</span>
+                      <span className="font-mono tabular-nums">{oferta.modelo}</span>
                     </div>
                   )}
                 </div>
                 <div className="text-right">
                   <span className="font-mono font-bold text-primary text-xl tabular-nums">
-                    {oferta.precio_neto_licencia.toLocaleString('es-ES')}
+                    {oferta.precio_neto.toLocaleString('es-ES')}
                     <span className="text-sm ml-0.5">€</span>
                   </span>
                   <p className="text-[10px] text-muted-foreground font-mono">neto</p>
@@ -471,7 +485,6 @@ export function LicensesView() {
               <tr className="text-left text-xs text-muted-foreground border-b border-white/10">
                 <th className="pb-3 font-medium font-mono uppercase tracking-wider">Fuente</th>
                 <th className="pb-3 font-medium font-mono uppercase tracking-wider">Día Descanso</th>
-                <th className="pb-3 font-medium font-mono uppercase tracking-wider">Precio Total</th>
                 <th className="pb-3 font-medium font-mono uppercase tracking-wider">Coche</th>
                 <th className="pb-3 font-medium font-mono uppercase tracking-wider text-right">Precio Neto</th>
               </tr>
@@ -487,22 +500,14 @@ export function LicensesView() {
                       variant="outline" 
                       className="text-[10px] px-2.5 py-1 font-mono border-primary/30 text-primary bg-primary/10"
                     >
-                      {oferta.dia_descanso}
+                      {oferta.dia}
                     </Badge>
                   </td>
-                  <td className="py-3 font-mono font-medium text-foreground text-sm tabular-nums">
-                    {oferta.precio_total.toLocaleString('es-ES')} €
-                  </td>
                   <td className="py-3">
-                    {oferta.coche_modelo !== "SIN COCHE" ? (
+                    {oferta.modelo !== "DESCONOCIDO" && oferta.modelo !== "SIN COCHE" ? (
                       <div className="flex items-center gap-2">
                         <Car className="h-4 w-4 text-muted-foreground" />
-                        <div>
-                          <p className="text-xs text-foreground">{oferta.coche_modelo}</p>
-                          <p className="text-[10px] text-muted-foreground font-mono tabular-nums">
-                            -{oferta.valor_coche_estimado.toLocaleString('es-ES')} €
-                          </p>
-                        </div>
+                        <p className="text-xs text-foreground">{oferta.modelo}</p>
                       </div>
                     ) : (
                       <span className="text-xs text-muted-foreground">Sin coche</span>
@@ -510,7 +515,7 @@ export function LicensesView() {
                   </td>
                   <td className="py-3 text-right">
                     <span className="font-mono font-bold text-primary text-base tabular-nums group-hover:text-primary">
-                      {oferta.precio_neto_licencia.toLocaleString('es-ES')} €
+                      {oferta.precio_neto.toLocaleString('es-ES')} €
                     </span>
                   </td>
                 </tr>

@@ -3,18 +3,27 @@ import { TrendingUp, TrendingDown, ChevronRight } from "lucide-react";
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer } from "recharts";
 import { cn } from "@/lib/utils";
 
-interface LicenciasData {
-  metadata: {
-    total_ofertas_validas: number;
-    precio_mercado_referencia: number;
+interface WebFeedData {
+  ticker: {
+    current_price: number;
+    delta_value: number;
+    delta_percent: number;
+    direction: string;
+    volume: number;
+    volatility: number;
   };
-  estadisticas: {
-    valor_mediano_por_fuente: Record<string, number>;
-    valor_mediano_por_dia: Record<string, number>;
+  charts: {
+    price_by_day_descanso: Record<string, number>;
   };
-  detalle_ofertas: Array<{
-    precio_neto_licencia: number;
-  }>;
+  market_depth: {
+    cheapest_offers: Array<{
+      precio_neto: number;
+    }>;
+    all_offers: Array<{
+      precio_neto: number;
+    }>;
+  };
+  updated_at: string;
 }
 
 interface HistoryEntry {
@@ -41,13 +50,13 @@ const parseCSV = (text: string): HistoryEntry[] => {
 };
 
 export function LicensePriceWidget({ onClick }: LicensePriceWidgetProps) {
-  const [data, setData] = useState<LicenciasData | null>(null);
+  const [data, setData] = useState<WebFeedData | null>(null);
   const [history, setHistory] = useState<HistoryEntry[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     Promise.all([
-      fetch("/analisis_licencias_taxi.json?t=" + Date.now()).then(res => res.json()),
+      fetch("/web_feed.json?t=" + Date.now()).then(res => res.json()),
       fetch("/history_stats.csv?t=" + Date.now()).then(res => res.text())
     ])
       .then(([jsonData, csvText]) => {
@@ -58,12 +67,12 @@ export function LicensePriceWidget({ onClick }: LicensePriceWidgetProps) {
       .catch(() => setLoading(false));
   }, []);
 
-  // Valores por defecto mientras carga
-  const precioRef = data?.metadata?.precio_mercado_referencia || 168000;
-  const totalOfertas = data?.metadata?.total_ofertas_validas || 0;
+  // Valores desde web_feed.json
+  const precioRef = data?.ticker?.current_price || 168000;
+  const totalOfertas = data?.market_depth?.all_offers?.length || 0;
   
   // Calcular min/max de las ofertas
-  const preciosNetos = data?.detalle_ofertas?.map(o => o.precio_neto_licencia) || [];
+  const preciosNetos = data?.market_depth?.all_offers?.map(o => o.precio_neto) || [];
   const minPrice = preciosNetos.length > 0 ? Math.min(...preciosNetos) : 160000;
   const maxPrice = preciosNetos.length > 0 ? Math.max(...preciosNetos) : 190000;
 
@@ -75,11 +84,9 @@ export function LicensePriceWidget({ onClick }: LicensePriceWidgetProps) {
       }))
     : [{ date: "hoy", price: precioRef }];
 
-  // Calcular tendencia real
-  const currentPrice = history.length > 0 ? history[history.length - 1].median_price : precioRef;
-  const previousPrice = history.length > 1 ? history[history.length - 2].median_price : currentPrice;
-  const priceChange = previousPrice > 0 ? ((currentPrice - previousPrice) / previousPrice) * 100 : 0;
-  const isUp = priceChange > 0;
+  // Calcular tendencia desde web_feed
+  const priceChange = data?.ticker?.delta_percent || 0;
+  const isUp = data?.ticker?.direction === "up";
 
   return (
     <button 

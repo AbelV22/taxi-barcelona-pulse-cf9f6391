@@ -80,11 +80,11 @@ const getTrenBgColor = (tren: string): string => {
   }
 };
 
-// Generar array de 24 horas empezando 30 minutos antes de la hora actual
-// Formato compacto: solo muestra la hora inicio
+// Generar array de 23 horas empezando 30 minutos antes de la hora actual
+// Formato compacto: solo muestra la hora inicio (eliminada la última franja)
 const generateHourSlots = (startHour: number): { label: string; hour: number }[] => {
   const slots: { label: string; hour: number }[] = [];
-  for (let i = 0; i < 24; i++) {
+  for (let i = 0; i < 23; i++) {
     const hour = (startHour + i) % 24;
     slots.push({ label: `${hour.toString().padStart(2, '0')}h`, hour });
   }
