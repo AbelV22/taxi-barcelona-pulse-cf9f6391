@@ -1,0 +1,46 @@
+name: Actualizar Licencias Taxi
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # Ejecutar a las 07:00 UTC (08:00 u 09:00 hora España según horario invierno/verano)
+  workflow_dispatch:      # Permite ejecutar manualmente desde la pestaña "Actions"
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Permiso CRÍTICO para poder guardar los archivos generados
+
+    steps:
+      - name: 📥 Checkout del código
+        uses: actions/checkout@v3
+
+      - name: 🐍 Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 📦 Instalar dependencias
+        run: |
+          pip install -r requirements.txt
+        # Asegúrate de que requirements.txt esté en la raíz y tenga: pandas, numpy, requests, beautifulsoup4 (o lo que use tu scraper)
+
+      - name: 🕵️ Ejecutar Scraper
+        run: python scripts/licencia_scrap.py
+        # Esto ejecutará tu script de scraping.
+        # IMPORTANTE: Asegúrate de que licencia_scrap.py guarde el JSON en la raíz (o que procesado_licen.py sepa dónde buscarlo).
+
+      - name: 📊 Ejecutar Procesado y Estadísticas
+        run: python scripts/procesado_licen.py
+        # Esto leerá el archivo del paso anterior y generará los datos para la web (market_data/)
+
+      - name: 💾 Guardar cambios (Commit & Push)
+        run: |
+          git config --global user.name 'TaxiBot'
+          git config --global user.email 'bot@noreply.github.com'
+          
+          # Añadimos todo lo que haya cambiado (el JSON raw y los datos procesados)
+          git add .
+          
+          # Hacemos commit solo si hay cambios para evitar errores
+          git diff --quiet && git diff --staged --quiet || (git commit -m "📈 Actualización diaria: $(date +'%Y-%m-%d')" && git push)
