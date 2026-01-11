@@ -41,6 +41,7 @@ const getTipoTren = (tren: string): string => {
   if (tipo.includes("IRYO") || tipo.includes("IL -")) return "IRYO";
   if (tipo.includes("OUIGO")) return "OUIGO";
   if (tipo.includes("TGV")) return "TGV";
+  if (tipo.includes("AVE")) return "AVE";
   return tipo;
 };
 
