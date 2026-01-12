@@ -9,12 +9,15 @@
     },
     "charts": {
         "history_dates": [
-            "2026-01-11"
+            "2026-01-11",
+            "2026-01-12"
         ],
         "history_prices": [
+            166147,
             166147
         ],
         "history_sma_7": [
+            0,
             0
         ],
         "price_by_day_descanso": {
@@ -227,5 +230,5 @@
             }
         ]
     },
-    "updated_at": "11/01/2026 14:01"
+    "updated_at": "12/01/2026 07:49"
 }
