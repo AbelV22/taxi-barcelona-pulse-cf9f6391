@@ -1,30 +1,32 @@
 {
     "ticker": {
-        "current_price": 166147,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
-        "volume": 22,
-        "volatility": 9683
+        "current_price": 165021,
+        "delta_value": -1126,
+        "delta_percent": -0.68,
+        "direction": "down",
+        "volume": 17,
+        "volatility": 8717
     },
     "charts": {
         "history_dates": [
-            "2026-01-11"
+            "2026-01-11",
+            "2026-01-13"
         ],
         "history_prices": [
-            166147
+            166147,
+            165021
         ],
         "history_sma_7": [
+            0,
             0
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165571,
-            "JUEVES PAR": 165575,
-            "LUNES IMPAR": 187050,
-            "LUNES PAR": 181157,
+            "JUEVES PAR": 165000,
+            "LUNES PAR": 175062,
             "MARTES PAR": 165021,
-            "NO ESPECIFICADO": 162552,
-            "VIERNES IMPAR": 166776
+            "NO ESPECIFICADO": 162513,
+            "VIERNES IMPAR": 168600
         }
     },
     "market_depth": {
@@ -71,34 +73,6 @@
             }
         ],
         "all_offers": [
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 187050,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "LUNES IMPAR",
-                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 210.000 € | Barcelona (Barcelona) | NO NEGOCIABLE \nFiesta Lun..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 187252,
-                "modelo": "TOYOTA CAMRY",
-                "dia": "LUNES PAR",
-                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 166776,
-                "modelo": "FORD",
-                "dia": "VIERNES IMPAR",
-                "raw": "Licencia Taxi Barcelona + coche | 170.000 € | Barcelona (Barcelona) | Vendo Licencia Taxi Barcelona ..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 170802,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES PAR",
-                "raw": "3 | Licencia Taxi Barcelona   185.000 € | Sant Quirze del Valles (Barcelona) | Numero de licencia te..."
-            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 171213,
@@ -206,13 +180,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 171992,
-                "modelo": "DACIA JOGGER",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 866 |  | Se vende licencia con vehículo Dacia Jogger con 1 años de antigüedad y 65000km...."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
@@ -227,5 +194,5 @@
             }
         ]
     },
-    "updated_at": "11/01/2026 14:01"
+    "updated_at": "13/01/2026 07:45"
 }
