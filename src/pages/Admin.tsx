@@ -245,24 +245,39 @@ export default function Admin() {
                             <p className="p-4 text-center text-muted-foreground text-sm">No hay registros recientes</p>
                         ) : (
                             registros.map((reg) => (
-                                <div key={reg.id} className="px-3 py-2 flex items-center justify-between">
-                                    <div>
+                                <div key={reg.id} className="px-3 py-2.5 border-b border-white/5">
+                                    <div className="flex items-center justify-between mb-1">
                                         <div className="flex items-center gap-2">
                                             <MapPin className={cn("h-3 w-3", reg.exited_at ? "text-muted-foreground" : "text-emerald-400")} />
                                             <span className="text-sm font-medium text-white">{reg.zona}</span>
-                                            <span className="text-[10px] text-muted-foreground">{anonymizeDeviceId(reg.device_id)}</span>
+                                            <span className={cn(
+                                                "text-[10px] px-2 py-0.5 rounded-full",
+                                                reg.exited_at ? "bg-muted-foreground/20 text-muted-foreground" : "bg-emerald-500/20 text-emerald-400"
+                                            )}>
+                                                {reg.exited_at ? "Salió" : "En cola"}
+                                            </span>
                                         </div>
-                                        <p className="text-[10px] text-muted-foreground">
+                                        <span className="text-[10px] text-muted-foreground">{anonymizeDeviceId(reg.device_id)}</span>
+                                    </div>
+                                    {/* GPS Coordinates for debugging */}
+                                    <div className="flex items-center gap-4 text-[10px] mt-1">
+                                        <span className="font-mono text-blue-400">
+                                            📍 {reg.lat.toFixed(6)}, {reg.lng.toFixed(6)}
+                                        </span>
+                                        <span className="text-muted-foreground">
                                             {formatTime(reg.created_at)}
                                             {reg.exited_at && ` → ${formatTime(reg.exited_at)}`}
-                                        </p>
+                                        </span>
                                     </div>
-                                    <span className={cn(
-                                        "text-[10px] px-2 py-0.5 rounded-full",
-                                        reg.exited_at ? "bg-muted-foreground/20 text-muted-foreground" : "bg-emerald-500/20 text-emerald-400"
-                                    )}>
-                                        {reg.exited_at ? "Salió" : "En cola"}
-                                    </span>
+                                    {/* Google Maps link for verification */}
+                                    <a
+                                        href={`https://maps.google.com/?q=${reg.lat},${reg.lng}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-[9px] text-primary hover:underline mt-1 inline-block"
+                                    >
+                                        Ver en Google Maps ↗
+                                    </a>
                                 </div>
                             ))
                         )}
