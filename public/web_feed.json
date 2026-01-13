@@ -1,37 +1,49 @@
 {
     "ticker": {
-        "current_price": 166147,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 165857,
+        "delta_value": -290,
+        "delta_percent": -0.17,
+        "direction": "down",
         "volume": 22,
-        "volatility": 9683
+        "volatility": 10077
     },
     "charts": {
         "history_dates": [
             "2026-01-11",
-            "2026-01-12"
+            "2026-01-12",
+            "2026-01-13"
         ],
         "history_prices": [
             166147,
-            166147
+            166147,
+            165857
         ],
         "history_sma_7": [
+            0,
             0,
             0
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 165571,
             "JUEVES PAR": 165575,
+            "LUNES": 155563,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 181157,
             "MARTES PAR": 165021,
-            "NO ESPECIFICADO": 162552,
+            "NO ESPECIFICADO": 162513,
             "VIERNES IMPAR": 166776
         }
     },
     "market_depth": {
         "cheapest_offers": [
+            {
+                "fuente": "MILANUNCIOS",
+                "dia": "LUNES",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
             {
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
@@ -63,17 +75,16 @@
                 "precio_neto": 160357,
                 "precio_total": 170000,
                 "valor_coche": 9643
-            },
-            {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "TOYOTA COROLLA",
-                "precio_neto": 162513,
-                "precio_total": 170000,
-                "valor_coche": 7487
             }
         ],
         "all_offers": [
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES",
+                "raw": "Compro Licencia Taxi Barcelona Lunes | 160.000 € | Barcelona (Barcelona) | Compro licencia de taxi  ..."
+            },
             {
                 "fuente": "MILANUNCIOS",
                 "precio_neto": 187050,
@@ -209,13 +220,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 171992,
-                "modelo": "DACIA JOGGER",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 866 |  | Se vende licencia con vehículo Dacia Jogger con 1 años de antigüedad y 65000km...."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
                 "dia": "NO ESPECIFICADO",
@@ -230,5 +234,5 @@
             }
         ]
     },
-    "updated_at": "12/01/2026 07:49"
+    "updated_at": "13/01/2026 07:45"
 }
