@@ -8,7 +8,9 @@ import { Capacitor } from "@capacitor/core";
 import { App as CapacitorApp } from "@capacitor/app";
 import { StatusBar, Style } from "@capacitor/status-bar";
 import { SplashScreen } from "@capacitor/splash-screen";
+import { startAutoTracking } from "./services/location/AutoLocationService";
 import Index from "./pages/Index";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +26,11 @@ const initializeNative = async () => {
 
     // Hide splash screen after app is ready
     await SplashScreen.hide();
+
+    // Start automatic location tracking
+    startAutoTracking((zona) => {
+      console.log('[App] Zone changed to:', zona);
+    });
   } catch (error) {
     console.error("Error initializing native features:", error);
   }
@@ -70,6 +77,7 @@ const App = () => {
           <BackButtonHandler />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/admin" element={<Admin />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
