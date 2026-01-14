@@ -11,7 +11,7 @@
     --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
     --safe-area-inset-left: env(safe-area-inset-left, 0px);
     --safe-area-inset-right: env(safe-area-inset-right, 0px);
-    
+
     /* iTaxiBcn Dark Theme - Based on reference design */
     --background: 220 25% 6%;
     --foreground: 220 10% 95%;
@@ -106,6 +106,67 @@
     --sidebar-border: 220 15% 15%;
     --sidebar-ring: 42 100% 50%;
   }
+
+  /* ============================================
+     LIGHT MODE THEME - iTaxiBcn
+     Professional warm light design
+     ============================================ */
+  .light {
+    /* Backgrounds - Warm off-white */
+    --background: 40 20% 98%;
+    --foreground: 220 25% 12%;
+
+    /* Card surfaces - Pure white with subtle warmth */
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    /* Popover/dropdowns */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    /* Primary - Deeper amber for light backgrounds */
+    --primary: 42 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light gray-blue */
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 25% 30%;
+
+    /* Muted elements */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent highlights */
+    --accent: 220 15% 93%;
+    --accent-foreground: 220 25% 15%;
+
+    /* Status colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 25% 6%;
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+    --rain: 200 80% 50%;
+    --rain-foreground: 0 0% 100%;
+
+    /* Borders - Subtle gray */
+    --border: 220 15% 88%;
+    --input: 220 15% 90%;
+    --ring: 42 100% 50%;
+
+    /* Sidebar - Light theme */
+    --sidebar-background: 40 15% 97%;
+    --sidebar-foreground: 220 20% 35%;
+    --sidebar-primary: 42 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 92%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 220 15% 90%;
+    --sidebar-ring: 42 100% 50%;
+  }
 }
 
 @layer base {
@@ -118,7 +179,12 @@
     font-family: 'Inter', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
 }
@@ -147,13 +213,13 @@
   .btn-gradient-emerald {
     @apply relative overflow-hidden;
     background: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(142 70% 45%) 100%);
-    box-shadow: 0 0 24px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
   }
 
   .btn-gradient-amber {
     @apply relative overflow-hidden;
     background: linear-gradient(135deg, hsl(45 93% 58%) 0%, hsl(38 92% 50%) 100%);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   /* Nav Button Glass */
@@ -222,8 +288,15 @@
   }
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
   }
 
   .animate-slide-up {
@@ -235,6 +308,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -246,8 +320,13 @@
   }
 
   @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   /* Premium Pulse Animation for Live Indicator */
@@ -256,10 +335,13 @@
   }
 
   @keyframes pulseGlow {
-    0%, 100% {
+
+    0%,
+    100% {
       opacity: 1;
       box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
     }
+
     50% {
       opacity: 0.7;
       box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
@@ -289,16 +371,103 @@
     background-color: hsl(var(--muted-foreground) / 0.3);
   }
 }
+
+/* ============================================
+   LIGHT MODE COMPONENT OVERRIDES
+   ============================================ */
+
+/* Glass Cards - Inverted for light mode */
+.light .card-glass {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.light .card-glass-hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.light .card-glass-hover:hover {
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Button Gradients - Softer shadows for light mode */
+.light .btn-gradient-emerald {
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.light .btn-gradient-amber {
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.light .btn-nav-glass {
+  background: rgba(0, 0, 0, 0.03);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.light .btn-nav-glass:hover {
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
+/* Primary button glow - Softer for light mode */
+.light .btn-primary-glow {
+  box-shadow: 0 4px 20px hsl(42 100% 50% / 0.25);
+}
+
+/* Logo glow - Remove in light mode */
+.light img[alt="iTaxiBcn"] {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* Text color overrides for hardcoded white text in glass cards */
+.light .card-glass .text-white,
+.light .card-glass-hover .text-white {
+  color: hsl(220 25% 12%);
+}
+
+.light .card-glass .text-white\/80,
+.light .card-glass-hover .text-white\/80 {
+  color: hsl(220 20% 30%);
+}
+
+.light .card-glass .text-white\/90,
+.light .card-glass-hover .text-white\/90 {
+  color: hsl(220 25% 15%);
+}
+
+/* Scrollbar for light mode */
+.light .scrollbar-dark::-webkit-scrollbar-thumb {
+  background-color: hsl(220 15% 80%);
+}
+
+.light .scrollbar-dark::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(220 15% 70%);
+}
+
+/* Mobile overlay - lighter for light mode */
+.light .bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Status bar background for native app */
+.light {
+  --status-bar-style: light;
+}
+
 /* --- AÑADE ESTO AL FINAL DEL ARCHIVO --- */
 /* Ocultar botón de Lovable */
 a[href*="lovable.dev"],
 .lovable-badge,
 #lovable-badge-container,
 div[data-lovable-badge="true"] {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-    width: 0 !important;
-    height: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
