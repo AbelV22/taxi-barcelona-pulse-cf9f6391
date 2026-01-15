@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { RefreshCw, Plane, Train, Users, Clock, ChevronRight, TrendingUp, Calendar, Settings } from "lucide-react";
+import { RefreshCw, Plane, Train, Users, Clock, ChevronRight, MapPin, TrendingUp, XCircle, Calendar, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEvents } from "@/hooks/useEvents";
-import { useWaitingTimes, getZoneWaitingTime, getZoneTaxistasActivos, getZoneHasRealData } from "@/hooks/useWaitingTimes";
-import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { getOrCreateDeviceId } from "@/lib/deviceId";
 // Tipos para vuelos.json (estructura real del scraper)
 interface VueloRaw {
   hora: string;
@@ -44,7 +45,7 @@ const getTerminalType = (vuelo: VueloRaw): 't1' | 't2' | 't2c' | 'puente' => {
   const terminal = vuelo.terminal?.toUpperCase() || "";
   const codigosVuelo = vuelo.vuelo?.toUpperCase() || "";
   const origen = vuelo.origen?.toUpperCase() || "";
-
+  
   if (terminal.includes("T2C") || terminal.includes("EASYJET")) return "t2c";
   if (codigosVuelo.includes("EJU") || codigosVuelo.includes("EZY")) return "t2c";
   if (origen.includes("MADRID") && codigosVuelo.includes("IBE")) return "puente";
@@ -103,9 +104,61 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   const [trenes, setTrenes] = useState<TrenSants[]>([]);
   const [licencias, setLicencias] = useState<LicenciasData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [isEnteringReten, setIsEnteringReten] = useState(false);
+  const [isInReten, setIsInReten] = useState(false);
+  const [currentZona, setCurrentZona] = useState<string | null>(null);
   const { events } = useEvents();
-  const { waitingTimes } = useWaitingTimes();
-  const navigate = useNavigate();
+
+  const handleEntrarReten = async () => {
+    setIsEnteringReten(true);
+    
+    try {
+      // Get GPS position
+      const position = await new Promise<GeolocationPosition>((resolve, reject) => {
+        navigator.geolocation.getCurrentPosition(resolve, reject, {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 0
+        });
+      });
+
+      const lat = position.coords.latitude;
+      const lng = position.coords.longitude;
+
+      // Get device ID
+      const deviceId = getOrCreateDeviceId();
+
+      // Call edge function
+      const { data, error } = await supabase.functions.invoke('check-geofence', {
+        body: { lat, lng, action: 'register', deviceId }
+      });
+
+      if (error) throw error;
+
+      if (data.success) {
+        setIsInReten(true);
+        setCurrentZona(data.zona);
+        toast.success(data.message);
+      } else {
+        toast.error(data.message);
+      }
+    } catch (error) {
+      console.error('Error registering entry:', error);
+      if (error instanceof GeolocationPositionError) {
+        toast.error('❌ No se pudo obtener tu ubicación. Activa el GPS.');
+      } else {
+        toast.error('❌ Error al registrar entrada. Inténtalo de nuevo.');
+      }
+    } finally {
+      setIsEnteringReten(false);
+    }
+  };
+
+  const handleSalirReten = () => {
+    setIsInReten(false);
+    setCurrentZona(null);
+    toast.success('✅ Has salido del retén');
+  };
 
   const fetchData = () => {
     Promise.all([
@@ -173,7 +226,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
   const getVuelosProximos60Min = (terminalId: string): number => {
     const nowMinutes = currentHour * 60 + now.getMinutes();
     const endMinutes = nowMinutes + 60;
-
+    
     return terminalData[terminalId].vuelos.filter(v => {
       if (v.estado?.toLowerCase().includes("finalizado")) return false;
       const [h, m] = (v.hora || "00:00").split(":").map(Number);
@@ -182,12 +235,12 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
     }).length;
   };
 
-  // Terminal config - 2x2 Grid with REAL waiting times from Supabase
+  // Terminal config - 2x2 Grid with T2C EasyJet (Ventana 60 min)
   const terminals = [
-    { id: "t1", name: "T1", vuelosEstaHora: getVuelosProximos60Min("t1"), espera: getZoneWaitingTime(waitingTimes, "T1"), hasRealData: getZoneHasRealData(waitingTimes, "T1"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T1") },
-    { id: "t2", name: "T2", vuelosEstaHora: getVuelosProximos60Min("t2"), espera: getZoneWaitingTime(waitingTimes, "T2"), hasRealData: getZoneHasRealData(waitingTimes, "T2"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2") },
-    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosProximos60Min("puente"), espera: getZoneWaitingTime(waitingTimes, "PUENTE_AEREO"), hasRealData: getZoneHasRealData(waitingTimes, "PUENTE_AEREO"), contribuidores: getZoneTaxistasActivos(waitingTimes, "PUENTE_AEREO") },
-    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosProximos60Min("t2c"), espera: getZoneWaitingTime(waitingTimes, "T2C_EASY"), hasRealData: getZoneHasRealData(waitingTimes, "T2C_EASY"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2C_EASY") },
+    { id: "t1", name: "T1", vuelosEstaHora: getVuelosProximos60Min("t1"), espera: getEsperaReten("t1", currentHour), contribuidores: 3 },
+    { id: "t2", name: "T2", vuelosEstaHora: getVuelosProximos60Min("t2"), espera: getEsperaReten("t2", currentHour), contribuidores: 2 },
+    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosProximos60Min("puente"), espera: getEsperaReten("puente", currentHour), contribuidores: 1 },
+    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosProximos60Min("t2c"), espera: getEsperaReten("t2c", currentHour), contribuidores: 0 },
   ];
 
   // License price data
@@ -231,17 +284,17 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
 
       {/* === QUICK NAV BUTTONS === */}
       <div className="grid grid-cols-2 gap-2 animate-fade-in" style={{ animationDelay: '100ms' }}>
-        <button
+        <button 
           onClick={onViewFullDay}
-          className="card-glass-hover flex items-center justify-center gap-2 h-11 text-white/80 hover:text-white font-medium text-sm transition-all duration-200"
+          className="card-glass-hover flex items-center justify-center gap-2 h-11 text-foreground/80 hover:text-foreground font-medium text-sm transition-all duration-200"
         >
           <Calendar className="h-4 w-4 text-primary" />
           <Plane className="h-4 w-4" />
           <span>Ver Vuelos</span>
         </button>
-        <button
+        <button 
           onClick={onViewTrainsFullDay}
-          className="card-glass-hover flex items-center justify-center gap-2 h-11 text-white/80 hover:text-white font-medium text-sm transition-all duration-200"
+          className="card-glass-hover flex items-center justify-center gap-2 h-11 text-foreground/80 hover:text-foreground font-medium text-sm transition-all duration-200"
         >
           <Calendar className="h-4 w-4 text-emerald-400" />
           <Train className="h-4 w-4" />
@@ -252,13 +305,13 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       {/* === AEROPUERTO SECTION - GLASSMORPHISM === */}
       <section className="space-y-2 animate-fade-in" style={{ animationDelay: '300ms', animationFillMode: 'backwards' }}>
         {/* Section Header - Clickable */}
-        <button
+        <button 
           onClick={onViewFullDay}
           className="flex items-center justify-between w-full px-1 group"
         >
           <div className="flex items-center gap-2">
             <Plane className="h-4 w-4 text-primary" />
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider group-hover:text-white transition-colors">Aeropuerto BCN</span>
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider group-hover:text-foreground transition-colors">Aeropuerto BCN</span>
             <span className="flex items-center gap-1 text-[10px] text-emerald-400">
               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-glow" />
               En vivo
@@ -270,11 +323,8 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
         {/* Terminal Cards - 2x2 Grid Glass */}
         <div className="grid grid-cols-2 gap-2">
           {terminals.map(term => {
-            // Only calculate esperaLevel if we have real data
-            const esperaLevel = term.hasRealData && term.espera !== null
-              ? (term.espera <= 10 ? "low" : term.espera <= 25 ? "medium" : "high")
-              : "unknown";
-
+            const esperaLevel = term.espera <= 10 ? "low" : term.espera <= 25 ? "medium" : "high";
+            
             return (
               <button
                 key={term.id}
@@ -283,28 +333,21 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
               >
                 {/* Header Row */}
                 <div className="flex items-center justify-between mb-0.5">
-                  <span className="text-sm font-semibold text-white/90">{term.name}</span>
-                  {term.hasRealData && term.espera !== null ? (
-                    <div className={cn(
-                      "inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold",
-                      esperaLevel === "low" && "bg-emerald-500 text-white",
-                      esperaLevel === "medium" && "bg-amber-400 text-black",
-                      esperaLevel === "high" && "bg-red-500 text-white"
-                    )}>
-                      <Clock className="h-2 w-2" />
-                      {term.espera}'
-                    </div>
-                  ) : (
-                    <div className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-medium bg-white/10 text-white/50">
-                      <Clock className="h-2 w-2" />
-                      Sin datos
-                    </div>
-                  )}
+                  <span className="text-sm font-semibold text-foreground">{term.name}</span>
+                  <div className={cn(
+                    "inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold",
+                    esperaLevel === "low" && "bg-success text-success-foreground",
+                    esperaLevel === "medium" && "bg-warning text-warning-foreground",
+                    esperaLevel === "high" && "bg-destructive text-destructive-foreground"
+                  )}>
+                    <Clock className="h-2 w-2" />
+                    {term.espera}'
+                  </div>
                 </div>
-
+                
                 {/* BIG NUMBER - Monospace Numeric */}
                 <div className="flex flex-col">
-                  <span className="font-mono font-black text-3xl tabular-nums tracking-tight text-white">
+                  <span className="font-mono font-black text-3xl tabular-nums tracking-tight text-foreground">
                     {term.vuelosEstaHora}
                   </span>
                   <span className="text-[8px] text-primary font-medium">Próximos 60m</span>
@@ -326,41 +369,41 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
       {/* === TRENES SANTS - GLASSMORPHISM DEPARTURE BOARD === */}
       <section className="space-y-2 animate-fade-in" style={{ animationDelay: '500ms', animationFillMode: 'backwards' }}>
         {/* Section Header - Clickable */}
-        <button
+        <button 
           onClick={onViewTrainsFullDay}
           className="flex items-center justify-between w-full px-1 group"
         >
           <div className="flex items-center gap-2">
             <Train className="h-4 w-4 text-emerald-400" />
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider group-hover:text-white transition-colors">Estación Sants</span>
-            <span className="font-mono text-lg font-bold text-white tabular-nums">{trenesProximaHora}</span>
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider group-hover:text-foreground transition-colors">Estación Sants</span>
+            <span className="font-mono text-lg font-bold text-foreground tabular-nums">{trenesProximaHora}</span>
             <span className="text-[10px] text-muted-foreground">/hora</span>
           </div>
           <ChevronRight className="h-4 w-4 text-muted-foreground group-hover:text-primary transition-colors" />
         </button>
 
         {/* Departure Board - Glass */}
-        <div className="card-glass overflow-hidden">
-          <div className="divide-y divide-white/5">
+        <div className="card-glass overflow-hidden divide-y divide-border">
+          <div className="divide-y divide-border/50">
             {proximosTrenes.length > 0 ? proximosTrenes.slice(0, 4).map((tren, idx) => {
               const countdown = getCountdown(tren.hora);
-
+              
               return (
-                <div
+                <div 
                   key={idx}
                   className={cn(
                     "grid grid-cols-[50px_1fr_auto_60px] gap-2 px-3 py-2 items-center transition-colors",
                     countdown.isCritical && "bg-red-500/10"
                   )}
                 >
-                  {/* Time - White */}
-                  <span className="font-mono text-sm font-bold tabular-nums text-white">
+                  {/* Time */}
+                  <span className="font-mono text-sm font-bold tabular-nums text-foreground">
                     {tren.hora}
                   </span>
-
+                  
                   {/* Origin */}
-                  <span className="text-xs text-white/80 truncate">{getCiudad(tren.origen)}</span>
-
+                  <span className="text-xs text-foreground/80 truncate">{getCiudad(tren.origen)}</span>
+                  
                   {/* Countdown - Colored by Urgency */}
                   <span className={cn(
                     "text-[10px] font-semibold tabular-nums",
@@ -368,7 +411,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
                   )}>
                     {countdown.text}
                   </span>
-
+                  
                   {/* Operator Badge */}
                   <span className={cn(
                     "font-mono text-[10px] font-semibold text-right",
@@ -402,7 +445,7 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
           <p className="text-[9px] text-purple-400 font-medium mb-0.5">{capitalizedToday}</p>
           {topEvent ? (
             <>
-              <p className="font-semibold text-sm text-white truncate leading-tight">{topEvent.title}</p>
+              <p className="font-semibold text-sm text-foreground truncate leading-tight">{topEvent.title}</p>
               <p className="text-[10px] text-muted-foreground mt-0.5">{topEvent.time} · {topEvent.location.split(' ')[0]}</p>
             </>
           ) : (
@@ -431,14 +474,6 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
           </div>
         </button>
       </div>
-
-      {/* Hidden Admin Access - Triple tap on version to access */}
-      <button
-        onClick={() => navigate('/admin')}
-        className="w-full py-4 text-[10px] text-muted-foreground/30 hover:text-muted-foreground/60 transition-colors"
-      >
-        v1.0.0
-      </button>
     </div>
   );
 }

@@ -6,12 +6,63 @@
 
 @layer base {
   :root {
-    /* Safe Area Insets for Android/iOS notches and navigation */
-    --safe-area-inset-top: env(safe-area-inset-top, 0px);
-    --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
-    --safe-area-inset-left: env(safe-area-inset-left, 0px);
-    --safe-area-inset-right: env(safe-area-inset-right, 0px);
+    /* iTaxiBcn Light Theme */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 12%;
 
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 12%;
+
+    /* Golden Yellow Primary */
+    --primary: 42 100% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Light Secondary */
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 20% 25%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 220 15% 92%;
+    --accent-foreground: 220 20% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Status Colors - Light theme optimized */
+    --success: 142 70% 35%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 45%;
+    --warning-foreground: 220 25% 10%;
+    --info: 199 89% 40%;
+    --info-foreground: 0 0% 100%;
+
+    /* Rain Alert */
+    --rain: 200 80% 45%;
+    --rain-foreground: 0 0% 100%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 90%;
+    --ring: 42 100% 45%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar - Light theme */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 25%;
+    --sidebar-primary: 42 100% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 94%;
+    --sidebar-accent-foreground: 220 20% 12%;
+    --sidebar-border: 220 15% 85%;
+    --sidebar-ring: 42 100% 45%;
+  }
+
+  .dark {
     /* iTaxiBcn Dark Theme - Based on reference design */
     --background: 220 25% 6%;
     --foreground: 220 10% 95%;
@@ -55,8 +106,6 @@
     --input: 220 20% 14%;
     --ring: 42 100% 50%;
 
-    --radius: 0.75rem;
-
     /* Sidebar - Dark theme */
     --sidebar-background: 220 25% 8%;
     --sidebar-foreground: 220 10% 70%;
@@ -79,12 +128,7 @@
     font-family: 'Inter', sans-serif;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Grotesk', sans-serif;
   }
 }
@@ -98,20 +142,35 @@
     @apply bg-card rounded-xl border border-border hover:border-primary/40 transition-all duration-300;
   }
 
-  /* Premium Glass Card - Dark theme optimized */
+  /* Premium Glass Card - Light/Dark adaptive */
   .card-glass {
     @apply rounded-xl border backdrop-blur-md transition-all duration-300;
-    background: rgba(0, 0, 0, 0.6);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: hsl(var(--card) / 0.8);
+    border-color: hsl(var(--border));
   }
 
   .card-glass-hover {
     @apply rounded-xl border backdrop-blur-md transition-all duration-300;
+    background: hsl(var(--card) / 0.8);
+    border-color: hsl(var(--border));
+  }
+  
+  .card-glass-hover:hover {
+    background: hsl(var(--card));
+    border-color: hsl(var(--primary) / 0.3);
+  }
+  
+  .dark .card-glass {
     background: rgba(0, 0, 0, 0.6);
     border-color: rgba(255, 255, 255, 0.1);
   }
-
-  .card-glass-hover:hover {
+  
+  .dark .card-glass-hover {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .card-glass-hover:hover {
     background: rgba(0, 0, 0, 0.7);
     border-color: rgba(255, 255, 255, 0.2);
   }
@@ -120,19 +179,19 @@
   .btn-gradient-emerald {
     @apply relative overflow-hidden;
     background: linear-gradient(135deg, hsl(158 64% 52%) 0%, hsl(142 70% 45%) 100%);
-    box-shadow: 0 0 24px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 24px rgba(16, 185, 129, 0.4), inset 0 1px 0 rgba(255,255,255,0.15);
   }
 
   .btn-gradient-amber {
     @apply relative overflow-hidden;
     background: linear-gradient(135deg, hsl(45 93% 58%) 0%, hsl(38 92% 50%) 100%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
   }
 
-  /* Nav Button Glass */
+  /* Nav Button Glass - Theme-aware */
   .btn-nav-glass {
-    @apply rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-200 hover:border-primary/30;
-    background: rgba(255, 255, 255, 0.03);
+    @apply rounded-xl border border-border backdrop-blur-sm transition-all duration-200 hover:border-primary/30;
+    background: hsl(var(--muted) / 0.3);
   }
 
   .stat-value {
@@ -195,15 +254,8 @@
   }
 
   @keyframes float {
-
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-
-    50% {
-      transform: translateY(-10px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 
   .animate-slide-up {
@@ -215,7 +267,6 @@
       opacity: 0;
       transform: translateY(20px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -227,13 +278,8 @@
   }
 
   @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-
-    to {
-      opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
 
   /* Premium Pulse Animation for Live Indicator */
@@ -242,13 +288,10 @@
   }
 
   @keyframes pulseGlow {
-
-    0%,
-    100% {
+    0%, 100% {
       opacity: 1;
       box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
     }
-
     50% {
       opacity: 0.7;
       box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
@@ -258,7 +301,7 @@
   /* Dark mode scrollbars */
   .scrollbar-dark {
     scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    scrollbar-color: hsl(var(--border)) transparent;
   }
 
   .scrollbar-dark::-webkit-scrollbar {
@@ -270,29 +313,29 @@
   }
 
   .scrollbar-dark::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: hsl(var(--border));
     border-radius: 3px;
   }
 
   .scrollbar-dark::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: hsl(var(--muted-foreground) / 0.3);
   }
 }
-
 /* Safe area for mobile bottom nav */
 .safe-area-bottom {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* --- Ocultar botón de Lovable --- */
+/* --- AÑADE ESTO AL FINAL DEL ARCHIVO --- */
+/* Ocultar botón de Lovable */
 a[href*="lovable.dev"],
 .lovable-badge,
 #lovable-badge-container,
 div[data-lovable-badge="true"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-  width: 0 !important;
-  height: 0 !important;
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
 }
