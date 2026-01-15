@@ -89,18 +89,13 @@ function updateThemeColorMeta(theme: 'light' | 'dark') {
  * Custom hook for theme management with Barcelona time-based auto-detection
  */
 export function useTheme() {
-    const [themeSetting, setThemeSetting] = useState<Theme>(() => {
-        // Check localStorage for saved preference
-        const saved = localStorage.getItem('itaxibcn-theme') as Theme | null;
-        return saved || 'auto'; // Default to auto (Barcelona time-based)
-    });
-
-    const [effectiveTheme, setEffectiveTheme] = useState<'light' | 'dark'>(() => {
-        return getEffectiveTheme(themeSetting);
-    });
+    const [themeSetting, setThemeSetting] = useState<Theme>('auto');
+    const [effectiveTheme, setEffectiveTheme] = useState<'light' | 'dark'>('dark');
+    const [isInitialized, setIsInitialized] = useState(false);
 
     // Apply theme to document
     const applyTheme = useCallback((theme: 'light' | 'dark') => {
+        if (typeof document === 'undefined') return;
         const root = document.documentElement;
         root.classList.remove('light', 'dark');
         root.classList.add(theme);
@@ -108,12 +103,30 @@ export function useTheme() {
         setEffectiveTheme(theme);
     }, []);
 
-    // Update theme when setting changes
+    // Initialize theme from localStorage on mount
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+
+        const saved = localStorage.getItem('itaxibcn-theme') as Theme | null;
+        const initialSetting = saved || 'auto';
+        setThemeSetting(initialSetting);
+
+        const newEffective = getEffectiveTheme(initialSetting);
+        applyTheme(newEffective);
+        setIsInitialized(true);
+    }, [applyTheme]);
+
+    // Update theme when setting changes (after initialization)
+    useEffect(() => {
+        if (!isInitialized) return;
+
         const newEffective = getEffectiveTheme(themeSetting);
         applyTheme(newEffective);
-        localStorage.setItem('itaxibcn-theme', themeSetting);
-    }, [themeSetting, applyTheme]);
+
+        if (typeof window !== 'undefined') {
+            localStorage.setItem('itaxibcn-theme', themeSetting);
+        }
+    }, [themeSetting, applyTheme, isInitialized]);
 
     // For auto mode: check and update theme every minute
     useEffect(() => {
