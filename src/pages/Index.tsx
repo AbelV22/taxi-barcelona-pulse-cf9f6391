@@ -11,6 +11,7 @@ import { FullDayView } from "@/components/views/FullDayView";
 import { TrainsFullDayView } from "@/components/views/TrainsFullDayView";
 import { TrainsByCityView } from "@/components/views/TrainsByCityView";
 import { TrainsByOperatorView } from "@/components/views/TrainsByOperatorView";
+import { QuickEarningsSheet } from "@/components/widgets/QuickEarningsSheet";
 
 const titles: Record<string, string> = {
   dashboard: "Inicio",
@@ -93,24 +94,24 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Sidebar 
-        activeTab={activeTab} 
+      <Sidebar
+        activeTab={activeTab}
         onTabChange={(tab) => {
           setActiveTab(tab);
           setSelectedTerminal(null);
           setSelectedTrainCity(null);
           setSelectedTrainOperator(null);
-        }} 
+        }}
         isOpen={sidebarOpen}
         onToggle={() => setSidebarOpen(!sidebarOpen)}
       />
-      
+
       <main className="lg:pl-56 transition-all duration-300">
         <Header title={titles[activeTab]} onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
-        
+
         <div className="p-4 md:p-6">
           {activeTab === "dashboard" && (
-            <DashboardView 
+            <DashboardView
               onTerminalClick={handleTerminalClick}
               onViewAllFlights={handleViewAllFlights}
               onViewAllEvents={handleViewAllEvents}
@@ -121,7 +122,7 @@ const Index = () => {
           )}
           {activeTab === "vuelos" && <FlightsView />}
           {activeTab === "trenes" && (
-            <TrainsFullDayView 
+            <TrainsFullDayView
               onBack={() => setActiveTab("dashboard")}
               onCityClick={handleTrainCityClick}
               onOperatorClick={handleTrainOperatorClick}
@@ -131,35 +132,38 @@ const Index = () => {
           {activeTab === "licencias" && <LicensesView />}
           {activeTab === "alertas" && <AlertsView />}
           {activeTab === "terminalDetail" && selectedTerminal && (
-            <TerminalDetailView 
-              terminalId={selectedTerminal} 
-              onBack={handleBackFromTerminal} 
+            <TerminalDetailView
+              terminalId={selectedTerminal}
+              onBack={handleBackFromTerminal}
             />
           )}
           {activeTab === "fullDay" && (
             <FullDayView onBack={handleBackFromFullDay} />
           )}
           {activeTab === "trainsFullDay" && (
-            <TrainsFullDayView 
+            <TrainsFullDayView
               onBack={handleBackFromTrainsFullDay}
               onCityClick={handleTrainCityClick}
               onOperatorClick={handleTrainOperatorClick}
             />
           )}
           {activeTab === "trainsByCity" && selectedTrainCity && (
-            <TrainsByCityView 
+            <TrainsByCityView
               city={selectedTrainCity}
               onBack={handleBackFromTrainsByCity}
             />
           )}
           {activeTab === "trainsByOperator" && selectedTrainOperator && (
-            <TrainsByOperatorView 
+            <TrainsByOperatorView
               operator={selectedTrainOperator}
               onBack={handleBackFromTrainsByOperator}
             />
           )}
         </div>
       </main>
+
+      {/* Floating Quick Earnings Button (PRO feature) */}
+      <QuickEarningsSheet />
     </div>
   );
 };

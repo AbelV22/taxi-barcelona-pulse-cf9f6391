@@ -3,8 +3,9 @@ import { supabase } from '@/integrations/supabase/client';
 
 interface WaitingTimeData {
     zona: string;
-    espera_minutos: number;
+    espera_minutos: number | null; // null when no real data available
     taxistas_activos: number;
+    isRealData: boolean; // true only when calculated from actual driver data
 }
 
 interface UseWaitingTimesResult {
@@ -13,19 +14,6 @@ interface UseWaitingTimesResult {
     error: Error | null;
     refresh: () => void;
 }
-
-const DEFAULT_WAITING_TIMES: Record<string, number> = {
-    T1: 25,
-    T2: 15,
-    SANTS: 10,
-    PUENTE_AEREO: 8,
-    T2C_EASY: 12,
-    // Map frontend names to backend names
-    t1: 25,
-    t2: 15,
-    puente: 8,
-    t2c: 12,
-};
 
 /**
  * Hook to fetch real waiting times from Supabase
@@ -58,9 +46,12 @@ export const useWaitingTimes = (): UseWaitingTimesResult => {
 
                 // Calculate average waiting time from completed waits
                 const completedWaits = zonaRegistros.filter(r => r.exited_at);
-                let avgWait = DEFAULT_WAITING_TIMES[zona] || 20;
 
-                if (completedWaits.length >= 2) {
+                // Only show real data if we have at least 3 completed waits
+                const hasRealData = completedWaits.length >= 3;
+                let avgWait: number | null = null;
+
+                if (hasRealData) {
                     const totalWait = completedWaits.reduce((acc, r) => {
                         const start = new Date(r.created_at).getTime();
                         const end = new Date(r.exited_at!).getTime();
@@ -73,6 +64,7 @@ export const useWaitingTimes = (): UseWaitingTimesResult => {
                     zona,
                     espera_minutos: avgWait,
                     taxistas_activos: activos,
+                    isRealData: hasRealData,
                 };
 
                 // Also map to lowercase names for compatibility
@@ -109,12 +101,25 @@ export const useWaitingTimes = (): UseWaitingTimesResult => {
 
 /**
  * Get waiting time for a specific zone
+ * Returns null if no real data is available (don't show fictitious values)
  */
 export const getZoneWaitingTime = (
     waitingTimes: Record<string, WaitingTimeData>,
     zona: string
-): number => {
-    return waitingTimes[zona]?.espera_minutos || DEFAULT_WAITING_TIMES[zona] || 20;
+): number | null => {
+    const data = waitingTimes[zona];
+    if (!data || !data.isRealData) return null;
+    return data.espera_minutos;
+};
+
+/**
+ * Check if a zone has real calculated data
+ */
+export const getZoneHasRealData = (
+    waitingTimes: Record<string, WaitingTimeData>,
+    zona: string
+): boolean => {
+    return waitingTimes[zona]?.isRealData ?? false;
 };
 
 /**

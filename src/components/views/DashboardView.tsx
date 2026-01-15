@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { RefreshCw, Plane, Train, Users, Clock, ChevronRight, TrendingUp, Calendar, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEvents } from "@/hooks/useEvents";
-import { useWaitingTimes, getZoneWaitingTime, getZoneTaxistasActivos } from "@/hooks/useWaitingTimes";
+import { useWaitingTimes, getZoneWaitingTime, getZoneTaxistasActivos, getZoneHasRealData } from "@/hooks/useWaitingTimes";
 import { useNavigate } from "react-router-dom";
 // Tipos para vuelos.json (estructura real del scraper)
 interface VueloRaw {
@@ -184,10 +184,10 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
 
   // Terminal config - 2x2 Grid with REAL waiting times from Supabase
   const terminals = [
-    { id: "t1", name: "T1", vuelosEstaHora: getVuelosProximos60Min("t1"), espera: getZoneWaitingTime(waitingTimes, "T1"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T1") },
-    { id: "t2", name: "T2", vuelosEstaHora: getVuelosProximos60Min("t2"), espera: getZoneWaitingTime(waitingTimes, "T2"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2") },
-    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosProximos60Min("puente"), espera: getZoneWaitingTime(waitingTimes, "PUENTE_AEREO"), contribuidores: getZoneTaxistasActivos(waitingTimes, "PUENTE_AEREO") },
-    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosProximos60Min("t2c"), espera: getZoneWaitingTime(waitingTimes, "T2C_EASY"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2C_EASY") },
+    { id: "t1", name: "T1", vuelosEstaHora: getVuelosProximos60Min("t1"), espera: getZoneWaitingTime(waitingTimes, "T1"), hasRealData: getZoneHasRealData(waitingTimes, "T1"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T1") },
+    { id: "t2", name: "T2", vuelosEstaHora: getVuelosProximos60Min("t2"), espera: getZoneWaitingTime(waitingTimes, "T2"), hasRealData: getZoneHasRealData(waitingTimes, "T2"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2") },
+    { id: "puente", name: "Puente", vuelosEstaHora: getVuelosProximos60Min("puente"), espera: getZoneWaitingTime(waitingTimes, "PUENTE_AEREO"), hasRealData: getZoneHasRealData(waitingTimes, "PUENTE_AEREO"), contribuidores: getZoneTaxistasActivos(waitingTimes, "PUENTE_AEREO") },
+    { id: "t2c", name: "T2C Easy", vuelosEstaHora: getVuelosProximos60Min("t2c"), espera: getZoneWaitingTime(waitingTimes, "T2C_EASY"), hasRealData: getZoneHasRealData(waitingTimes, "T2C_EASY"), contribuidores: getZoneTaxistasActivos(waitingTimes, "T2C_EASY") },
   ];
 
   // License price data
@@ -270,7 +270,10 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
         {/* Terminal Cards - 2x2 Grid Glass */}
         <div className="grid grid-cols-2 gap-2">
           {terminals.map(term => {
-            const esperaLevel = term.espera <= 10 ? "low" : term.espera <= 25 ? "medium" : "high";
+            // Only calculate esperaLevel if we have real data
+            const esperaLevel = term.hasRealData && term.espera !== null
+              ? (term.espera <= 10 ? "low" : term.espera <= 25 ? "medium" : "high")
+              : "unknown";
 
             return (
               <button
@@ -281,15 +284,22 @@ export function DashboardView({ onTerminalClick, onViewAllFlights, onViewAllEven
                 {/* Header Row */}
                 <div className="flex items-center justify-between mb-0.5">
                   <span className="text-sm font-semibold text-white/90">{term.name}</span>
-                  <div className={cn(
-                    "inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold",
-                    esperaLevel === "low" && "bg-emerald-500 text-white",
-                    esperaLevel === "medium" && "bg-amber-400 text-black",
-                    esperaLevel === "high" && "bg-red-500 text-white"
-                  )}>
-                    <Clock className="h-2 w-2" />
-                    {term.espera}'
-                  </div>
+                  {term.hasRealData && term.espera !== null ? (
+                    <div className={cn(
+                      "inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-semibold",
+                      esperaLevel === "low" && "bg-emerald-500 text-white",
+                      esperaLevel === "medium" && "bg-amber-400 text-black",
+                      esperaLevel === "high" && "bg-red-500 text-white"
+                    )}>
+                      <Clock className="h-2 w-2" />
+                      {term.espera}'
+                    </div>
+                  ) : (
+                    <div className="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full text-[9px] font-medium bg-white/10 text-white/50">
+                      <Clock className="h-2 w-2" />
+                      Sin datos
+                    </div>
+                  )}
                 </div>
 
                 {/* BIG NUMBER - Monospace Numeric */}
