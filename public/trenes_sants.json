@@ -12,33 +12,9 @@
         "via": ""
     },
     {
-        "hora": "08:29",
-        "origen": "Camp de Tarragona",
-        "tren": "AVANT 08869",
-        "via": ""
-    },
-    {
-        "hora": "08:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03092",
-        "via": ""
-    },
-    {
         "hora": "09:15",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08087",
-        "via": ""
-    },
-    {
-        "hora": "09:15",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 08087",
-        "via": ""
-    },
-    {
-        "hora": "09:31",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03301",
         "via": ""
     },
     {
@@ -210,7 +186,7 @@
         "via": ""
     },
     {
-        "hora": "13:17",
+        "hora": "13:16",
         "origen": "Donostia / San Sebastián",
         "tren": "ALVIA 00533",
         "via": ""
