@@ -30,24 +30,6 @@
         "via": ""
     },
     {
-        "hora": "09:54",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
-        "hora": "09:59",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06071",
-        "via": ""
-    },
-    {
-        "hora": "10:05",
-        "origen": "Figueres-Vilafant",
-        "tren": "EUROMED 11102",
-        "via": ""
-    },
-    {
         "hora": "10:05",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01101",
@@ -60,7 +42,7 @@
         "via": ""
     },
     {
-        "hora": "10:46",
+        "hora": "10:54",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03073",
         "via": ""
@@ -186,7 +168,7 @@
         "via": ""
     },
     {
-        "hora": "13:16",
+        "hora": "13:09",
         "origen": "Donostia / San Sebastián",
         "tren": "ALVIA 00533",
         "via": ""
