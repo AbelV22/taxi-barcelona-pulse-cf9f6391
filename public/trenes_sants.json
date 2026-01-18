@@ -186,18 +186,6 @@
         "via": ""
     },
     {
-        "hora": "13:49",
-        "origen": "Portbou",
-        "tren": "MD 15070",
-        "via": ""
-    },
-    {
-        "hora": "14:08",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34394",
-        "via": ""
-    },
-    {
         "hora": "14:08",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34394",
@@ -210,27 +198,9 @@
         "via": ""
     },
     {
-        "hora": "14:21",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06111",
-        "via": ""
-    },
-    {
         "hora": "14:25",
         "origen": "Sevilla Santa Justa",
         "tren": "AVE 03943",
-        "via": ""
-    },
-    {
-        "hora": "14:32",
-        "origen": "Sevilla Santa Justa",
-        "tren": "AVE 03943",
-        "via": ""
-    },
-    {
-        "hora": "14:32",
-        "origen": "Paris Gare de Lyon",
-        "tren": "TGV INOUI 09713",
         "via": ""
     },
     {
@@ -252,15 +222,15 @@
         "via": ""
     },
     {
-        "hora": "14:51",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03113",
+        "hora": "14:50",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "EUROMED 01112",
         "via": ""
     },
     {
-        "hora": "14:57",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01112",
+        "hora": "14:51",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03113",
         "via": ""
     },
     {
