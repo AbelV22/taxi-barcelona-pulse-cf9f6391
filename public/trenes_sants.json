@@ -6,12 +6,6 @@
         "via": ""
     },
     {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
-        "via": ""
-    },
-    {
         "hora": "07:15",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03662",
@@ -303,18 +297,6 @@
         "hora": "12:41",
         "origen": "Sevilla Santa Justa",
         "tren": "AVE 02561",
-        "via": ""
-    },
-    {
-        "hora": "12:41",
-        "origen": "Sevilla Santa Justa",
-        "tren": "AVE 02561",
-        "via": ""
-    },
-    {
-        "hora": "12:49",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06011",
         "via": ""
     },
     {
