@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169777,
-        "delta_value": 58,
-        "delta_percent": 0.03,
-        "direction": "up",
-        "volume": 25,
-        "volatility": 13918
+        "current_price": 169748,
+        "delta_value": -29,
+        "delta_percent": -0.02,
+        "direction": "down",
+        "volume": 24,
+        "volatility": 14203
     },
     "charts": {
         "history_dates": [
@@ -14,7 +14,8 @@
             "2026-01-13",
             "2026-01-16",
             "2026-01-17",
-            "2026-01-18"
+            "2026-01-18",
+            "2026-01-19"
         ],
         "history_prices": [
             166147,
@@ -22,7 +23,8 @@
             165857,
             166147,
             169719,
-            169777
+            169777,
+            169748
         ],
         "history_sma_7": [
             0,
@@ -30,11 +32,12 @@
             0,
             0,
             0,
-            0
+            0,
+            167648
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
-            "JUEVES PAR": 170802,
+            "JUEVES PAR": 170495,
             "LUNES": 155563,
             "LUNES IMPAR": 183620,
             "LUNES PAR": 178485,
@@ -113,13 +116,6 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 170802,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES PAR",
-                "raw": "3 | Licencia Taxi Barcelona   185.000 € | Sant Quirze del Valles (Barcelona) | Numero de licencia te..."
             },
             {
                 "fuente": "SOLANO",
@@ -263,5 +259,5 @@
             }
         ]
     },
-    "updated_at": "18/01/2026 07:22"
+    "updated_at": "19/01/2026 07:31"
 }
