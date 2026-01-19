@@ -192,24 +192,6 @@
         "via": ""
     },
     {
-        "hora": "14:13",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34394",
-        "via": ""
-    },
-    {
-        "hora": "14:14",
-        "origen": "Portbou",
-        "tren": "MD 15070",
-        "via": ""
-    },
-    {
-        "hora": "14:14",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06111",
-        "via": ""
-    },
-    {
         "hora": "14:14",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06111",
@@ -228,27 +210,9 @@
         "via": ""
     },
     {
-        "hora": "14:32",
-        "origen": "Paris Gare de Lyon",
-        "tren": "TGV INOUI 09713",
-        "via": ""
-    },
-    {
         "hora": "14:46",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03113",
-        "via": ""
-    },
-    {
-        "hora": "14:46",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03113",
-        "via": ""
-    },
-    {
-        "hora": "14:50",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01112",
         "via": ""
     },
     {
@@ -294,7 +258,7 @@
         "via": ""
     },
     {
-        "hora": "16:19",
+        "hora": "16:24",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 09725",
         "via": ""
@@ -306,7 +270,7 @@
         "via": ""
     },
     {
-        "hora": "16:34",
+        "hora": "16:40",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03141",
         "via": ""
@@ -330,7 +294,7 @@
         "via": ""
     },
     {
-        "hora": "16:54",
+        "hora": "17:00",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06141",
         "via": ""
@@ -630,7 +594,7 @@
         "via": ""
     },
     {
-        "hora": "21:14",
+        "hora": "21:19",
         "origen": "Cádiz",
         "tren": "ALVIA 00694",
         "via": ""
