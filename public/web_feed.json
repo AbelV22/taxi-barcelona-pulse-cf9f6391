@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 169748,
-        "delta_value": -29,
-        "delta_percent": -0.02,
+        "current_price": 165621,
+        "delta_value": -4127,
+        "delta_percent": -2.43,
         "direction": "down",
-        "volume": 24,
-        "volatility": 14203
+        "volume": 22,
+        "volatility": 14456
     },
     "charts": {
         "history_dates": [
@@ -15,7 +15,8 @@
             "2026-01-16",
             "2026-01-17",
             "2026-01-18",
-            "2026-01-19"
+            "2026-01-19",
+            "2026-01-20"
         ],
         "history_prices": [
             166147,
@@ -24,7 +25,8 @@
             166147,
             169719,
             169777,
-            169748
+            169748,
+            165621
         ],
         "history_sma_7": [
             0,
@@ -33,15 +35,16 @@
             0,
             0,
             0,
-            167648
+            167648,
+            167573
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
-            "JUEVES PAR": 170495,
+            "JUEVES PAR": 169777,
             "LUNES": 155563,
-            "LUNES IMPAR": 183620,
+            "LUNES IMPAR": 187050,
             "LUNES PAR": 178485,
-            "NO ESPECIFICADO": 162513,
+            "NO ESPECIFICADO": 160357,
             "VIERNES IMPAR": 164516
         }
     },
@@ -119,8 +122,8 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 164807,
-                "modelo": "TOYOTA PRIUS",
+                "precio_neto": 166243,
+                "modelo": "TOYOTA COROLLA",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38563 | DIA DE FIESTA:  | JUEVES IMPAR | LICENCIA TAXI EN VENTA BARCELONA-JUEVES IMPAR-TOYOT..."
             },
@@ -137,13 +140,6 @@
                 "modelo": "DACIA",
                 "dia": "LUNES PAR",
                 "raw": "Ref:  | 38558 | DIA DE FIESTA:  | LUNES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VE..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 180191,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "LUNES IMPAR",
-                "raw": "Ref:  | 38555 | DIA DE FIESTA:  | LUNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN ..."
             },
             {
                 "fuente": "SOLANO",
@@ -188,18 +184,11 @@
                 "raw": "Ref:  | 38500 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
-                "fuente": "STAC",
-                "precio_neto": 170536,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 934 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Automatico con 2 años de an..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 175393,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 933 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Automatico con 1.5 años de ..."
+                "fuente": "SOLANO",
+                "precio_neto": 165000,
+                "modelo": "SIN COCHE",
+                "dia": "JUEVES PAR",
+                "raw": "Ref:  | 38495 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN V..."
             },
             {
                 "fuente": "STAC",
@@ -259,5 +248,5 @@
             }
         ]
     },
-    "updated_at": "19/01/2026 07:31"
+    "updated_at": "20/01/2026 07:30"
 }
