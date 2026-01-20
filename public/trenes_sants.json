@@ -6,12 +6,6 @@
         "via": ""
     },
     {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
-        "via": ""
-    },
-    {
         "hora": "07:15",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03662",
@@ -987,12 +981,6 @@
         "hora": "23:03",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:48",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03203",
         "via": ""
     },
     {
