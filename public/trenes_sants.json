@@ -174,18 +174,6 @@
         "via": ""
     },
     {
-        "hora": "14:01",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03303",
-        "via": ""
-    },
-    {
-        "hora": "14:08",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34394",
-        "via": ""
-    },
-    {
         "hora": "14:08",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34394",
@@ -195,24 +183,6 @@
         "hora": "14:14",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06111",
-        "via": ""
-    },
-    {
-        "hora": "14:15",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06501",
-        "via": ""
-    },
-    {
-        "hora": "14:25",
-        "origen": "Marseille Saint Charles",
-        "tren": "AVE 09730",
-        "via": ""
-    },
-    {
-        "hora": "14:32",
-        "origen": "Paris Gare de Lyon",
-        "tren": "TGV INOUI 09713",
         "via": ""
     },
     {
@@ -240,54 +210,48 @@
         "via": ""
     },
     {
-        "hora": "15:40",
+        "hora": "15:31",
+        "origen": "Paris Gare de Lyon",
+        "tren": "TGV INOUI 09713",
+        "via": ""
+    },
+    {
+        "hora": "15:42",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03113",
         "via": ""
     },
     {
-        "hora": "15:49",
+        "hora": "15:50",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03162",
+        "via": ""
+    },
+    {
+        "hora": "15:50",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03162",
+        "via": ""
+    },
+    {
+        "hora": "16:13",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06111",
         "via": ""
     },
     {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
+        "hora": "16:19",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 09725",
         "via": ""
     },
     {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
-        "via": ""
-    },
-    {
-        "hora": "16:10",
+        "hora": "16:32",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06121",
         "via": ""
     },
     {
-        "hora": "16:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
-        "via": ""
-    },
-    {
-        "hora": "16:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
-        "via": ""
-    },
-    {
-        "hora": "16:34",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03141",
-        "via": ""
-    },
-    {
         "hora": "16:34",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03141",
@@ -300,9 +264,9 @@
         "via": ""
     },
     {
-        "hora": "16:49",
+        "hora": "16:53",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06541",
+        "tren": "AVE 03141",
         "via": ""
     },
     {
@@ -318,6 +282,12 @@
         "via": ""
     },
     {
+        "hora": "17:00",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "OUIGO 06541",
+        "via": ""
+    },
+    {
         "hora": "17:24",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03143",
@@ -327,6 +297,12 @@
         "hora": "17:24",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03143",
+        "via": ""
+    },
+    {
+        "hora": "17:27",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 09725",
         "via": ""
     },
     {
@@ -565,20 +541,20 @@
     },
     {
         "hora": "21:09",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06181",
+        "via": ""
+    },
+    {
+        "hora": "21:09",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06181",
+        "via": ""
+    },
+    {
+        "hora": "21:15",
         "origen": "Cádiz",
         "tren": "ALVIA 00694",
-        "via": ""
-    },
-    {
-        "hora": "21:09",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06181",
-        "via": ""
-    },
-    {
-        "hora": "21:09",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06181",
         "via": ""
     },
     {
