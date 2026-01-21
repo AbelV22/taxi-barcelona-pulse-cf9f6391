@@ -1,24 +1,18 @@
 [
     {
-        "hora": "00:09",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": ""
-    },
-    {
-        "hora": "01:19",
+        "hora": "01:36",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03201",
         "via": ""
     },
     {
-        "hora": "01:44",
+        "hora": "02:09",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06611",
         "via": ""
     },
     {
-        "hora": "02:36",
+        "hora": "02:56",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03203",
         "via": ""
