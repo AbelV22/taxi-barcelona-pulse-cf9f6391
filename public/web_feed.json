@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 165621,
-        "delta_value": -4127,
-        "delta_percent": -2.43,
+        "current_price": 165000,
+        "delta_value": -621,
+        "delta_percent": -0.37,
         "direction": "down",
-        "volume": 22,
-        "volatility": 14456
+        "volume": 23,
+        "volatility": 14540
     },
     "charts": {
         "history_dates": [
@@ -16,7 +16,8 @@
             "2026-01-17",
             "2026-01-18",
             "2026-01-19",
-            "2026-01-20"
+            "2026-01-20",
+            "2026-01-21"
         ],
         "history_prices": [
             166147,
@@ -26,7 +27,8 @@
             169719,
             169777,
             169748,
-            165621
+            165621,
+            165000
         ],
         "history_sma_7": [
             0,
@@ -36,12 +38,13 @@
             0,
             0,
             167648,
-            167573
+            167573,
+            167409
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 177830,
             "JUEVES PAR": 169777,
-            "LUNES": 155563,
+            "LUNES": 152781,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 178485,
             "NO ESPECIFICADO": 160357,
@@ -57,6 +60,14 @@
                 "precio_neto": 125563,
                 "precio_total": 130000,
                 "valor_coche": 4437
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "dia": "LUNES",
+                "modelo": "SIN COCHE",
+                "precio_neto": 150000,
+                "precio_total": 150000,
+                "valor_coche": 0
             },
             {
                 "fuente": "SOLANO",
@@ -81,14 +92,6 @@
                 "precio_neto": 155563,
                 "precio_total": 160000,
                 "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
-                "valor_coche": 4437
             }
         ],
         "all_offers": [
@@ -101,10 +104,10 @@
             },
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
+                "precio_neto": 150000,
+                "modelo": "SIN COCHE",
                 "dia": "LUNES",
-                "raw": "Compro Licencia Taxi Barcelona Lunes | 160.000 € | Barcelona (Barcelona) | Compro licencia de taxi  ..."
+                "raw": "Compro licencia de taxi en Barcelona | 150.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -119,6 +122,13 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
+                "dia": "LUNES",
+                "raw": "Compro Licencia Taxi Barcelona Lunes | 160.000 € | Barcelona (Barcelona) | Compro licencia de taxi  ..."
             },
             {
                 "fuente": "SOLANO",
@@ -248,5 +258,5 @@
             }
         ]
     },
-    "updated_at": "20/01/2026 07:30"
+    "updated_at": "21/01/2026 07:31"
 }
