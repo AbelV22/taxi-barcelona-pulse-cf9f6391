@@ -42,12 +42,6 @@
         "via": ""
     },
     {
-        "hora": "09:31",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03301",
-        "via": ""
-    },
-    {
         "hora": "09:39",
         "origen": "València Estació del Nord",
         "tren": "INTERCITY 01072",
@@ -60,15 +54,21 @@
         "via": ""
     },
     {
-        "hora": "09:54",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
         "hora": "09:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06071",
+        "via": ""
+    },
+    {
+        "hora": "10:00",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03301",
+        "via": ""
+    },
+    {
+        "hora": "10:03",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "OUIGO 06471",
         "via": ""
     },
     {
