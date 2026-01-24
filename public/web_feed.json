@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 162591,
-        "delta_value": -1925,
-        "delta_percent": -1.17,
+        "current_price": 162552,
+        "delta_value": -39,
+        "delta_percent": -0.02,
         "direction": "down",
-        "volume": 23,
-        "volatility": 14845
+        "volume": 24,
+        "volatility": 14595
     },
     "charts": {
         "history_dates": [
@@ -19,7 +19,8 @@
             "2026-01-20",
             "2026-01-21",
             "2026-01-22",
-            "2026-01-23"
+            "2026-01-23",
+            "2026-01-24"
         ],
         "history_prices": [
             166147,
@@ -32,7 +33,8 @@
             165621,
             165000,
             164516,
-            162591
+            162591,
+            162552
         ],
         "history_sma_7": [
             0,
@@ -45,7 +47,8 @@
             167573,
             167409,
             167218,
-            166710
+            166710,
+            165686
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169040,
@@ -55,7 +58,7 @@
             "LUNES PAR": 187252,
             "MARTES PAR": 174285,
             "MIERCOLES IMPAR": 175783,
-            "NO ESPECIFICADO": 160357,
+            "NO ESPECIFICADO": 159460,
             "VIERNES IMPAR": 160161
         }
     },
@@ -94,8 +97,8 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "MILANUNCIOS",
-                "dia": "LUNES",
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -210,6 +213,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 158563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 935 |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFO..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
@@ -266,5 +276,5 @@
             }
         ]
     },
-    "updated_at": "23/01/2026 07:28"
+    "updated_at": "24/01/2026 07:22"
 }
