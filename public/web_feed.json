@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 162552,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 164824,
+        "delta_value": 2272,
+        "delta_percent": 1.4,
         "direction": "up",
-        "volume": 24,
-        "volatility": 14595
+        "volume": 22,
+        "volatility": 13975
     },
     "charts": {
         "history_dates": [
@@ -22,7 +22,8 @@
             "2026-01-23",
             "2026-01-24",
             "2026-01-25",
-            "2026-01-26"
+            "2026-01-26",
+            "2026-01-27"
         ],
         "history_prices": [
             166147,
@@ -38,7 +39,8 @@
             162591,
             162552,
             162552,
-            162552
+            162552,
+            164824
         ],
         "history_sma_7": [
             0,
@@ -54,7 +56,8 @@
             166710,
             165686,
             164654,
-            163626
+            163626,
+            163512
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169040,
@@ -64,7 +67,7 @@
             "LUNES PAR": 187252,
             "MARTES PAR": 174285,
             "MIERCOLES IMPAR": 175783,
-            "NO ESPECIFICADO": 159460,
+            "NO ESPECIFICADO": 159038,
             "VIERNES IMPAR": 160161
         }
     },
@@ -74,8 +77,8 @@
                 "fuente": "MILANUNCIOS",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 125563,
-                "precio_total": 130000,
+                "precio_neto": 135563,
+                "precio_total": 140000,
                 "valor_coche": 4437
             },
             {
@@ -103,8 +106,8 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
+                "fuente": "MILANUNCIOS",
+                "dia": "LUNES",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -114,10 +117,10 @@
         "all_offers": [
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 125563,
+                "precio_neto": 135563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Licencia Taxi Barcelona | 130.000 € | Barcelona (Barcelona) | Busco licencia de taxi en Barcelona ci..."
+                "raw": "Licencia Taxi Barcelona | 140.000 € | Barcelona (Barcelona) | Compro licencia de taxi en Barcelona c..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -219,13 +222,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 158563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 935 |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
@@ -244,13 +240,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 923 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 160357,
-                "modelo": "SKODA OCTAVIA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi GNC Automatico con 5 años de..."
             },
             {
                 "fuente": "STAC",
@@ -282,5 +271,5 @@
             }
         ]
     },
-    "updated_at": "26/01/2026 07:30"
+    "updated_at": "27/01/2026 07:30"
 }
