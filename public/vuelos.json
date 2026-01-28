@@ -1,72 +1,32 @@
 [
     {
-        "hora": "06:26",
-        "vuelo": "RYR2494",
-        "aerolinea": "N/A",
-        "origen": "PALMA DE MALLORCA (PMI)",
-        "terminal": "T2B",
-        "sala": "B",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "06:48",
-        "vuelo": "QTR137",
-        "aerolinea": "N/A",
-        "origen": "DOHA / HAMAD INTERNATIONAL (DOH)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "07:07",
-        "vuelo": "CCA845",
-        "aerolinea": "N/A",
-        "origen": "BEIJING / CAPITAL (PEK)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "07:13",
-        "vuelo": "ETD111",
-        "aerolinea": "N/A",
-        "origen": "ABU DHABI (AUH)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "07:23",
+        "hora": "07:22",
         "vuelo": "RYR6342",
         "aerolinea": "N/A",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T2B",
         "sala": "B",
-        "estado": "SALA B",
+        "estado": "Finalizado",
         "dia_relativo": 0
     },
     {
-        "hora": "07:43",
-        "vuelo": "VLG3905 / IBE5111 / LAN5836 / LVL5394 / QTR3743",
-        "aerolinea": "Multicompania",
-        "origen": "PALMA DE MALLORCA (PMI)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "07:48",
+        "hora": "07:41",
         "vuelo": "AEA6006 / ASL7450 / DAL6776 / ETD4388 / ITY2407 / KLM3350 / THY4586",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "SALA T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "07:47",
+        "vuelo": "VLG5006 / QTR8002 / LVL3001 / LAN1518 / AVA6029 / FIN5571 / DTA6002 / IBE0401",
+        "aerolinea": "Multicompania",
+        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
         "dia_relativo": 0
     },
     {
@@ -90,18 +50,18 @@
         "dia_relativo": 0
     },
     {
-        "hora": "07:59",
-        "vuelo": "FIN5571 / VLG5006 / QTR8002 / LVL3001 / LAN1518 / DTA6002 / AVA6029 / IBE0401",
+        "hora": "07:57",
+        "vuelo": "VLG3905 / IBE5111 / LAN5836 / LVL5394 / QTR3743",
         "aerolinea": "Multicompania",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
+        "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
-        "hora": "08:07",
-        "vuelo": "UAL120 / ACA3692 / DLH7968 / SWR3011",
+        "hora": "08:05",
+        "vuelo": "UAL120 / DLH7968 / SWR3011 / ACA3692",
         "aerolinea": "Multicompania",
         "origen": "NUEVA YORK / NEWARK-NUEVA JERSEY (EWR)",
         "terminal": "T1",
@@ -110,58 +70,8 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:11",
-        "vuelo": "VLG8005 / QTR3732 / LAN5882 / LVL5617 / IBE5195",
-        "aerolinea": "Multicompania",
-        "origen": "PARIS /ORLY (ORY)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:12",
-        "vuelo": "VLG1423 / QTR3540 / LVL5062 / LAN5865 / IBE5019",
-        "aerolinea": "Multicompania",
-        "origen": "BILBAO (BIO)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:16",
-        "vuelo": "VLG2213 / LVL5212 / QTR3592 / LAN5891 / AAL8853 / IBE5163",
-        "aerolinea": "Multicompania",
-        "origen": "SEVILLA (SVQ)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:17",
-        "vuelo": "FIN5573 / LAN1519 / LVL3003 / QTR6857 / VLG5010 / AVA6028 / IBE0403",
-        "aerolinea": "Multicompania",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:18",
-        "vuelo": "VLG3501 / IBE5063 / LAN5855 / LVL5322 / QTR3785",
-        "aerolinea": "Multicompania",
-        "origen": "IBIZA (IBZ)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:19",
-        "vuelo": "VLG1303 / QTR3512 / LAN5850 / LVL5046 / IBE5263",
+        "hora": "08:07",
+        "vuelo": "VLG1303 / QTR3512 / LVL5046 / LAN5850 / IBE5263",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
@@ -170,17 +80,37 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:20",
-        "vuelo": "TAM8114 / IBE6542 / QTR8446 / LAN8114 / FIN4405",
+        "hora": "08:07",
+        "vuelo": "VLG8005 / LAN5882 / QTR3732 / LVL5617 / IBE5195",
         "aerolinea": "Multicompania",
-        "origen": "SAO PAULO /GUARULHOS (GRU)",
+        "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
-        "hora": "08:25",
+        "hora": "08:08",
+        "vuelo": "VLG2213 / IBE5163 / LAN5891 / LVL5212 / QTR3592 / AAL8853",
+        "aerolinea": "Multicompania",
+        "origen": "SEVILLA (SVQ)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:11",
+        "vuelo": "VLG1423 / LAN5865 / LVL5062 / QTR3540 / IBE5019",
+        "aerolinea": "Multicompania",
+        "origen": "BILBAO (BIO)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:17",
         "vuelo": "UAE255 / AVA6255",
         "aerolinea": "Multicompania",
         "origen": "DUBAI (DXB)",
@@ -190,7 +120,7 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:25",
+        "hora": "08:17",
         "vuelo": "QFA8255",
         "aerolinea": "N/A",
         "origen": "-",
@@ -200,17 +130,7 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:27",
-        "vuelo": "IBE2377 / VLG5777 / LVL3107 / FIN5584 / QTR8043",
-        "aerolinea": "Multicompania",
-        "origen": "VALENCIA (VLC)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:27",
+        "hora": "08:21",
         "vuelo": "WMT3175",
         "aerolinea": "N/A",
         "origen": "BUCAREST (OTP)",
@@ -220,7 +140,37 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:30",
+        "hora": "08:25",
+        "vuelo": "AVA6028 / QTR6857 / LVL3003 / LAN1519 / VLG5010 / FIN5573 / IBE0403",
+        "aerolinea": "Multicompania",
+        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:27",
+        "vuelo": "TAM8114 / QTR8446 / IBE6542 / LAN8114 / FIN4405",
+        "aerolinea": "Multicompania",
+        "origen": "SAO PAULO /GUARULHOS (GRU)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:28",
+        "vuelo": "VLG3501 / QTR3785 / LVL5322 / IBE5063 / LAN5855",
+        "aerolinea": "Multicompania",
+        "origen": "IBIZA (IBZ)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:31",
         "vuelo": "AVA018",
         "aerolinea": "N/A",
         "origen": "BOGOTA /EL DORADO (BOG)",
@@ -231,6 +181,16 @@
     },
     {
         "hora": "08:31",
+        "vuelo": "IBE2377 / LVL3107 / FIN5584 / QTR8043 / VLG5777",
+        "aerolinea": "Multicompania",
+        "origen": "VALENCIA (VLC)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:32",
         "vuelo": "MAC377",
         "aerolinea": "N/A",
         "origen": "TANGER (TNG)",
@@ -240,30 +200,20 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:34",
-        "vuelo": "RYR4546",
+        "hora": "08:33",
+        "vuelo": "RYR2835",
         "aerolinea": "N/A",
-        "origen": "OPORTO (OPO)",
+        "origen": "BRUSELAS /CHARLEROI (CRL)",
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
         "dia_relativo": 0
     },
     {
-        "hora": "08:35",
-        "vuelo": "AAL742 / BAW1607 / IBE4934 / FIN3814",
-        "aerolinea": "Multicompania",
-        "origen": "FILADELFIA (PHL)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "08:38",
-        "vuelo": "RYR2835",
+        "hora": "08:37",
+        "vuelo": "RYR4546",
         "aerolinea": "N/A",
-        "origen": "BRUSELAS /CHARLEROI (CRL)",
+        "origen": "OPORTO (OPO)",
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
@@ -280,8 +230,18 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:43",
-        "vuelo": "AFR1148 / AMX5966 / DAL8392 / CES1759",
+        "hora": "08:39",
+        "vuelo": "AAL742 / IBE4934 / FIN3814 / BAW1607",
+        "aerolinea": "Multicompania",
+        "origen": "FILADELFIA (PHL)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "08:41",
+        "vuelo": "AFR1148 / DAL8392 / CES1759 / AMX5966",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -290,8 +250,8 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:43",
-        "vuelo": "MAU9328 / REU8148",
+        "hora": "08:41",
+        "vuelo": "REU8148 / MAU9328",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -300,8 +260,8 @@
         "dia_relativo": 0
     },
     {
-        "hora": "08:55",
-        "vuelo": "AEA7701 / ETD4302 / ETH1425 / DAL6768 / KAL6651 / AMX6896",
+        "hora": "08:52",
+        "vuelo": "AEA7701 / KAL6651 / DAL6768 / ETD4302 / AMX6896 / ETH1425",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -310,27 +270,7 @@
         "dia_relativo": 0
     },
     {
-        "hora": "09:00",
-        "vuelo": "LAN1520 / AAL8552 / AVA6126 / FIN5585 / LVL3005 / QTR8070 / VLG5023 / IBE0405",
-        "aerolinea": "Multicompania",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "09:02",
-        "vuelo": "VLG1301 / QTR3515 / LVL5044 / LAN5744 / IBE5137",
-        "aerolinea": "Multicompania",
-        "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "09:05",
+        "hora": "08:59",
         "vuelo": "SWR1952",
         "aerolinea": "N/A",
         "origen": "ZURICH (ZRH)",
@@ -340,10 +280,20 @@
         "dia_relativo": 0
     },
     {
-        "hora": "09:07",
-        "vuelo": "SIA378",
+        "hora": "09:02",
+        "vuelo": "RYR3079",
         "aerolinea": "N/A",
-        "origen": "SINGAPORE (SIN)",
+        "origen": "LISBOA (LIS)",
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "SALA B",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "09:10",
+        "vuelo": "QTR8070 / LAN1520 / FIN5585 / VLG5023 / AVA6126 / LVL3005 / AAL8552 / IBE0405",
+        "aerolinea": "Multicompania",
+        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "En hora",
@@ -351,7 +301,7 @@
     },
     {
         "hora": "09:14",
-        "vuelo": "VLG8308 / LAN5745 / LVL5667 / QTR4687 / IBE5222",
+        "vuelo": "VLG8308 / QTR4687 / LVL5667 / LAN5745 / IBE5222",
         "aerolinea": "Multicompania",
         "origen": "AMSTERDAM /SCHIPHOL (AMS)",
         "terminal": "T1",
@@ -370,7 +320,27 @@
         "dia_relativo": 0
     },
     {
-        "hora": "09:14",
+        "hora": "09:18",
+        "vuelo": "CSZ865 / CCA3729",
+        "aerolinea": "Multicompania",
+        "origen": "SHENZHEN/BAOAN (SZX)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "09:20",
+        "vuelo": "VLG1301 / QTR3515 / LVL5044 / IBE5137 / LAN5744",
+        "aerolinea": "Multicompania",
+        "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "09:20",
         "vuelo": "RYR3029",
         "aerolinea": "N/A",
         "origen": "IBIZA (IBZ)",
@@ -391,7 +361,7 @@
     },
     {
         "hora": "09:22",
-        "vuelo": "VLG3901 / IBE5322 / LAN5885 / LVL5390 / QTR3688",
+        "vuelo": "VLG3901 / IBE5322 / LVL5390 / QTR3688 / LAN5885",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -401,27 +371,17 @@
     },
     {
         "hora": "09:24",
-        "vuelo": "CSZ865 / CCA3729",
-        "aerolinea": "Multicompania",
-        "origen": "SHENZHEN/BAOAN (SZX)",
+        "vuelo": "SIA378",
+        "aerolinea": "N/A",
+        "origen": "SINGAPORE (SIN)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
-        "hora": "09:35",
-        "vuelo": "RYR3079",
-        "aerolinea": "N/A",
-        "origen": "LISBOA (LIS)",
-        "terminal": "T2B",
-        "sala": "B",
-        "estado": "SALA B",
-        "dia_relativo": 0
-    },
-    {
         "hora": "09:42",
-        "vuelo": "VLG1221 / IBE5249 / QTR3700 / LVL5027 / LAN5860",
+        "vuelo": "VLG1221 / IBE5249 / LAN5860 / LVL5027 / QTR3700",
         "aerolinea": "Multicompania",
         "origen": "LYON (LYS)",
         "terminal": "T1",
@@ -431,7 +391,7 @@
     },
     {
         "hora": "09:45",
-        "vuelo": "AAL192 / IBE4792 / FIN3842 / BAW1648",
+        "vuelo": "AAL192 / FIN3842 / IBE4792 / BAW1648",
         "aerolinea": "Multicompania",
         "origen": "DALLAS-FORT WORTH INTL. (DFW)",
         "terminal": "T1",
@@ -441,7 +401,7 @@
     },
     {
         "hora": "09:48",
-        "vuelo": "LVL3007 / LAN1521 / VLG5024 / QTR5090 / AAL8775 / IBE0407",
+        "vuelo": "AAL8775 / VLG5024 / LVL3007 / LAN1521 / QTR5090 / IBE0407",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -461,17 +421,7 @@
     },
     {
         "hora": "09:52",
-        "vuelo": "ELY393",
-        "aerolinea": "N/A",
-        "origen": "TEL AVIV (TLV)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "09:52",
-        "vuelo": "VLG8021 / LAN5830 / LVL5635 / QTR3555 / IBE5785",
+        "vuelo": "VLG8021 / QTR3555 / LVL5635 / LAN5830 / IBE5785",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
@@ -490,13 +440,33 @@
         "dia_relativo": 0
     },
     {
-        "hora": "09:58",
+        "hora": "09:57",
         "vuelo": "RYR6266",
         "aerolinea": "N/A",
         "origen": "EDIMBURGO (EDI)",
         "terminal": "T2A",
         "sala": "A",
-        "estado": "En hora",
+        "estado": "SALA A",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "10:01",
+        "vuelo": "EZY2703",
+        "aerolinea": "N/A",
+        "origen": "BRISTOL (BRS)",
+        "terminal": "T2C (EasyJet)",
+        "sala": "C",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "10:05",
+        "vuelo": "ELY393",
+        "aerolinea": "N/A",
+        "origen": "TEL AVIV (TLV)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -511,7 +481,7 @@
     },
     {
         "hora": "10:10",
-        "vuelo": "VLG1421 / LAN5834 / LVL5060 / QTR3645 / IBE5045",
+        "vuelo": "VLG1421 / QTR3645 / LVL5060 / LAN5834 / IBE5045",
         "aerolinea": "Multicompania",
         "origen": "BILBAO (BIO)",
         "terminal": "T1",
@@ -521,12 +491,12 @@
     },
     {
         "hora": "10:13",
-        "vuelo": "EZY2703",
+        "vuelo": "AEE710",
         "aerolinea": "N/A",
-        "origen": "BRISTOL (BRS)",
-        "terminal": "T2C (EasyJet)",
-        "sala": "C",
-        "estado": "En hora",
+        "origen": "ATENAS (ATH)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -551,7 +521,7 @@
     },
     {
         "hora": "10:24",
-        "vuelo": "VLG1516 / LVL5082 / LAN5875 / IBE5149 / QTR3702",
+        "vuelo": "VLG1516 / QTR3702 / LVL5082 / LAN5875 / IBE5149",
         "aerolinea": "Multicompania",
         "origen": "NIZA /COTE D-AZUR (NCE)",
         "terminal": "T1",
@@ -561,7 +531,7 @@
     },
     {
         "hora": "10:25",
-        "vuelo": "VLG6201 / LVL5481 / QTR3603 / IBE5572 / LAN5853",
+        "vuelo": "VLG6201 / QTR3603 / LVL5481 / LAN5853 / IBE5572",
         "aerolinea": "Multicompania",
         "origen": "GINEBRA (GVA)",
         "terminal": "T1",
@@ -571,7 +541,7 @@
     },
     {
         "hora": "10:25",
-        "vuelo": "KLM1511 / KAL6405 / CES1839 / DAL9188",
+        "vuelo": "KLM1511 / KAL6405 / DAL9188 / CES1839",
         "aerolinea": "Multicompania",
         "origen": "AMSTERDAM /SCHIPHOL (AMS)",
         "terminal": "T1",
@@ -590,18 +560,8 @@
         "dia_relativo": 0
     },
     {
-        "hora": "10:28",
-        "vuelo": "AEE710",
-        "aerolinea": "N/A",
-        "origen": "ATENAS (ATH)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
         "hora": "10:36",
-        "vuelo": "VLG1669 / QTR3630 / LVL5108 / IBE5853",
+        "vuelo": "VLG1669 / IBE5853 / LVL5108 / QTR3630",
         "aerolinea": "Multicompania",
         "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
         "terminal": "T1",
@@ -611,22 +571,12 @@
     },
     {
         "hora": "10:37",
-        "vuelo": "VLG1291 / QTR3689 / LVL5038 / IBE5565",
+        "vuelo": "VLG1291 / QTR3689 / IBE5565 / LVL5038",
         "aerolinea": "Multicompania",
         "origen": "A CORUÑA (LCG)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "10:40",
-        "vuelo": "RYR3184",
-        "aerolinea": "N/A",
-        "origen": "RABAT /SALE (RBA)",
-        "terminal": "T2A",
-        "sala": "A",
-        "estado": "En hora",
         "dia_relativo": 0
     },
     {
@@ -640,18 +590,18 @@
         "dia_relativo": 0
     },
     {
-        "hora": "10:45",
-        "vuelo": "THY1853",
+        "hora": "10:47",
+        "vuelo": "RYR3184",
         "aerolinea": "N/A",
-        "origen": "ESTAMBUL (IST)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
+        "origen": "RABAT /SALE (RBA)",
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "En hora",
         "dia_relativo": 0
     },
     {
         "hora": "10:49",
-        "vuelo": "VLG2977 / IBE5781 / LVL5278 / QTR3549",
+        "vuelo": "VLG2977 / QTR3549 / LVL5278 / IBE5781",
         "aerolinea": "Multicompania",
         "origen": "NANTES-ATLANTIQUE (NTE)",
         "terminal": "T1",
@@ -661,7 +611,7 @@
     },
     {
         "hora": "10:51",
-        "vuelo": "VLG2011 / LVL5180 / QTR3678 / IBE5333",
+        "vuelo": "VLG2011 / QTR3678 / LVL5180 / IBE5333",
         "aerolinea": "Multicompania",
         "origen": "GRANADA-JAÉN F.G.L. (GRX)",
         "terminal": "T1",
@@ -671,7 +621,7 @@
     },
     {
         "hora": "10:55",
-        "vuelo": "VLG2114 / QTR3505 / LVL5195 / IBE5006",
+        "vuelo": "VLG2114 / LVL5195 / IBE5006 / QTR3505",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
@@ -691,7 +641,7 @@
     },
     {
         "hora": "10:57",
-        "vuelo": "VLG2211 / AAL8851 / IBE5161 / LVL5210 / QTR3695",
+        "vuelo": "VLG2211 / IBE5161 / QTR3695 / AAL8851 / LVL5210",
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
@@ -700,18 +650,28 @@
         "dia_relativo": 0
     },
     {
-        "hora": "11:05",
-        "vuelo": "VLG3005 / IBE5381 / LVL5284 / QTR3648",
+        "hora": "11:07",
+        "vuelo": "VLG3005 / QTR3648 / LVL5284 / IBE5381",
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "En hora",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "11:10",
-        "vuelo": "AFR1348 / DAL8557 / CES1707 / AMX6010",
+        "vuelo": "THY1853",
+        "aerolinea": "N/A",
+        "origen": "ESTAMBUL (IST)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "11:10",
+        "vuelo": "AFR1348 / CES1707 / AMX6010 / DAL8557",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -721,7 +681,7 @@
     },
     {
         "hora": "11:10",
-        "vuelo": "HVN3672 / GLO5176 / KQA3048 / REU8348 / MAU9320",
+        "vuelo": "GLO5176 / HVN3672 / KQA3048 / REU8348 / MAU9320",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -731,7 +691,7 @@
     },
     {
         "hora": "11:11",
-        "vuelo": "AEA6156 / ETD7544 / KLM3352 / ITY2409 / DAL6778",
+        "vuelo": "AEA6156 / DAL6778 / ITY2409 / ETD7544 / KLM3352",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -761,7 +721,7 @@
     },
     {
         "hora": "11:15",
-        "vuelo": "VLG8475 / LVL5692 / IBE5703 / QTR3705",
+        "vuelo": "VLG8475 / QTR3705 / LVL5692 / IBE5703",
         "aerolinea": "Multicompania",
         "origen": "OPORTO (OPO)",
         "terminal": "T1",
@@ -781,7 +741,7 @@
     },
     {
         "hora": "11:25",
-        "vuelo": "VLG6007 / QTR3653 / LVL5428 / AAL8879 / IBE5183",
+        "vuelo": "VLG6007 / AAL8879 / IBE5183 / LVL5428 / QTR3653",
         "aerolinea": "Multicompania",
         "origen": "FLORENCIA / PERETOLA (FLR)",
         "terminal": "T1",
@@ -801,7 +761,7 @@
     },
     {
         "hora": "11:30",
-        "vuelo": "VLG6401 / IBE5666 / LVL5511 / QTR3768",
+        "vuelo": "VLG6401 / QTR3768 / IBE5666 / LVL5511",
         "aerolinea": "Multicompania",
         "origen": "VENECIA /MARCO POLO (VCE)",
         "terminal": "T1",
@@ -811,7 +771,7 @@
     },
     {
         "hora": "11:30",
-        "vuelo": "VLG7823 / LVL5581 / IBE5627 / BAW8053",
+        "vuelo": "VLG7823 / IBE5627 / BAW8053 / LVL5581",
         "aerolinea": "Multicompania",
         "origen": "LONDRES /GATWICK (LGW)",
         "terminal": "T1",
@@ -821,7 +781,7 @@
     },
     {
         "hora": "11:31",
-        "vuelo": "TAP1032 / RZO8710 / AZU7277 / MSR9422",
+        "vuelo": "TAP1032 / AZU7277 / MSR9422 / RZO8710",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -851,7 +811,7 @@
     },
     {
         "hora": "11:39",
-        "vuelo": "QTR7246 / LVL3009 / LAN1624 / CPA1827 / AVA6078 / AAL8651 / VLG5116 / IBE0409",
+        "vuelo": "LVL3009 / AAL8651 / VLG5116 / LAN1624 / QTR7246 / CPA1827 / AVA6078 / IBE0409",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -861,7 +821,7 @@
     },
     {
         "hora": "11:39",
-        "vuelo": "VLG8461 / QTR5517 / LVL5682 / IBE5229",
+        "vuelo": "VLG8461 / LVL5682 / QTR5517 / IBE5229",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -871,7 +831,7 @@
     },
     {
         "hora": "11:40",
-        "vuelo": "LVL2626 / IBE2626 / FIN5392 / QTR5370 / AAL8792",
+        "vuelo": "LVL2626 / FIN5392 / IBE2626 / QTR5370 / AAL8792",
         "aerolinea": "Multicompania",
         "origen": "BOSTON (BOS)",
         "terminal": "T1",
@@ -881,7 +841,7 @@
     },
     {
         "hora": "11:40",
-        "vuelo": "VLG6331 / LVL5497 / QTR3729 / IBE5664",
+        "vuelo": "VLG6331 / QTR3729 / LVL5497 / IBE5664",
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
@@ -891,7 +851,7 @@
     },
     {
         "hora": "11:45",
-        "vuelo": "VLG8981 / LVL5734 / IBE5618",
+        "vuelo": "VLG8981 / IBE5618 / LVL5734",
         "aerolinea": "Multicompania",
         "origen": "BRUSELAS (BRU)",
         "terminal": "T1",
@@ -911,7 +871,7 @@
     },
     {
         "hora": "11:53",
-        "vuelo": "VLG1305 / IBE5139 / QTR3534 / LVL5048",
+        "vuelo": "VLG1305 / IBE5139 / LVL5048 / QTR3534",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
@@ -931,7 +891,7 @@
     },
     {
         "hora": "11:58",
-        "vuelo": "VLG3213 / QTR3764 / IBE5450 / LVL5308",
+        "vuelo": "VLG3213 / LVL5308 / QTR3764 / IBE5450",
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
@@ -961,7 +921,7 @@
     },
     {
         "hora": "12:01",
-        "vuelo": "VLG1813 / LVL5144 / IBE5295 / QTR3668",
+        "vuelo": "VLG1813 / IBE5295 / QTR3668 / LVL5144",
         "aerolinea": "Multicompania",
         "origen": "MUNICH (MUC)",
         "terminal": "T1",
@@ -971,12 +931,22 @@
     },
     {
         "hora": "12:01",
-        "vuelo": "VLG8001 / LVL5613 / IBE5191 / QTR3746",
+        "vuelo": "VLG8001 / QTR3746 / LVL5613 / IBE5191",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "12:02",
+        "vuelo": "LVL2604 / QTR7244 / IBE2604 / FIN5354",
+        "aerolinea": "Multicompania",
+        "origen": "BUENOS AIRES/MINISTRO PISTARINI (EZE)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -1000,16 +970,6 @@
         "dia_relativo": 0
     },
     {
-        "hora": "12:09",
-        "vuelo": "LVL2604 / IBE2604 / QTR7244 / FIN5354",
-        "aerolinea": "Multicompania",
-        "origen": "BUENOS AIRES/MINISTRO PISTARINI (EZE)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
         "hora": "12:15",
         "vuelo": "KLM1513 / DAL9186",
         "aerolinea": "Multicompania",
@@ -1021,7 +981,7 @@
     },
     {
         "hora": "12:15",
-        "vuelo": "KQA1673 / CXA9321 / CAL8593",
+        "vuelo": "KQA1673 / CAL8593 / CXA9321",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -1071,7 +1031,7 @@
     },
     {
         "hora": "12:40",
-        "vuelo": "AVA6089 / AAL8613 / VLG5031 / LVL3011 / QTR5095 / CPA1839 / IBE0411",
+        "vuelo": "AAL8613 / AVA6089 / CPA1839 / LVL3011 / QTR5095 / VLG5031 / IBE0411",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -1081,7 +1041,7 @@
     },
     {
         "hora": "12:41",
-        "vuelo": "VLG1427 / IBE5023 / LVL5066 / QTR3647",
+        "vuelo": "VLG1427 / QTR3647 / IBE5023 / LVL5066",
         "aerolinea": "Multicompania",
         "origen": "BILBAO (BIO)",
         "terminal": "T1",
@@ -1101,7 +1061,7 @@
     },
     {
         "hora": "12:46",
-        "vuelo": "VLG7831 / BAW8061 / IBE5639 / LVL5589",
+        "vuelo": "VLG7831 / IBE5639 / LVL5589 / BAW8061",
         "aerolinea": "Multicompania",
         "origen": "LONDRES /GATWICK (LGW)",
         "terminal": "T1",
@@ -1141,7 +1101,7 @@
     },
     {
         "hora": "13:18",
-        "vuelo": "VLG8653 / IBE5712 / LVL5710",
+        "vuelo": "VLG8653 / LVL5710 / IBE5712",
         "aerolinea": "Multicompania",
         "origen": "PRAGA (PRG)",
         "terminal": "T1",
@@ -1181,7 +1141,7 @@
     },
     {
         "hora": "13:29",
-        "vuelo": "VLG6103 / IBE5051 / LAN5873 / LVL5448 / QTR3669",
+        "vuelo": "VLG6103 / LVL5448 / LAN5873 / IBE5051 / QTR3669",
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
@@ -1196,16 +1156,6 @@
         "origen": "COPENHAGUE (CPH)",
         "terminal": "T2C (EasyJet)",
         "sala": "C",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "13:32",
-        "vuelo": "TAP1034 / UAL6870 / AZU7279 / RZO8692",
-        "aerolinea": "Multicompania",
-        "origen": "LISBOA (LIS)",
-        "terminal": "T1",
-        "sala": "T1_G",
         "estado": "En hora",
         "dia_relativo": 0
     },
@@ -1231,7 +1181,7 @@
     },
     {
         "hora": "13:44",
-        "vuelo": "VLG3909 / IBE5115 / LVL5398 / QTR3766",
+        "vuelo": "VLG3909 / QTR3766 / IBE5115 / LVL5398",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -1240,8 +1190,18 @@
         "dia_relativo": 0
     },
     {
+        "hora": "13:47",
+        "vuelo": "TAP1034 / AZU7279 / RZO8692 / UAL6870",
+        "aerolinea": "Multicompania",
+        "origen": "LISBOA (LIS)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
         "hora": "13:54",
-        "vuelo": "VLG1871 / IBE5307 / LVL5162 / QTR5536",
+        "vuelo": "VLG1871 / QTR5536 / IBE5307 / LVL5162",
         "aerolinea": "Multicompania",
         "origen": "COPENHAGUE (CPH)",
         "terminal": "T1",
@@ -1251,7 +1211,7 @@
     },
     {
         "hora": "14:00",
-        "vuelo": "AFR1648 / AMX6011 / DAL8383",
+        "vuelo": "AFR1648 / DAL8383 / AMX6011",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -1261,7 +1221,7 @@
     },
     {
         "hora": "14:00",
-        "vuelo": "GLO5247 / HVN3682 / KQA3786 / MAU9326",
+        "vuelo": "KQA3786 / MAU9326 / GLO5247 / HVN3682",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -1281,7 +1241,7 @@
     },
     {
         "hora": "14:09",
-        "vuelo": "VLG8101 / IBE5211 / LVL5639",
+        "vuelo": "VLG8101 / LVL5639 / IBE5211",
         "aerolinea": "Multicompania",
         "origen": "ATENAS (ATH)",
         "terminal": "T1",
@@ -1301,7 +1261,7 @@
     },
     {
         "hora": "14:10",
-        "vuelo": "VLG1252 / IBE5255 / LVL5032 / QTR3691",
+        "vuelo": "VLG1252 / LVL5032 / QTR3691 / IBE5255",
         "aerolinea": "Multicompania",
         "origen": "ALMERÍA (LEI)",
         "terminal": "T1",
@@ -1321,7 +1281,7 @@
     },
     {
         "hora": "14:19",
-        "vuelo": "IBE2251 / VLG5651 / LVL3103",
+        "vuelo": "IBE2251 / LVL3103 / VLG5651",
         "aerolinea": "Multicompania",
         "origen": "MELILLA (MLN)",
         "terminal": "T1",
@@ -1331,7 +1291,7 @@
     },
     {
         "hora": "14:20",
-        "vuelo": "AAL8710 / QTR6939 / VLG5050 / LVL3013 / LAN5401 / CPA1841 / AVA6146 / IBE0413",
+        "vuelo": "AVA6146 / CPA1841 / AAL8710 / VLG5050 / QTR6939 / LVL3013 / LAN5401 / IBE0413",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -1350,16 +1310,6 @@
         "dia_relativo": 0
     },
     {
-        "hora": "14:24",
-        "vuelo": "MSR767",
-        "aerolinea": "N/A",
-        "origen": "EL CAIRO (CAI)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 0
-    },
-    {
         "hora": "14:27",
         "vuelo": "RYR776",
         "aerolinea": "N/A",
@@ -1371,7 +1321,7 @@
     },
     {
         "hora": "14:28",
-        "vuelo": "AEA6060 / ITY2442 / ETD4328 / KLM3320",
+        "vuelo": "AEA6060 / KLM3320 / ITY2442 / ETD4328",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -1381,7 +1331,7 @@
     },
     {
         "hora": "14:30",
-        "vuelo": "VLG3715 / IBE5497 / QTR3658 / LVL5376",
+        "vuelo": "VLG3715 / LVL5376 / QTR3658 / IBE5497",
         "aerolinea": "Multicompania",
         "origen": "MENORCA (MAH)",
         "terminal": "T1",
@@ -1411,7 +1361,7 @@
     },
     {
         "hora": "14:37",
-        "vuelo": "VLG8013 / LVL5625 / IBE5203 / QTR4682",
+        "vuelo": "VLG8013 / QTR4682 / LVL5625 / IBE5203",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
@@ -1431,7 +1381,7 @@
     },
     {
         "hora": "14:40",
-        "vuelo": "VLG1307 / QTR3513 / IBE5265 / LVL5050",
+        "vuelo": "VLG1307 / QTR3513 / LVL5050 / IBE5265",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
@@ -1461,7 +1411,7 @@
     },
     {
         "hora": "14:45",
-        "vuelo": "VLG3211 / QTR3763 / LVL5306 / IBE5448",
+        "vuelo": "VLG3211 / LVL5306 / QTR3763 / IBE5448",
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
@@ -1477,6 +1427,16 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "15:00",
+        "vuelo": "MSR767",
+        "aerolinea": "N/A",
+        "origen": "EL CAIRO (CAI)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Retrasado",
         "dia_relativo": 0
     },
     {
@@ -1500,6 +1460,16 @@
         "dia_relativo": 0
     },
     {
+        "hora": "15:02",
+        "vuelo": "VLG2219 / LVL5218 / IBE5169 / AAL8859",
+        "aerolinea": "Multicompania",
+        "origen": "SEVILLA (SVQ)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
         "hora": "15:06",
         "vuelo": "WZZ1411",
         "aerolinea": "N/A",
@@ -1511,7 +1481,7 @@
     },
     {
         "hora": "15:07",
-        "vuelo": "VLG2485 / LVL5254 / IBE5190 / QTR3662",
+        "vuelo": "VLG2485 / LVL5254 / QTR3662 / IBE5190",
         "aerolinea": "Multicompania",
         "origen": "SAN SEBASTIÁN (EAS)",
         "terminal": "T1",
@@ -1520,8 +1490,18 @@
         "dia_relativo": 0
     },
     {
+        "hora": "15:19",
+        "vuelo": "VLG7365 / IBE5755 / LVL5563 / QTR3780",
+        "aerolinea": "Multicompania",
+        "origen": "TANGER (TNG)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
         "hora": "15:20",
-        "vuelo": "AFR1248 / AMX6030 / KAL6343 / DAL8328",
+        "vuelo": "AFR1248 / KAL6343 / DAL8328 / AMX6030",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -1540,43 +1520,63 @@
         "dia_relativo": 0
     },
     {
-        "hora": "15:20",
-        "vuelo": "VLG2219 / AAL8859 / LVL5218 / IBE5169",
+        "hora": "15:30",
+        "vuelo": "VLG1677 / LVL5121 / IBE5157 / QTR3761",
         "aerolinea": "Multicompania",
-        "origen": "SEVILLA (SVQ)",
+        "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "SALA T1_G",
+        "estado": "En hora",
         "dia_relativo": 0
     },
     {
-        "hora": "15:40",
-        "vuelo": "VLG7365 / QTR3780 / LVL5563 / IBE5755",
-        "aerolinea": "Multicompania",
-        "origen": "TANGER (TNG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "15:45",
+        "hora": "15:32",
         "vuelo": "RYR574",
         "aerolinea": "N/A",
         "origen": "BOLONIA (BLQ)",
         "terminal": "T2B",
         "sala": "B",
-        "estado": "SALA B",
+        "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "15:43",
+        "vuelo": "VLG1575 / QTR3544 / LVL5094 / IBE5107",
+        "aerolinea": "Multicompania",
+        "origen": "ASTURIAS (OVD)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "15:45",
-        "vuelo": "VLG1677 / LVL5121 / QTR3761 / IBE5157",
+        "vuelo": "VLG2013 / IBE5335 / QTR3683 / LVL5182",
         "aerolinea": "Multicompania",
-        "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
+        "origen": "GRANADA-JAÉN F.G.L. (GRX)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "15:48",
+        "vuelo": "BAW484",
+        "aerolinea": "N/A",
+        "origen": "LONDRES / HEATHROW (LHR)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "15:52",
+        "vuelo": "TVF4754",
+        "aerolinea": "N/A",
+        "origen": "PARIS /ORLY (ORY)",
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "En hora",
         "dia_relativo": 0
     },
     {
@@ -1591,16 +1591,6 @@
     },
     {
         "hora": "15:55",
-        "vuelo": "VLG2013 / LVL5182 / IBE5335 / QTR3683",
-        "aerolinea": "Multicompania",
-        "origen": "GRANADA-JAÉN F.G.L. (GRX)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "15:55",
         "vuelo": "RYR3040",
         "aerolinea": "N/A",
         "origen": "PRAGA (PRG)",
@@ -1610,48 +1600,8 @@
         "dia_relativo": 0
     },
     {
-        "hora": "16:00",
-        "vuelo": "VLG6279 / IBE5608 / QTR3693 / LVL5495",
-        "aerolinea": "Multicompania",
-        "origen": "BASEL /MULHOUSE (BSL)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "16:00",
-        "vuelo": "TVF4754",
-        "aerolinea": "N/A",
-        "origen": "PARIS /ORLY (ORY)",
-        "terminal": "T2B",
-        "sala": "B",
-        "estado": "SALA B",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "16:00",
-        "vuelo": "VLG1575 / QTR3544 / LVL5094 / IBE5107",
-        "aerolinea": "Multicompania",
-        "origen": "ASTURIAS (OVD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
         "hora": "16:05",
-        "vuelo": "BAW484",
-        "aerolinea": "N/A",
-        "origen": "LONDRES / HEATHROW (LHR)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "16:05",
-        "vuelo": "VLG2215 / QTR3692 / LVL5214 / AAL8855 / IBE5165",
+        "vuelo": "IBE5165 / LVL5214 / QTR3692 / AAL8855",
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
@@ -1660,8 +1610,18 @@
         "dia_relativo": 0
     },
     {
+        "hora": "16:06",
+        "vuelo": "VLG2215",
+        "aerolinea": "N/A",
+        "origen": "SEVILLA (SVQ)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
         "hora": "16:10",
-        "vuelo": "VLG6515 / IBE5696 / LVL5527 / QTR3767",
+        "vuelo": "VLG6515 / LVL5527 / QTR3767 / IBE5696",
         "aerolinea": "Multicompania",
         "origen": "TURIN (TRN)",
         "terminal": "T1",
@@ -1671,7 +1631,7 @@
     },
     {
         "hora": "16:15",
-        "vuelo": "VLG2118 / IBE5010 / LVL5199 / QTR3506",
+        "vuelo": "VLG2118 / QTR3506 / LVL5199 / IBE5010",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
@@ -1681,7 +1641,7 @@
     },
     {
         "hora": "16:15",
-        "vuelo": "VLG5057 / AAL8630 / AVA6016 / LAN1522 / LVL3015 / QTR6889 / IBE0415",
+        "vuelo": "LVL3015 / AAL8630 / QTR6889 / AVA6016 / LAN1522 / VLG5057 / IBE0415",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -1711,7 +1671,7 @@
     },
     {
         "hora": "16:30",
-        "vuelo": "KLM1517 / DAL9187 / SVA6337 / AMX6301 / CES1841",
+        "vuelo": "KLM1517 / DAL9187 / CES1841 / AMX6301 / SVA6337",
         "aerolinea": "Multicompania",
         "origen": "AMSTERDAM /SCHIPHOL (AMS)",
         "terminal": "T1",
@@ -1721,7 +1681,7 @@
     },
     {
         "hora": "16:30",
-        "vuelo": "GLO5512 / CXA9323 / IGO3210 / CAL9393",
+        "vuelo": "GLO5512 / CAL9393 / IGO3210 / CXA9323",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -1731,7 +1691,7 @@
     },
     {
         "hora": "16:30",
-        "vuelo": "VLG6005 / LVL5424 / QTR3687 / AAL8869 / IBE5181",
+        "vuelo": "VLG6005 / IBE5181 / LVL5424 / QTR3687 / AAL8869",
         "aerolinea": "Multicompania",
         "origen": "FLORENCIA / PERETOLA (FLR)",
         "terminal": "T1",
@@ -1741,7 +1701,7 @@
     },
     {
         "hora": "16:30",
-        "vuelo": "VLG3913 / LVL5402 / IBE5119",
+        "vuelo": "VLG3913 / IBE5119 / LVL5402",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -1750,8 +1710,18 @@
         "dia_relativo": 0
     },
     {
+        "hora": "16:34",
+        "vuelo": "VLG6279 / LVL5495 / IBE5608 / QTR3693",
+        "aerolinea": "Multicompania",
+        "origen": "BASEL /MULHOUSE (BSL)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Retrasado",
+        "dia_relativo": 0
+    },
+    {
         "hora": "16:35",
-        "vuelo": "AEA7703 / KAC6082 / SVA6027 / DAL6771 / ETD4366 / ASL7452 / SAS8366 / KAL6653 / CES4968 / MEA4003 / AMX6808",
+        "vuelo": "AEA7703 / ETD4366 / DAL6771 / CES4968 / ASL7452 / AMX6808 / KAL6653 / SVA6027 / SAS8366 / MEA4003 / KAC6082",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -1761,7 +1731,7 @@
     },
     {
         "hora": "16:35",
-        "vuelo": "VLG6339 / LVL5505 / IBE5767 / QTR3750",
+        "vuelo": "VLG6339 / LVL5505 / QTR3750 / IBE5767",
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
@@ -1771,7 +1741,7 @@
     },
     {
         "hora": "16:50",
-        "vuelo": "VLG1509 / LVL5080 / QTR3690 / IBE5285",
+        "vuelo": "VLG1509 / QTR3690 / LVL5080 / IBE5285",
         "aerolinea": "Multicompania",
         "origen": "MARSELLA (MRS)",
         "terminal": "T1",
@@ -1791,7 +1761,7 @@
     },
     {
         "hora": "17:00",
-        "vuelo": "VLG8463 / LVL5684 / QTR5514 / IBE5231",
+        "vuelo": "VLG8463 / LVL5684 / IBE5231 / QTR5514",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -1801,7 +1771,7 @@
     },
     {
         "hora": "17:00",
-        "vuelo": "VLG6601 / QTR3655 / IBE5630 / LVL5541",
+        "vuelo": "VLG6601 / IBE5630 / LVL5541 / QTR3655",
         "aerolinea": "Multicompania",
         "origen": "PALERMO /PUNTA RAISI (PMO)",
         "terminal": "T1",
@@ -1831,7 +1801,7 @@
     },
     {
         "hora": "17:10",
-        "vuelo": "VLG8245 / LVL5651 / QTR3546 / IBE5041",
+        "vuelo": "VLG8245 / QTR3546 / LVL5651 / IBE5041",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -1851,7 +1821,7 @@
     },
     {
         "hora": "17:15",
-        "vuelo": "TAP1036 / RZO8706 / UAE4860 / LOT4708 / AZU7283 / AEE1762",
+        "vuelo": "TAP1036 / UAE4860 / RZO8706 / LOT4708 / AEE1762 / AZU7283",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -1881,7 +1851,7 @@
     },
     {
         "hora": "17:20",
-        "vuelo": "VLG8477 / LVL5694 / QTR8134 / IBE5584",
+        "vuelo": "VLG8477 / IBE5584 / LVL5694 / QTR8134",
         "aerolinea": "Multicompania",
         "origen": "OPORTO (OPO)",
         "terminal": "T1",
@@ -1951,7 +1921,7 @@
     },
     {
         "hora": "17:55",
-        "vuelo": "AEA6072 / ETD4329 / KLM3334",
+        "vuelo": "AEA6072 / KLM3334 / ETD4329",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -1971,7 +1941,7 @@
     },
     {
         "hora": "18:10",
-        "vuelo": "VLG2116 / QTR3502 / IBE5008 / LVL5197",
+        "vuelo": "VLG2116 / LVL5197 / QTR3502 / IBE5008",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
@@ -1991,7 +1961,7 @@
     },
     {
         "hora": "18:10",
-        "vuelo": "VLG5059 / LAN1524 / AVA6174 / LVL3019 / QTR8077 / RAM5332 / IBE0419",
+        "vuelo": "RAM5332 / VLG5059 / QTR8077 / AVA6174 / LAN1524 / LVL3019 / IBE0419",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -2041,7 +2011,7 @@
     },
     {
         "hora": "18:20",
-        "vuelo": "VLG6333 / QTR3745 / IBE5765 / LVL5499",
+        "vuelo": "VLG6333 / LVL5499 / IBE5765 / QTR3745",
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
@@ -2101,7 +2071,7 @@
     },
     {
         "hora": "18:35",
-        "vuelo": "VLG3509 / QTR3545 / LVL5332 / IBE5070",
+        "vuelo": "VLG3509 / IBE5070 / LVL5332 / QTR3545",
         "aerolinea": "Multicompania",
         "origen": "IBIZA (IBZ)",
         "terminal": "T1",
@@ -2111,7 +2081,7 @@
     },
     {
         "hora": "18:35",
-        "vuelo": "VLG8011 / LVL5623 / IBE5201 / QTR5538",
+        "vuelo": "VLG8011 / IBE5201 / QTR5538 / LVL5623",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
@@ -2131,7 +2101,7 @@
     },
     {
         "hora": "18:35",
-        "vuelo": "VLG2217 / IBE5167 / AAL8857 / QTR3759 / LVL5216",
+        "vuelo": "VLG2217 / AAL8857 / LVL5216 / QTR3759 / IBE5167",
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
@@ -2171,7 +2141,7 @@
     },
     {
         "hora": "18:40",
-        "vuelo": "VLG1593 / LVL5102 / IBE5289 / QTR3665",
+        "vuelo": "VLG1593 / QTR3665 / LVL5102 / IBE5289",
         "aerolinea": "Multicompania",
         "origen": "SANTANDER-SEVE BALLESTEROS (SDR)",
         "terminal": "T1",
@@ -2191,7 +2161,7 @@
     },
     {
         "hora": "18:45",
-        "vuelo": "VLG3721 / IBE5505 / LVL5382 / QTR4708",
+        "vuelo": "VLG3721 / LVL5382 / QTR4708 / IBE5505",
         "aerolinea": "Multicompania",
         "origen": "MENORCA (MAH)",
         "terminal": "T1",
@@ -2241,7 +2211,7 @@
     },
     {
         "hora": "19:15",
-        "vuelo": "VLG8983 / LVL5736 / IBE5033",
+        "vuelo": "VLG8983 / IBE5033 / LVL5736",
         "aerolinea": "Multicompania",
         "origen": "BRUSELAS (BRU)",
         "terminal": "T1",
@@ -2251,7 +2221,7 @@
     },
     {
         "hora": "19:15",
-        "vuelo": "VLG3215 / IBE5452 / LVL5310 / QTR3765",
+        "vuelo": "VLG3215 / LVL5310 / QTR3765 / IBE5452",
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
@@ -2261,12 +2231,12 @@
     },
     {
         "hora": "19:20",
-        "vuelo": "VLG7477 / IBE5091 / QTR3564 / LVL5567",
+        "vuelo": "VLG7477 / LVL5567 / QTR3564 / IBE5091",
         "aerolinea": "Multicompania",
         "origen": "ARGEL/ HOUARI BOUMEDIEN (ALG)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2275,18 +2245,18 @@
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:20",
-        "vuelo": "KQA3156 / GLO5233",
+        "vuelo": "GLO5233 / KQA3156",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2294,49 +2264,49 @@
         "vuelo": "MAC375",
         "aerolinea": "N/A",
         "origen": "NADOR / EL AROUI (NDR)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
         "dia_relativo": 0
     },
     {
         "hora": "19:35",
-        "vuelo": "VLG1309 / IBE5141 / QTR3539 / LVL5052",
+        "vuelo": "VLG1309 / QTR3539 / LVL5052 / IBE5141",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:35",
-        "vuelo": "AVA6170 / VLG5122 / QTR6971 / LVL3021 / IBE0421",
+        "vuelo": "VLG5122 / LVL3021 / AVA6170 / QTR6971 / IBE0421",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:35",
-        "vuelo": "VLG6335 / IBE5761 / QTR3749 / LVL5501",
+        "vuelo": "VLG6335 / IBE5761 / LVL5501 / QTR3749",
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:35",
-        "vuelo": "VLG3917 / LVL5406 / IBE5123 / QTR3748",
+        "vuelo": "VLG3917 / QTR3748 / IBE5123 / LVL5406",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2344,9 +2314,9 @@
         "vuelo": "RYR5247",
         "aerolinea": "N/A",
         "origen": "VILNIUS (VNO)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "SALA B",
         "dia_relativo": 0
     },
     {
@@ -2354,29 +2324,29 @@
         "vuelo": "ASL584",
         "aerolinea": "N/A",
         "origen": "BELGRADO (BEG)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
         "dia_relativo": 0
     },
     {
         "hora": "19:45",
-        "vuelo": "VLG2913 / LVL5268 / IBE5496 / QTR3595",
+        "vuelo": "VLG2913 / IBE5496 / LVL5268 / QTR3595",
         "aerolinea": "Multicompania",
         "origen": "BURDEOS (BOD)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:45",
-        "vuelo": "VLG6613 / QTR3656 / IBE5632 / LVL5551",
+        "vuelo": "VLG6613 / QTR3656 / LVL5551 / IBE5632",
         "aerolinea": "Multicompania",
         "origen": "BARI /PALESE (BRI)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2385,8 +2355,8 @@
         "aerolinea": "N/A",
         "origen": "LONDRES / HEATHROW (LHR)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2395,18 +2365,18 @@
         "aerolinea": "N/A",
         "origen": "FRANKFURT (FRA)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "19:50",
-        "vuelo": "VLG8009 / LVL5621 / QTR3737 / IBE5199",
+        "vuelo": "VLG8009 / IBE5199 / QTR3737 / LVL5621",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2415,8 +2385,8 @@
         "aerolinea": "Multicompania",
         "origen": "HELSINKI (HEL)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2425,28 +2395,28 @@
         "aerolinea": "N/A",
         "origen": "-",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "20:05",
-        "vuelo": "VLG2015 / IBE5337 / QTR3701 / LVL5184",
+        "vuelo": "VLG2015 / IBE5337 / LVL5184 / QTR3701",
         "aerolinea": "Multicompania",
         "origen": "GRANADA-JAÉN F.G.L. (GRX)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
         "hora": "20:05",
-        "vuelo": "VLG3007 / QTR3699 / LVL5286 / IBE5383",
+        "vuelo": "VLG3007 / QTR3699 / IBE5383 / LVL5286",
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
         "dia_relativo": 0
     },
     {
@@ -2454,14 +2424,14 @@
         "vuelo": "EZY2325",
         "aerolinea": "N/A",
         "origen": "LONDRES /LUTON (LTN)",
-        "terminal": "T2-",
-        "sala": "-",
+        "terminal": "T2C (EasyJet)",
+        "sala": "C",
         "estado": "Programado",
         "dia_relativo": 0
     },
     {
         "hora": "20:20",
-        "vuelo": "TAP1038 / RZO8708 / AZU7288",
+        "vuelo": "TAP1038 / AZU7288 / RZO8708",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -2481,7 +2451,7 @@
     },
     {
         "hora": "20:25",
-        "vuelo": "VLG5063 / BOV5010 / AVA6072 / LVL3023 / LAN1684 / QTR6918 / IBE0423",
+        "vuelo": "AVA6072 / LVL3023 / QTR6918 / LAN1684 / BOV5010 / VLG5063 / IBE0423",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -2491,7 +2461,7 @@
     },
     {
         "hora": "20:25",
-        "vuelo": "VLG1685 / QTR3751 / IBE5855 / LVL5134",
+        "vuelo": "VLG1685 / IBE5855 / QTR3751 / LVL5134",
         "aerolinea": "Multicompania",
         "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
         "terminal": "T1",
@@ -2521,7 +2491,7 @@
     },
     {
         "hora": "20:45",
-        "vuelo": "VLG8247 / QTR3682 / IBE5043 / LVL5654",
+        "vuelo": "VLG8247 / LVL5654 / IBE5043 / QTR3682",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -2551,7 +2521,7 @@
     },
     {
         "hora": "20:50",
-        "vuelo": "VLG1311 / QTR3530 / IBE5803 / LVL5054",
+        "vuelo": "VLG1311 / LVL5054 / IBE5803 / QTR3530",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
@@ -2571,7 +2541,7 @@
     },
     {
         "hora": "20:55",
-        "vuelo": "VLG2112 / IBE5004 / QTR3503 / LVL5193",
+        "vuelo": "VLG2112 / LVL5193 / IBE5004 / QTR3503",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
@@ -2581,7 +2551,7 @@
     },
     {
         "hora": "20:55",
-        "vuelo": "VLG1433 / LVL5072 / QTR3518 / IBE5433",
+        "vuelo": "VLG1433 / LVL5072 / IBE5433 / QTR3518",
         "aerolinea": "Multicompania",
         "origen": "BILBAO (BIO)",
         "terminal": "T1",
@@ -2591,7 +2561,7 @@
     },
     {
         "hora": "20:55",
-        "vuelo": "VLG7833 / IBE5647 / LVL5591 / BAW8063",
+        "vuelo": "VLG7833 / BAW8063 / LVL5591 / IBE5647",
         "aerolinea": "Multicompania",
         "origen": "LONDRES /GATWICK (LGW)",
         "terminal": "T1",
@@ -2611,7 +2581,7 @@
     },
     {
         "hora": "21:00",
-        "vuelo": "VLG3217 / QTR3673 / IBE5454 / LVL5312",
+        "vuelo": "VLG3217 / IBE5454 / LVL5312 / QTR3673",
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
@@ -2621,7 +2591,7 @@
     },
     {
         "hora": "21:05",
-        "vuelo": "VLG1891 / IBE5317 / LVL5172 / QTR8124",
+        "vuelo": "VLG1891 / LVL5172 / IBE5317 / QTR8124",
         "aerolinea": "Multicompania",
         "origen": "HANNOVER (HAJ)",
         "terminal": "T1",
@@ -2631,7 +2601,7 @@
     },
     {
         "hora": "21:05",
-        "vuelo": "VLG3511 / QTR3631 / LVL5334 / IBE5072",
+        "vuelo": "VLG3511 / QTR3631 / IBE5072 / LVL5334",
         "aerolinea": "Multicompania",
         "origen": "IBIZA (IBZ)",
         "terminal": "T1",
@@ -2671,7 +2641,7 @@
     },
     {
         "hora": "21:20",
-        "vuelo": "VLG6115 / IBE5273 / LAN5777 / LVL5460 / QTR3547",
+        "vuelo": "VLG6115 / IBE5273 / LAN5777 / QTR3547 / LVL5460",
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
@@ -2681,7 +2651,7 @@
     },
     {
         "hora": "21:20",
-        "vuelo": "AVA6083 / LVL3025 / LAN1694 / QTR6924 / VLG5079 / IBE0425",
+        "vuelo": "QTR6924 / AVA6083 / VLG5079 / LVL3025 / LAN1694 / IBE0425",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -2691,7 +2661,7 @@
     },
     {
         "hora": "21:30",
-        "vuelo": "VLG6521 / QTR3520 / IBE5739 / LVL5529",
+        "vuelo": "VLG6521 / QTR3520 / LVL5529 / IBE5739",
         "aerolinea": "Multicompania",
         "origen": "BOLONIA (BLQ)",
         "terminal": "T1",
@@ -2711,7 +2681,7 @@
     },
     {
         "hora": "21:45",
-        "vuelo": "VLG2221 / QTR3597 / AAL8861 / IBE5171 / LVL5220",
+        "vuelo": "VLG2221 / IBE5171 / QTR3597 / AAL8861 / LVL5220",
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
@@ -2721,7 +2691,7 @@
     },
     {
         "hora": "22:00",
-        "vuelo": "VLG1823 / LVL5152 / IBE5564 / QTR3795",
+        "vuelo": "VLG1823 / QTR3795 / LVL5152 / IBE5564",
         "aerolinea": "Multicompania",
         "origen": "HAMBURGO (HAM)",
         "terminal": "T1",
@@ -2771,7 +2741,7 @@
     },
     {
         "hora": "22:40",
-        "vuelo": "VLG6009 / AAL8873 / IBE5850 / LVL5431 / QTR3644",
+        "vuelo": "VLG6009 / AAL8873 / LVL5431 / IBE5850 / QTR3644",
         "aerolinea": "Multicompania",
         "origen": "FLORENCIA / PERETOLA (FLR)",
         "terminal": "T1",
@@ -2781,7 +2751,7 @@
     },
     {
         "hora": "22:50",
-        "vuelo": "QTR6927 / FIN5575 / LAN1530 / LVL3027 / VLG5091 / RAM5339 / IBE0427",
+        "vuelo": "LAN1530 / VLG5091 / RAM5339 / LVL3027 / QTR6927 / FIN5575 / IBE0427",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -2801,7 +2771,7 @@
     },
     {
         "hora": "22:55",
-        "vuelo": "AFR1448 / AMX6031 / KAL6341 / CES1859",
+        "vuelo": "AFR1448 / CES1859 / KAL6341 / AMX6031",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -2841,7 +2811,7 @@
     },
     {
         "hora": "23:05",
-        "vuelo": "KLM1521 / KAL6413 / AMX6303 / CES1843",
+        "vuelo": "KLM1521 / AMX6303 / KAL6413 / CES1843",
         "aerolinea": "Multicompania",
         "origen": "AMSTERDAM /SCHIPHOL (AMS)",
         "terminal": "T1",
@@ -2851,7 +2821,7 @@
     },
     {
         "hora": "23:05",
-        "vuelo": "GLO5507 / KQA1681 / CXA9327 / IGO3209 / LHX1816",
+        "vuelo": "KQA1681 / GLO5507 / CXA9327 / IGO3209 / LHX1816",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
@@ -2861,7 +2831,7 @@
     },
     {
         "hora": "23:15",
-        "vuelo": "VLG1815 / IBE5297 / LVL5146 / QTR3756",
+        "vuelo": "VLG1815 / LVL5146 / IBE5297 / QTR3756",
         "aerolinea": "Multicompania",
         "origen": "MUNICH (MUC)",
         "terminal": "T1",
@@ -2881,7 +2851,7 @@
     },
     {
         "hora": "23:25",
-        "vuelo": "VLG6249 / IBE5135 / LVL5489 / QTR8138",
+        "vuelo": "VLG6249 / QTR8138 / LVL5489 / IBE5135",
         "aerolinea": "Multicompania",
         "origen": "ZURICH (ZRH)",
         "terminal": "T1",
@@ -2911,7 +2881,7 @@
     },
     {
         "hora": "23:35",
-        "vuelo": "VLG8531 / QTR3708 / IBE5660",
+        "vuelo": "VLG8531 / IBE5660 / QTR3708",
         "aerolinea": "Multicompania",
         "origen": "AGADIR/AL MASSIRA (AGA)",
         "terminal": "T1",
@@ -2921,7 +2891,7 @@
     },
     {
         "hora": "23:35",
-        "vuelo": "VLG6337 / QTR3711 / LVL5503 / IBE5763",
+        "vuelo": "VLG6337 / QTR3711 / IBE5763 / LVL5503",
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
@@ -2931,7 +2901,7 @@
     },
     {
         "hora": "23:35",
-        "vuelo": "VLG8017 / LVL5629 / QTR3758 / IBE5207",
+        "vuelo": "VLG8017 / QTR3758 / IBE5207 / LVL5629",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
@@ -2941,7 +2911,7 @@
     },
     {
         "hora": "23:40",
-        "vuelo": "VLG8655 / LVL5712 / IBE5714",
+        "vuelo": "VLG8655 / IBE5714 / LVL5712",
         "aerolinea": "Multicompania",
         "origen": "PRAGA (PRG)",
         "terminal": "T1",
@@ -2951,7 +2921,7 @@
     },
     {
         "hora": "23:45",
-        "vuelo": "VLG2474 / IBE5352 / LVL5243 / QTR3501",
+        "vuelo": "VLG2474 / LVL5243 / QTR3501 / IBE5352",
         "aerolinea": "Multicompania",
         "origen": "LANZAROTE CÉSAR MANRIQUE (ACE)",
         "terminal": "T1",
@@ -2981,7 +2951,7 @@
     },
     {
         "hora": "23:55",
-        "vuelo": "VLG8241 / LVL5646 / IBE5039 / QTR3588",
+        "vuelo": "VLG8241 / QTR3588 / IBE5039 / LVL5646",
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
@@ -2991,7 +2961,7 @@
     },
     {
         "hora": "23:55",
-        "vuelo": "VLG2017 / IBE5339 / QTR3681 / LVL5186",
+        "vuelo": "VLG2017 / LVL5186 / IBE5339 / QTR3681",
         "aerolinea": "Multicompania",
         "origen": "GRANADA-JAÉN F.G.L. (GRX)",
         "terminal": "T1",
@@ -3001,7 +2971,7 @@
     },
     {
         "hora": "00:00",
-        "vuelo": "VLG8985 / LVL5738 / IBE5035",
+        "vuelo": "VLG8985 / IBE5035 / LVL5738",
         "aerolinea": "Multicompania",
         "origen": "BRUSELAS (BRU)",
         "terminal": "T1",
@@ -3011,7 +2981,7 @@
     },
     {
         "hora": "00:00",
-        "vuelo": "VLG8465 / LVL5686 / IBE5233 / QTR3638",
+        "vuelo": "VLG8465 / QTR3638 / LVL5686 / IBE5233",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
@@ -3021,7 +2991,7 @@
     },
     {
         "hora": "00:05",
-        "vuelo": "VLG6653 / LVL5557 / BAW8079 / IBE5644",
+        "vuelo": "VLG6653 / IBE5644 / BAW8079 / LVL5557",
         "aerolinea": "Multicompania",
         "origen": "LONDRES / HEATHROW (LHR)",
         "terminal": "T1",
@@ -3031,7 +3001,7 @@
     },
     {
         "hora": "00:10",
-        "vuelo": "VLG7829 / BAW8059 / IBE5635 / LVL5587",
+        "vuelo": "VLG7829 / LVL5587 / BAW8059 / IBE5635",
         "aerolinea": "Multicompania",
         "origen": "LONDRES /GATWICK (LGW)",
         "terminal": "T1",
@@ -3061,7 +3031,7 @@
     },
     {
         "hora": "00:25",
-        "vuelo": "VLG1573 / IBE5105 / QTR3740 / LVL5092",
+        "vuelo": "VLG1573 / IBE5105 / LVL5092 / QTR3740",
         "aerolinea": "Multicompania",
         "origen": "ASTURIAS (OVD)",
         "terminal": "T1",
@@ -3081,7 +3051,7 @@
     },
     {
         "hora": "00:30",
-        "vuelo": "VLG3209 / IBE5446 / LVL5304 / QTR3697",
+        "vuelo": "VLG3209 / QTR3697 / IBE5446 / LVL5304",
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
@@ -3101,7 +3071,7 @@
     },
     {
         "hora": "00:35",
-        "vuelo": "VLG8479 / LVL5696 / QTR8135 / IBE5103",
+        "vuelo": "VLG8479 / IBE5103 / QTR8135 / LVL5696",
         "aerolinea": "Multicompania",
         "origen": "OPORTO (OPO)",
         "terminal": "T1",
@@ -3121,7 +3091,7 @@
     },
     {
         "hora": "00:45",
-        "vuelo": "VLG3003 / QTR3710 / LVL5282 / IBE5379",
+        "vuelo": "VLG3003 / IBE5379 / QTR3710 / LVL5282",
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
@@ -3171,7 +3141,7 @@
     },
     {
         "hora": "07:05",
-        "vuelo": "AAL112 / BAW1514 / IBE4460 / FIN3780",
+        "vuelo": "AAL112 / FIN3780 / IBE4460 / BAW1514",
         "aerolinea": "Multicompania",
         "origen": "MIAMI (MIA)",
         "terminal": "T1",
@@ -3211,7 +3181,7 @@
     },
     {
         "hora": "07:35",
-        "vuelo": "VLG3905 / IBE5111 / QTR3743 / LVL5394",
+        "vuelo": "VLG3905 / LVL5394 / QTR3743 / IBE5111",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -3241,7 +3211,7 @@
     },
     {
         "hora": "07:55",
-        "vuelo": "AEA6006 / DAL6776 / ITY2407 / ASL7450 / ETD4388 / KLM3350 / THY4586",
+        "vuelo": "AEA6006 / THY4586 / ITY2407 / ETD4388 / DAL6776 / ASL7450 / KLM3350",
         "aerolinea": "Multicompania",
         "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
@@ -3251,7 +3221,7 @@
     },
     {
         "hora": "08:00",
-        "vuelo": "DAL168 / KLM6039 / AFR3597",
+        "vuelo": "DAL168 / AFR3597 / KLM6039",
         "aerolinea": "Multicompania",
         "origen": "NUEVA YORK-J.F.KENNEDY (JFK)",
         "terminal": "T1",
@@ -3271,7 +3241,7 @@
     },
     {
         "hora": "08:00",
-        "vuelo": "VLG5006 / FIN5571 / QTR8002 / AVA6029 / LAN1518 / DTA6002 / LVL3001 / IBE0401",
+        "vuelo": "FIN5571 / DTA6002 / VLG5006 / LVL3001 / QTR8002 / AVA6029 / LAN1518 / IBE0401",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -3281,7 +3251,7 @@
     },
     {
         "hora": "08:10",
-        "vuelo": "VLG8005 / IBE5195 / LVL5617",
+        "vuelo": "VLG8005 / LVL5617 / IBE5195",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
@@ -3291,7 +3261,7 @@
     },
     {
         "hora": "08:15",
-        "vuelo": "VLG2110 / LVL5191 / QTR3757 / IBE5144",
+        "vuelo": "VLG2110 / QTR3757 / LVL5191 / IBE5144",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
@@ -3301,7 +3271,7 @@
     },
     {
         "hora": "08:15",
-        "vuelo": "VLG1303 / IBE5263 / LVL5046 / QTR3512",
+        "vuelo": "VLG1303 / QTR3512 / IBE5263 / LVL5046",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
@@ -3341,7 +3311,7 @@
     },
     {
         "hora": "08:20",
-        "vuelo": "VLG1423 / LVL5062 / IBE5019 / QTR3540",
+        "vuelo": "VLG1423 / IBE5019 / LVL5062 / QTR3540",
         "aerolinea": "Multicompania",
         "origen": "BILBAO (BIO)",
         "terminal": "T1",
@@ -3361,7 +3331,7 @@
     },
     {
         "hora": "08:25",
-        "vuelo": "VLG3501 / LVL5322 / IBE5063 / QTR3785",
+        "vuelo": "VLG3501 / QTR3785 / IBE5063 / LVL5322",
         "aerolinea": "Multicompania",
         "origen": "IBIZA (IBZ)",
         "terminal": "T1",
@@ -3371,7 +3341,7 @@
     },
     {
         "hora": "08:25",
-        "vuelo": "VLG5010 / AVA6028 / LAN1519 / FIN5573 / LVL3003 / QTR6857 / IBE0403",
+        "vuelo": "LVL3003 / LAN1519 / FIN5573 / VLG5010 / QTR6857 / AVA6028 / IBE0403",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
@@ -3391,9 +3361,29 @@
     },
     {
         "hora": "08:25",
-        "vuelo": "VLG1669 / LVL5108 / IBE5853 / QTR3630",
+        "vuelo": "VLG1669 / QTR3630 / IBE5853 / LVL5108",
         "aerolinea": "Multicompania",
         "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "08:30",
+        "vuelo": "RYR5711",
+        "aerolinea": "N/A",
+        "origen": "NAPOLES (NAP)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "08:30",
+        "vuelo": "VLG2213 / AAL8853 / IBE5163",
+        "aerolinea": "Multicompania",
+        "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
