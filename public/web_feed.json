@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 164824,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 168417,
+        "delta_value": 3593,
+        "delta_percent": 2.18,
         "direction": "up",
         "volume": 22,
-        "volatility": 13975
+        "volatility": 13851
     },
     "charts": {
         "history_dates": [
@@ -24,7 +24,8 @@
             "2026-01-25",
             "2026-01-26",
             "2026-01-27",
-            "2026-01-28"
+            "2026-01-28",
+            "2026-01-29"
         ],
         "history_prices": [
             166147,
@@ -42,7 +43,8 @@
             162552,
             162552,
             164824,
-            164824
+            164824,
+            168417
         ],
         "history_sma_7": [
             0,
@@ -60,17 +62,18 @@
             164654,
             163626,
             163512,
-            163487
+            163487,
+            164044
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169040,
             "JUEVES PAR": 170495,
-            "LUNES": 152781,
+            "LUNES": 150000,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
-            "MARTES PAR": 174285,
+            "MARTES PAR": 174642,
             "MIERCOLES IMPAR": 175783,
-            "NO ESPECIFICADO": 159038,
+            "NO ESPECIFICADO": 159077,
             "VIERNES IMPAR": 160161
         }
     },
@@ -109,8 +112,8 @@
                 "valor_coche": 4437
             },
             {
-                "fuente": "MILANUNCIOS",
-                "dia": "LUNES",
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -124,6 +127,13 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Licencia Taxi Barcelona | 140.000 € | Barcelona (Barcelona) | Compro licencia de taxi en Barcelona c..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 175000,
+                "modelo": "SIN COCHE",
+                "dia": "MARTES PAR",
+                "raw": "Vendo licencia de taxi amb barcelona | 175.000 € | Barcelona (Barcelona) | Vendo licencia de taxi so..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -145,13 +155,6 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "LUNES",
-                "raw": "Compro Licencia Taxi Barcelona Lunes | 160.000 € | Barcelona (Barcelona) | Compro licencia de taxi  ..."
             },
             {
                 "fuente": "SOLANO",
@@ -232,7 +235,7 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 162513,
+                "precio_neto": 163052,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de antigüedad y ..."
@@ -274,5 +277,5 @@
             }
         ]
     },
-    "updated_at": "28/01/2026 07:28"
+    "updated_at": "29/01/2026 07:41"
 }
