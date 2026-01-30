@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168417,
-        "delta_value": 3593,
-        "delta_percent": 2.18,
-        "direction": "up",
+        "current_price": 167142,
+        "delta_value": -1275,
+        "delta_percent": -0.76,
+        "direction": "down",
         "volume": 22,
-        "volatility": 13851
+        "volatility": 13000
     },
     "charts": {
         "history_dates": [
@@ -25,7 +25,8 @@
             "2026-01-26",
             "2026-01-27",
             "2026-01-28",
-            "2026-01-29"
+            "2026-01-29",
+            "2026-01-30"
         ],
         "history_prices": [
             166147,
@@ -44,7 +45,8 @@
             162552,
             164824,
             164824,
-            168417
+            168417,
+            167142
         ],
         "history_sma_7": [
             0,
@@ -63,7 +65,8 @@
             163626,
             163512,
             163487,
-            164044
+            164044,
+            164694
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 169040,
@@ -73,7 +76,7 @@
             "LUNES PAR": 187252,
             "MARTES PAR": 174642,
             "MIERCOLES IMPAR": 175783,
-            "NO ESPECIFICADO": 159077,
+            "NO ESPECIFICADO": 160577,
             "VIERNES IMPAR": 160161
         }
     },
@@ -123,6 +126,20 @@
         "all_offers": [
             {
                 "fuente": "MILANUNCIOS",
+                "precio_neto": 187050,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES IMPAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 210.000 € | Barcelona (Barcelona) | NO NEGOCIABLE \nFiesta Lun..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 187252,
+                "modelo": "TOYOTA CAMRY",
+                "dia": "LUNES PAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
                 "precio_neto": 135563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
@@ -141,20 +158,6 @@
                 "modelo": "SIN COCHE",
                 "dia": "LUNES",
                 "raw": "Compro licencia de taxi en Barcelona | 150.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 187050,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "LUNES IMPAR",
-                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 210.000 € | Barcelona (Barcelona) | NO NEGOCIABLE \nFiesta Lun..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 187252,
-                "modelo": "TOYOTA CAMRY",
-                "dia": "LUNES PAR",
-                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
             },
             {
                 "fuente": "SOLANO",
@@ -228,6 +231,20 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 167227,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 937 |  | Se vende licencia con vehículo Automatico con 4 años de antigüedad y 250000km. ..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 158563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Referencia: 939 |  | Se vende licencia sin vehículo. | Precio: 163000€ | + INFO..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 153563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
@@ -245,21 +262,7 @@
                 "precio_neto": 155563,
                 "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 923 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 155563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 886 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 187570,
-                "modelo": "MERCEDES VITO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 870 |  | Se vende licencia con vehículo Mercedes Vito PMR 7PAX con 2 años de antigüedad ..."
             },
             {
                 "fuente": "STAC",
@@ -277,5 +280,5 @@
             }
         ]
     },
-    "updated_at": "29/01/2026 07:41"
+    "updated_at": "30/01/2026 07:42"
 }
