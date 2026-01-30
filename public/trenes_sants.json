@@ -1,30 +1,12 @@
 [
     {
-        "hora": "00:00",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "00:10",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": ""
-    },
-    {
-        "hora": "00:30",
+        "hora": "00:36",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06201",
         "via": ""
     },
     {
-        "hora": "00:44",
-        "origen": "Cádiz",
-        "tren": "ALVIA 00694",
-        "via": ""
-    },
-    {
-        "hora": "00:50",
+        "hora": "01:09",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03203",
         "via": ""
@@ -393,12 +375,6 @@
         "hora": "23:54",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06611",
-        "via": ""
-    },
-    {
-        "hora": "23:59",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 02883",
         "via": ""
     }
 ]
