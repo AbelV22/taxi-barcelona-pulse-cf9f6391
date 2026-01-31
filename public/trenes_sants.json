@@ -1,6 +1,6 @@
 [
     {
-        "hora": "00:14",
+        "hora": "00:16",
         "origen": "Vigo Guixar",
         "tren": "ALVIA 00621",
         "via": ""
@@ -210,36 +210,6 @@
         "via": ""
     },
     {
-        "hora": "18:01",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 33555",
-        "via": ""
-    },
-    {
-        "hora": "18:09",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06541",
-        "via": ""
-    },
-    {
-        "hora": "18:11",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
-        "via": ""
-    },
-    {
-        "hora": "18:14",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06141",
-        "via": ""
-    },
-    {
-        "hora": "18:14",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03294",
-        "via": ""
-    },
-    {
         "hora": "18:14",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03294",
@@ -249,18 +219,6 @@
         "hora": "18:19",
         "origen": "València Estació del Nord",
         "tren": "EUROMED 01152",
-        "via": ""
-    },
-    {
-        "hora": "18:21",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 02591",
-        "via": ""
-    },
-    {
-        "hora": "18:28",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06021",
         "via": ""
     },
     {
@@ -288,6 +246,12 @@
         "via": ""
     },
     {
+        "hora": "18:38",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06021",
+        "via": ""
+    },
+    {
         "hora": "18:46",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03305",
@@ -303,12 +267,6 @@
         "hora": "19:06",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08187",
-        "via": ""
-    },
-    {
-        "hora": "19:08",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06151",
         "via": ""
     },
     {
@@ -330,6 +288,12 @@
         "via": ""
     },
     {
+        "hora": "19:27",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06151",
+        "via": ""
+    },
+    {
         "hora": "19:34",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03171",
@@ -342,7 +306,7 @@
         "via": ""
     },
     {
-        "hora": "19:40",
+        "hora": "19:49",
         "origen": "Figueres",
         "tren": "MD 15092",
         "via": ""
@@ -360,12 +324,6 @@
         "via": ""
     },
     {
-        "hora": "20:03",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06571",
-        "via": ""
-    },
-    {
         "hora": "20:07",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34742",
@@ -375,12 +333,6 @@
         "hora": "20:07",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34742",
-        "via": ""
-    },
-    {
-        "hora": "20:10",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03305",
         "via": ""
     },
     {
@@ -392,7 +344,13 @@
     {
         "hora": "20:25",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06171",
+        "tren": "AVE 03305",
+        "via": ""
+    },
+    {
+        "hora": "20:25",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "OUIGO 06571",
         "via": ""
     },
     {
@@ -405,6 +363,12 @@
         "hora": "20:34",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02553",
+        "via": ""
+    },
+    {
+        "hora": "20:42",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06171",
         "via": ""
     },
     {
@@ -516,7 +480,7 @@
         "via": ""
     },
     {
-        "hora": "22:29",
+        "hora": "22:34",
         "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
         "tren": "ALVIA 00536",
         "via": ""
