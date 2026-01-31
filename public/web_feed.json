@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 167142,
-        "delta_value": -1275,
-        "delta_percent": -0.76,
+        "current_price": 163052,
+        "delta_value": -4090,
+        "delta_percent": -2.45,
         "direction": "down",
-        "volume": 22,
-        "volatility": 13000
+        "volume": 19,
+        "volatility": 13630
     },
     "charts": {
         "history_dates": [
@@ -26,7 +26,8 @@
             "2026-01-27",
             "2026-01-28",
             "2026-01-29",
-            "2026-01-30"
+            "2026-01-30",
+            "2026-01-31"
         ],
         "history_prices": [
             166147,
@@ -46,7 +47,8 @@
             164824,
             164824,
             168417,
-            167142
+            167142,
+            163052
         ],
         "history_sma_7": [
             0,
@@ -66,18 +68,18 @@
             163512,
             163487,
             164044,
-            164694
+            164694,
+            164766
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 169040,
-            "JUEVES PAR": 170495,
+            "JUEVES IMPAR": 177830,
+            "JUEVES PAR": 171213,
             "LUNES": 150000,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
-            "MARTES PAR": 174642,
-            "MIERCOLES IMPAR": 175783,
-            "NO ESPECIFICADO": 160577,
-            "VIERNES IMPAR": 160161
+            "MARTES PAR": 174285,
+            "NO ESPECIFICADO": 160538,
+            "VIERNES IMPAR": 166143
         }
     },
     "market_depth": {
@@ -147,13 +149,6 @@
             },
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 175000,
-                "modelo": "SIN COCHE",
-                "dia": "MARTES PAR",
-                "raw": "Vendo licencia de taxi amb barcelona | 175.000 € | Barcelona (Barcelona) | Vendo licencia de taxi so..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
                 "precio_neto": 150000,
                 "modelo": "SIN COCHE",
                 "dia": "LUNES",
@@ -161,24 +156,10 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 160250,
-                "modelo": "DACIA JOGGER",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38579 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAX..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 174285,
                 "modelo": "FORD CUSTOM",
                 "dia": "MARTES PAR",
                 "raw": "Ref:  | 38572 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAX..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 175783,
-                "modelo": "DACIA",
-                "dia": "MIERCOLES IMPAR",
-                "raw": "Ref:  | 38574 | DIA DE FIESTA:  | MIERCOLES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI..."
             },
             {
                 "fuente": "SOLANO",
@@ -203,13 +184,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 169777,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "JUEVES PAR",
-                "raw": "Ref:  | 38538 | DIA DE FIESTA:  | JUEVES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 177830,
                 "modelo": "VOLKSWAGEN CADDY",
                 "dia": "JUEVES IMPAR",
@@ -230,11 +204,18 @@
                 "raw": "Ref:  | 38500 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI E..."
             },
             {
+                "fuente": "SOLANO",
+                "precio_neto": 166143,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "VIERNES IMPAR",
+                "raw": "Ref:  | 38404 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
+            },
+            {
                 "fuente": "STAC",
-                "precio_neto": 167227,
-                "modelo": "DESCONOCIDO",
+                "precio_neto": 162513,
+                "modelo": "TOYOTA COROLLA",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 937 |  | Se vende licencia con vehículo Automatico con 4 años de antigüedad y 250000km. ..."
+                "raw": "Referencia: 937 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN Automatico con 4 años de an..."
             },
             {
                 "fuente": "STAC",
@@ -280,5 +261,5 @@
             }
         ]
     },
-    "updated_at": "30/01/2026 07:42"
+    "updated_at": "31/01/2026 07:31"
 }
