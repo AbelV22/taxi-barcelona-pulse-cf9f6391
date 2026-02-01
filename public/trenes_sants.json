@@ -1,36 +1,24 @@
 [
     {
-        "hora": "00:11",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06013",
-        "via": ""
-    },
-    {
-        "hora": "00:28",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": ""
-    },
-    {
-        "hora": "00:46",
+        "hora": "00:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
         "via": ""
     },
     {
-        "hora": "00:47",
+        "hora": "01:10",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06211",
         "via": ""
     },
     {
-        "hora": "01:27",
+        "hora": "01:42",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03203",
         "via": ""
     },
     {
-        "hora": "01:42",
+        "hora": "02:09",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02883",
         "via": ""
@@ -501,18 +489,6 @@
         "hora": "23:03",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:39",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "INTERCITY 01402",
-        "via": ""
-    },
-    {
-        "hora": "23:52",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03183",
         "via": ""
     }
 ]
