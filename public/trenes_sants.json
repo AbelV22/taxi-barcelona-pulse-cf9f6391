@@ -108,12 +108,6 @@
         "via": ""
     },
     {
-        "hora": "10:53",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
         "hora": "10:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06081",
@@ -144,19 +138,19 @@
         "via": ""
     },
     {
-        "hora": "11:45",
+        "hora": "11:56",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06081",
         "via": ""
     },
     {
-        "hora": "11:58",
+        "hora": "12:14",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03083",
         "via": ""
     },
     {
-        "hora": "12:03",
+        "hora": "12:19",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06281",
         "via": ""
@@ -204,51 +198,45 @@
         "via": ""
     },
     {
-        "hora": "12:57",
+        "hora": "13:04",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06011",
+        "tren": "OUIGO 06501",
         "via": ""
     },
     {
-        "hora": "13:04",
+        "hora": "13:09",
+        "origen": "Donostia / San Sebastián",
+        "tren": "ALVIA 00533",
+        "via": ""
+    },
+    {
+        "hora": "13:09",
+        "origen": "Donostia / San Sebastián",
+        "tren": "ALVIA 00533",
+        "via": ""
+    },
+    {
+        "hora": "13:19",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03303",
+        "via": ""
+    },
+    {
+        "hora": "13:21",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02661",
         "via": ""
     },
     {
-        "hora": "13:04",
+        "hora": "13:22",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06011",
+        "via": ""
+    },
+    {
+        "hora": "13:40",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06501",
-        "via": ""
-    },
-    {
-        "hora": "13:09",
-        "origen": "Donostia / San Sebastián",
-        "tren": "ALVIA 00533",
-        "via": ""
-    },
-    {
-        "hora": "13:09",
-        "origen": "Donostia / San Sebastián",
-        "tren": "ALVIA 00533",
-        "via": ""
-    },
-    {
-        "hora": "13:15",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06501",
-        "via": ""
-    },
-    {
-        "hora": "13:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03303",
-        "via": ""
-    },
-    {
-        "hora": "13:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03303",
         "via": ""
     },
     {
@@ -261,6 +249,12 @@
         "hora": "13:40",
         "origen": "Portbou",
         "tren": "MD 15070",
+        "via": ""
+    },
+    {
+        "hora": "13:41",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03303",
         "via": ""
     },
     {
