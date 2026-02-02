@@ -223,12 +223,6 @@
     },
     {
         "hora": "15:44",
-        "origen": "Portbou",
-        "tren": "MD 15070",
-        "via": ""
-    },
-    {
-        "hora": "15:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02591",
         "via": ""
@@ -237,18 +231,6 @@
         "hora": "15:50",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03162",
-        "via": ""
-    },
-    {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
-        "via": ""
-    },
-    {
-        "hora": "16:10",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03113",
         "via": ""
     },
     {
@@ -276,13 +258,13 @@
         "via": ""
     },
     {
-        "hora": "16:59",
+        "hora": "17:11",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06121",
         "via": ""
     },
     {
-        "hora": "17:11",
+        "hora": "17:18",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02591",
         "via": ""
@@ -300,48 +282,48 @@
         "via": ""
     },
     {
-        "hora": "17:35",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
-        "via": ""
-    },
-    {
-        "hora": "17:39",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06541",
-        "via": ""
-    },
-    {
         "hora": "17:41",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06021",
         "via": ""
     },
     {
-        "hora": "17:44",
+        "hora": "17:52",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 09725",
+        "via": ""
+    },
+    {
+        "hora": "17:54",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06141",
         "via": ""
     },
     {
-        "hora": "17:45",
+        "hora": "17:55",
+        "origen": "Lleida Pirineus",
+        "tren": "AVANT 33555",
+        "via": ""
+    },
+    {
+        "hora": "17:55",
+        "origen": "Lleida Pirineus",
+        "tren": "AVANT 33555",
+        "via": ""
+    },
+    {
+        "hora": "17:57",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "OUIGO 06541",
+        "via": ""
+    },
+    {
+        "hora": "18:04",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03141",
         "via": ""
     },
     {
-        "hora": "17:55",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 33555",
-        "via": ""
-    },
-    {
-        "hora": "17:55",
-        "origen": "Lleida Pirineus",
-        "tren": "AVANT 33555",
-        "via": ""
-    },
-    {
         "hora": "18:05",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01180",
@@ -354,93 +336,87 @@
         "via": ""
     },
     {
-        "hora": "18:06",
+        "hora": "18:14",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03294",
+        "via": ""
+    },
+    {
+        "hora": "18:14",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03294",
+        "via": ""
+    },
+    {
+        "hora": "18:19",
+        "origen": "València Estació del Nord",
+        "tren": "EUROMED 01152",
+        "via": ""
+    },
+    {
+        "hora": "18:27",
+        "origen": "València Estació del Nord",
+        "tren": "EUROMED 01152",
+        "via": ""
+    },
+    {
+        "hora": "18:29",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03143",
+        "tren": "IRYO 06151",
         "via": ""
     },
     {
-        "hora": "18:08",
+        "hora": "18:30",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03192",
+        "via": ""
+    },
+    {
+        "hora": "18:30",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03192",
+        "via": ""
+    },
+    {
+        "hora": "18:34",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03161",
+        "via": ""
+    },
+    {
+        "hora": "18:34",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03161",
+        "via": ""
+    },
+    {
+        "hora": "18:37",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03151",
         "via": ""
     },
     {
-        "hora": "18:14",
+        "hora": "18:39",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03143",
+        "via": ""
+    },
+    {
+        "hora": "18:41",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06021",
         "via": ""
     },
     {
-        "hora": "18:14",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03294",
-        "via": ""
-    },
-    {
-        "hora": "18:14",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03294",
-        "via": ""
-    },
-    {
-        "hora": "18:19",
-        "origen": "València Estació del Nord",
-        "tren": "EUROMED 01152",
-        "via": ""
-    },
-    {
-        "hora": "18:19",
-        "origen": "València Estació del Nord",
-        "tren": "EUROMED 01152",
-        "via": ""
-    },
-    {
-        "hora": "18:29",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06151",
-        "via": ""
-    },
-    {
-        "hora": "18:29",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06151",
-        "via": ""
-    },
-    {
-        "hora": "18:30",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03192",
-        "via": ""
-    },
-    {
-        "hora": "18:30",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03192",
-        "via": ""
-    },
-    {
-        "hora": "18:34",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03161",
-        "via": ""
-    },
-    {
-        "hora": "18:34",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03161",
-        "via": ""
-    },
-    {
         "hora": "18:46",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03305",
         "via": ""
     },
     {
-        "hora": "18:46",
+        "hora": "18:49",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03305",
+        "tren": "IRYO 06151",
         "via": ""
     },
     {
@@ -498,9 +474,9 @@
         "via": ""
     },
     {
-        "hora": "19:34",
+        "hora": "19:53",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03171",
+        "tren": "AVE 03305",
         "via": ""
     },
     {
@@ -636,9 +612,9 @@
         "via": ""
     },
     {
-        "hora": "21:34",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03191",
+        "hora": "21:32",
+        "origen": "Paris Gare de Lyon",
+        "tren": "TGV INOUI 09715",
         "via": ""
     },
     {
@@ -648,15 +624,9 @@
         "via": ""
     },
     {
-        "hora": "21:40",
-        "origen": "Vigo Guixar",
-        "tren": "ALVIA 00621",
-        "via": ""
-    },
-    {
-        "hora": "21:40",
-        "origen": "Salamanca",
-        "tren": "ALVIA 00631",
+        "hora": "21:34",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03191",
         "via": ""
     },
     {
@@ -672,6 +642,18 @@
         "via": ""
     },
     {
+        "hora": "21:48",
+        "origen": "Vigo Guixar",
+        "tren": "ALVIA 00621",
+        "via": ""
+    },
+    {
+        "hora": "21:48",
+        "origen": "Salamanca",
+        "tren": "ALVIA 00631",
+        "via": ""
+    },
+    {
         "hora": "22:04",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01193",
@@ -708,7 +690,7 @@
         "via": ""
     },
     {
-        "hora": "22:34",
+        "hora": "22:35",
         "origen": "Cádiz",
         "tren": "ALVIA 00694",
         "via": ""
