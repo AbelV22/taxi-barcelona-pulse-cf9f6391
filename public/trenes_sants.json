@@ -1,6 +1,6 @@
 [
     {
-        "hora": "00:35",
+        "hora": "00:57",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": ""
@@ -75,6 +75,12 @@
         "hora": "09:34",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03071",
+        "via": ""
+    },
+    {
+        "hora": "09:39",
+        "origen": "València Estació del Nord",
+        "tren": "INTERCITY 01072",
         "via": ""
     },
     {
@@ -478,11 +484,5 @@
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
         "via": ""
-    },
-    {
-        "hora": "23:36",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06013",
-        "via": "3"
     }
 ]
