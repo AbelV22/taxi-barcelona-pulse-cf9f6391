@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 163052,
-        "delta_value": 231,
-        "delta_percent": 0.14,
+        "current_price": 166143,
+        "delta_value": 3091,
+        "delta_percent": 1.9,
         "direction": "up",
-        "volume": 15,
-        "volatility": 9680
+        "volume": 17,
+        "volatility": 61595
     },
     "charts": {
         "history_dates": [
@@ -33,7 +33,8 @@
             "2026-02-03",
             "2026-02-04",
             "2026-02-05",
-            "2026-02-06"
+            "2026-02-06",
+            "2026-02-07"
         ],
         "history_prices": [
             166147,
@@ -60,7 +61,8 @@
             162821,
             162821,
             162821,
-            163052
+            163052,
+            166143
         ],
         "history_sma_7": [
             0,
@@ -87,12 +89,15 @@
             164622,
             164336,
             163537,
-            162953
+            162953,
+            163394
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 175896,
-            "MARTES PAR": 174285,
+            "LUNES IMPAR": 187050,
+            "LUNES PAR": 187252,
             "NO ESPECIFICADO": 160375,
+            "VIERNES": 416329,
             "VIERNES IMPAR": 166143,
             "VIERNES PAR": 169345
         }
@@ -100,19 +105,19 @@
     "market_depth": {
         "cheapest_offers": [
             {
-                "fuente": "SOLANO",
-                "dia": "VIERNES IMPAR",
+                "fuente": "MILANUNCIOS",
+                "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 150563,
                 "precio_total": 155000,
                 "valor_coche": 4437
             },
             {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
+                "fuente": "SOLANO",
+                "dia": "VIERNES IMPAR",
                 "modelo": "DESCONOCIDO",
-                "precio_neto": 153563,
-                "precio_total": 158000,
+                "precio_neto": 150563,
+                "precio_total": 155000,
                 "valor_coche": 4437
             },
             {
@@ -141,6 +146,34 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 416329,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES",
+                "raw": "2 licencia taxi Barcelona | 420.000 € | Sant Adria de Besos/San Adrian (Barcelona) | Dos, licencia d..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 187050,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "LUNES IMPAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 210.000 € | Barcelona (Barcelona) | NO NEGOCIABLE \nFiesta Lun..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 187252,
+                "modelo": "TOYOTA CAMRY",
+                "dia": "LUNES PAR",
+                "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 150563,
+                "modelo": "DESCONOCIDO",
+                "dia": "NO ESPECIFICADO",
+                "raw": "Licencia Taxi Barcelona | 155.000 € | Barcelona (Barcelona) | Compro licencia de taxi en Barcelona c..."
+            },
             {
                 "fuente": "SOLANO",
                 "precio_neto": 175896,
@@ -171,13 +204,6 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 174285,
-                "modelo": "FORD CUSTOM",
-                "dia": "MARTES PAR",
-                "raw": "Ref:  | 38572 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TAX..."
-            },
-            {
-                "fuente": "SOLANO",
                 "precio_neto": 159582,
                 "modelo": "DACIA",
                 "dia": "JUEVES IMPAR",
@@ -203,13 +229,6 @@
                 "modelo": "SKODA OCTAVIA",
                 "dia": "NO ESPECIFICADO",
                 "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi 1.5 GNC con 5 años de antigü..."
-            },
-            {
-                "fuente": "STAC",
-                "precio_neto": 153563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 940 |  | Se vende licencia sin vehículo. | Precio: 158000€ | + INFO..."
             },
             {
                 "fuente": "STAC",
@@ -248,5 +267,5 @@
             }
         ]
     },
-    "updated_at": "06/02/2026 07:49"
+    "updated_at": "07/02/2026 07:33"
 }
