@@ -1,6 +1,6 @@
 [
     {
-        "hora": "00:17",
+        "hora": "00:23",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": "1"
@@ -432,24 +432,6 @@
         "via": ""
     },
     {
-        "hora": "22:47",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03292",
-        "via": "5"
-    },
-    {
-        "hora": "22:50",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01193",
-        "via": "1"
-    },
-    {
-        "hora": "23:08",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03183",
-        "via": ""
-    },
-    {
         "hora": "23:20",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
@@ -462,27 +444,9 @@
         "via": ""
     },
     {
-        "hora": "23:34",
-        "origen": "Paris Gare de Lyon",
-        "tren": "TGV INOUI 09715",
-        "via": ""
-    },
-    {
-        "hora": "23:35",
-        "origen": "Vigo Guixar",
-        "tren": "ALVIA 00621",
-        "via": ""
-    },
-    {
-        "hora": "23:35",
-        "origen": "Salamanca",
-        "tren": "ALVIA 00631",
-        "via": ""
-    },
-    {
-        "hora": "23:49",
+        "hora": "23:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
-        "via": ""
+        "via": "6"
     }
 ]
