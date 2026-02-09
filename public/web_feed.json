@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 17,
-        "volatility": 61595
+        "volatility": 61339
     },
     "charts": {
         "history_dates": [
@@ -35,7 +35,8 @@
             "2026-02-05",
             "2026-02-06",
             "2026-02-07",
-            "2026-02-08"
+            "2026-02-08",
+            "2026-02-09"
         ],
         "history_prices": [
             166147,
@@ -63,6 +64,7 @@
             162821,
             162821,
             163052,
+            166143,
             166143,
             166143
         ],
@@ -93,13 +95,15 @@
             163537,
             162953,
             163394,
-            163836
+            163836,
+            164277
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 175896,
+            "LUNES": 160000,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
-            "NO ESPECIFICADO": 160375,
+            "NO ESPECIFICADO": 161483,
             "VIERNES": 416329,
             "VIERNES IMPAR": 166143,
             "VIERNES PAR": 169345
@@ -107,14 +111,6 @@
     },
     "market_depth": {
         "cheapest_offers": [
-            {
-                "fuente": "MILANUNCIOS",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 150563,
-                "precio_total": 155000,
-                "valor_coche": 4437
-            },
             {
                 "fuente": "SOLANO",
                 "dia": "VIERNES IMPAR",
@@ -146,6 +142,14 @@
                 "precio_neto": 159582,
                 "precio_total": 173000,
                 "valor_coche": 13418
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "dia": "LUNES",
+                "modelo": "SIN COCHE",
+                "precio_neto": 160000,
+                "precio_total": 160000,
+                "valor_coche": 0
             }
         ],
         "all_offers": [
@@ -172,10 +176,10 @@
             },
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 150563,
-                "modelo": "DESCONOCIDO",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Licencia Taxi Barcelona | 155.000 € | Barcelona (Barcelona) | Compro licencia de taxi en Barcelona c..."
+                "precio_neto": 160000,
+                "modelo": "SIN COCHE",
+                "dia": "LUNES",
+                "raw": "Compro licencia de taxi en Barcelona | 160.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
             },
             {
                 "fuente": "SOLANO",
@@ -270,5 +274,5 @@
             }
         ]
     },
-    "updated_at": "08/02/2026 07:40"
+    "updated_at": "09/02/2026 07:59"
 }
