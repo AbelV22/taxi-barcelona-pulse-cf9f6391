@@ -1,6 +1,6 @@
 [
     {
-        "hora": "00:25",
+        "hora": "00:32",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": "1"
@@ -438,12 +438,6 @@
         "via": ""
     },
     {
-        "hora": "22:53",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01193",
-        "via": "1"
-    },
-    {
         "hora": "23:07",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03201",
@@ -462,13 +456,7 @@
         "via": ""
     },
     {
-        "hora": "23:42",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:51",
+        "hora": "23:55",
         "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
         "tren": "ALVIA 00437",
         "via": ""
