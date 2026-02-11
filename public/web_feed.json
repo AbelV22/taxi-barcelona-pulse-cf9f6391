@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 166438,
-        "delta_value": 295,
-        "delta_percent": 0.18,
-        "direction": "up",
-        "volume": 16,
-        "volatility": 63073
+        "current_price": 166143,
+        "delta_value": -295,
+        "delta_percent": -0.18,
+        "direction": "down",
+        "volume": 17,
+        "volatility": 61278
     },
     "charts": {
         "history_dates": [
@@ -37,7 +37,8 @@
             "2026-02-07",
             "2026-02-08",
             "2026-02-09",
-            "2026-02-10"
+            "2026-02-10",
+            "2026-02-11"
         ],
         "history_prices": [
             166147,
@@ -68,7 +69,8 @@
             166143,
             166143,
             166143,
-            166438
+            166438,
+            166143
         ],
         "history_sma_7": [
             0,
@@ -99,15 +101,17 @@
             163394,
             163836,
             164277,
-            164794
+            164794,
+            165269
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 175896,
+            "JUEVES IMPAR": 173528,
+            "LUNES": 160000,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
             "NO ESPECIFICADO": 161483,
             "VIERNES": 416329,
-            "VIERNES IMPAR": 166143,
+            "VIERNES IMPAR": 158353,
             "VIERNES PAR": 169345
         }
     },
@@ -146,12 +150,12 @@
                 "valor_coche": 13418
             },
             {
-                "fuente": "STAC",
-                "dia": "NO ESPECIFICADO",
-                "modelo": "SKODA OCTAVIA",
-                "precio_neto": 160375,
-                "precio_total": 170000,
-                "valor_coche": 9625
+                "fuente": "MILANUNCIOS",
+                "dia": "LUNES",
+                "modelo": "SIN COCHE",
+                "precio_neto": 160000,
+                "precio_total": 160000,
+                "valor_coche": 0
             }
         ],
         "all_offers": [
@@ -161,6 +165,13 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES",
                 "raw": "2 licencia taxi Barcelona | 420.000 € | Sant Adria de Besos/San Adrian (Barcelona) | Dos, licencia d..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 160000,
+                "modelo": "SIN COCHE",
+                "dia": "LUNES",
+                "raw": "Compro licencia de taxi en Barcelona | 160.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -175,6 +186,13 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 171161,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "JUEVES IMPAR",
+                "raw": "Ref:  | 38613 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
             },
             {
                 "fuente": "SOLANO",
@@ -196,13 +214,6 @@
                 "modelo": "DESCONOCIDO",
                 "dia": "VIERNES IMPAR",
                 "raw": "Ref:  | 38599 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCI..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 166733,
-                "modelo": "TOYOTA PRIUS",
-                "dia": "VIERNES IMPAR",
-                "raw": "Ref:  | 38594 | DIA DE FIESTA:  | VIERNES IMPAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE ..."
             },
             {
                 "fuente": "SOLANO",
@@ -269,5 +280,5 @@
             }
         ]
     },
-    "updated_at": "10/02/2026 08:00"
+    "updated_at": "11/02/2026 07:57"
 }
