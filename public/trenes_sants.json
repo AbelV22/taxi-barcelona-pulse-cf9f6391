@@ -468,21 +468,9 @@
         "via": ""
     },
     {
-        "hora": "23:31",
-        "origen": "Salamanca",
-        "tren": "ALVIA 00631",
-        "via": "1"
-    },
-    {
         "hora": "23:39",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06201",
-        "via": ""
-    },
-    {
-        "hora": "23:43",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06415",
         "via": ""
     }
 ]
