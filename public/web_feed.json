@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 166143,
-        "delta_value": -295,
-        "delta_percent": -0.18,
-        "direction": "down",
-        "volume": 17,
-        "volatility": 61278
+        "current_price": 168000,
+        "delta_value": 1857,
+        "delta_percent": 1.12,
+        "direction": "up",
+        "volume": 21,
+        "volatility": 55238
     },
     "charts": {
         "history_dates": [
@@ -38,7 +38,8 @@
             "2026-02-08",
             "2026-02-09",
             "2026-02-10",
-            "2026-02-11"
+            "2026-02-11",
+            "2026-02-12"
         ],
         "history_prices": [
             166147,
@@ -70,7 +71,8 @@
             166143,
             166143,
             166438,
-            166143
+            166143,
+            168000
         ],
         "history_sma_7": [
             0,
@@ -102,17 +104,19 @@
             163836,
             164277,
             164794,
-            165269
+            165269,
+            166008
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 173528,
-            "LUNES": 160000,
+            "LUNES": 171818,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
-            "NO ESPECIFICADO": 161483,
-            "VIERNES": 416329,
+            "MARTES PAR": 168000,
+            "NO ESPECIFICADO": 155563,
+            "VIERNES": 163052,
             "VIERNES IMPAR": 158353,
-            "VIERNES PAR": 169345
+            "VIERNES PAR": 170686
         }
     },
     "market_depth": {
@@ -137,6 +141,14 @@
                 "fuente": "STAC",
                 "dia": "NO ESPECIFICADO",
                 "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "NO ESPECIFICADO",
+                "modelo": "DESCONOCIDO",
                 "precio_neto": 158563,
                 "precio_total": 163000,
                 "valor_coche": 4437
@@ -148,14 +160,6 @@
                 "precio_neto": 159582,
                 "precio_total": 173000,
                 "valor_coche": 13418
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "dia": "LUNES",
-                "modelo": "SIN COCHE",
-                "precio_neto": 160000,
-                "precio_total": 160000,
-                "valor_coche": 0
             }
         ],
         "all_offers": [
@@ -186,6 +190,20 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 205.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 172028,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES PAR",
+                "raw": "Ref:  | 38621 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
+            },
+            {
+                "fuente": "SOLANO",
+                "precio_neto": 168000,
+                "modelo": "DESCONOCIDO",
+                "dia": "MARTES PAR",
+                "raw": "Ref:  | 38619 | DIA DE FIESTA:  | MARTES PAR | LICENCIA DE TAXI SOLA EN VENTA BARCELONA | LICENCIA D..."
             },
             {
                 "fuente": "SOLANO",
@@ -238,10 +256,24 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 174108,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES",
+                "raw": "Referencia: 943 |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con 6 años de a..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 160375,
                 "modelo": "SKODA OCTAVIA",
+                "dia": "VIERNES",
+                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1.5 GNC con 5..."
+            },
+            {
+                "fuente": "STAC",
+                "precio_neto": 155563,
+                "modelo": "DESCONOCIDO",
                 "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi 1.5 GNC con 5 años de antigü..."
+                "raw": "Referencia: 920/2 |  | Se vende licencia sin vehículo. | Precio: 160000€ | + INFO..."
             },
             {
                 "fuente": "STAC",
@@ -261,24 +293,24 @@
                 "fuente": "STAC",
                 "precio_neto": 163052,
                 "modelo": "TOYOTA COROLLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN con 3 años de antigüedad y ..."
+                "dia": "VIERNES",
+                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN FIESTA VIERNES con 3 años d..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 847 |  | Se vende licencia con vehículo Dacia Jogger GLP Manual con 2 años de antigüedad..."
+                "dia": "VIERNES",
+                "raw": "Referencia: 847 |  | Se vende licencia con vehículo Dacia Jogger FIESTA VIERNES GLP Manual con 2 año..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 183637,
                 "modelo": "TESLA",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 734 |  | Se vende licencia con vehículo Tesla ELECTRICO con 1 años de antigüedad y 52000..."
+                "dia": "LUNES",
+                "raw": "Referencia: 734 |  | Se vende licencia con vehículo Tesla FIESTA LUNES 100% ELECTRICO con 1 años de ..."
             }
         ]
     },
-    "updated_at": "11/02/2026 07:57"
+    "updated_at": "12/02/2026 07:54"
 }
