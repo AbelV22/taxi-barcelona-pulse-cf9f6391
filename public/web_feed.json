@@ -1,11 +1,11 @@
 {
     "ticker": {
         "current_price": 168000,
-        "delta_value": 1857,
-        "delta_percent": 1.12,
+        "delta_value": 0,
+        "delta_percent": 0.0,
         "direction": "up",
         "volume": 21,
-        "volatility": 55238
+        "volatility": 55255
     },
     "charts": {
         "history_dates": [
@@ -39,7 +39,8 @@
             "2026-02-09",
             "2026-02-10",
             "2026-02-11",
-            "2026-02-12"
+            "2026-02-12",
+            "2026-02-13"
         ],
         "history_prices": [
             166147,
@@ -72,6 +73,7 @@
             166143,
             166438,
             166143,
+            168000,
             168000
         ],
         "history_sma_7": [
@@ -105,10 +107,11 @@
             164277,
             164794,
             165269,
-            166008
+            166008,
+            166715
         ],
         "price_by_day_descanso": {
-            "JUEVES IMPAR": 173528,
+            "JUEVES IMPAR": 172528,
             "LUNES": 171818,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
@@ -207,7 +210,7 @@
             },
             {
                 "fuente": "SOLANO",
-                "precio_neto": 171161,
+                "precio_neto": 169161,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "JUEVES IMPAR",
                 "raw": "Ref:  | 38613 | DIA DE FIESTA:  | LICENCIA TAXI EN VENTA BARCELONA | LICENCIA TAXI EN VENTA BARCELON..."
@@ -312,5 +315,5 @@
             }
         ]
     },
-    "updated_at": "12/02/2026 07:54"
+    "updated_at": "13/02/2026 07:51"
 }
