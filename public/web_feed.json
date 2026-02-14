@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 168000,
-        "delta_value": 0,
-        "delta_percent": 0.0,
+        "current_price": 169253,
+        "delta_value": 1253,
+        "delta_percent": 0.75,
         "direction": "up",
-        "volume": 21,
-        "volatility": 55255
+        "volume": 22,
+        "volatility": 53987
     },
     "charts": {
         "history_dates": [
@@ -40,7 +40,8 @@
             "2026-02-10",
             "2026-02-11",
             "2026-02-12",
-            "2026-02-13"
+            "2026-02-13",
+            "2026-02-14"
         ],
         "history_prices": [
             166147,
@@ -74,7 +75,8 @@
             166438,
             166143,
             168000,
-            168000
+            168000,
+            169253
         ],
         "history_sma_7": [
             0,
@@ -108,16 +110,18 @@
             164794,
             165269,
             166008,
-            166715
+            166715,
+            167160
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 172528,
             "LUNES": 171818,
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
-            "MARTES PAR": 168000,
+            "MARTES": 170774,
+            "MARTES PAR": 183414,
             "NO ESPECIFICADO": 155563,
-            "VIERNES": 163052,
+            "VIERNES": 168349,
             "VIERNES IMPAR": 158353,
             "VIERNES PAR": 170686
         }
@@ -166,6 +170,13 @@
             }
         ],
         "all_offers": [
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 198829,
+                "modelo": "TOYOTA COROLLA",
+                "dia": "MARTES PAR",
+                "raw": "licencia taxi Barcelona | 210.000 € | Barcelona (Barcelona) | Se vende licencia de taxi en Barcelona..."
+            },
             {
                 "fuente": "MILANUNCIOS",
                 "precio_neto": 416329,
@@ -259,6 +270,13 @@
             },
             {
                 "fuente": "STAC",
+                "precio_neto": 170774,
+                "modelo": "SEAT",
+                "dia": "MARTES",
+                "raw": "Referencia: 944 |  | Se vende licencia con vehículo Seat Toledo MARTES con 8 años de antigüedad y 37..."
+            },
+            {
+                "fuente": "STAC",
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES",
@@ -294,13 +312,6 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 163052,
-                "modelo": "TOYOTA COROLLA",
-                "dia": "VIERNES",
-                "raw": "Referencia: 929 |  | Se vende licencia con vehículo TOYOTA COROLLA SEDAN FIESTA VIERNES con 3 años d..."
-            },
-            {
-                "fuente": "STAC",
                 "precio_neto": 162591,
                 "modelo": "DACIA JOGGER",
                 "dia": "VIERNES",
@@ -315,5 +326,5 @@
             }
         ]
     },
-    "updated_at": "13/02/2026 07:51"
+    "updated_at": "14/02/2026 07:35"
 }
