@@ -3,12 +3,6 @@
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": "1"
-    },
-    {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
         "via": ""
     },
     {
@@ -48,7 +42,7 @@
         "via": ""
     },
     {
-        "hora": "09:39",
+        "hora": "09:45",
         "origen": "València Estació del Nord",
         "tren": "INTERCITY 01072",
         "via": ""
