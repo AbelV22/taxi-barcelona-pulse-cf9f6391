@@ -384,22 +384,10 @@
         "via": ""
     },
     {
-        "hora": "22:40",
-        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00536",
-        "via": ""
-    },
-    {
         "hora": "22:46",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06013",
         "via": ""
-    },
-    {
-        "hora": "22:56",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06013",
-        "via": "3"
     },
     {
         "hora": "23:07",
@@ -426,13 +414,7 @@
         "via": ""
     },
     {
-        "hora": "23:29",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": "5"
-    },
-    {
-        "hora": "23:35",
+        "hora": "23:28",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
         "via": ""
