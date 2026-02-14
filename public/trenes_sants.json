@@ -186,34 +186,16 @@
         "via": ""
     },
     {
-        "hora": "16:55",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 02591",
-        "via": ""
-    },
-    {
-        "hora": "16:58",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 10051",
-        "via": ""
-    },
-    {
         "hora": "16:59",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03141",
         "via": ""
     },
     {
-        "hora": "17:22",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06541",
-        "via": ""
-    },
-    {
-        "hora": "17:43",
+        "hora": "17:49",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 09725",
-        "via": "1"
+        "via": ""
     },
     {
         "hora": "17:49",
@@ -246,16 +228,10 @@
         "via": ""
     },
     {
-        "hora": "18:23",
+        "hora": "18:40",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06021",
         "via": "1"
-    },
-    {
-        "hora": "18:54",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06151",
-        "via": ""
     },
     {
         "hora": "18:54",
@@ -270,6 +246,12 @@
         "via": ""
     },
     {
+        "hora": "19:06",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06151",
+        "via": ""
+    },
+    {
         "hora": "19:14",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03305",
@@ -279,7 +261,7 @@
         "hora": "19:20",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08187",
-        "via": ""
+        "via": "1"
     },
     {
         "hora": "19:20",
@@ -288,7 +270,7 @@
         "via": ""
     },
     {
-        "hora": "19:21",
+        "hora": "19:23",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03305",
         "via": ""
@@ -312,7 +294,7 @@
         "via": ""
     },
     {
-        "hora": "19:24",
+        "hora": "19:32",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06571",
         "via": ""
@@ -324,34 +306,34 @@
         "via": ""
     },
     {
-        "hora": "19:39",
+        "hora": "19:40",
+        "origen": "Portbou",
+        "tren": "MD 15092",
+        "via": ""
+    },
+    {
+        "hora": "19:40",
+        "origen": "Portbou",
+        "tren": "MD 15092",
+        "via": ""
+    },
+    {
+        "hora": "19:44",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03163",
+        "via": ""
+    },
+    {
+        "hora": "19:46",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 11661",
         "via": ""
     },
     {
-        "hora": "19:40",
-        "origen": "Portbou",
-        "tren": "MD 15092",
-        "via": ""
-    },
-    {
-        "hora": "19:40",
-        "origen": "Portbou",
-        "tren": "MD 15092",
-        "via": ""
-    },
-    {
-        "hora": "19:44",
+        "hora": "19:52",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03163",
-        "via": ""
-    },
-    {
-        "hora": "19:44",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03163",
-        "via": ""
+        "via": "3"
     },
     {
         "hora": "19:59",
@@ -492,18 +474,6 @@
         "via": ""
     },
     {
-        "hora": "22:03",
-        "origen": "Vigo Guixar",
-        "tren": "ALVIA 00621",
-        "via": ""
-    },
-    {
-        "hora": "22:04",
-        "origen": "Salamanca",
-        "tren": "ALVIA 00631",
-        "via": ""
-    },
-    {
         "hora": "22:04",
         "origen": "Alacant / Alicante Terminal",
         "tren": "EUROMED 01193",
@@ -516,15 +486,21 @@
         "via": ""
     },
     {
-        "hora": "22:13",
-        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00437",
+        "hora": "22:11",
+        "origen": "Vigo Guixar",
+        "tren": "ALVIA 00621",
         "via": ""
     },
     {
-        "hora": "22:29",
+        "hora": "22:11",
+        "origen": "Salamanca",
+        "tren": "ALVIA 00631",
+        "via": ""
+    },
+    {
+        "hora": "22:13",
         "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00536",
+        "tren": "ALVIA 00437",
         "via": ""
     },
     {
