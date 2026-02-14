@@ -75,12 +75,6 @@
         "hora": "12:29",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34730",
-        "via": "1"
-    },
-    {
-        "hora": "12:29",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34730",
         "via": ""
     },
     {
@@ -102,22 +96,10 @@
         "via": ""
     },
     {
-        "hora": "13:00",
-        "origen": "Marseille Saint Charles",
-        "tren": "AVE 09730",
-        "via": ""
-    },
-    {
         "hora": "13:04",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02661",
         "via": ""
-    },
-    {
-        "hora": "13:06",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06091",
-        "via": "5"
     },
     {
         "hora": "13:09",
@@ -127,24 +109,6 @@
     },
     {
         "hora": "13:14",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06011",
-        "via": ""
-    },
-    {
-        "hora": "13:27",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06501",
-        "via": ""
-    },
-    {
-        "hora": "13:28",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 02661",
-        "via": "1"
-    },
-    {
-        "hora": "13:32",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06011",
         "via": ""
@@ -162,33 +126,27 @@
         "via": ""
     },
     {
-        "hora": "13:54",
-        "origen": "Portbou",
-        "tren": "MD 15070",
+        "hora": "14:08",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVANT 34394",
         "via": ""
     },
     {
-        "hora": "13:57",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03303",
-        "via": ""
-    },
-    {
-        "hora": "14:02",
+        "hora": "14:10",
         "origen": "Donostia / San Sebastián",
         "tren": "ALVIA 00533",
         "via": ""
     },
     {
-        "hora": "14:08",
+        "hora": "14:15",
         "origen": "Figueres-Vilafant",
         "tren": "AVANT 34394",
         "via": ""
     },
     {
-        "hora": "14:08",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVANT 34394",
+        "hora": "14:21",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03303",
         "via": ""
     },
     {
@@ -217,14 +175,14 @@
     },
     {
         "hora": "14:50",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06111",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "EUROMED 01113",
         "via": ""
     },
     {
-        "hora": "14:50",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "EUROMED 01113",
+        "hora": "15:05",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06111",
         "via": ""
     },
     {
@@ -234,63 +192,63 @@
         "via": ""
     },
     {
-        "hora": "15:19",
+        "hora": "15:26",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03113",
         "via": ""
     },
     {
-        "hora": "15:23",
+        "hora": "15:39",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06121",
+        "via": ""
+    },
+    {
+        "hora": "15:49",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06121",
+        "via": "3"
+    },
+    {
+        "hora": "15:50",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03162",
+        "via": "5"
+    },
+    {
+        "hora": "15:50",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03162",
+        "via": ""
+    },
+    {
+        "hora": "16:09",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 02591",
+        "via": ""
+    },
+    {
+        "hora": "16:19",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 09725",
+        "via": ""
+    },
+    {
+        "hora": "16:19",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 09725",
+        "via": ""
+    },
+    {
+        "hora": "16:21",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 10051",
         "via": ""
     },
     {
-        "hora": "15:39",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06121",
-        "via": ""
-    },
-    {
-        "hora": "15:39",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06121",
-        "via": ""
-    },
-    {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
-        "via": ""
-    },
-    {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
-        "via": ""
-    },
-    {
-        "hora": "16:09",
+        "hora": "16:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 02591",
-        "via": ""
-    },
-    {
-        "hora": "16:09",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 02591",
-        "via": ""
-    },
-    {
-        "hora": "16:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
-        "via": ""
-    },
-    {
-        "hora": "16:19",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 09725",
         "via": ""
     },
     {
@@ -300,7 +258,7 @@
         "via": ""
     },
     {
-        "hora": "16:44",
+        "hora": "16:56",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06541",
         "via": ""
@@ -489,12 +447,6 @@
         "hora": "20:42",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06171",
-        "via": ""
-    },
-    {
-        "hora": "20:51",
-        "origen": "Linares-Baeza",
-        "tren": "ALVIA 00694",
         "via": ""
     },
     {
