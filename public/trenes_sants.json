@@ -3,13 +3,13 @@
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": "4"
+        "via": ""
     },
     {
-        "hora": "06:25",
+        "hora": "06:33",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": ""
+        "via": "4"
     },
     {
         "hora": "07:15",
