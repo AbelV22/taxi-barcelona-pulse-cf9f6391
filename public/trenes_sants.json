@@ -1,11 +1,5 @@
 [
     {
-        "hora": "00:17",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": "1"
-    },
-    {
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
@@ -147,6 +141,12 @@
         "hora": "12:36",
         "origen": "Marseille Saint Charles",
         "tren": "AVE 09730",
+        "via": ""
+    },
+    {
+        "hora": "12:39",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06091",
         "via": ""
     },
     {
@@ -481,12 +481,6 @@
     },
     {
         "hora": "23:28",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
         "via": ""
