@@ -1,6 +1,6 @@
 [
     {
-        "hora": "00:09",
+        "hora": "00:17",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": "1"
@@ -147,12 +147,6 @@
         "hora": "12:36",
         "origen": "Marseille Saint Charles",
         "tren": "AVE 09730",
-        "via": ""
-    },
-    {
-        "hora": "12:39",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06091",
         "via": ""
     },
     {
@@ -468,12 +462,6 @@
         "via": ""
     },
     {
-        "hora": "22:54",
-        "origen": "Bilbao Intermodal Abando-Indalecio Prieto.",
-        "tren": "ALVIA 00437",
-        "via": ""
-    },
-    {
         "hora": "22:59",
         "origen": "Sevilla Santa Justa",
         "tren": "AVE 03941",
@@ -498,13 +486,7 @@
         "via": ""
     },
     {
-        "hora": "23:36",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "IRYO 06013",
-        "via": "4"
-    },
-    {
-        "hora": "23:41",
+        "hora": "23:44",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06415",
         "via": ""
