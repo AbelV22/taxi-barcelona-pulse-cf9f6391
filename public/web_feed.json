@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 22,
-        "volatility": 53987
+        "volatility": 53918
     },
     "charts": {
         "history_dates": [
@@ -42,7 +42,8 @@
             "2026-02-12",
             "2026-02-13",
             "2026-02-14",
-            "2026-02-15"
+            "2026-02-15",
+            "2026-02-16"
         ],
         "history_prices": [
             166147,
@@ -77,6 +78,7 @@
             166143,
             168000,
             168000,
+            169253,
             169253,
             169253
         ],
@@ -114,7 +116,8 @@
             166008,
             166715,
             167160,
-            167604
+            167604,
+            168048
         ],
         "price_by_day_descanso": {
             "JUEVES IMPAR": 172528,
@@ -122,7 +125,7 @@
             "LUNES IMPAR": 187050,
             "LUNES PAR": 187252,
             "MARTES": 170774,
-            "MARTES PAR": 183414,
+            "MARTES PAR": 180914,
             "NO ESPECIFICADO": 155563,
             "VIERNES": 168349,
             "VIERNES IMPAR": 158353,
@@ -175,10 +178,10 @@
         "all_offers": [
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 198829,
+                "precio_neto": 193829,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "MARTES PAR",
-                "raw": "licencia taxi Barcelona | 210.000 € | Barcelona (Barcelona) | Se vende licencia de taxi en Barcelona..."
+                "raw": "licencia taxi Barcelona | 205.000 € | Barcelona (Barcelona) | Se vende licencia de taxi en Barcelona..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -329,5 +332,5 @@
             }
         ]
     },
-    "updated_at": "15/02/2026 07:39"
+    "updated_at": "16/02/2026 07:56"
 }
