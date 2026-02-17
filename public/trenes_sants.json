@@ -3,12 +3,6 @@
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": "5"
-    },
-    {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
         "via": ""
     },
     {
@@ -51,7 +45,7 @@
         "hora": "08:23",
         "origen": "Camp de Tarragona",
         "tren": "AVANT 08869",
-        "via": ""
+        "via": "3"
     },
     {
         "hora": "08:23",
