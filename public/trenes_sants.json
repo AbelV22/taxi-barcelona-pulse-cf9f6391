@@ -466,17 +466,5 @@
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06201",
         "via": ""
-    },
-    {
-        "hora": "23:45",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06415",
-        "via": ""
-    },
-    {
-        "hora": "23:54",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03201",
-        "via": "1"
     }
 ]
