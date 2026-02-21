@@ -5,7 +5,7 @@
         "delta_percent": 0.0,
         "direction": "up",
         "volume": 24,
-        "volatility": 51698
+        "volatility": 51690
     },
     "charts": {
         "history_dates": [
@@ -47,7 +47,8 @@
             "2026-02-17",
             "2026-02-18",
             "2026-02-19",
-            "2026-02-20"
+            "2026-02-20",
+            "2026-02-21"
         ],
         "history_prices": [
             166147,
@@ -87,6 +88,7 @@
             169253,
             169253,
             164563,
+            170454,
             170454,
             170454
         ],
@@ -129,18 +131,17 @@
             168450,
             168225,
             168575,
-            168926
+            168926,
+            169097
         ],
         "price_by_day_descanso": {
-            "JUEVES": 164563,
             "JUEVES IMPAR": 169161,
             "LUNES": 171818,
             "LUNES IMPAR": 183993,
             "LUNES PAR": 180407,
             "MARTES PAR": 180914,
             "MIERCOLES PAR": 171563,
-            "NO ESPECIFICADO": 172830,
-            "VIERNES": 158563,
+            "VIERNES": 160375,
             "VIERNES PAR": 169345
         }
     },
@@ -211,17 +212,17 @@
             },
             {
                 "fuente": "MILANUNCIOS",
-                "precio_neto": 416695,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES",
-                "raw": "2 licencia taxi Barcelona | 420.000 € | Sant Adria de Besos/San Adrian (Barcelona) | Dos, licencia d..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
                 "precio_neto": 160000,
                 "modelo": "SIN COCHE",
                 "dia": "LUNES",
                 "raw": "Compro licencia de taxi en Barcelona | 160.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 416695,
+                "modelo": "DESCONOCIDO",
+                "dia": "VIERNES",
+                "raw": "2 licencia taxi Barcelona | 420.000 € | Sant Adria de Besos/San Adrian (Barcelona) | Dos, licencia d..."
             },
             {
                 "fuente": "SOLANO",
@@ -295,17 +296,17 @@
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 172830,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "NO ESPECIFICADO",
-                "raw": "Referencia: 947 |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2.0 TDI Cambio Manual (embrague..."
+                "precio_neto": 165161,
+                "modelo": "TOYOTA PRIUS",
+                "dia": "VIERNES",
+                "raw": "Referencia: 948 VIERNES |  | Se vende licencia con vehículo Toyota Prius Plus con 7 años de antigüed..."
             },
             {
                 "fuente": "STAC",
-                "precio_neto": 164563,
-                "modelo": "DESCONOCIDO",
-                "dia": "JUEVES",
-                "raw": "Referencia: 945 JUEVES |  | Se vende licencia sin vehículo. | Precio: 169000€ | + INFO..."
+                "precio_neto": 172830,
+                "modelo": "VOLKSWAGEN CADDY",
+                "dia": "VIERNES",
+                "raw": "Referencia: 947 VIERNES |  | Se vende licencia con vehículo VOLKSWAGEN CADDY 2.0 TDI Cambio Manual (..."
             },
             {
                 "fuente": "STAC",
@@ -319,14 +320,14 @@
                 "precio_neto": 174108,
                 "modelo": "TOYOTA PRIUS",
                 "dia": "VIERNES",
-                "raw": "Referencia: 943 |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con 6 años de a..."
+                "raw": "Referencia: 943 VIERNES |  | Se vende licencia con vehículo Toyota Prius Plus FIESTA VIERNES con 6 a..."
             },
             {
                 "fuente": "STAC",
                 "precio_neto": 160375,
                 "modelo": "SKODA OCTAVIA",
                 "dia": "VIERNES",
-                "raw": "Referencia: 920 |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1.5 GNC con 5..."
+                "raw": "Referencia: 920 VIERNES |  | Se vende licencia con vehículo Skoda Octavia Combi FIESTA VIERNES 1.5 G..."
             },
             {
                 "fuente": "STAC",
@@ -354,9 +355,9 @@
                 "precio_neto": 183637,
                 "modelo": "TESLA",
                 "dia": "LUNES",
-                "raw": "Referencia: 734 |  | Se vende licencia con vehículo Tesla FIESTA LUNES 100% ELECTRICO con 1 años de ..."
+                "raw": "Referencia: 734 LUNES |  | Se vende licencia con vehículo Tesla FIESTA LUNES 100% ELECTRICO con 1 añ..."
             }
         ]
     },
-    "updated_at": "20/02/2026 07:50"
+    "updated_at": "21/02/2026 07:35"
 }
