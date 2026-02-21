@@ -9,12 +9,6 @@
         "hora": "08:23",
         "origen": "Camp de Tarragona",
         "tren": "AVANT 08869",
-        "via": "2"
-    },
-    {
-        "hora": "08:23",
-        "origen": "Camp de Tarragona",
-        "tren": "AVANT 08869",
         "via": ""
     },
     {
@@ -54,15 +48,9 @@
         "via": ""
     },
     {
-        "hora": "09:57",
+        "hora": "10:00",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
-        "hora": "10:05",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03301",
         "via": ""
     },
     {
@@ -78,7 +66,13 @@
         "via": ""
     },
     {
-        "hora": "10:24",
+        "hora": "10:08",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03301",
+        "via": ""
+    },
+    {
+        "hora": "10:31",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06071",
         "via": ""
