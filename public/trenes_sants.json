@@ -3,12 +3,6 @@
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": "1"
-    },
-    {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
         "via": ""
     },
     {
@@ -39,7 +33,7 @@
         "hora": "09:15",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08087",
-        "via": ""
+        "via": "1"
     },
     {
         "hora": "09:15",
@@ -54,19 +48,19 @@
         "via": ""
     },
     {
-        "hora": "09:45",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "OUIGO 06471",
-        "via": ""
-    },
-    {
         "hora": "09:56",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03301",
         "via": ""
     },
     {
-        "hora": "09:56",
+        "hora": "09:57",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "OUIGO 06471",
+        "via": ""
+    },
+    {
+        "hora": "10:05",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03301",
         "via": ""
@@ -75,7 +69,7 @@
         "hora": "10:05",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01101",
-        "via": ""
+        "via": "2"
     },
     {
         "hora": "10:05",
