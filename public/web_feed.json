@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 170454,
-        "delta_value": 0,
-        "delta_percent": 0.0,
-        "direction": "up",
+        "current_price": 169253,
+        "delta_value": -1201,
+        "delta_percent": -0.7,
+        "direction": "down",
         "volume": 24,
-        "volatility": 51690
+        "volatility": 11509
     },
     "charts": {
         "history_dates": [
@@ -48,7 +48,8 @@
             "2026-02-18",
             "2026-02-19",
             "2026-02-20",
-            "2026-02-21"
+            "2026-02-21",
+            "2026-02-22"
         ],
         "history_prices": [
             166147,
@@ -90,7 +91,8 @@
             164563,
             170454,
             170454,
-            170454
+            170454,
+            169253
         ],
         "history_sma_7": [
             0,
@@ -132,6 +134,7 @@
             168225,
             168575,
             168926,
+            169097,
             169097
         ],
         "price_by_day_descanso": {
@@ -141,7 +144,8 @@
             "LUNES PAR": 180407,
             "MARTES PAR": 180914,
             "MIERCOLES PAR": 171563,
-            "VIERNES": 160375,
+            "VIERNES": 159469,
+            "VIERNES IMPAR": 162000,
             "VIERNES PAR": 169345
         }
     },
@@ -198,6 +202,13 @@
             },
             {
                 "fuente": "MILANUNCIOS",
+                "precio_neto": 162000,
+                "modelo": "SIN COCHE",
+                "dia": "VIERNES IMPAR",
+                "raw": "Nuevo | Licencia de taxi barcelona | 162.000 € | Barcelona (Barcelona) | Vendo licencia taxi barcelo..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
                 "precio_neto": 189050,
                 "modelo": "TOYOTA COROLLA",
                 "dia": "LUNES IMPAR",
@@ -216,13 +227,6 @@
                 "modelo": "SIN COCHE",
                 "dia": "LUNES",
                 "raw": "Compro licencia de taxi en Barcelona | 160.000 € | Barcelona (Barcelona) | Compramos licencias de ta..."
-            },
-            {
-                "fuente": "MILANUNCIOS",
-                "precio_neto": 416695,
-                "modelo": "DESCONOCIDO",
-                "dia": "VIERNES",
-                "raw": "2 licencia taxi Barcelona | 420.000 € | Sant Adria de Besos/San Adrian (Barcelona) | Dos, licencia d..."
             },
             {
                 "fuente": "SOLANO",
@@ -359,5 +363,5 @@
             }
         ]
     },
-    "updated_at": "21/02/2026 07:35"
+    "updated_at": "22/02/2026 07:38"
 }
