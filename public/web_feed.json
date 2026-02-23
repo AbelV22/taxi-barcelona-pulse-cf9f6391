@@ -1,9 +1,9 @@
 {
     "ticker": {
         "current_price": 169253,
-        "delta_value": -1201,
-        "delta_percent": -0.7,
-        "direction": "down",
+        "delta_value": 0,
+        "delta_percent": 0.0,
+        "direction": "up",
         "volume": 24,
         "volatility": 11509
     },
@@ -49,7 +49,8 @@
             "2026-02-19",
             "2026-02-20",
             "2026-02-21",
-            "2026-02-22"
+            "2026-02-22",
+            "2026-02-23"
         ],
         "history_prices": [
             166147,
@@ -92,6 +93,7 @@
             170454,
             170454,
             170454,
+            169253,
             169253
         ],
         "history_sma_7": [
@@ -134,6 +136,7 @@
             168225,
             168575,
             168926,
+            169097,
             169097,
             169097
         ],
@@ -205,7 +208,7 @@
                 "precio_neto": 162000,
                 "modelo": "SIN COCHE",
                 "dia": "VIERNES IMPAR",
-                "raw": "Nuevo | Licencia de taxi barcelona | 162.000 € | Barcelona (Barcelona) | Vendo licencia taxi barcelo..."
+                "raw": "Licencia de taxi barcelona | 162.000 € | Barcelona (Barcelona) | Vendo licencia taxi barcelona, Vier..."
             },
             {
                 "fuente": "MILANUNCIOS",
@@ -363,5 +366,5 @@
             }
         ]
     },
-    "updated_at": "22/02/2026 07:38"
+    "updated_at": "23/02/2026 07:57"
 }
