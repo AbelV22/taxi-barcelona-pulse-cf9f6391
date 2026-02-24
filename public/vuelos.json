@@ -1,356 +1,6 @@
 [
     {
-        "hora": "22:13",
-        "vuelo": "RYR148",
-        "aerolinea": "N/A",
-        "origen": "BERLIN BRANDENBURG (BER)",
-        "terminal": "T2B",
-        "sala": "B",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:25",
-        "vuelo": "VLG7477 / QTR3628 / LVL5567 / IBE5091",
-        "aerolinea": "Multicompania",
-        "origen": "ARGEL/ HOUARI BOUMEDIEN (ALG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:31",
-        "vuelo": "VLG1011",
-        "aerolinea": "N/A",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:41",
-        "vuelo": "SWR1950",
-        "aerolinea": "N/A",
-        "origen": "ZURICH (ZRH)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:43",
-        "vuelo": "EJU7156",
-        "aerolinea": "N/A",
-        "origen": "MILAN /MALPENSA (MXP)",
-        "terminal": "T2C (EasyJet)",
-        "sala": "C",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:44",
-        "vuelo": "VLG1435 / IBE5029 / LVL5074 / QTR3649",
-        "aerolinea": "Multicompania",
-        "origen": "BILBAO (BIO)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:46",
-        "vuelo": "LVL3027 / LAN1530 / VLG5091 / QTR6927 / RAM5339 / FIN5575 / IBE0427",
-        "aerolinea": "Multicompania",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:46",
-        "vuelo": "JAL9403",
-        "aerolinea": "N/A",
-        "origen": "-",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:49",
-        "vuelo": "EJU7174",
-        "aerolinea": "N/A",
-        "origen": "BERLIN BRANDENBURG (BER)",
-        "terminal": "T2C (EasyJet)",
-        "sala": "C",
-        "estado": "Finalizado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:53",
-        "vuelo": "LHX1816",
-        "aerolinea": "N/A",
-        "origen": "-",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:55",
-        "vuelo": "VLG1815 / LVL5146 / IBE5297 / QTR3756",
-        "aerolinea": "Multicompania",
-        "origen": "MUNICH (MUC)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:56",
-        "vuelo": "VLG6249 / LVL5489 / IBE5135 / QTR8138",
-        "aerolinea": "Multicompania",
-        "origen": "ZURICH (ZRH)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:59",
-        "vuelo": "AFR1448 / KAL6341 / AMX6031 / CES1859",
-        "aerolinea": "Multicompania",
-        "origen": "PARIS /CHARLES DE GAULLE (CDG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "22:59",
-        "vuelo": "MAU9322 / GLO5279 / JAL5353",
-        "aerolinea": "Multicompania",
-        "origen": "-",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:01",
-        "vuelo": "VLG2975 / IBE5375 / QTR3725 / LVL5276",
-        "aerolinea": "Multicompania",
-        "origen": "NANTES-ATLANTIQUE (NTE)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:02",
-        "vuelo": "ITY078",
-        "aerolinea": "N/A",
-        "origen": "ROMA /FIUMICINO (FCO)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:04",
-        "vuelo": "KLM1521 / CES1843 / AMX6303 / KAL6413",
-        "aerolinea": "Multicompania",
-        "origen": "AMSTERDAM /SCHIPHOL (AMS)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:04",
-        "vuelo": "CXA9327 / KQA1681 / IGO3209 / GLO5507",
-        "aerolinea": "Multicompania",
-        "origen": "-",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:09",
-        "vuelo": "VLG6337 / LVL5503 / QTR3711 / IBE5763",
-        "aerolinea": "Multicompania",
-        "origen": "MILAN /MALPENSA (MXP)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:09",
-        "vuelo": "VLG8655 / LVL5712 / IBE5714",
-        "aerolinea": "Multicompania",
-        "origen": "PRAGA (PRG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:19",
-        "vuelo": "RYR2835",
-        "aerolinea": "N/A",
-        "origen": "BRUSELAS /CHARLEROI (CRL)",
-        "terminal": "T2B",
-        "sala": "B",
-        "estado": "SALA B",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:20",
-        "vuelo": "VLG3919 / QTR3755 / LVL5408 / IBE5125",
-        "aerolinea": "Multicompania",
-        "origen": "PALMA DE MALLORCA (PMI)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "Retrasado",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:20",
-        "vuelo": "VLG8017 / QTR3758 / LVL5629 / IBE5207",
-        "aerolinea": "Multicompania",
-        "origen": "PARIS /ORLY (ORY)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:23",
-        "vuelo": "VLG1899 / QTR5510 / IBE5321 / LVL5178",
-        "aerolinea": "Multicompania",
-        "origen": "DUSSELDORF (DUS)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:27",
-        "vuelo": "VLG1705 / IBE5724 / QTR3752 / LVL5140",
-        "aerolinea": "Multicompania",
-        "origen": "VIGO (VGO)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:33",
-        "vuelo": "VLG2474 / QTR3501 / IBE5352 / LVL5243",
-        "aerolinea": "Multicompania",
-        "origen": "LANZAROTE CÉSAR MANRIQUE (ACE)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:33",
-        "vuelo": "VLG1887 / IBE5315 / QTR4695 / LVL5170",
-        "aerolinea": "Multicompania",
-        "origen": "BERLIN BRANDENBURG (BER)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:37",
-        "vuelo": "VLG8241 / QTR3588 / IBE5039 / LVL5646",
-        "aerolinea": "Multicompania",
-        "origen": "PARIS /CHARLES DE GAULLE (CDG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:39",
-        "vuelo": "VLG6405 / QTR3770 / LVL5515 / LAN5876 / IBE5688",
-        "aerolinea": "Multicompania",
-        "origen": "VENECIA /MARCO POLO (VCE)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:40",
-        "vuelo": "VLG8985 / LVL5738 / IBE5035",
-        "aerolinea": "Multicompania",
-        "origen": "BRUSELAS (BRU)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:46",
-        "vuelo": "VLG6653 / LVL5557 / IBE5644 / BAW8079",
-        "aerolinea": "Multicompania",
-        "origen": "LONDRES / HEATHROW (LHR)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:50",
-        "vuelo": "VLG8313 / IBE5227 / LVL5672 / QTR3731",
-        "aerolinea": "Multicompania",
-        "origen": "AMSTERDAM /SCHIPHOL (AMS)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:51",
-        "vuelo": "THY1851",
-        "aerolinea": "N/A",
-        "origen": "ESTAMBUL (IST)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:51",
-        "vuelo": "VLG1518 / IBE5151 / LAN5838 / LVL5084 / QTR3723",
-        "aerolinea": "Multicompania",
-        "origen": "NIZA /COTE D-AZUR (NCE)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:54",
-        "vuelo": "VLG6113 / IBE5271 / QTR3520 / LVL5458 / LAN5831",
-        "aerolinea": "Multicompania",
-        "origen": "ROMA /FIUMICINO (FCO)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:54",
+        "hora": "00:00",
         "vuelo": "VLG6503 / LVL5523 / QTR3663 / IBE5779 / LAN5816",
         "aerolinea": "Multicompania",
         "origen": "NAPOLES (NAP)",
@@ -360,94 +10,34 @@
         "dia_relativo": 0
     },
     {
-        "hora": "23:55",
-        "vuelo": "DLH1138",
-        "aerolinea": "N/A",
-        "origen": "FRANKFURT (FRA)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:56",
-        "vuelo": "TAP1040",
-        "aerolinea": "N/A",
-        "origen": "LISBOA (LIS)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:58",
-        "vuelo": "VLG2017 / LVL5186 / IBE5339 / QTR3681",
-        "aerolinea": "Multicompania",
-        "origen": "GRANADA-JAÉN F.G.L. (GRX)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
-        "hora": "23:59",
-        "vuelo": "VLG7333 / QTR3714 / LVL5559 / IBE5694",
-        "aerolinea": "Multicompania",
-        "origen": "MARRAKECH (RAK)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 0
-    },
-    {
         "hora": "00:01",
-        "vuelo": "VLG3921 / IBE5127 / LVL5410 / QTR3733 / LAN5897",
+        "vuelo": "VLG6113 / IBE5271 / QTR3520 / LVL5458 / LAN5831",
         "aerolinea": "Multicompania",
-        "origen": "PALMA DE MALLORCA (PMI)",
+        "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 1
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
-        "hora": "00:13",
-        "vuelo": "VLG2126 / QTR3502 / LVL5207 / IBE5790 / LAN5741",
-        "aerolinea": "Multicompania",
-        "origen": "MALAGA-COSTA DEL SOL (AGP)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "00:15",
+        "hora": "00:06",
         "vuelo": "VLG1675 / LVL5117 / QTR3564 / LAN5743 / IBE5815",
         "aerolinea": "Multicompania",
         "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "00:22",
+        "hora": "00:17",
         "vuelo": "RYR9014",
         "aerolinea": "N/A",
         "origen": "LONDRES /STANSTED (STN)",
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "00:23",
-        "vuelo": "VLG1293 / IBE5567 / QTR3679 / LAN5862 / LVL5040",
-        "aerolinea": "Multicompania",
-        "origen": "A CORUÑA (LCG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "00:30",
@@ -456,38 +46,68 @@
         "origen": "OPORTO (OPO)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 1
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
-        "hora": "00:34",
-        "vuelo": "VLG3209 / LVL5304 / LAN5874 / QTR3697 / IBE5446",
+        "hora": "00:31",
+        "vuelo": "VLG3919 / IBE5125 / LVL5408 / QTR3755",
         "aerolinea": "Multicompania",
-        "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
+        "origen": "PALMA DE MALLORCA (PMI)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "00:42",
+        "hora": "00:32",
+        "vuelo": "VLG2126 / QTR3502 / LVL5207 / IBE5790 / LAN5741",
+        "aerolinea": "Multicompania",
+        "origen": "MALAGA-COSTA DEL SOL (AGP)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "00:33",
+        "vuelo": "VLG1293 / IBE5567 / QTR3679 / LAN5862 / LVL5040",
+        "aerolinea": "Multicompania",
+        "origen": "A CORUÑA (LCG)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "00:35",
         "vuelo": "EJU7210",
         "aerolinea": "N/A",
         "origen": "SOUTHEND (SEN)",
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "00:53",
+        "hora": "00:38",
+        "vuelo": "VLG3209 / LVL5304 / LAN5874 / QTR3697 / IBE5446",
+        "aerolinea": "Multicompania",
+        "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "00:44",
         "vuelo": "VLG3003 / QTR3710 / LAN5814 / IBE5379 / LVL5282",
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "02:58",
@@ -497,17 +117,17 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "03:16",
+        "hora": "03:15",
         "vuelo": "VLG7895 / LVL5611 / IBE5670",
         "aerolinea": "Multicompania",
         "origen": "EL CAIRO (CAI)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "En hora",
-        "dia_relativo": 1
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "05:20",
@@ -517,7 +137,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "05:28",
@@ -527,7 +147,27 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
+    },
+    {
+        "hora": "06:27",
+        "vuelo": "AAL112 / FIN3780 / BAW1514 / IBE4460",
+        "aerolinea": "Multicompania",
+        "origen": "MIAMI (MIA)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "06:34",
+        "vuelo": "CCA845",
+        "aerolinea": "N/A",
+        "origen": "BEIJING / CAPITAL (PEK)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "06:40",
@@ -537,87 +177,67 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "07:05",
+        "hora": "06:48",
         "vuelo": "QTR137",
         "aerolinea": "N/A",
         "origen": "DOHA / HAMAD INTERNATIONAL (DOH)",
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "07:05",
-        "vuelo": "AAL112 / FIN3780 / BAW1514 / IBE4460",
-        "aerolinea": "Multicompania",
-        "origen": "MIAMI (MIA)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "07:10",
+        "hora": "07:02",
         "vuelo": "ETD111",
         "aerolinea": "N/A",
         "origen": "ABU DHABI (AUH)",
         "terminal": "T1",
         "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "estado": "En hora",
+        "dia_relativo": 0
     },
     {
-        "hora": "07:35",
-        "vuelo": "CCA845",
-        "aerolinea": "N/A",
-        "origen": "BEIJING / CAPITAL (PEK)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "07:35",
-        "vuelo": "VLG3905 / LVL5394 / LAN5836 / IBE5111 / QTR3743",
-        "aerolinea": "Multicompania",
-        "origen": "PALMA DE MALLORCA (PMI)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "07:40",
-        "vuelo": "AVA018",
-        "aerolinea": "N/A",
-        "origen": "BOGOTA /EL DORADO (BOG)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "07:40",
+        "hora": "07:20",
         "vuelo": "RYR6342",
         "aerolinea": "N/A",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
-        "hora": "07:50",
+        "hora": "07:29",
+        "vuelo": "VLG3905 / LVL5394 / LAN5836 / IBE5111 / QTR3743",
+        "aerolinea": "Multicompania",
+        "origen": "PALMA DE MALLORCA (PMI)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "En hora",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "07:43",
+        "vuelo": "AVA018",
+        "aerolinea": "N/A",
+        "origen": "BOGOTA /EL DORADO (BOG)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "07:47",
         "vuelo": "EJU3738",
         "aerolinea": "N/A",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T2C (EasyJet)",
         "sala": "C",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "estado": "En hora",
+        "dia_relativo": 0
     },
     {
         "hora": "07:55",
@@ -627,7 +247,17 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
+    },
+    {
+        "hora": "07:57",
+        "vuelo": "LAN1518 / LVL3001 / QTR8002 / VLG5006 / FIN5571 / DTA6002 / AVA6029 / IBE0401",
+        "aerolinea": "Multicompania",
+        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "En hora",
+        "dia_relativo": 0
     },
     {
         "hora": "08:00",
@@ -637,7 +267,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:00",
@@ -647,17 +277,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
-    },
-    {
-        "hora": "08:00",
-        "vuelo": "LAN1518 / LVL3001 / QTR8002 / VLG5006 / FIN5571 / DTA6002 / AVA6029 / IBE0401",
-        "aerolinea": "Multicompania",
-        "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
-        "terminal": "T1",
-        "sala": "T1_G",
-        "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:15",
@@ -667,7 +287,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:15",
@@ -677,7 +297,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:15",
@@ -687,7 +307,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:15",
@@ -697,7 +317,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:15",
@@ -707,7 +327,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:20",
@@ -717,7 +337,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:20",
@@ -727,7 +347,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:20",
@@ -737,7 +357,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:25",
@@ -747,7 +367,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:25",
@@ -757,7 +377,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:25",
@@ -767,7 +387,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:25",
@@ -777,7 +397,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:30",
@@ -787,7 +407,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:35",
@@ -797,7 +417,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:35",
@@ -807,7 +427,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:40",
@@ -817,7 +437,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:40",
@@ -827,7 +447,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:40",
@@ -837,7 +457,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:40",
@@ -847,7 +467,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:45",
@@ -857,7 +477,7 @@
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:50",
@@ -867,7 +487,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:50",
@@ -877,7 +497,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:50",
@@ -887,7 +507,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:55",
@@ -897,7 +517,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "08:55",
@@ -907,7 +527,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:00",
@@ -917,7 +537,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:00",
@@ -927,7 +547,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:00",
@@ -937,7 +557,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:00",
@@ -947,7 +567,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:05",
@@ -957,7 +577,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:05",
@@ -967,7 +587,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:10",
@@ -977,7 +597,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:10",
@@ -987,7 +607,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:10",
@@ -997,7 +617,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:10",
@@ -1007,7 +627,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:15",
@@ -1017,7 +637,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:15",
@@ -1027,7 +647,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:20",
@@ -1037,7 +657,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:20",
@@ -1047,7 +667,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:20",
@@ -1057,7 +677,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:20",
@@ -1067,7 +687,7 @@
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:25",
@@ -1077,7 +697,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:30",
@@ -1087,7 +707,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:30",
@@ -1097,7 +717,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:35",
@@ -1107,7 +727,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:35",
@@ -1117,7 +737,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:45",
@@ -1127,7 +747,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:45",
@@ -1137,7 +757,7 @@
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:45",
@@ -1147,7 +767,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:45",
@@ -1157,7 +777,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:55",
@@ -1167,7 +787,7 @@
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "09:55",
@@ -1177,7 +797,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:00",
@@ -1187,7 +807,7 @@
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:00",
@@ -1197,7 +817,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:05",
@@ -1207,7 +827,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:05",
@@ -1217,7 +837,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:10",
@@ -1227,7 +847,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:10",
@@ -1237,7 +857,7 @@
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:15",
@@ -1247,7 +867,7 @@
         "terminal": "T2C (EasyJet)",
         "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:15",
@@ -1257,7 +877,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:20",
@@ -1267,7 +887,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:25",
@@ -1277,7 +897,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:25",
@@ -1287,7 +907,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:25",
@@ -1297,7 +917,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:25",
@@ -1307,7 +927,7 @@
         "terminal": "T2B",
         "sala": "B",
         "estado": "SALA B",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:25",
@@ -1317,7 +937,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:30",
@@ -1327,7 +947,7 @@
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:35",
@@ -1337,7 +957,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:40",
@@ -1347,7 +967,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:45",
@@ -1357,7 +977,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:50",
@@ -1367,7 +987,7 @@
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:50",
@@ -1377,7 +997,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:50",
@@ -1387,7 +1007,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:50",
@@ -1397,7 +1017,7 @@
         "terminal": "T2A",
         "sala": "A",
         "estado": "SALA A",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:55",
@@ -1407,7 +1027,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "10:55",
@@ -1417,7 +1037,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "11:00",
@@ -1427,7 +1047,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "11:05",
@@ -1437,7 +1057,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "11:05",
@@ -1447,7 +1067,7 @@
         "terminal": "T1",
         "sala": "T1_G",
         "estado": "SALA T1_G",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "11:10",
@@ -1455,9 +1075,9 @@
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:10",
@@ -1465,9 +1085,9 @@
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:10",
@@ -1475,19 +1095,19 @@
         "aerolinea": "Multicompania",
         "origen": "GRANADA-JAÉN F.G.L. (GRX)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:10",
         "vuelo": "RYR8214",
         "aerolinea": "N/A",
         "origen": "LONDRES /STANSTED (STN)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
+        "dia_relativo": 0
     },
     {
         "hora": "11:15",
@@ -1495,9 +1115,9 @@
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:15",
@@ -1505,9 +1125,9 @@
         "aerolinea": "Multicompania",
         "origen": "STUTTGART (STR)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:15",
@@ -1515,19 +1135,19 @@
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:20",
         "vuelo": "RYR2917",
         "aerolinea": "N/A",
         "origen": "BRUSELAS (BRU)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "SALA B",
+        "dia_relativo": 0
     },
     {
         "hora": "11:20",
@@ -1535,19 +1155,19 @@
         "aerolinea": "N/A",
         "origen": "LONDRES / HEATHROW (LHR)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:25",
         "vuelo": "EJU7102",
         "aerolinea": "N/A",
         "origen": "BASEL /MULHOUSE (BSL)",
-        "terminal": "T2-",
-        "sala": "-",
+        "terminal": "T2C (EasyJet)",
+        "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "11:25",
@@ -1555,9 +1175,9 @@
         "aerolinea": "Multicompania",
         "origen": "DUSSELDORF (DUS)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:25",
@@ -1565,9 +1185,9 @@
         "aerolinea": "Multicompania",
         "origen": "FLORENCIA / PERETOLA (FLR)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:25",
@@ -1575,9 +1195,9 @@
         "aerolinea": "Multicompania",
         "origen": "MENORCA (MAH)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:30",
@@ -1585,9 +1205,9 @@
         "aerolinea": "Multicompania",
         "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:30",
@@ -1595,9 +1215,9 @@
         "aerolinea": "Multicompania",
         "origen": "VENECIA /MARCO POLO (VCE)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:30",
@@ -1605,9 +1225,9 @@
         "aerolinea": "Multicompania",
         "origen": "ZURICH (ZRH)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:35",
@@ -1615,9 +1235,9 @@
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:35",
@@ -1625,9 +1245,9 @@
         "aerolinea": "Multicompania",
         "origen": "IBIZA (IBZ)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:35",
@@ -1635,9 +1255,9 @@
         "aerolinea": "Multicompania",
         "origen": "OPORTO (OPO)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:40",
@@ -1645,9 +1265,9 @@
         "aerolinea": "Multicompania",
         "origen": "VIGO (VGO)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
@@ -1655,9 +1275,9 @@
         "aerolinea": "Multicompania",
         "origen": "BRUSELAS (BRU)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
@@ -1665,9 +1285,9 @@
         "aerolinea": "Multicompania",
         "origen": "PARIS /CHARLES DE GAULLE (CDG)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
@@ -1675,9 +1295,9 @@
         "aerolinea": "N/A",
         "origen": "CASABLANCA /MOHAMED V (CMN)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
@@ -1685,9 +1305,9 @@
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
@@ -1695,29 +1315,29 @@
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:45",
         "vuelo": "PGT1091",
         "aerolinea": "N/A",
         "origen": "ISTANBUL/SABIHA GOKCEN, (SAW)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
+        "dia_relativo": 0
     },
     {
         "hora": "11:50",
         "vuelo": "RYR3977",
         "aerolinea": "N/A",
         "origen": "DUBLIN (DUB)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
+        "dia_relativo": 0
     },
     {
         "hora": "11:50",
@@ -1725,19 +1345,19 @@
         "aerolinea": "Multicompania",
         "origen": "LONDRES /GATWICK (LGW)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:50",
         "vuelo": "RYR3109",
         "aerolinea": "N/A",
         "origen": "LUXEMBURGO (LUX)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "SALA B",
+        "dia_relativo": 0
     },
     {
         "hora": "11:50",
@@ -1745,9 +1365,9 @@
         "aerolinea": "Multicompania",
         "origen": "NAPOLES (NAP)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:55",
@@ -1755,9 +1375,9 @@
         "aerolinea": "N/A",
         "origen": "FRANKFURT (FRA)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "11:55",
@@ -1765,69 +1385,69 @@
         "aerolinea": "Multicompania",
         "origen": "MILAN /MALPENSA (MXP)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "12:00",
-        "vuelo": "VLG1305 / IBE5139 / LVL5048 / QTR3534",
+        "vuelo": "VLG1305 / IBE5139 / QTR3534 / LVL5048",
         "aerolinea": "Multicompania",
         "origen": "ALICANTE-ELCHE MIGUEL HDEZ. (ALC)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "12:00",
         "vuelo": "RYR847",
         "aerolinea": "N/A",
         "origen": "MILAN/BERGAMO (BGY)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "SALA B",
+        "dia_relativo": 0
     },
     {
         "hora": "12:00",
         "vuelo": "EJU7194",
         "aerolinea": "N/A",
         "origen": "LEEDS/BRADFORD (LBA)",
-        "terminal": "T2-",
-        "sala": "-",
+        "terminal": "T2C (EasyJet)",
+        "sala": "C",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:00",
-        "vuelo": "VLG1813 / QTR3668 / IBE5295 / LVL5144",
+        "vuelo": "VLG1813 / LVL5144 / IBE5295 / QTR3668",
         "aerolinea": "Multicompania",
         "origen": "MUNICH (MUC)",
         "terminal": "T1",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
     },
     {
         "hora": "12:00",
         "vuelo": "RYR2240",
         "aerolinea": "N/A",
         "origen": "MARRAKECH (RAK)",
-        "terminal": "T2-",
-        "sala": "-",
-        "estado": "Programado",
-        "dia_relativo": 1
+        "terminal": "T2A",
+        "sala": "A",
+        "estado": "SALA A",
+        "dia_relativo": 0
     },
     {
         "hora": "12:05",
-        "vuelo": "VLG8461 / IBE5229 / LVL5682 / QTR5517",
+        "vuelo": "VLG8461 / QTR5517 / IBE5229 / LVL5682",
         "aerolinea": "Multicompania",
         "origen": "LISBOA (LIS)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:05",
@@ -1837,7 +1457,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:10",
@@ -1847,7 +1467,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:10",
@@ -1857,17 +1477,17 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:10",
-        "vuelo": "VLG8001 / QTR3746 / IBE5191 / LVL5613",
+        "vuelo": "VLG8001 / IBE5191 / LVL5613 / QTR3746",
         "aerolinea": "Multicompania",
         "origen": "PARIS /ORLY (ORY)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:15",
@@ -1877,17 +1497,17 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:15",
-        "vuelo": "CXA9321 / KQA1673 / CAL8593",
+        "vuelo": "CXA9321 / CAL8593 / KQA1673",
         "aerolinea": "Multicompania",
         "origen": "-",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:20",
@@ -1897,7 +1517,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:30",
@@ -1907,7 +1527,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:35",
@@ -1917,37 +1537,37 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:35",
-        "vuelo": "IBE2471 / QTR6959 / LVL3101 / VLG5871",
+        "vuelo": "IBE2471 / QTR6959 / VLG5871 / LVL3101",
         "aerolinea": "Multicompania",
         "origen": "LEÓN (LEN)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:40",
-        "vuelo": "VLG8301 / LVL5660 / IBE5215 / QTR4680",
+        "vuelo": "VLG8301 / IBE5215 / QTR4680 / LVL5660",
         "aerolinea": "Multicompania",
         "origen": "AMSTERDAM /SCHIPHOL (AMS)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:40",
-        "vuelo": "LVL3011 / VLG5031 / CPA1839 / AVA6089 / AAL8613 / QTR5095 / IBE0411",
+        "vuelo": "LVL3011 / CPA1839 / AAL8613 / AVA6089 / VLG5031 / QTR5095 / IBE0411",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:40",
@@ -1957,7 +1577,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:45",
@@ -1967,7 +1587,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:50",
@@ -1977,7 +1597,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:50",
@@ -1987,7 +1607,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "12:50",
@@ -1997,7 +1617,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:00",
@@ -2007,7 +1627,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:00",
@@ -2017,7 +1637,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:05",
@@ -2027,7 +1647,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:20",
@@ -2037,7 +1657,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:20",
@@ -2047,7 +1667,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:25",
@@ -2057,7 +1677,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:25",
@@ -2067,7 +1687,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:35",
@@ -2077,7 +1697,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:40",
@@ -2087,7 +1707,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:45",
@@ -2097,7 +1717,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:50",
@@ -2107,7 +1727,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:50",
@@ -2117,7 +1737,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "13:55",
@@ -2127,7 +1747,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:00",
@@ -2137,7 +1757,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:00",
@@ -2147,7 +1767,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:00",
@@ -2157,7 +1777,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:00",
@@ -2167,7 +1787,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:05",
@@ -2177,7 +1797,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:05",
@@ -2187,7 +1807,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:08",
@@ -2197,7 +1817,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:15",
@@ -2207,7 +1827,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:15",
@@ -2217,7 +1837,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:20",
@@ -2227,7 +1847,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:20",
@@ -2237,7 +1857,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:24",
@@ -2247,7 +1867,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:25",
@@ -2257,7 +1877,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:30",
@@ -2267,7 +1887,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:30",
@@ -2277,7 +1897,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:35",
@@ -2287,7 +1907,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:35",
@@ -2297,7 +1917,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:40",
@@ -2307,7 +1927,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:40",
@@ -2317,7 +1937,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:45",
@@ -2327,7 +1947,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:45",
@@ -2337,7 +1957,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:45",
@@ -2347,7 +1967,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:45",
@@ -2357,7 +1977,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:45",
@@ -2367,7 +1987,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:50",
@@ -2377,7 +1997,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:50",
@@ -2387,7 +2007,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:55",
@@ -2397,7 +2017,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "14:55",
@@ -2407,7 +2027,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:00",
@@ -2417,7 +2037,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:00",
@@ -2427,7 +2047,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:00",
@@ -2437,7 +2057,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:00",
@@ -2447,7 +2067,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:10",
@@ -2457,7 +2077,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:10",
@@ -2467,7 +2087,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:20",
@@ -2477,7 +2097,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:45",
@@ -2487,7 +2107,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:45",
@@ -2497,7 +2117,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:45",
@@ -2507,7 +2127,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:55",
@@ -2517,7 +2137,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:55",
@@ -2527,7 +2147,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:55",
@@ -2537,7 +2157,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "15:55",
@@ -2547,7 +2167,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:00",
@@ -2557,7 +2177,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:00",
@@ -2567,7 +2187,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:05",
@@ -2577,7 +2197,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:05",
@@ -2587,7 +2207,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:10",
@@ -2597,7 +2217,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:15",
@@ -2607,7 +2227,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:15",
@@ -2617,7 +2237,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:15",
@@ -2627,7 +2247,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:15",
@@ -2637,7 +2257,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:20",
@@ -2647,7 +2267,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:20",
@@ -2657,7 +2277,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:20",
@@ -2667,7 +2287,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:25",
@@ -2677,7 +2297,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:25",
@@ -2687,7 +2307,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:30",
@@ -2697,7 +2317,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:30",
@@ -2707,7 +2327,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:30",
@@ -2717,7 +2337,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:30",
@@ -2727,7 +2347,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:35",
@@ -2737,7 +2357,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:35",
@@ -2747,7 +2367,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:40",
@@ -2757,7 +2377,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:50",
@@ -2767,7 +2387,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:50",
@@ -2777,7 +2397,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "16:55",
@@ -2787,7 +2407,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:00",
@@ -2797,7 +2417,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:00",
@@ -2807,7 +2427,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:05",
@@ -2817,7 +2437,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:05",
@@ -2827,7 +2447,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:05",
@@ -2837,7 +2457,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:10",
@@ -2847,7 +2467,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:10",
@@ -2857,7 +2477,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:10",
@@ -2867,7 +2487,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:10",
@@ -2877,7 +2497,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:15",
@@ -2887,7 +2507,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:20",
@@ -2897,7 +2517,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:25",
@@ -2907,7 +2527,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:30",
@@ -2917,7 +2537,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:35",
@@ -2927,7 +2547,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:40",
@@ -2937,7 +2557,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:40",
@@ -2947,7 +2567,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:45",
@@ -2957,7 +2577,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:45",
@@ -2967,7 +2587,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:50",
@@ -2977,7 +2597,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:55",
@@ -2987,7 +2607,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "17:55",
@@ -2997,7 +2617,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:05",
@@ -3007,7 +2627,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:05",
@@ -3017,7 +2637,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:05",
@@ -3027,7 +2647,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:10",
@@ -3037,7 +2657,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:10",
@@ -3047,7 +2667,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:10",
@@ -3057,7 +2677,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:15",
@@ -3067,7 +2687,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:15",
@@ -3077,7 +2697,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:15",
@@ -3087,7 +2707,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:20",
@@ -3097,7 +2717,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:20",
@@ -3107,7 +2727,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:20",
@@ -3117,7 +2737,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:20",
@@ -3127,7 +2747,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:20",
@@ -3137,7 +2757,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:25",
@@ -3147,7 +2767,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:25",
@@ -3157,7 +2777,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:30",
@@ -3167,7 +2787,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:35",
@@ -3177,7 +2797,7 @@
         "terminal": "N/A",
         "sala": "",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:35",
@@ -3187,7 +2807,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:35",
@@ -3197,7 +2817,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:35",
@@ -3207,7 +2827,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:35",
@@ -3217,7 +2837,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:40",
@@ -3227,7 +2847,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:40",
@@ -3237,7 +2857,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:40",
@@ -3247,7 +2867,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:40",
@@ -3257,7 +2877,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:40",
@@ -3267,7 +2887,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:45",
@@ -3277,7 +2897,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:45",
@@ -3287,7 +2907,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:55",
@@ -3297,7 +2917,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "18:55",
@@ -3307,7 +2927,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:00",
@@ -3317,7 +2937,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:00",
@@ -3327,7 +2947,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:05",
@@ -3337,7 +2957,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:05",
@@ -3347,7 +2967,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:05",
@@ -3357,7 +2977,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:15",
@@ -3367,7 +2987,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:15",
@@ -3377,7 +2997,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:15",
@@ -3387,7 +3007,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:15",
@@ -3397,7 +3017,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:20",
@@ -3407,7 +3027,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:20",
@@ -3417,7 +3037,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:20",
@@ -3427,7 +3047,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:35",
@@ -3437,7 +3057,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:35",
@@ -3447,7 +3067,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:35",
@@ -3457,7 +3077,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:35",
@@ -3467,7 +3087,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:40",
@@ -3477,7 +3097,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:45",
@@ -3487,7 +3107,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:45",
@@ -3497,7 +3117,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:45",
@@ -3507,7 +3127,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:45",
@@ -3517,7 +3137,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:45",
@@ -3527,7 +3147,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:50",
@@ -3537,7 +3157,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:50",
@@ -3547,7 +3167,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:55",
@@ -3557,7 +3177,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:55",
@@ -3567,7 +3187,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "19:55",
@@ -3577,7 +3197,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:00",
@@ -3587,27 +3207,27 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:00",
-        "vuelo": "VLG6107 / IBE5055 / LAN5808 / LVL5452 / QTR3670",
+        "vuelo": "VLG6107 / QTR3670 / LVL5452 / LAN5808 / IBE5055",
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:00",
-        "vuelo": "VLG2015 / LVL5184 / QTR3701 / IBE5337",
+        "vuelo": "VLG2015 / QTR3701 / LVL5184 / IBE5337",
         "aerolinea": "Multicompania",
         "origen": "GRANADA-JAÉN F.G.L. (GRX)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:00",
@@ -3617,17 +3237,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:05",
-        "vuelo": "VLG3007 / LVL5286 / IBE5383 / QTR3699",
+        "vuelo": "VLG3007 / LVL5286 / QTR3699 / IBE5383",
         "aerolinea": "Multicompania",
         "origen": "GRAN CANARIA (LPA)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:05",
@@ -3637,7 +3257,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:10",
@@ -3647,17 +3267,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:10",
-        "vuelo": "VLG3723 / IBE5507 / LVL5384 / QTR3654",
+        "vuelo": "VLG3723 / QTR3654 / LVL5384 / IBE5507",
         "aerolinea": "Multicompania",
         "origen": "MENORCA (MAH)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:20",
@@ -3667,7 +3287,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:25",
@@ -3677,27 +3297,27 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:25",
-        "vuelo": "BOV5010 / AVA6072 / VLG5063 / QTR6918 / LVL3023 / LAN1684 / IBE0423",
+        "vuelo": "AVA6072 / BOV5010 / LAN1684 / LVL3023 / QTR6918 / VLG5063 / IBE0423",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:25",
-        "vuelo": "VLG1685 / LVL5134 / QTR3751 / IBE5855",
+        "vuelo": "VLG1685 / IBE5855 / LVL5134 / QTR3751",
         "aerolinea": "Multicompania",
         "origen": "SANTIAGO-ROSALÍA DE CASTRO (SCQ)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:35",
@@ -3707,7 +3327,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:35",
@@ -3717,7 +3337,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:35",
@@ -3727,7 +3347,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:40",
@@ -3737,7 +3357,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:40",
@@ -3747,7 +3367,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:45",
@@ -3757,7 +3377,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:45",
@@ -3767,7 +3387,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:50",
@@ -3777,7 +3397,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:50",
@@ -3787,17 +3407,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:55",
-        "vuelo": "VLG2112 / IBE5004 / QTR3503 / LVL5193",
+        "vuelo": "VLG2112 / IBE5004 / LVL5193 / QTR3503",
         "aerolinea": "Multicompania",
         "origen": "MALAGA-COSTA DEL SOL (AGP)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "20:55",
@@ -3807,7 +3427,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:00",
@@ -3817,7 +3437,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:00",
@@ -3827,17 +3447,17 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:05",
-        "vuelo": "VLG1891 / QTR8124 / IBE5317 / LVL5172",
+        "vuelo": "VLG1891 / LVL5172 / QTR8124 / IBE5317",
         "aerolinea": "Multicompania",
         "origen": "HANNOVER (HAJ)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:05",
@@ -3847,7 +3467,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:10",
@@ -3857,17 +3477,17 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:20",
-        "vuelo": "VLG6111 / IBE5059 / LAN5843 / LVL5456 / QTR3664",
+        "vuelo": "VLG6111 / QTR3664 / LVL5456 / LAN5843 / IBE5059",
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:20",
@@ -3877,17 +3497,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:20",
-        "vuelo": "AVA6083 / VLG5079 / LAN1694 / LVL3025 / QTR6924 / IBE0425",
+        "vuelo": "AVA6083 / QTR6924 / LVL3025 / LAN1694 / VLG5079 / IBE0425",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:20",
@@ -3897,7 +3517,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:30",
@@ -3907,7 +3527,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:40",
@@ -3917,17 +3537,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:45",
-        "vuelo": "VLG2221 / QTR3597 / LVL5220 / AAL8861 / IBE5171",
+        "vuelo": "VLG2221 / AAL8861 / IBE5171 / QTR3597 / LVL5220",
         "aerolinea": "Multicompania",
         "origen": "SEVILLA (SVQ)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:50",
@@ -3937,7 +3557,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "21:55",
@@ -3947,7 +3567,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:05",
@@ -3957,7 +3577,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:05",
@@ -3967,17 +3587,17 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:20",
-        "vuelo": "VLG3725 / IBE5509 / LVL5386 / QTR3672",
+        "vuelo": "VLG3725 / LVL5386 / QTR3672 / IBE5509",
         "aerolinea": "Multicompania",
         "origen": "MENORCA (MAH)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:25",
@@ -3987,7 +3607,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:25",
@@ -3997,7 +3617,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:30",
@@ -4007,7 +3627,7 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:30",
@@ -4017,27 +3637,27 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:35",
-        "vuelo": "VLG6115 / IBE5273 / QTR3547 / LVL5460",
+        "vuelo": "VLG6115 / QTR3547 / LVL5460 / IBE5273",
         "aerolinea": "Multicompania",
         "origen": "ROMA /FIUMICINO (FCO)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:40",
-        "vuelo": "VLG6009 / IBE5850 / LVL5431 / QTR3644 / AAL8873",
+        "vuelo": "VLG6009 / AAL8873 / IBE5850 / LVL5431 / QTR3644",
         "aerolinea": "Multicompania",
         "origen": "FLORENCIA / PERETOLA (FLR)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:40",
@@ -4047,7 +3667,7 @@
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:50",
@@ -4057,13 +3677,623 @@
         "terminal": "T2-",
         "sala": "-",
         "estado": "Programado",
-        "dia_relativo": 1
+        "dia_relativo": 0
     },
     {
         "hora": "22:50",
-        "vuelo": "VLG5091 / RAM5339 / QTR6927",
+        "vuelo": "FIN5575 / LAN1530 / LVL3027 / QTR6927 / RAM5339 / VLG5091 / IBE0427",
         "aerolinea": "Multicompania",
         "origen": "MADRID-BARAJAS ADOLFO SUÁREZ (MAD)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:50",
+        "vuelo": "JAL9403",
+        "aerolinea": "N/A",
+        "origen": "-",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:50",
+        "vuelo": "VLG3919 / IBE5125 / LVL5408 / QTR3755",
+        "aerolinea": "Multicompania",
+        "origen": "PALMA DE MALLORCA (PMI)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:55",
+        "vuelo": "AFR1448 / AMX6031 / CES1859 / KAL6341",
+        "aerolinea": "Multicompania",
+        "origen": "PARIS /CHARLES DE GAULLE (CDG)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:55",
+        "vuelo": "MAU9322 / GLO5279 / JAL5353",
+        "aerolinea": "Multicompania",
+        "origen": "-",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:55",
+        "vuelo": "EJU7156",
+        "aerolinea": "N/A",
+        "origen": "MILAN /MALPENSA (MXP)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "22:55",
+        "vuelo": "VLG1867 / LVL5158 / QTR3762 / IBE5303",
+        "aerolinea": "Multicompania",
+        "origen": "STUTTGART (STR)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:00",
+        "vuelo": "VLG8541 / LVL5706",
+        "aerolinea": "Multicompania",
+        "origen": "TROMSO (TOS)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:00",
+        "vuelo": "SWR1950",
+        "aerolinea": "N/A",
+        "origen": "ZURICH (ZRH)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:05",
+        "vuelo": "KLM1521 / KAL6413 / CES1843 / AMX6303",
+        "aerolinea": "Multicompania",
+        "origen": "AMSTERDAM /SCHIPHOL (AMS)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:05",
+        "vuelo": "KQA1681 / GLO5507 / IGO3209 / CXA9327 / LHX1816",
+        "aerolinea": "Multicompania",
+        "origen": "-",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:05",
+        "vuelo": "EJU8061",
+        "aerolinea": "N/A",
+        "origen": "LONDRES /GATWICK (LGW)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:07",
+        "vuelo": "VLG6337 / QTR3711 / IBE5763 / LVL5503",
+        "aerolinea": "Multicompania",
+        "origen": "MILAN /MALPENSA (MXP)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:09",
+        "vuelo": "VLG8655 / LVL5712 / IBE5714",
+        "aerolinea": "Multicompania",
+        "origen": "PRAGA (PRG)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:15",
+        "vuelo": "VLG1815 / IBE5297 / LVL5146 / QTR3756",
+        "aerolinea": "Multicompania",
+        "origen": "MUNICH (MUC)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:18",
+        "vuelo": "RYR2835",
+        "aerolinea": "N/A",
+        "origen": "BRUSELAS /CHARLEROI (CRL)",
+        "terminal": "T2B",
+        "sala": "B",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:19",
+        "vuelo": "VLG8017 / QTR3758 / IBE5207 / LVL5629",
+        "aerolinea": "Multicompania",
+        "origen": "PARIS /ORLY (ORY)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:20",
+        "vuelo": "VLG1899 / IBE5321 / LVL5178 / QTR5510",
+        "aerolinea": "Multicompania",
+        "origen": "DUSSELDORF (DUS)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:20",
+        "vuelo": "DLH1138",
+        "aerolinea": "N/A",
+        "origen": "FRANKFURT (FRA)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:23",
+        "vuelo": "VLG1705 / LVL5140 / QTR3752 / IBE5724",
+        "aerolinea": "Multicompania",
+        "origen": "VIGO (VGO)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:25",
+        "vuelo": "VLG6249 / QTR8138 / IBE5135 / LVL5489",
+        "aerolinea": "Multicompania",
+        "origen": "ZURICH (ZRH)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:27",
+        "vuelo": "VLG2474 / IBE5352 / LVL5243 / QTR3501",
+        "aerolinea": "Multicompania",
+        "origen": "LANZAROTE CÉSAR MANRIQUE (ACE)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:30",
+        "vuelo": "VLG1435 / QTR3649 / IBE5029 / LVL5074",
+        "aerolinea": "Multicompania",
+        "origen": "BILBAO (BIO)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:32",
+        "vuelo": "VLG1887 / IBE5315 / QTR4695 / LVL5170",
+        "aerolinea": "Multicompania",
+        "origen": "BERLIN BRANDENBURG (BER)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:35",
+        "vuelo": "VLG8531 / QTR3708 / IBE5660",
+        "aerolinea": "Multicompania",
+        "origen": "AGADIR/AL MASSIRA (AGA)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:35",
+        "vuelo": "VLG6337 / IBE5763 / LVL5503 / QTR3711",
+        "aerolinea": "Multicompania",
+        "origen": "MILAN /MALPENSA (MXP)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:35",
+        "vuelo": "VLG2975 / QTR3725 / LVL5276 / IBE5375",
+        "aerolinea": "Multicompania",
+        "origen": "NANTES-ATLANTIQUE (NTE)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:35",
+        "vuelo": "VLG8017 / LVL5629 / IBE5207 / QTR3758",
+        "aerolinea": "Multicompania",
+        "origen": "PARIS /ORLY (ORY)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:36",
+        "vuelo": "VLG8241 / LVL5646 / IBE5039 / QTR3588",
+        "aerolinea": "Multicompania",
+        "origen": "PARIS /CHARLES DE GAULLE (CDG)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:37",
+        "vuelo": "VLG8985 / LVL5738 / IBE5035",
+        "aerolinea": "Multicompania",
+        "origen": "BRUSELAS (BRU)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "Finalizado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:40",
+        "vuelo": "VLG8655 / LVL5712 / IBE5714",
+        "aerolinea": "Multicompania",
+        "origen": "PRAGA (PRG)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:41",
+        "vuelo": "VLG6653 / LVL5557 / IBE5644 / BAW8079",
+        "aerolinea": "Multicompania",
+        "origen": "LONDRES / HEATHROW (LHR)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:45",
+        "vuelo": "VLG6405 / QTR3770 / LVL5515 / LAN5876 / IBE5688",
+        "aerolinea": "Multicompania",
+        "origen": "VENECIA /MARCO POLO (VCE)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:45",
+        "vuelo": "VLG1518 / IBE5151 / LAN5838 / LVL5084 / QTR3723",
+        "aerolinea": "Multicompania",
+        "origen": "NIZA /COTE D-AZUR (NCE)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:45",
+        "vuelo": "VLG2474 / QTR3501 / IBE5352 / LVL5243",
+        "aerolinea": "Multicompania",
+        "origen": "LANZAROTE CÉSAR MANRIQUE (ACE)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:45",
+        "vuelo": "TAP1040",
+        "aerolinea": "N/A",
+        "origen": "LISBOA (LIS)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:46",
+        "vuelo": "DLH1138",
+        "aerolinea": "N/A",
+        "origen": "FRANKFURT (FRA)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:49",
+        "vuelo": "VLG8313 / IBE5227 / LVL5672 / QTR3731",
+        "aerolinea": "Multicompania",
+        "origen": "AMSTERDAM /SCHIPHOL (AMS)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:50",
+        "vuelo": "RYR3142",
+        "aerolinea": "N/A",
+        "origen": "MILAN/BERGAMO (BGY)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:50",
+        "vuelo": "THY1851",
+        "aerolinea": "N/A",
+        "origen": "ESTAMBUL (IST)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:53",
+        "vuelo": "THY1851",
+        "aerolinea": "N/A",
+        "origen": "ESTAMBUL (IST)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:54",
+        "vuelo": "VLG2017 / QTR3681 / LVL5186 / IBE5339",
+        "aerolinea": "Multicompania",
+        "origen": "GRANADA-JAÉN F.G.L. (GRX)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:55",
+        "vuelo": "VLG8313 / QTR3731 / IBE5227 / LVL5672",
+        "aerolinea": "Multicompania",
+        "origen": "AMSTERDAM /SCHIPHOL (AMS)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:55",
+        "vuelo": "VLG8241 / IBE5039 / QTR3588 / LVL5646",
+        "aerolinea": "Multicompania",
+        "origen": "PARIS /CHARLES DE GAULLE (CDG)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:55",
+        "vuelo": "VLG2017 / LVL5186 / IBE5339 / QTR3681",
+        "aerolinea": "Multicompania",
+        "origen": "GRANADA-JAÉN F.G.L. (GRX)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:56",
+        "vuelo": "VLG3921 / IBE5127 / LVL5410 / QTR3733 / LAN5897",
+        "aerolinea": "Multicompania",
+        "origen": "PALMA DE MALLORCA (PMI)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:56",
+        "vuelo": "VLG7333 / QTR3714 / LVL5559 / IBE5694",
+        "aerolinea": "Multicompania",
+        "origen": "MARRAKECH (RAK)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "23:57",
+        "vuelo": "TAP1040",
+        "aerolinea": "N/A",
+        "origen": "LISBOA (LIS)",
+        "terminal": "T1",
+        "sala": "T1_G",
+        "estado": "SALA T1_G",
+        "dia_relativo": 0
+    },
+    {
+        "hora": "00:00",
+        "vuelo": "VLG8985 / IBE5035 / LVL5738",
+        "aerolinea": "Multicompania",
+        "origen": "BRUSELAS (BRU)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:00",
+        "vuelo": "VLG8465 / IBE5233 / LVL5686 / QTR3638",
+        "aerolinea": "Multicompania",
+        "origen": "LISBOA (LIS)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:05",
+        "vuelo": "VLG1887 / IBE5315 / LVL5170 / QTR4695",
+        "aerolinea": "Multicompania",
+        "origen": "BERLIN BRANDENBURG (BER)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:05",
+        "vuelo": "VLG6653 / IBE5644 / LVL5557 / BAW8079",
+        "aerolinea": "Multicompania",
+        "origen": "LONDRES / HEATHROW (LHR)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:10",
+        "vuelo": "VLG7829 / LVL5587 / BAW8059 / IBE5635",
+        "aerolinea": "Multicompania",
+        "origen": "LONDRES /GATWICK (LGW)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:10",
+        "vuelo": "VLG3921 / LVL5410 / QTR3733 / IBE5127",
+        "aerolinea": "Multicompania",
+        "origen": "PALMA DE MALLORCA (PMI)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:10",
+        "vuelo": "VLG6405 / IBE5688 / LVL5515 / QTR3770",
+        "aerolinea": "Multicompania",
+        "origen": "VENECIA /MARCO POLO (VCE)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:15",
+        "vuelo": "VLG1518 / QTR3723 / IBE5151 / LVL5084",
+        "aerolinea": "Multicompania",
+        "origen": "NIZA /COTE D-AZUR (NCE)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:25",
+        "vuelo": "VLG6503 / IBE5779 / QTR3663 / LVL5523",
+        "aerolinea": "Multicompania",
+        "origen": "NAPOLES (NAP)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:25",
+        "vuelo": "VLG1573 / IBE5105 / QTR3740 / LVL5092",
+        "aerolinea": "Multicompania",
+        "origen": "ASTURIAS (OVD)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:25",
+        "vuelo": "RYR8230",
+        "aerolinea": "N/A",
+        "origen": "LONDRES /STANSTED (STN)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:30",
+        "vuelo": "VLG3209 / LVL5304 / QTR3697 / IBE5446",
+        "aerolinea": "Multicompania",
+        "origen": "TENERIFE NORTE-C. LA LAGUNA (TFN)",
+        "terminal": "T1",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:35",
+        "vuelo": "RYR059",
+        "aerolinea": "N/A",
+        "origen": "NAPOLES (NAP)",
+        "terminal": "T2-",
+        "sala": "-",
+        "estado": "Programado",
+        "dia_relativo": 1
+    },
+    {
+        "hora": "00:35",
+        "vuelo": "VLG8479",
+        "aerolinea": "N/A",
+        "origen": "OPORTO (OPO)",
         "terminal": "T1",
         "sala": "-",
         "estado": "Programado",
