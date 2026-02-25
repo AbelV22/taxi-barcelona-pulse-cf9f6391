@@ -27,7 +27,7 @@
         "hora": "08:04",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01081",
-        "via": ""
+        "via": "2"
     },
     {
         "hora": "08:04",
@@ -450,12 +450,6 @@
         "via": ""
     },
     {
-        "hora": "15:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03162",
-        "via": ""
-    },
-    {
         "hora": "16:09",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03123",
@@ -537,6 +531,12 @@
         "hora": "18:05",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01181",
+        "via": ""
+    },
+    {
+        "hora": "18:06",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "IRYO 06021",
         "via": ""
     },
     {
