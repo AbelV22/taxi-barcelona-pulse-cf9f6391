@@ -1,11 +1,11 @@
 {
     "ticker": {
-        "current_price": 171795,
-        "delta_value": 1341,
-        "delta_percent": 0.79,
-        "direction": "up",
+        "current_price": 170563,
+        "delta_value": -1232,
+        "delta_percent": -0.72,
+        "direction": "down",
         "volume": 22,
-        "volatility": 11670
+        "volatility": 11617
     },
     "charts": {
         "history_dates": [
@@ -53,7 +53,8 @@
             "2026-02-23",
             "2026-02-24",
             "2026-02-25",
-            "2026-02-26"
+            "2026-02-26",
+            "2026-02-27"
         ],
         "history_prices": [
             166147,
@@ -100,7 +101,8 @@
             169253,
             169253,
             170454,
-            171795
+            171795,
+            170563
         ],
         "history_sma_7": [
             0,
@@ -147,12 +149,13 @@
             169097,
             169097,
             169939,
-            170130
+            170130,
+            170146
         ],
         "price_by_day_descanso": {
             "JUEVES": 175492,
-            "JUEVES IMPAR": 176863,
-            "JUEVES PAR": 176831,
+            "JUEVES IMPAR": 175896,
+            "JUEVES PAR": 171197,
             "LUNES": 183637,
             "LUNES IMPAR": 179306,
             "LUNES PAR": 189252,
@@ -174,24 +177,24 @@
                 "valor_coche": 4437
             },
             {
+                "fuente": "STAC",
+                "dia": "VIERNES",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
+            {
+                "fuente": "STAC",
+                "dia": "VIERNES",
+                "modelo": "DESCONOCIDO",
+                "precio_neto": 155563,
+                "precio_total": 160000,
+                "valor_coche": 4437
+            },
+            {
                 "fuente": "SOLANO",
                 "dia": "VIERNES PAR",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES",
-                "modelo": "DESCONOCIDO",
-                "precio_neto": 155563,
-                "precio_total": 160000,
-                "valor_coche": 4437
-            },
-            {
-                "fuente": "STAC",
-                "dia": "VIERNES",
                 "modelo": "DESCONOCIDO",
                 "precio_neto": 155563,
                 "precio_total": 160000,
@@ -234,6 +237,13 @@
                 "modelo": "TOYOTA CAMRY",
                 "dia": "LUNES PAR",
                 "raw": "6 | LUNES LICENCIA DE TAXI BARCELONA | 207.000 € | L' Hospitalet de Llobregat (Barcelona) | NO NEGOC..."
+            },
+            {
+                "fuente": "MILANUNCIOS",
+                "precio_neto": 165563,
+                "modelo": "DESCONOCIDO",
+                "dia": "JUEVES PAR",
+                "raw": "Licencia de taxi Barcelona, jueves, par | 170.000 € | Barcelona (Barcelona) | Licencia de taxi de Ba..."
             },
             {
                 "fuente": "SOLANO",
@@ -290,13 +300,6 @@
                 "modelo": "TOYOTA COROLLA",
                 "dia": "VIERNES PAR",
                 "raw": "Ref:  | 38602 | DIA DE FIESTA:  | VIERNES PAR | LICENCIA DE TAXI EN VENTA BARCELONA | LICENCIA DE TA..."
-            },
-            {
-                "fuente": "SOLANO",
-                "precio_neto": 177830,
-                "modelo": "VOLKSWAGEN CADDY",
-                "dia": "JUEVES IMPAR",
-                "raw": "Ref:  | 38525 | DIA DE FIESTA:  | JUEVES IMPAR | licencia taxi en venta barcelona | LICENCIA TAXI EN..."
             },
             {
                 "fuente": "STAC",
@@ -363,5 +366,5 @@
             }
         ]
     },
-    "updated_at": "26/02/2026 07:53"
+    "updated_at": "27/02/2026 07:48"
 }
