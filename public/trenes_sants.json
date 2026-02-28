@@ -9,19 +9,7 @@
         "hora": "08:23",
         "origen": "Camp de Tarragona",
         "tren": "AVANT 08869",
-        "via": "2"
-    },
-    {
-        "hora": "08:23",
-        "origen": "Camp de Tarragona",
-        "tren": "AVANT 08869",
         "via": ""
-    },
-    {
-        "hora": "08:50",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03092",
-        "via": "5"
     },
     {
         "hora": "08:50",
@@ -42,6 +30,12 @@
         "via": ""
     },
     {
+        "hora": "09:19",
+        "origen": "Figueres-Vilafant",
+        "tren": "AVE 03092",
+        "via": "5"
+    },
+    {
         "hora": "09:39",
         "origen": "València Estació del Nord",
         "tren": "INTERCITY 01072",
@@ -54,7 +48,7 @@
         "via": ""
     },
     {
-        "hora": "09:50",
+        "hora": "09:51",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "OUIGO 06471",
         "via": ""
@@ -75,7 +69,7 @@
         "hora": "10:05",
         "origen": "Figueres-Vilafant",
         "tren": "EUROMED 01101",
-        "via": ""
+        "via": "1"
     },
     {
         "hora": "10:05",
