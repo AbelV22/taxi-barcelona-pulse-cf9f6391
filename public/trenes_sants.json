@@ -3,12 +3,6 @@
         "hora": "06:25",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03302",
-        "via": "6"
-    },
-    {
-        "hora": "06:25",
-        "origen": "Figueres-Vilafant",
-        "tren": "AVE 03302",
         "via": ""
     },
     {
@@ -27,7 +21,7 @@
         "hora": "08:50",
         "origen": "Figueres-Vilafant",
         "tren": "AVE 03092",
-        "via": ""
+        "via": "5"
     },
     {
         "hora": "08:50",
@@ -39,7 +33,7 @@
         "hora": "09:15",
         "origen": "Lleida Pirineus",
         "tren": "AVANT 08087",
-        "via": ""
+        "via": "1"
     },
     {
         "hora": "09:15",
