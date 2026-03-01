@@ -6,7 +6,7 @@
         "via": "1"
     },
     {
-        "hora": "00:03",
+        "hora": "00:08",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "IRYO 06211",
         "via": "4"
@@ -456,33 +456,21 @@
         "via": ""
     },
     {
-        "hora": "22:50",
-        "origen": "València Estació del Nord",
-        "tren": "INTERCITY 01382",
-        "via": ""
-    },
-    {
-        "hora": "23:17",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06013",
-        "via": "3"
-    },
-    {
         "hora": "23:20",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": ""
     },
     {
-        "hora": "23:27",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": "2"
-    },
-    {
         "hora": "23:28",
         "origen": "Sevilla Santa Justa",
         "tren": "OUIGO 06415",
+        "via": ""
+    },
+    {
+        "hora": "23:38",
+        "origen": "Alacant / Alicante Terminal",
+        "tren": "INTERCITY 01402",
         "via": ""
     },
     {
@@ -493,12 +481,6 @@
     },
     {
         "hora": "23:49",
-        "origen": "Alacant / Alicante Terminal",
-        "tren": "INTERCITY 01402",
-        "via": ""
-    },
-    {
-        "hora": "23:50",
         "origen": "Sevilla Santa Justa",
         "tren": "OUIGO 06415",
         "via": ""
