@@ -444,22 +444,16 @@
         "via": ""
     },
     {
-        "hora": "22:54",
-        "origen": "Sevilla Santa Justa",
-        "tren": "IRYO 06013",
-        "via": "4"
-    },
-    {
         "hora": "23:20",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03309",
         "via": ""
     },
     {
-        "hora": "23:25",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03309",
-        "via": "5"
+        "hora": "23:28",
+        "origen": "Sevilla Santa Justa",
+        "tren": "OUIGO 06415",
+        "via": "6"
     },
     {
         "hora": "23:28",
@@ -468,21 +462,15 @@
         "via": ""
     },
     {
-        "hora": "23:37",
-        "origen": "Sevilla Santa Justa",
-        "tren": "OUIGO 06415",
-        "via": ""
+        "hora": "23:47",
+        "origen": "Madrid Puerta de Atocha Almudena Grandes",
+        "tren": "AVE 03201",
+        "via": "2"
     },
     {
         "hora": "23:47",
         "origen": "Madrid Puerta de Atocha Almudena Grandes",
         "tren": "AVE 03201",
         "via": ""
-    },
-    {
-        "hora": "23:52",
-        "origen": "Madrid Puerta de Atocha Almudena Grandes",
-        "tren": "AVE 03201",
-        "via": "2"
     }
 ]
